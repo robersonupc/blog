@@ -1,0 +1,10 @@
+permalink: /:title/
+exclude: ["README.md", "bin", ".gitignore"]
+production_url : http://www.sergiolopes.org
+
+markdown: kramdown
+pygments: true
+
+title: sergiolopes.org
+author:
+   name: Sérgio Lopes

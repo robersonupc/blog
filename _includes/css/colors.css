@@ -1,0 +1,32 @@
+body {
+	background: #F7F7F9;
+}
+
+body:before {
+	background: #36393B;
+}
+
+header #sergio, header #org {
+	color: #3299BB;
+}
+header #lopes {
+	color: #004e66;
+}
+nav a {
+	background-color: #FF9900;
+	color: white;
+}
+nav a:hover {
+	background-color: #FA6900;
+}
+
+article p {
+	color: #222;
+}
+
+h2 {
+	color: #424242;
+}
+div#social, article h4 {
+	background: #E7E7E9;
+}

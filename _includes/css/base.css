@@ -1,0 +1,172 @@
+* {
+	-moz-box-sizing : border-box;
+	-webkit-box-sizing : border-box;
+	box-sizing : border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0 auto;
+	max-width: 900px;
+	width: 98%;
+}
+
+header {
+	height: 150px;
+	width: 100%;
+}
+header img {
+	border: 0.5em solid white;
+	display: inline-block;
+	vertical-align: top;
+	
+	-moz-box-shadow: 0 0 0.35em #556270;
+	-webkit-box-shadow: 0 0 0.35em #556270;
+	box-shadow: 0 0 0.35em #556270;
+
+	margin: 1em 1.5em 3em 0;
+	
+	height: 150px;
+	width: 150px;
+}
+header a {
+	text-decoration: none;
+}
+header div {
+	display: inline-block;
+	margin: 0.4em 0 0 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+nav.top {
+	float: left;
+	margin: -60px 0 0 178px;
+}
+nav.bottom {
+	display: none;
+	margin: 2em auto;
+	text-align: center;
+	width: 90%;
+}
+nav .menu {
+	display: none;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline-block;
+	margin: 0 0.7em 0.7em 0;
+}
+nav a {
+	display: block;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+}
+
+article {
+	clear: both;
+	margin: 2em 0;
+}
+article h1 {
+	margin-top: 0;
+	padding: 1em 0 0.5em 0;
+}
+article p:first-of-type {
+	font-size: 1.25em;
+	line-height: 1.6em;
+}
+
+.fb-comments, .fb-comments iframe {
+	width: 100% !important;
+}
+
+div#social {
+	float: right;
+	margin: 0 0 0 1em;
+	padding: 0.6em 0 0 0;
+	text-align: center;
+	height: 80px;
+	width: 250px;
+}
+div#social div.fb-like, div#social #___plusone_0, div#social .twitter-share-button {
+	display: inline-block;
+	margin: 0 1em;
+	vertical-align: top;
+}
+div#social #___plusone_0 {
+	-webkit-transform: scale(1.038);
+	-moz-transform: scale(1.038);
+	-o-transform: scale(1.038);
+	transform: scale(1.038);
+
+	-o-tranform-origin: top center;
+	-webkit-tranform-origin: top center;
+	-moz-tranform-origin: top center;
+	tranform-origin: top center;
+}
+
+article h4 {
+	font-weight: normal;
+	margin: 2em 0;
+	padding: 0.5em 2em;
+}
+article h4 .data {
+	font-weight: bold;
+}
+article h3.fb {
+	margin-top: 1em;
+}
+
+/* imagens e videos */
+figure {
+	counter-increment: figure;
+	clear: both;
+	display: block;
+}
+figure.responsive {
+	margin: 2.5em auto;
+	position: relative;
+	text-align: center;
+}
+figure.video {
+	max-width: 600px;
+}
+figure.responsive img {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
+.video-wrapper {
+    height: 0;
+    padding-top: 0;
+    position: relative;
+
+    /* default: 4/3 */
+    padding-bottom:75%;
+}
+.video-wrapper.r16x9 {
+	padding-bottom:56.25%;
+}
+.video-wrapper video, .video-wrapper iframe  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+figcaption {
+	display: block;
+	margin-top: 0.5em;
+	padding: 0.2em;
+	text-align: center;
+}
+figcaption:before {
+	content: 'Figura ' counter(figure) ': ';
+}

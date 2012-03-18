@@ -1,0 +1,88 @@
+@media only screen and (max-width: 599px) {
+	body {
+		font-size: 87.5%;
+	}
+}
+@media only screen and (max-width: 540px) {
+	header {
+		height: auto;
+	}
+	header img {
+		border-width: 0.3em;
+		margin: 0.5em 0.5em 0 0.2em;
+		height: 90px;
+		width: 90px;
+	}
+	header div {
+		font-size: 250%;
+		margin-top: 0.8em;
+	}
+	article h1 {
+		padding: 0;
+	}
+	nav.top {
+		float: none;
+		margin: 0;
+		position: absolute;
+		top: 2.5em;
+		right: 0.3em;
+		width: auto;
+	}
+	nav.top .menu {
+		display: inline-block;
+		text-transform: lowercase;
+	}
+	nav.top ul {
+		display: none;
+	}
+	nav.bottom {
+		display: block;
+		font-size: 110%;
+	}
+	nav.bottom li {
+		margin: 0 1em 1em 0;
+	}
+	nav.bottom a {
+		padding: 0.4em 0.6em;
+	}
+
+	article h4 {
+		margin: 1em auto;
+		padding: 0.5em;
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	header img {
+		border-width: 0.2em;
+		margin-right: 0.6em;
+		margin-top: 0.4em;
+		height: 60px;
+		width: 60px;
+	}
+	header div {
+		font-size: 150%;
+		margin-top: 1em;
+	}
+
+	div#social {
+		float: none;
+		margin: 0.5em auto;
+	}
+	nav {
+		width: 96%;
+	}
+	nav.top {
+		top: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	header div {
+		margin-top: 0.65em;
+	}
+	nav.top {
+		margin-top: -44px;
+	}
+}
