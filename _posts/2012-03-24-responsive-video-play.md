@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Responsive Play: Vídeo do seu site responsivo em centenas de resoluções"
+category: mobile
+description: Novo projeto open source para você visualizar seu site em diversas resoluções.
+---
+
+Um site responsivo deve abrir direito em quais tamanhos? 320px, 480px, 600px, 768px e 960px? **Errado!** Responsividade de verdade é abrir em todo tipo de resolução, até as incomuns -- como os 533px do meu Android.
+
+Ferramentas de testes para *mobile* e *responsive design* costumam focar nas resoluções dos dispositivos mais famosos -- iPhones e iPads. Faltava uma ferramenta que permitisse testar um design *verdadeiramente responsivo* em **todas as resoluções** possíveis.
+
+Assim nasceu meu *pet project* chamado **Responsive Play** -- [disponível no Github](https://github.com/sergiolopes/responsive-play). Com ele, você pode gerar um **vídeo** mostrando seu design responsivo em centenas de resoluções. Como o vídeo abaixo do [ArquiteturaJava.com.br](http://www.arquiteturajava.com.br), um site responsivo em que trabalhei:
+
+{% youtube N_17S54YNhE ArquiteturaJava.com.br no Responsive Play %}
+
+Rodar o projeto é bem fácil:
+
+{% code bash %}
+play http://www.arquiteturajava.com.br
+{% endcode %}
+
+Você pode ainda passar opções como o o intervalo das resoluções a ser usado e até o tempo do vídeo:
+
+{% code bash %}
+play http://www.arquiteturajava.com.br 320 960
+{% endcode %}
+
+Mais um demo: um vídeo do [Boston Globe](http://www.bostonglobe.com), um famoso caso de design responsivo que funciona em todo tipo de resolução:
+
+{% youtube xmyYz6D-jCA BostonGlobe.com no Responsive Play %}
+
+Browser edition
+---------------
+
+Além disso, o **Responsive Play** tem uma versão web pra você rodar no navegador e visualizar seu site em diversas resoluções, sem gerar o vídeo. É só [acessar a página](http://sergiolopes.github.com/responsive-play/) e colocar o endereço de teste.
+
+{% figure ArquiteturaJava.com.br no Responsive Play, Browser Edition %}
+	responsive-play/browser-edition.png
+{% endfigure %}
+
+Mais
+----
+
+E o que você acha de testar sites responsivos em centenas de resoluções ao invés de algumas poucas de dispositivos famosos? Saiu [um artigo na Smashing Magazine](http://coding.smashingmagazine.com/2012/03/22/device-agnostic-approach-to-responsive-web-design/) essa semana que trata justo do porquê sites responsivos deveriam funcionar em todo tipo de resolução.
