@@ -170,3 +170,29 @@ figcaption {
 figcaption:before {
 	content: 'Figura ' counter(figure) ': ';
 }
+
+.tweetable {
+	background: #c0deed;
+	font-size: 1.1875em;
+	margin: 1em 0 0 1em;
+	padding: 0.8em 4.5em 0.8em 0.8em;
+	position: relative;
+
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+
+	-moz-box-shadow: 0 0 0.25em #8ec1da;
+	-webkit-box-shadow: 0 0 0.25em #8ec1da;
+	box-shadow: 0 0 0.25em #8ec1da;
+}
+.tweetable iframe {
+	position: absolute;
+	top: 0.9em;
+	right: 0.8em;
+}
+.tweetable + p {
+	font-style: italic;
+	margin: 0.5em 0 2.5em 2em;
+}
