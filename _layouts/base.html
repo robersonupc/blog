@@ -19,6 +19,10 @@
 
 	<!-- Estilos -->
 	<link rel="stylesheet" type="text/css" href="/style.css?4">
+	{% if page.css %}
+		<link rel="stylesheet" type="text/css" href="{{ page.css }}">
+	{% endif %}
+
 	<!-- Facebook -->
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:url" content="http://sergiolopes.org{{ page.url }}">
@@ -77,5 +81,9 @@
 
 	<div id="fb-root"></div>
 	<script src="/js/scripts.js?1" async></script>
+
+	{% if page.script %}
+		<script src="{{ page.script }}" async></script>
+	{% endif %}
 </body>
 </html>
