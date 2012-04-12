@@ -18,7 +18,7 @@
 	<link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:700' rel='stylesheet' type='text/css'>
 
 	<!-- Estilos -->
-	<link rel="stylesheet" type="text/css" href="/style.css?3">
+	<link rel="stylesheet" type="text/css" href="/style.css?4">
 	<!-- Facebook -->
 	<meta property="og:title" content="{{ page.title }}">
 	<meta property="og:url" content="http://sergiolopes.org{{ page.url }}">
@@ -38,26 +38,27 @@
 </head>
 <body>
 	<header>
+		<a href="/">
+			<img src="/img/base/foto.jpg" alt="Sérgio Lopes">
+		</a>
+		<div>
 			<a href="/">
-				<img src="/img/base/foto.jpg" alt="Sérgio Lopes">
+				<span id="sergio">sergio</span><span id="lopes">lopes</span><span id="org">.org</span>
 			</a>
-			<div>
-				<a href="/">
-					<span id="sergio">sergio</span><span id="lopes">lopes</span><span id="org">.org</span>
-				</a>
-			</div>
+		</div>
+	
+		<nav class="top">
+			<a href="#nav-bottom" class="menu">Menu</a>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/sobre/">Sobre</a></li>
+				<li><a href="/feed.xml">Feed</a></li>
+				<li><a href="https://twitter.com/sergio_caelum">Twitter</a></li>
+				<li><a href="https://www.facebook.com/sergio.caelum">Facebook</a></li>
+				<li><a href="https://github.com/sergiolopes">Github</a></li>
+			</ul>
+		</nav>
 	</header>
-	<nav class="top">
-		<a href="#nav-bottom" class="menu">Menu</a>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/sobre/">Sobre</a></li>
-			<li><a href="/feed.xml">Feed</a></li>
-			<li><a href="https://twitter.com/sergio_caelum">Twitter</a></li>
-			<li><a href="https://www.facebook.com/sergio.caelum">Facebook</a></li>
-			<li><a href="https://github.com/sergiolopes">Github</a></li>
-		</ul>
-	</nav>
 
 	<article>
 		{{ content }}
