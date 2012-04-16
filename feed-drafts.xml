@@ -15,7 +15,6 @@ title : sergiolopes.org
  </author>
 
  {% for post in site.posts %}
- {% if post.draft != true %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.production_url }}{{ post.url }}/"/>
@@ -27,7 +26,6 @@ title : sergiolopes.org
    		&lt;hr&gt;&lt;p&gt;Conteúdo original do blog &lt;a href=&quot;http://sergiolopes.org&quot;&gt;sergiolopes.org&lt;/a&gt;.&lt;/p&gt;
    </content>
  </entry>
- {% endif %}
  {% endfor %}
  
 </feed>

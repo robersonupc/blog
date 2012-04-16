@@ -9,7 +9,7 @@ ogtype: website
 <ul class="posts">
   {% for post in site.posts %}
 
-  	{% if post.category != 'blog' %}
+  	{% if post.draft != true and post.category != 'blog' %}
     	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
 
@@ -21,7 +21,7 @@ ogtype: website
 <ul class="posts">
   {% for post in site.posts %}
 
-  	{% if post.category == 'blog' %}
+  	{% if post.draft != true and post.category == 'blog' %}
     	<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endif %}
 
