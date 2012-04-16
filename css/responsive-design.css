@@ -1,0 +1,605 @@
+/* background geral */
+body {
+	background: #004e66 url(/img/posts/responsive-design/background.jpg);
+}
+
+/* sobrescreve header pra combinar */
+body:before {
+	background: rgba(30, 30, 30, 0.15);
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 182px;
+	width: 100%;
+}
+header div span {
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+header #sergio, header #org {
+	color: #FFF0A5;
+}
+header #lopes {
+	color: #FFB03B;
+}
+nav a {
+	background-color: #222;
+}
+nav a:hover {
+	background-color: #111;
+}
+
+/* titulo principal */
+h1 {
+	color: white;
+	color: rgba(255,255,255,0.9);
+	font-family: 'Della Respira', serif;
+	font-size: 4em;
+	font-weight: 400;
+	text-align: right;
+
+	float: right;
+	margin-right: 0.5em;
+
+	text-shadow: -1px -1px 2px rgba(30, 30, 50, 0.6);
+}
+h1 .dr {
+	display: block;
+	margin-right: 1em;
+}
+h1 .pu {
+	font-size: 0.6em;
+	font-style: italic;
+	line-height: 1.5em;
+	vertical-align: top;
+}
+h1 .wu {
+}
+
+/* base */
+section {
+	clear: both;
+	margin-bottom: 5em;
+	position: relative;
+}
+article p, article li, blockquote {
+	color: white;
+	color: rgba(255,255,255,0.95); 
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+section em {
+	color: #FFF0A5;
+	font-style: normal;
+}
+section strong {
+	color: #EDC951;
+	font-weight: normal;	
+}
+article a {
+	color: #edaa51;
+}
+article a:hover {
+	text-decoration: none;
+}
+
+/* intro */
+.intro {
+	font-size: 1.125em;
+	font-weight: normal;
+	line-height: 1.6em;
+	margin-left: 10%;
+}
+.intro p {
+	width: 62%;
+}
+
+/* social */
+.intro #social {
+	background: none;
+	position: absolute;
+	right: 0;
+	top: 1em;
+}
+
+.comeco {
+	padding-left: 210px;
+}
+	.comeco .destaque {
+		color: #FFB03B;
+		font-family: 'Della Respira', serif;
+		font-size: 1.5em;
+		padding: 0.5em;
+		text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+	}
+
+h1.sub {
+	color: #FFB03B;
+	font-family: 'Della Respira', serif;
+	font-size: 5em; /* 64 px */
+	float: none;
+	margin: 0;
+	padding: 0;
+	line-height: 0.8em;
+	text-transform: lowercase;
+}
+	h1.sub span {
+		display: block;
+	}
+
+.rwd  h1{
+	width: 4.8em;
+}
+	.rwd div.txt {
+		float: right;
+		padding-left: 1em;
+		max-width: 32em;
+		margin-top: 1em;
+	}
+	.rwd:after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+
+/* demo */
+.no-js .demo, .no-js .rwd button, .no-responsive-play .rwd button {
+	display: none;
+}
+.demo {
+	background: url(/img/posts/responsive-design/regua.png) no-repeat 7px 0;
+	padding-top: 2.4em;
+	margin-bottom: 2em;
+}
+.demo.video {
+	background: none;
+	padding-top: 0;
+}
+.demo .wrapper {
+	background: url(/img/posts/responsive-design/demobg.png);
+	border-radius: 8px;
+	box-shadow: inset 1px 1px 12px rgba(0,0,0,0.35);
+	padding: 10px;
+	position: relative;
+	overflow: hidden;
+	height: 340px;
+	width: 100%;
+}
+.demo .wrapper:before {
+	content: url(/img/posts/responsive-design/seta.png);
+	height: 117px;
+	width: 300px;
+	left: 300px;
+	position: absolute;
+	top: 100px;
+}
+.demo .protector {
+	content: ' ';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	bottom: 0;
+	right: 0;
+	z-index: 3;
+}
+.demo .protector:after {
+	content: url(/img/posts/responsive-design/ativar.png);
+	position: absolute;
+	bottom: -70px;
+	left: 5px;
+}
+.demo .wrapper iframe {
+	border: 0;
+	position: relative;
+	width: 240px;
+	z-index: 2;
+	-webkit-overflow-scrolling: touch; /* ios 5 */
+}
+.demo.up .wrapper iframe {
+	-o-transition: width 5s linear;
+	-ms-transition: width 5s linear;
+	-moz-transition: width 5s linear;
+	-webkit-transition: width 5s linear;
+	transition: width 5s linear;
+	height: 100%;
+}
+.demo.up .wrapper {
+	-o-transition: height 3s linear;
+	-ms-transition: height 3s linear;
+	-moz-transition: height 3s linear;
+	-webkit-transition: height 3s linear;
+	transition: height 3s linear;
+
+	height: 470px;
+}
+
+.rwd button {
+	background: #FFB03B;
+	border: 0;
+	color: #222;
+	font-size: 2em;
+
+	padding: 0.2em 0.7em 0.3em 0.7em;
+	text-align: center;
+
+	display: block;
+	margin: 1em auto;
+	max-width: 300px;
+	width: 96%;
+
+	border-radius: 0.3em;
+	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
+	text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.6);
+}
+.rwd button:active {
+	position: relative;
+	top: 1px;
+	text-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+
+.oque ul {
+	font-size: 1.125em; /* 18px */
+	padding-left: 14em;
+	width: 100%;
+	float: right;
+
+	list-style-type: none;
+}
+	.oque li {
+		color: #EFE0E0;
+		font-style: italic;
+		font-size: 0.833em; /* 15px */
+		padding-bottom: 1.8em;
+	}
+	.oque li span {
+		color: #FFF0A5;
+		display: block;
+		font-size: 1.2em; /* 18px */
+		font-style: normal;
+	}
+
+.como h2, .mas h2, .fim h2 {
+	color: #123745;
+	font-family: 'Della Respira', serif;
+	font-size: 5em;
+	text-shadow: -1px -1px 2px rgba(0,0,0,0.65);
+	font-weight: normal;
+	text-transform: lowercase;
+}
+
+.como {
+	
+}
+	.como h2 {
+		display: inline-block;
+		margin: 0;
+		vertical-align: baseline;
+	}
+		.como h2 span {
+			display: none;
+		}
+	.como .destaque {
+		color: #153f4f;
+		display: inline-block;
+		font-size: 1.8em;
+		padding-left: 1em;
+		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+	}
+
+	.como ol {
+		margin-top: 2em;
+		list-style-type: none;
+		padding: 0;
+	}
+		.como li {
+			position: relative;
+		}
+		.como h3 {
+			font-family: 'Della Respira', serif;
+			font-size: 3em;
+			font-weight: normal;
+			line-height: 128px;
+			height: 128px;
+			padding-left: 1.6em;
+			text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+		}
+		.como h3:before {
+			background: url(/img/posts/responsive-design/numeros.png) no-repeat;
+			background-position: -129px 0;
+			content: ' ';
+			display: inline-block;
+			margin-right: 0.5em;
+			height: 128px;
+			vertical-align: middle;
+			width: 129px;
+		}
+			.como li:first-child h3:before {
+				background-position: 0 0;
+			}
+			.como li:last-child h3:before {
+				background-position: -258px 0;
+			}
+
+	.como .txt {
+		position: relative;
+	}
+	.como .txt p {
+		padding-right: 310px;
+	}
+
+	.como .mq {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+		.como small {
+			display: block;
+			max-width: 240px;
+			margin: 0 auto;
+			font-style: italic;
+		}
+	.como .highlight {
+		margin-top: 0;
+	}
+	.como pre {
+		padding: 0 0.5em;
+	}
+	.como pre code:before {
+		display: none;
+	}
+
+.como .fluido .txt p {
+	padding-right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 600px;
+	width: 95%;
+}
+.como .imagens .txt p {
+	padding-right: 0;
+	padding-left: 310px;
+}
+
+.mas {
+
+}
+	.mas h2 {
+		margin-bottom: 0;
+	}
+	.mas p {
+		margin-left: auto;
+		max-width: 680px;
+		padding-right: 8%;
+		width: 94%;
+	}
+	.mas h3 {
+		color: #FFB03B;
+		font-family: 'Della Respira', serif;
+		font-size: 1.8em;
+		font-weight: normal;
+		padding-left: 6em;
+		padding-top: 1.5em;
+		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+	}
+
+.mb h1 {
+	line-height: 0.9em;
+	width: 3.5em;
+}
+.fim h2 {
+	margin-bottom: 0;
+}
+
+.mb p, .fim p {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 680px;
+	width: 96%;
+}
+
+.fim .ultimo {
+	font-size: 1.25em;
+	line-height: 1.6em;
+	max-width: 780px;
+	padding-top: 1.2em;
+}
+
+/* facebook */
+#facebook {
+	background: rgba(30,30,30, 0.2);
+	padding-top: 3em;
+	padding-bottom: 3em;
+	margin-bottom: 0;
+}
+#facebook .fb-comments {
+	display: block;
+}
+#facebook .fb {
+	color: white;
+	font-size: 400;
+	margin-bottom: 1em;
+	text-shadow: -1px -1px 2px rgba(30, 30, 50, 0.6);
+}
+
+
+/** RESPONSIVE **/
+
+@media (min-width: 700px) {
+	/* só mostra imagens decorativas a partir de 700px */
+	h1 {
+		background: url(/img/posts/responsive-design/h1.png) no-repeat center center;
+		background-size: 100%;
+	}
+	.comeco {
+		background: url(/img/posts/responsive-design/iphone-sketch.png) no-repeat left top;
+	}
+	.como .imagens {
+		background: url(/img/posts/responsive-design/pagedesign.png) no-repeat 10px center;
+	}
+
+}
+
+@media (max-width: 880px) {
+	.mas h3 {
+		padding-left: 3em;
+	}
+}
+
+@media (max-width: 760px) {
+
+	.como h2, .mas h2, .fim h2 {
+		font-size: 5em;
+	}
+	.como .destaque {
+		font-size: 1.5em;
+	}
+	.como .txt p {
+		padding-right: 0;
+	}
+	.como .mq {
+		padding-right: 45%;
+		position: relative;
+		top: auto;
+		right: auto;
+	}
+		.como small {
+			max-width: 43%;
+			position: absolute;
+			top: 3em;
+			right: 0;
+		}
+	.como .imagens {
+		background-position: 0 center;
+	}
+		.como .imagens .txt p {
+			padding-left: 265px;
+		}
+	.mas h3 {
+		padding-left: 0;
+	}
+}
+
+@media (max-width: 699px) {
+	article h1 {
+		padding: 0.5em 0 0 0;
+	}
+	h1.title {
+		font-size: 3.5em;	
+	}
+	.intro p {
+		margin-left: auto;
+		margin-right: auto;
+		width: 80%;
+	}
+	.intro #social {
+		float: none;
+		position: relative;
+		right: auto;
+		top: auto;
+		margin: 0 auto;
+	}
+	.comeco {
+		padding-left: 0;
+		margin-left: auto;
+		width: 96%;
+	}
+	.como .destaque {
+		font-size: 1.4em;
+		padding-left: 0;
+		display: block;
+		margin-top: 0;
+	}
+	.como .imagens .txt p {
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		width: 95%;
+	}
+
+}
+
+@media (max-width: 600px) {
+	.rwd .txt:last-child {
+		margin-top: 0;
+	}
+	.como h3 {
+		padding-left: 0.5em;
+	}
+	.demo .wrapper:before, .demo .protector:after {
+		display: none;
+	}
+}
+
+@media (max-width: 540px) {
+	body:before {
+		height: 106px;
+	}
+	section {
+		margin-bottom: 3em;
+	}
+	.intro p {
+		width: 92%;
+	}
+	.como h2, .mas h2, .fim h2 {
+		font-size: 4em;
+	}
+}
+
+@media (max-width: 520px) {
+	.rwd {
+		margin-bottom: 2em;
+	}
+	.como h3 {
+		padding-bottom: 4em;
+		padding-left: 0;
+		line-height: 1em;
+	}
+	.como h3:before {
+		display: block;
+	}
+}
+
+@media (max-width: 479px) {
+	h1.title {
+		font-size: 3em;	
+	}
+	.como .mq {
+		padding-right: 0;
+		margin-bottom: 0;
+	}
+		.como small {
+			max-width: 80%;
+			position: relative;
+			top: auto;
+		}
+}
+
+@media (max-width: 460px) {
+	body:before {
+		height: 73px;
+	}
+	h1.title {
+		font-size: 2.5em;	
+	}
+	.intro p {
+		width: 100%;
+	}
+}
+
+@media (max-width: 400px) {
+	h1.sub {
+		font-size: 4em;
+	}
+	h1.title {
+		font-size: 2.2em;	
+	}
+}
+
+/* TODO suportar 240px */
