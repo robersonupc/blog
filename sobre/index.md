@@ -16,7 +16,7 @@ Atividades
 * Instrutor e desenvolvedor na [Caelum](http://www.caelum.com.br/)
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
 * Palestrante em diversos eventos
-* Co-autor do livro [Introdução a arquiterua e design Java](http://www.arquiteturajava.com.br/)
+* Co-autor do livro [Introdução a arquitetura e design Java](http://www.arquiteturajava.com.br/)
 
 Interesses atuais
 -----------------
@@ -51,5 +51,6 @@ Este blog
 * Baseado no [Jekyll](https://github.com/mojombo/jekyll/)
 * Estático, rápido e otimizado -- não lerdo igual Wordpress
 * [Código fonte disponível](https://github.com/sergiolopes/blog) -- layout, estrutura, códigos e conteúdo
+* Suporte para Chrome16+, Firefox9+, iOS 4.2+, Android 2.2+, Opera 11.5+. IE9 fica razoável mas não suporta tudo.
 * Todo conteúdo e códigos liberados para consumo pessoal e aprendizado -- **não copie e poste em outros lugares**
 * No ar desde **Março de 2012**
