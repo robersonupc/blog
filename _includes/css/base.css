@@ -8,7 +8,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-header, article {
+header, article, .container {
 	margin: 0 auto;
 	max-width: 900px;
 	position: relative;
@@ -16,7 +16,7 @@ header, article {
 }
 
 header {
-	height: 150px;
+	
 }
 header img {
 	border: 0.5em solid white;
@@ -27,7 +27,7 @@ header img {
 	-webkit-box-shadow: 0 0 0.35em #556270;
 	box-shadow: 0 0 0.35em #556270;
 
-	margin: 1em 1.5em 3em 0;
+	margin: 1em 1.5em 1em 0;
 	
 	height: 150px;
 	width: 150px;
@@ -79,7 +79,7 @@ article h1 {
 	margin-top: 0;
 	padding: 1em 0 0.5em 0;
 }
-article p:first-of-type {
+article.post p:first-of-type {
 	font-size: 1.125em;
 	line-height: 1.6em;
 }
