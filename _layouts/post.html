@@ -5,13 +5,7 @@ ogtype: article
 <article class="post">
 <h1>{{ page.title }}</h1>
 
-<div id="social">
-	<div class="fb-like" data-send="false" data-layout="box_count" data-show-faces="true"></div>
-	<div class="g-plusone" data-size="tall"></div>
-	<a href="https://twitter.com/share" class="twitter-share-button" data-via="sergio_caelum" data-related="sergio_caelum" data-count="vertical">
-		Tweet
-	</a>
-</div>
+{% include snippets/social.html %}
 
 {{ content }}
 
@@ -19,5 +13,5 @@ ogtype: article
 
 <h3 class="fb">Comentários via Facebook</h3>
 
-<div class="fb-comments" data-href="http://sergiolopes.org{{ page.url }}" data-num-posts="10" data-width="600"></div>
+<div class="fb-comments" data-href="{{ site.production_url }}{{ page.url }}" data-num-posts="10" data-width="600"></div>
 </article>
