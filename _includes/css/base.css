@@ -84,7 +84,7 @@ article.post p:first-of-type {
 	line-height: 1.6em;
 }
 
-.fb-comments, .fb-comments iframe {
+.fb-comments, .fb-comments > span, .fb-comments iframe {
 	width: 100% !important;
 }
 
