@@ -1,6 +1,6 @@
 permalink: /:title/
 exclude: ["README.md", "bin", ".gitignore"]
-production_url : http://www.sergiolopes.org
+production_url : http://sergiolopes.org
 
 markdown: kramdown
 pygments: true
