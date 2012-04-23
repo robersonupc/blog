@@ -5,7 +5,7 @@ category: mobile
 description: Muita gente abre emails no celular. Se sua newsletter não é compatível, você está perdendo dinheiro.
 
 css: /css/email-responsivo.css
-shareImage: /img/posts/responsive-design/share.jpg
+shareImage: /img/posts/responsive-email/share.jpg
 ---
 
 Muita gente abre emails no celular. Falamos que a web mobile tem crescido, mas abrir emails fora do Desktop já é uma tendência ainda maior. Há [pesquisas][cmclients] que apontam mais de 20% de taxa de abertura de emails em mobile. E é bom estar preparado, se você manda emails para seus usuários -- newsletters, informativos, emails de confirmação, notificações.
