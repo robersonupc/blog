@@ -52,3 +52,6 @@ FileETag None
 AddType video/ogg .ogv
 AddType video/mp4 .mp4
 AddType video/webm .webm
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz

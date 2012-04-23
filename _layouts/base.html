@@ -42,8 +42,8 @@
 	<meta name="description" content="{{ page.description }}">
 
 	<!-- Feed -->
-	<link rel="alternate" type="application/atom+xml" title="SergioLopes.org" href="http://sergiolopes.org/feed.xml">
-	<script>document.documentElement.className = 'js'</script>
+	<link rel="alternate" type="application/atom+xml" title="SergioLopes.org" href="{{site.production_url}}/feed.xml">
+	<script>document.documentElement.className = 'js '+ (!!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', "svg").createSVGRect ? 'svg':'nosvg')</script>
 </head>
 <body>
 	<header>
