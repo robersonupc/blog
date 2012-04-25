@@ -12,7 +12,7 @@ Muita gente abre emails no celular. Falamos que a web mobile tem crescido, mas a
 
 Recentemente, trabalhei na reestruturação da [newsletter da Caelum][newsletter] e um dos focos foi a criação de um **email responsivo**. Reparamos que a taxa de visitantes mobile no site da Caelum vindas da newsletter é **o dobro** dos visitantes normais. E nossa newsletter não era responsiva ainda.
 
-Conheça a nova [newsletter responsiva da Caelum](/resources/email-responsivo/newsletter.html).
+Conheça a nova [newsletter responsiva da Caelum](/resources/email-responsivo/newsletter.html) (redimensione o navegador pra vê-la em ação).
 
 ## One email
 
@@ -22,7 +22,7 @@ Quando falamos em email, não há escolha. **Só existe um email**, entregue par
 
 ## Mobile first
 
-Esse é a dica que se dá normalmente para sites responsivos. Mas pensar em [mobile primeiro][responsivo], vai ajudar **muito** o desenvolvimento do seu email responsivo.
+Esse é a dica que se dá normalmente para sites responsivos. Mas pensar em [mobile primeiro][responsive], vai ajudar **muito** o desenvolvimento do seu email responsivo.
 
 Na web, podemos escolher entre *mobile first* ou *desktop first*. Prefiro o primeiro, mas sei que às vezes é bom ter a segunda opção. E, com as [media queries][mediaqueries], sempre conseguimos ajustar o layout para todo tipo de dispositivo. Bem, isso me leva ao *próximo ponto:*
 
@@ -104,7 +104,7 @@ Se não quiser perder a cabeça, use algum serviço de testes de emails como o e
 
 Óbvio, mas não custa lembrar: O email mais acessível, portável, usável, prático e direto é o... **texto puro**. Funciona em qualquer cliente de email, é responsivo e seu usuário está acostumado.
 
-Aliás, lembre disso: **usuários estão acostumados a mensagens em texto puro**. Você não pode fazer um site todo em txt em pleno 2012 sem parecer louco, mas, no email, é diferente. Um email texto puro passa a ideia de objetividade. 
+Aliás, lembre disso: **usuários estão acostumados a emails em texto puro**. Você não pode fazer um site todo em txt em pleno 2012 sem parecer louco, mas, no email, é diferente. Um email texto puro passa a ideia de objetividade. 
 
 Recomendo mensagens texto para emails de confirmação, notificações e alertas. Até para certas newsletters ele fica bom. Ou você pode mandar um email em HTML mas fortemente baseado em texto, quase sem formatação visual -- só uns estilos nos títulos e cores. **Mega acessível, compatível e responsivo**.
 
