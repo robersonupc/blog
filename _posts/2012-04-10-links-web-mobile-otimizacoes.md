@@ -2,7 +2,7 @@
 layout: post
 title: "Meu blogroll: o que eu leio sobre Web, Mobile, Design, Otimizações e afins"
 category: blog
-description: Descubra porque um site rápido é importante em 14 fatos tweetáveis
+description: Tenho mais de 150 feeds assinados no meu *Google Reader* que acompanho diariamente. Vários desses sobre assuntos pertinentes a esse blog e seus visitantes.
 ---
 
 Tenho mais de **150 feeds** assinados no meu *Google Reader* que acompanho diariamente. Vários desses sobre assuntos pertinentes a esse blog e seus visitantes.
