@@ -14,6 +14,8 @@ Recentemente, trabalhei na reestruturação da [newsletter da Caelum][newsletter
 
 Conheça a nova [newsletter responsiva da Caelum](/resources/email-responsivo/newsletter.html) (redimensione o navegador pra vê-la em ação).
 
+Trabalhei também em uma newsletter para o evento QCon 2012 e publiquei um [post especificamente sobre ela](/newsletter-responsiva-qcon-2012/ "Artigo: A Newsletter Responsiva do QCon 2012"), incluindo um projeto no Github com o código fonte.
+
 ## One email
 
 Falamos muito que a web é única e de [web design responsivo][responsive]. Mas, se você quiser *muito*, pode fazer vários sites diferentes -- um mobile, um Desktop, um pra tablets etc. Na web, é sua escolha abraçar ou não a ideia de web única.
