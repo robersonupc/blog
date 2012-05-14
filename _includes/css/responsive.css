@@ -75,7 +75,10 @@
 		font-size: 150%;
 		margin-top: 1em;
 	}
-
+	article.post blockquote {
+		margin-left: 0.8em;
+		margin-right: 0;
+	}
 	div#social {
 		float: none;
 		margin: 0.5em auto;

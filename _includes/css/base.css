@@ -84,6 +84,16 @@ article.post > p:first-of-type {
 	line-height: 1.6em;
 }
 
+article.post blockquote {
+	background: #eee;
+	border-left: 10px solid #ccc;
+	padding: 0.1em 0.5em;
+
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	box-shadow: 1px 1px 3px rgba(30,30,30,0.25);
+}
+
 .fb-comments, .fb-comments > span, .fb-comments iframe {
 	width: 100% !important;
 }
@@ -172,8 +182,9 @@ figcaption:before {
 	content: 'Figura ' counter(figure) ': ';
 }
 
-.tweetable {
+article.post .tweetable {
 	background: #c0deed;
+	border: 0;
 	font-size: 1.1875em;
 	margin: 1em 0 0 1em;
 	padding: 0.8em 4.5em 0.8em 0.8em;
@@ -188,12 +199,12 @@ figcaption:before {
 	-webkit-box-shadow: 0 0 0.25em #8ec1da;
 	box-shadow: 0 0 0.25em #8ec1da;
 }
-.tweetable iframe {
+article.post .tweetable iframe {
 	position: absolute;
 	top: 0.9em;
 	right: 0.8em;
 }
-.tweetable + p {
+article.post .tweetable + p {
 	font-style: italic;
 	margin: 0.5em 0 2.5em 2em;
 }

@@ -23,6 +23,10 @@ nav a:hover {
 article p {
 	color: #222;
 }
+article.post blockquote {
+	background: #FFF0BB;
+	border-left-color: #FF9900;
+}
 
 h2 {
 	color: #424242;
