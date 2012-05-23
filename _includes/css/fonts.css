@@ -19,6 +19,13 @@ h2, h3.fb {
 	font-weight: 700;
 }
 
+h3 {
+	font-family: 'Droid Serif', serif;
+	font-size: 1.3em;
+	line-height: 1.2em;
+	font-weight: 400;	
+}
+
 code {
   font-family:'Droid Sans Mono', 'Bitstream Vera Sans Mono','Courier', monospace;
 }
