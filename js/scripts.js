@@ -45,3 +45,30 @@ _gaq.push(['_trackPageview']);
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 })();
 
+// analytics: track external links
+(function(doc) {
+	if (!document.querySelectorAll) return;
+
+	var rootUrl = location.protocol + '//' + (location.hostname||location.host) + 
+				((document.location.port||false) ? ':' + location.port : '') + '/';
+
+	function track(elements) {
+		for (var i = 0; i < elements.length; i++) {
+			var el = elements[i];
+
+			// skips .dont-track links
+			if (el.className == 'dont-track') continue;
+
+			// skips self links
+			if (el.href.indexOf(rootUrl) === 0) continue;
+
+			// track
+			el.addEventListener('click', function(){
+				_gaq.push(['_trackPageview', '/EXTERNAL/' + this.href]);
+			}, false);
+		}
+	}
+
+	track(doc.querySelectorAll('a[href^="http://"]'));
+	track(doc.querySelectorAll('a[href^="https://"]'));
+})(document);
