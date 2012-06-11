@@ -16,6 +16,6 @@ Se você tiver tempo para apenas uma coisa agora, foque em deixar [seu site mais
 
 O site Desktop menos mobile do mundo se torna **acessível** num celular se for **rápido e otimizado**. E um site cuidadosamente construído pra mobile é **lixo** se for **lento e pesado**.
 
-É verdade que [performance é importante pra todo mundo](http://localhost:4000/tweetables-performance-web-otimizacoes/). Mas em mobile, é **absolutamente essencial**. E apesar das limitações de hardware e rede dos aparelhos, 71% dos usuários esperam que um site abra tão rápido no celular quanto no Desktop ([fonte](http://www.gomez.com/wp-content/downloads/19986_WhatMobileUsersWant_Wp.pdf "Pesquisa Gomez/Compuware em julho de 2011")). Um site mobile não otimizado simplesmente não será usado.
+É verdade que [performance é importante pra todo mundo](/tweetables-performance-web-otimizacoes/). Mas em mobile, é **absolutamente essencial**. E apesar das limitações de hardware e rede dos aparelhos, 71% dos usuários esperam que um site abra tão rápido no celular quanto no Desktop ([fonte](http://www.gomez.com/wp-content/downloads/19986_WhatMobileUsersWant_Wp.pdf "Pesquisa Gomez/Compuware em julho de 2011")). Um site mobile não otimizado simplesmente não será usado.
 
 *Sempre lembre da funcionalidade **mais importante** quando pensar na sua estratégia mobile e [otimize seu site](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/).*
