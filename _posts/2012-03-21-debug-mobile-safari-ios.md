@@ -8,6 +8,8 @@ description: Use o debugger do WebKit/Safari no seu Desktop para inspecionar pá
 
 A partir do **iOS 5**, é possível fazer *remote debug* de qualquer aba aberta no Mobile Safari, através do famoso *Inspector* do Webkit no Desktop enquanto se navega no celular/emulador.
 
+*(tenho também um post sobre [debug remoto no Chrome Mobile do Android](/remote-debug-chrome-mobile/))*
+
 Criei então um script bash que abre o emulador do iOS 5 e conecta o debugger nele via Safari. É bastante útil pra desenvolvimento Web mobile. Basta rodar o script no Mac após ter instalado o **XCode** mais novo que inclui o emulador do iOS 5.
 
 Após rodar no terminal, abra o Mobile Safari dentro do emulador e navegue até a página que quer debugar. Depois, volte ao terminal e dê *enter* para o script continuar e capturar o debug. Ele vai abrir o Safari no seu Desktop com o *Web Inspector*.
