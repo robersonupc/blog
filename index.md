@@ -22,6 +22,8 @@ ogtype: website
 <h3>Meus principais posts no Blog da Caelum</h3>
 
 <ul class="posts">
+  <li><a href="http://blog.caelum.com.br/css-facil-flexivel-e-dinamico-com-less/">CSS fácil, flexível e dinâmico com LESS</a></li>
+
   <li class="destaque"><a href="http://blog.caelum.com.br/2012-e-o-ano-do-mercado-mobile-no-brasil/">2012 é o ano do mercado mobile no Brasil</a></li>
 
   <li><a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/">Flexibilidade em páginas para dispositivos móveis com media queries</a></li>
