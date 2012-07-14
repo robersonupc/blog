@@ -165,6 +165,9 @@ figure.responsive img {
 .video-wrapper.r16x9 {
 	padding-bottom:56.25%;
 }
+.slideshare .video-wrapper {
+	padding-bottom: 83.3723653%;
+}
 .video-wrapper video, .video-wrapper iframe  {
     position: absolute;
     left: 0;
