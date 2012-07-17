@@ -45,6 +45,17 @@ A palestra tratou de diversos tópicos de otimização, mas, claro, pelo tempo c
 
 ------
 
+## Outras palestras do evento
+
+Aproveitei que estava lá no evento e fiz umas anotações sobre as outras excelentes palestras, junto com comentários meus:
+
+* [Rest Client Side](/front-in-bh-rest-client-side-alexandre-gaigalas/), com Alexandre Gaigalas
+* [Wordpress aliado do Front End](/front-in-bh-wordpress-leandro-vieira/), com Leandro Vieira
+* [Amazon AWS e CDN no Peixe Urbano](/front-in-bh-peixe-urbano-amazon-cdn-alexandre-tabor/), com Alexandre Tabor
+* [Novo Cinto de Utilidades do Desenvolvedor JavaScript](/front-in-bh-novidades-mozilla-leo-balter/), com Leo Balter
+* [Desafios do Design Mobile](/front-in-bh-desafios-design-mobile-horacio-soares/), com Horácio Soares
+* [CSS Sucks](/front-in-bh-css-sucks-zeno-rocha/), com Zeno Rocha
+* [Estilizando folhas de estilo com estilo](/front-in-bh-estilizando-css-com-estilo-bernard-de-luna/), com Bernard de Luna
 
 Você estava no evento? Deixe sua opinião sobre a palestra e não esqueça de participar da **promoção aqui no blog**!
 
