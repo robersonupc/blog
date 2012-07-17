@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Front In BH 2012: sobre performance e otimizações e web"
+title: "Front In BH 2012: palestra sobre performance e otimizações web"
 category: palestra
+class: destaque
 description: Slides, anotações e complementos da minha palestra sobre Otimizações Web no FrontInBH 2012
 ---
 
@@ -12,6 +13,10 @@ Dia 14 de Julho, tive o prazer de palestrar no [FontInBH 2012](http://www.fronti
 Tive a oportunidade de palestrar sobre esse tema que gosto bastante e considero de máxima importância para os desenvolvedores. Os slides da palestra estão no [slideshare](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes "Slides: Por uma Web mais rápida: técnicas de otimização de sites") pra você ver ou baixar.
 
 {% slideshare 13635829 %}
+
+**UPDATE**: coloquei também um vídeo com o áudio da palestra e os slides. Um tanto amador mas dá pra acompanhar sem problemas:
+
+{% youtube GuPEcngbNAw %}
 
 A palestra tratou de diversos tópicos de otimização, mas, claro, pelo tempo curto, não focou em detalhes de implementação. Se você gostou e quer se aprofundar no tema, sugiro alguns links:
 
