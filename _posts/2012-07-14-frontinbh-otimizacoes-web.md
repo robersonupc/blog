@@ -31,7 +31,7 @@ A palestra tratou de diversos tópicos de otimização, mas, claro, pelo tempo c
 * Tenho um post bem completo no [blog da Caelum com 26 práticas de otimizações](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/). Recomendo.
 * Os guias de boas práticas do [Google](https://developers.google.com/speed/docs/best-practices/rules_intro) e do [Yahoo](http://developer.yahoo.com/performance/rules.html) são excelentes.
 * Livros nós temos: *High Performance Web Sites*, 2007, O'Reilly e *Even Faster Web Sites*, 2009, O'Reilly, do Steve Souders.
-* **[Curso Online de Otimizações Web](caelum.com.br/curso/online/otimizacoes-web/) da Caelum que estou fazendo (lançamento em breve)**
+* **[Curso Online de Otimizações Web](http://www.caelum.com.br/curso/online/otimizacoes-web/) da Caelum que estou fazendo (lançamento em breve)**
 
 ### Ferramentas pra implementar as técnicas vistas
 

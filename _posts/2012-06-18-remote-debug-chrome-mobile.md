@@ -3,7 +3,7 @@ layout: post
 title: Como debugar remotamente uma página no Chrome Mobile do Android
 category: mobile
 
-description: Use o debugger do WebKit/Safari no seu Desktop para inspecionar página rodando no emulador do iOS.
+description: Use o debugger do Chrome no seu Desktop para inspecionar página rodando no Chrome Mobile do Android.
 ---
 
 O desenvolvimento de página web mobile é difícil de testar por envolver outros aparelhos. Mas os browsers mais novos já possuem recurso de debug remoto. Além do [iOS](/debug-mobile-safari-ios/ 'Meu post sobre remote debug no iOS 5'), o **Chrome Mobile** também traz esse recurso.
