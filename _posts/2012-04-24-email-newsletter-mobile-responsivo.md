@@ -118,6 +118,9 @@ Não adianta ter uma super newsletter responsiva e, quando o usuário clica no c
 
 **Email é o ponto de partida para uma experiência online com seu usuário**. Faça seu site também mobile/responsivo e ofereça uma experiência completa e satisfatória pra quem não está no Desktop.
 
+## Dica bônus 2: HTML email boilerplate
+
+O [HTMLemailboilerplate.com](http://htmlemailboilerplate.com/) tem muitas dicas práticas de HTML e CSS pra se criar emails ricos, inclusive com dicas de mobile. Vale bastante a pena acompanhar.
 
 
 [responsive]: /responsive-web-design/ "Artigo: Design Responsivo por uma Web Única"
