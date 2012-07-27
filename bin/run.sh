@@ -1,3 +1,3 @@
 #!/bin/bash
 
-jekyll --server --auto
+jekyll --server --auto --limit_posts 1
