@@ -19,6 +19,9 @@
 
 	<!-- Estilos -->
 	<link rel="stylesheet" type="text/css" href="/style.css?9">
+	{% if page.layoutcss %}
+		<link rel="stylesheet" type="text/css" href="{{ page.layoutcss }}">
+	{% endif %}
 	{% if page.css %}
 		<link rel="stylesheet" type="text/css" href="{{ page.css }}">
 	{% endif %}
@@ -85,6 +88,9 @@
 	<div id="fb-root"></div>
 	<script src="/js/scripts.js?2" async></script>
 
+	{% if page.layoutscript %}
+		<script src="{{ page.layoutscript }}" async></script>
+	{% endif %}
 	{% if page.script %}
 		<script src="{{ page.script }}" async></script>
 	{% endif %}
