@@ -13,7 +13,7 @@ p code, li code {
 	clear: both;
 	padding: 0;
 	margin: 1.5em 0;
-	overflow-x: scroll;
+	overflow-x: auto;
 	position: relative;
 	line-height: normal;
 
