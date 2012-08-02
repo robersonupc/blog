@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# build stylus
+stylus css/palestra/ -w -u nib
+
 # compress html
 for file in `find $1  -name '*.html'`; do
 	echo Compressing $file
