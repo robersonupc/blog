@@ -1,0 +1,1419 @@
+---
+layout: presentation
+title: 'Uma tonelada de truques de Web mobile. - Palestra QCon SP 2012'
+category: mobile
+description: Uma cacetada de truques de performance, otimizações, UX, HTML5 e CSS3 pra deixar seu site mobile tinindo. E são dicas valiosas mesmo que você prefira um site exclusivo mobile ao invés de responsivo, ou mesmo uma webapp.
+slug: mobile-web
+offlineManifest: /manifest/palestra/mobile-web.manifest
+---
+
+<article class="presentation">
+
+<!--
+####   ABERTURA
+ -->
+
+<section class="slide" id="capa">
+	<div class="content">
+		<h1>
+			<span>Truques de</span>
+			<span>Web mobile</span>
+		</h1>
+
+		<div class="aovivo">
+			<a href="http://sergiolopes.org/aovivo">sergiolopes.org<span>/aovivo</span></a>
+			<div>(acesse agora no celular, tablet ou desktop pra acompanhar a palestra)</div>
+		</div>
+	</div>
+	<aside class="notes">
+		TODO abertura explicando sincronizacao
+
+		Essa é a palestra sobre Mobile Web que dei no QCon 2012.
+
+		- abertura
+		- Apresenta interatividade da palestra beta
+	</aside>
+	<aside class="audience">
+		<h2>Se prepara aí que já já vai começar a palestra!</h2>
+	</aside>
+</section>
+
+<section class="slide" id="quem">
+	<div class="content">
+		<h1>
+			<span>Sérgio</span>
+			<span>Lopes</span>
+		</h1>
+
+		<ul>
+			<li><a href="https://twitter.com/sergio_caelum">@sergio_caelum</a></li>
+			<li><a href="http://sergiolopes.org">sergiolopes.org</a></li>
+		</ul>
+	</div>
+
+	<aside class="notes">
+		<p>Sou instrutor e desenvolvedor na Caelum. Trabalho com Web há 12 anos e ultimamente tenho me dedicado a Web Mobile.</p>
+	</aside>
+	<aside class="audience">
+		<p>Aproveita e já <a href="http://twitter.com/sergio_caelum" target="_blank">me segue aí no Twitter</a>.</p>
+	</aside>
+</section>
+
+
+<!--
+####   INTRODUCAO
+ -->
+
+<section class="slide destaque" id="bombando">
+	<div class="content">
+		<h1>
+			<span>Mobile tá</span>
+			<span>bombando</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>Tem muita coisa acontecendo no mundo mobile.</p>
+
+		<p>A Web é essencial. Mesmo que você goste de Apps, você precisa de web mobile. O usuário recebe links de amigos no email ou Facebook, ele busca algo no Google etc. Ele navega. E isso é web. Eu, pessoalmente, acredito que o futuro mobile é web, não apps nativas, mas isso é assunto pra uma outra palestra inteira.</p>
+
+		<p>Aqui, vamos focar na Web mobile. E basicamente atacamos o mundo Web mobile de duas formas.</p>
+	</aside>
+</section>
+
+<section class="slide" id="responsive">
+	<div class="content">
+		<h1>
+			<span>Design</span>
+			<span>Responsivo</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>Um <a href="http://sergiolopes.org/responsive-web-design/">design responsivo</a> é um site único pro Desktop e mobile que se adapta. O segredo aqui é pensar em adaptação e flexibilidade. Só relembrando, o ponto central são as <a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/">media queries</a>, que serão importantes pra algumas coisas que faremos aqui também.</p>
+	</aside>
+	<aside class="audience">
+		<p>Teve <a href="http://www.slideshare.net/eshiota/responsive-web-design-e-a-ubiquidade-da-web">palestra do Shiota</a> mais cedo aqui no QCon sobre <b>design responsivo</b>.</p>
+	</aside>
+</section>
+
+<section class="slide" id="mediaqueries">
+	<div class="content">
+		<h1>
+			<span>Relembrando</span>
+			<span>
+				<div>media</div>
+				<div>queries</div>
+			</span>
+		</h1>
+
+		{% code css %}
+		@media (min-width: 400px) {
+		   body {
+		      font-size: 125%;
+		   }
+		}
+		{% endcode %}
+
+		{% code css %}
+		@media (min-width: 400px) { }
+		@media (min-width: 600px) and (max-width: 790px){}
+		@media (max-width: 600px) and (orientation: landscape){}
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Esses são alguns exemplos de media queries comuns. Se você não conhece, recomendo a leitura do <a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/">meu post sobre media queries</a> no blog da Caelum.</p>
+	</aside>
+	<aside class="audience">
+		<p>A cor de fundo aqui muda de acordo com a largura do navegador.</p>
+		<p>No celular ou tablet, gire o aparelho. No Desktop, redimensione a janela.</p>
+	</aside>
+</section>
+
+<section class="slide" id="sitemobile">
+	<div class="content">
+		<div class="iphone portrait">
+			<div class="screen">
+				<h1>Site mobile</h1>
+			</div>
+		</div>
+
+		<h2>m.site.com</h2>
+	</div>
+
+	<aside class="notes">
+		<p>Outra forma é fazer um site mobile exclusivo. Embora eu prefira responsivo, sei que há cenários em que um site mobile exclusivo se encaixa melhor.</p>
+
+		<p>Mas não se engane: um site mobile exclusivo hoje é, de certa forma, responsivo também. A não ser que você queira criar um site pra celular retrato, outro pra paisagem, outro pra tablets medios de 7'', outro pra tablet grande como iPad, outro pros hibridos como o Galaxy Note etc. Ou seja, mesmo num site exlusivo mobile, você vai querer certa flexibilidade e possivelmente media queries pra ajustar as coisas pra diversas resoluções comuns no mundo mobile.</p>
+
+		<p>E nada impede que evoluamos esse cara depois pra ser o site único, no melhor estilo Mobile First.</p>
+	</aside>
+
+	<aside class="audience">
+		Já ouviu falar dos <b>Phablets</b>? Meio phone, meio tablet, tipo o <i>Galaxy Note</i> da Samsung.
+	</aside>
+</section>
+
+<section class="slide" id="redirects">
+	<div class="content">
+		<h1>
+			<span>Site mobile</span>
+			<span>direito</span>
+		</h1>
+
+		<ul>
+			<li>Redirects:
+				<div class="redirect">exemplo.com/sobre <span>&lt;&gt;</span> <b>m.</b>exemplo.com/sobre</div>
+			</li>
+			<li>
+				Link pra trocar de versão
+			</li>
+			<li>
+				Metadados corretos pra SEO
+			</li>
+		</ul>
+
+		{% code html %}
+		<!-- na página Desktop coloque: -->
+		<link rel="alternate" href="http://m.site.com/sobre"
+		    media="only screen and (max-width: 700px)">
+
+		<!-- na página Mobile coloque: -->
+		<link rel="canonical" href="http://site.com/sobre">
+		{% endcode %}
+
+	</div>
+
+	<aside class="notes">
+		<p>Aqui vai a primeira dica, pro pessoal que vai fazer site mobile exclusivo: faça os redirects corretamente. Se recebo um link pra página de contato e abro no celular, quero cair na página de contato do celular e não na home page. E não esqueça de colocar um link pro usuário trocar de versão quando quiser, e salve isso num cookie.</p>
+
+		<p>E há um problema de duplicação de conteúdo que pode te encrencar no Google e SEO. Pra evitar isso, siga as <a href="https://developers.google.com/webmasters/smartphone-sites/feature-phones">recomendações</a> deles de meta tags que se referenciam da maneira correta.</p>
+
+		<p>Mas tirando essas práticas, construir site mobile, seja específico ou único responsivo, há zilhões de macetes importantes. O mundo mobile é diferente do Desktop e é importante entender as diferenças, limitações e capacidades na hora de criar uma solução Web que suporte mobile.</p>
+
+		<p>Todas as próximas práticas da palestra são universais, pra todo tipo de projeto Web que envolva Web - responsivo ou site exclusivo.</p>
+	</aside>
+</section>
+
+
+<!--
+####   TELAS PEQUENAS
+####   6 min
+ -->
+
+<section class="slide destaque" id="telapequena">
+	<div class="content">
+		<h1>
+			<span>Telas são</span>
+			<span>pequenas</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>Primeira limitação óbvia é que as telas de celulares e tablets são menores que as telas do Desktop. E só isso já nos traz algumas diferenças.</p>
+	</aside>
+
+	<aside class="audience">
+		<p>Telas pequenas são uma grande <b>limitação</b>.</p>
+	</aside>
+</section>
+
+<section class="slide" id="zoom">
+	<div class="content">
+		<h1>
+			<b>Sempre</b>
+			<span>habilite o zoom</span>
+		</h1>
+
+		{% code html %}
+		<!-- como irritar seu usuário -->
+		<meta name="viewport" 
+		   content="width=device-width,user-scalable=no">
+
+		<!-- ou -->
+		<meta name="viewport" 
+		   content="width=device-width, 
+		            minimum-scale=1,maximum-scale=1">
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Usuários mobile estão acostumados a resolver o problema da tela pequena com um gesto: dar um zoom no conteúdo abrindo dois dedos na tela. Mas uma página Web pode desabilitar o zoom facilmente, usando a <a href="http://blog.caelum.com.br/pixels-pixels-ou-pixels-dicas-de-web-mobile-com-viewport/">tag viewport</a>.</p>
+
+		<p>Nesse slide, você vê duas formas de se codificar uma página com zoom desabilitado. Isso é uma péssima prática. Usuários diferentes têm necessidades diferentes, restrições visuais e até do contexto atual de uso do aparelho. Deixe cada um dar zoom conforme sentir necessidade.</p>
+	</aside>
+	<aside class="audience">
+		<h2>O importante é:</h2>
+
+		<p class="peq">Hoje é o amanhã de ontem e o depois de amanhã de anteontem.</p>
+
+		<br><br>
+		<button class="enable-zoom">Habilitar Zoom</button>
+	</aside>
+</section>
+
+<section class="slide" id="zoom2">
+	<div class="content">
+		<h1>
+			<b>Sempre</b>
+			<span>habilite o zoom</span>
+		</h1>
+
+		{% code html %}
+		<!-- como deixar todo mundo feliz -->
+		<meta name="viewport" 
+		   content="width=device-width, initial-scale=1">
+		{% endcode %}
+	</div>
+	<aside class="notes">
+		<p>Habilitar o zoom é fácil, basta ajustar a tag viewport.</p>
+
+		<p>Há quem argumente contrário a essa decisão por causa de um bug famoso do iOS - mas que já foi corrigido na versão 6. Para mais discussão sobre essa prática de habilitar o zoom, consulte <a href="http://sergiolopes.org/libere-zoom-nas-paginas-mobile/">meu post</a> sobre o assunto aqui no blog.</p>
+	</aside>
+</section>
+
+<section class="slide" id="scroll">
+	<div class="content">
+		<h1><b>Elimine</b> a barra de endereços</h1>
+
+		{% code javascript %}
+		window.scrollTo(0,1);
+		{% endcode %}
+
+		<div class="iphone portrait">
+			<div class="browser"></div>
+		</div>
+	</div>
+
+	<aside class="notes">
+		<p>Além da tela pequena, uma coisa que atrapalha ainda mais é o tamanho das barras de navegação e opções dos navegadores. Elas ocupam espaço precioso e diminuem o espaço útil para o seu site. Mas muitos navegadores, como no iPhone e Android, têm um atenuante: eles escondem a imensa barra de endereços assim que o usuário começar a scrollar a página.</p>
+
+		<p>O truque aqui é forçar o browser a fazer esse scroll e esconder a barra de endereços logo de cara. Essencialmente, é mandar scrollar pro início com `window.scrollTo` mas há uns truques como esperar a página carregar antes de fazer isso, e o fato de o iOS precisar de 0 e o Android de 1. Há uns scripts prontos que já cuidam desses detalhes. Recomendo <a href="https://gist.github.com/1183357">esse script</a> do @scottjehl.</p>
+	</aside>
+	<aside class="audience">
+		<p>Fizemos o <code><b>window.scrollTo(0,1)</b></code> nesse slide.</p>
+		<p>No celular, você deve ver a barra de endereços sumir. E isso libera espaço pra mais um monte de conteúdo.</p>
+		<p><small>* Nem todos os navegadores escondem a barra de endereços, como o Chrome Mobile que tem a barra fixa sempre. Nesses, o scrollTo não terá efeito algum.</small></p>
+
+		<p class="ps">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+		<p class="ps">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</aside>
+</section>
+
+<section class="slide" id="hotzones">
+	<div class="content">
+		<h1>
+			<span class="u">UX</span>
+			<span class="h">Hot</span>
+			<span class="z">Zones</span>
+		</h1>
+		
+		<div class="iphone portrait">
+			<div class="hotzone"></div>
+		</div>
+		<div class="iphone landscape">
+			<div class="hotzone"></div>
+		</div>
+	</div>
+
+	<aside class="notes">
+		<p>Outra coisa são as chamadas hot zones dos dedos quando usamos o celular. É a área privilegiada na tela do celular onde o toque é mais fácil, com alcance mais fácil dos dedos. Há alguns artigos de UX tratando do assunto: <a href="http://www.netmagazine.com/features/designing-touch">Design for Touch</a> (.Net Magazine) e <a href="http://designscreenshots.blogspot.com.br/2012/06/designing-for-one-hand-operation.html">Design for one hand operation</a> são meus favoritos.</p>
+
+		<p>Repare no desenho que as hot zones mudam de acordo com a orientação do dispositivo - e até se estamos falando de celulares pequenos ou tablets com telas maiores. Mas essa palestra é técnica e não tão focada em UX. O que eu gostaria de comentar sobre as hot zones é que, frequentemente, você vai precisar de ajustes de design para diferentes resoluções e, principalmente, para a orientação específica do aparelho.</p>		
+	</aside>
+	<aside class="audience">
+		<p>Tente alcançar o <b>botão</b> lá embaixo usando um smartphone em portrait. <b>É desconfortável.</b></p>
+		<button>aqui</button>
+	</aside>
+</section>
+
+<section class="slide" id="orientation">	
+	<div class="content">
+		{% code css %}
+		@media (orientation: portrait) { 
+			/* otimiza pra retrato */
+		}
+
+		@media (orientation: landscape) { 
+			/* otimiza pra paisagem */
+		}
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Com media queries, é bem fácil declarar novas regras associadas especificamente a uma orientação do dispositivo. Você pode usar isso pra fazer ajustes no design de acordo com o hot zone, ou outros detalhes.</p>
+	</aside>
+</section>
+
+<section class="slide" id="orientationchange">
+	<div class="content">
+		{% code javascript %}
+		window.onorientationchange = function() {
+		   switch (window.orientation) {
+		      case 0: 
+		      case 180:
+		         // ... paisagem ...
+		         break;
+
+		      case 90: 
+		      case -90:
+		         // ... retrato ...
+		         break;
+
+		      default:
+		         // mostra um unicórnio
+		   }
+		}
+		{% endcode %}
+	</div>
+	<aside class="notes">
+		<p>Ou ainda, se CSS não for suficiente e você precisar executar algo de acordo com a orientação, é possível usar um callback JavaScript no evento `onorientationchange` e observar o valor da variável `orientation`.</p>
+	</aside>
+</section>
+
+<section class="slide" id="mobilize">
+	<div class="content">
+		<figure>
+			<blockquote><b>Mobilize</b>, don’t miniaturize</blockquote>
+			<figcaption>Barbara Ballard</figcaption>
+		</figure>
+
+		<figure>
+			<blockquote>Don’t shrink, <b>rethink</b></blockquote>
+			<figcaption>Nokia</figcaption>
+		</figure>
+	</div>
+
+	<aside class="notes">
+		<p>Essa é uma palestra com teor mais técnico, com pouco foco no processo de design em si. Mas há zilhões de boas práticas de design e usabilidade pra mobile. Mas gostaria de deixar duas ideias na cabeça de vocês, com essas duas frases famosas.</p>
+	</aside>
+
+	<aside class="audience">
+		"Movelize, não miniaturize" e "Não encolha, repense".
+	</aside>
+</section>
+
+
+<!--
+####   DEDO != MOUSE
+####   14min
+ -->
+
+<section class="slide destaque" id="dedo">
+	<div class="content">
+		<h1>
+			<span>Dedo é diferente</span>
+			<span>de mouse</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>A diferença de tamanho dos dedos e a forma como interagimos com o touchscreen mudam completamente a precisão do dedo em comparação com a precisão quase exata de um mouse ou caneta stylus.</p>
+
+		<p>Além disso, o dedo cobre a área de toque, impedindo a visão do que está por baixo. Uma diferença imensa do cursor que é controlado pelo mouse e não na tela em si.</p>
+	</aside>
+
+	<aside class="audience">
+		<p>Atividade do dia: aperte apenas as bolinhas ímpares. <b>Com o dedão.</b></p>
+
+		<div class="bolinhas">
+			<span data-num=1></span><span data-num=2></span><span data-num=3></span><span data-num=4></span><span data-num=5></span><span data-num=6></span><span data-num=7></span><span data-num=8></span><span data-num=9></span><span data-num=10></span><span data-num=11></span><span data-num=12></span><span data-num=13></span><span data-num=14></span>
+		</div>
+	</aside>
+</section>
+
+<section class="slide" id="hover">
+	<div class="content">
+		<h1>
+			<span>Esqueça</span>
+			<span>:hover</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>No celular, não existe o estado hover, tão comum no Desktop. Você não tem como passar o dedo em cima de algo sem causar um clique. Alguns navegadores tentam emular esses eventos de hover com interações pouco intuitivas que causam estranheza no usuário. Na prática, esqueça hover.</p>
+
+		<p>Pode usar hover puramente como decoração, adicional no Desktop, totalmente progressive enhancement.
+		Mas não dependa dele pra mostrar conteúdo ou fazer alguma interação.</p>
+	</aside>
+</section>
+
+<section class="slide" id="esquecer">
+	<div class="content">
+		<h1>
+			<span class="o">Outras</span>
+			<span class="c">coisas</span>
+			<span class="p">pra</span>
+			<span class="e">esquecer</span>
+		</h1>
+
+		<ul>
+			<li>position: fixed</li>
+			<li>Lightbox</li>
+			<li>Flash, Java, Silverlight, etc</li>
+		</ul>
+	</div>
+
+	<aside class="notes">
+		<p>E falando em outras coisas para esquecer, temos mais alguns.</p>
+
+		<p>A famosa barra fixa no topo com `position: relative` fica péssima no mobile. A maioria dos navegadores não suporta fixed e, os poucos que suportam, o fazem de maneira bem esquisita. Na verdade, a grande questão é como essas barras fixas devem se comportar quando temos zoom. No Android por exemplo, o fixed só funciona se você desabilita o zoom, algo que vimos que é bem ruim.</p>
+
+		<p>Aqueles irritantes lightboxes que abrem uma espécie de popup JavaScript na página mostrando fotos e outros conteúdos estão presentes em toda a Web. Mas no celular costumam ser uma péssima ideia. Costumam depender de position fixed e de ocupar o viewport como um todo, duas coisas dificeis de se fazer no mobile. Evite.</p>
+
+		<p>E, obviamente, evite todo tipo de plugin proprietário.</p>
+	</aside>
+</section>
+
+<section class="slide" id="gestos">
+	<div class="content">
+		<h1><b>Gestos</b> na Web</h1>
+
+		<img src="/img/palestra/mobile-web/gestures.svg" alt="gestos comuns na web">
+	</div>
+
+	<aside class="notes">
+		<p>Dedos são diferentes de mouse por serem capazes de executar gestos para interações mais intuitivas e expressivas. Celulares touch têm diversos gestos diferentes, vários envolvendo diversos dedos, com significados diferentes.</p>
+
+		<p>Na Web, é recomendado que nos limitemos a um conjunto pequeno de gestoes que têm comportamento mais previsível nos diversos aparelhos e que todos os usuários conhecem. Importante observar que alguns smartphones low-end não possuem tela multitoque, suportando então apenas gestos de um dedo. E vários com multitoque na verdade só suportam dois pontos de toque, eliminando a utilidade de gestos com 3, 4 ou 5 dedos (como os presentes no iOS).</p>
+
+		<p>Na web, restrinja-se aos gestos mostrados aqui, e prefira os de 1 dedo apenas. (imagens da <a href="http://gestureworks.com/features/open-source-gestures/">Open Source Gesture Library</a>)</p>
+
+	</aside>
+	<aside class="audience">
+		<p>Faça uns <b>gestos</b> dentro do quadrado amarelo.</p>
+		<div class="touchme"></div>
+	</aside>
+</section>
+
+<section class="slide" id="gestos2">
+	<div class="content">
+		<h1><b>Gestos</b> na Web</h1>
+
+		{% code javascript %}
+		/* Gestos com Zepto.js */
+
+		$('div').doubleTap(function() {
+			// faz algo ao tocar 2x
+		});
+
+		$('li').swipeRight(function() {
+			// faz algo ao deslizar para direita
+		});
+
+		$('.foto').longTap(function() {
+			// faz algo quando segurar toque
+		});
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Tratar eventos de touch é fácil com um framework mobile. O código mostrado usa o <a href="http://zeptojs.com">Zepto.JS</a>, que tratei <a href="http://blog.caelum.com.br/nao-use-jquery-no-seu-site-mobile-conheca-o-zepto-js/">nesse post</a> no blog da Caelum.</p>
+
+		<p>Outro framework famoso que gosto bastante e uso nos projetos é o <a href="http://eightmedia.github.com/hammer.js/">Hammer.JS</a>, que eu usei também aqui nos slides. Ele é focado apenas nos gestos, é bem pequeno e suporta várias coisas que outros frameworks não suportam.</p>
+	</aside>
+</section>
+
+
+<!--
+####   INPUT É DIFICIL
+####   18min
+ -->
+
+<section class="slide destaque" id="input-dificil">
+	<div class="content">
+		<h1>
+			<span>Input de dados</span>
+			<span>é difícil</span>
+		</h1>
+		<h2>
+			<span>* mas não</span>
+			<span>impossível</span>
+		</h2>
+	</div>
+
+	<aside class="notes">
+		<p>Mais uma limitação importante: digitar dados no celular é bem difícil. Há quem diga que o mundo mobile dos smartphones e tablets é um mundo mais focado no consumo do que na produção de conteúdo.</p>
+
+		<p>Mas os usuários querem, sim, produzir conteúdo em seus celulares. E querem agilidade no processo. O que fazer pra melhorar?</p>
+	</aside>
+</section>
+
+<section class="slide input" id="input-url">
+	<div class="content">
+		<h1>
+			<span>Diferentes teclados com</span>
+			<b>input types HTML5</b>
+		</h1>
+
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-text.png">
+			{% code html %}<input type="text">{% endcode %}
+		</section>
+		
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-url.png">
+			{% code html %}<input type="url">{% endcode %}
+		</section>
+	</div>
+
+	<aside class="notes">
+		<p>Os novos input types do HTML5 permitem que teclados virtuais, como dos smartphones touchscreen, se ajustem pra melhorar a experiência do usuário. Só indicamos no campo que tipo de dado é aquele e o celular vai tentar prover um teclado melhor.</p>
+
+		<p>A documentação do iOS lista os diferentes <a href="http://developer.apple.com/library/ios/#documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html">tipos de teclado</a> suportados por ele. Há uma <a href="http://wiki.whatwg.org/wiki/Text_input_keyboard_mode_control">boa lista de teclados possíveis</a> no Android e iOS, incluindo opções de outras línguas como japonês. E essa <a href="http://www.quirksmode.org/html5/inputs_mobile.html">tabela de compatibilidade</a> mostra o suporte a diferentes propriedades em várias plataformas.</p>
+
+		<p>Neste exemplo, temos um campo texto normal e um campo com tipo URL. Repare como iOS coloca a tecla <b>.com</b> pra ajudá-lo a preencher o endereço.</p>
+	</aside>
+	<aside class="audience">
+
+		<label for="campo1">Texto</label>
+		<input type=text id="campo1">
+
+		<label for="campo2">URL</label>
+		<input type=url id="campo2">
+
+		<label for="campo3">Email</label>
+		<input type=email autocapitalize="off" autocorrect="off" id="campo3">
+
+		<label for="campo4">Telefone</label>
+		<input type=tel id="campo4">
+
+		<label for="campo5">Data</label>
+		<input type=date id="campo5">
+
+		<label for="campo6">Hora</label>
+		<input type=time id="campo6">
+
+		<label for="campo7">Numérico</label>
+		<input type=text pattern="[0-9]*" id="campo7">
+
+		<button>Enviar</button>
+
+	</aside>
+</section>
+
+<section class="slide input" id="input-email">
+	<div class="content">
+		<h1>
+			<span>Diferentes teclados com</span>
+			<b>input types HTML5</b>
+		</h1>
+
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-email.png">
+		</section>
+		
+		<section>
+			<img src="/img/palestra/mobile-web/android-input-email.png" width="320">
+		</section>
+
+		{% code html %}<input type="email">{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Aqui mostramos o input email no iOS e Android com teclado SwiftX Key. Repare no Android como o @ completa até o domínio. Cada teclado no Android tem seu próprio comportamento.</p>
+	</aside>
+</section>
+
+<section class="slide input" id="input-tel">
+	<div class="content">
+		<h1>
+			<span>Diferentes teclados com</span>
+			<b>input types HTML5</b>
+		</h1>
+
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-tel.png">
+		</section>
+		
+		<section>
+			<img src="/img/palestra/mobile-web/android-input-tel.png" width="320">
+		</section>
+
+		{% code html %}<input type="tel">{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Aqui temos o input tel no iOS e Android com teclado Swiftx Key.</p>
+	</aside>
+</section>
+
+<section class="slide input" id="input-date">
+	<div class="content">
+		<h1>
+			<span>Diferentes teclados com</span>
+			<b>input types HTML5</b>
+		</h1>
+
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-date.png">
+		</section>
+		
+		<section>
+			<img src="/img/palestra/mobile-web/android-chrome-input-date.png" width="320">
+		</section>
+
+		{% code html %}<input type="date">{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>O input date no iOS 5 e Android no Chrome Mobile. Outros browser no Android mostram outra UIs.</p>
+	</aside>
+</section>
+
+<section class="slide input" id="input-mais">
+	<div class="content">
+		<h1>
+			<span>Diferentes teclados com</span>
+			<b>input types HTML5</b>
+		</h1>
+
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-time.png">
+			{% code html %}<input type="time">{% endcode %}
+		</section>
+		
+		<section>
+			<img src="/img/palestra/mobile-web/ios-input-number.png">
+			{% code html %}
+			<input type="text" 
+			    pattern="[0-9]*">
+			{% endcode %}
+		</section>
+	</div>
+
+	<aside class="notes">
+		<p>Aqui mostramos o input time e number no iOS.</p>
+
+		<p>Lidar com tipos numéricos não é uma tarefa tão simples. Há diferenças entre os navegadores e às vezez as opções mais óbvias não servem. Essa <a href="http://seesparkbox.com/experiments/numericKeyboard/index.html">tabela de compatibilidade</a> mostra diferentes opções e o suporte nos navegadores. Há um <a href="http://bradfrostweb.com/blog/mobile/better-numerical-inputs-for-mobile-forms/">bom artigo</a> também sobre o assunto.</p>
+	</aside>
+</section>
+
+<section class="slide" id="form-attrs">
+	<div class="content">
+		<h1>Mais ajustes no <b>teclado</b></h1>
+
+		{% code html %}
+		<input type="text" name="username" 
+		       autocorrect="none" autocapitalization="on">
+		{% endcode %}
+
+		<h2>* só no iOS</h2>
+	</div>
+
+	<aside class="notes">
+		<p>No iOS, você pode controlar se um campo vai ser auto corrigido ou não pelo sistema (<a href="https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/autocorrect">docs</a>). Também é possível controlar a maneira como o teclado insere letras maiúsculas no início do campo ou não (<a href="https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/html/attribute/autocapitalize">docs</a>).</p>
+
+		<p>Por padrão, o iOS corrige e capitaliza todos os campos texto, o que pode não ser interessante em muitos casos. Um campo username ou email por exemplo pode ficar melhor com essas opções desligadas.</p>
+
+		<p>Infelizmente, essas opções ainda são proprietárias da Apple e não fazem parte de nenhuma especificação. Sendo assim, só o iOS as suporta. Mas adicioná-las não fará mal nenhum aos outros browsers, então é uma espécie de progressive enhancement.</p>
+	</aside>
+</section>
+
+<section class="slide" id="form-ux">
+	<div class="content">
+		<h1>
+			<span class="h">Form</span>
+			<span class="z">Mobile</span>
+		</h1>
+
+		<ul class="ul-simples">
+			<li>Labels no topo ou dentro</li>
+			<li>Opção mostrar password</li>
+			<li>Touch targets grandes</li>
+			<li>Menos campos, <i>óbvio</i></li>
+		</ul>
+
+		<div class="iphone portrait form">
+			<div class="screen">
+				<label>Usuário</label>
+				<input value="sergio" type="text">
+
+				<label>Senha</label>
+				<input value="1234" type="text">
+
+				<label>
+					<input type="checkbox" checked>
+					<span>mostrar senha</span>
+				</label>
+
+				<button>Enviar</button>
+			</div>
+		</div>
+	</div>
+	<aside class="notes">
+		<p>Mais algumas práticas de UX interessantes e simples de se fazer.</p>
+
+		<p>Vários browsers, mais notoriamente o iOS, dão zoom automaticamente num campo de formulário quando o usuário começa a preenchê-lo. Excelente para ajudar o usuário, mas isso pode criar problemas se seu formulário tem labels alinhados a esquerda do campo. Ao dar zoom, os labels serão escondidos, atrapalhando o usuário. Faça os labels então sempre acima do campo, assim ficarão visíveis. Outra opção é colocar dentro do campo em si, mas isso pode confundir o usuário por desaparecer quando ele começa a digitar a informação.</p>
+
+		<p>Outra opção importante é deixar o usuário visualizar a senha digitada como texto, não apenas como password com asteriscos. Acho essa uma boa prática até para o Desktop, mas no mobile é mais importante ainda porque senhas costumam ser difíceis de digitar e errá-las é muito fácil.</p>
+	</aside>
+
+	<!--
+		TODO fazer audience com label na esquerda, no topo e dentro pra comparar.
+			 e com password mostrável.
+     -->
+</section>
+
+<section class="slide" id="form-js">
+	<div class="content">
+		<h1>
+			<b>Libs JavaScript</b>
+			<span>pra ajudar</span>
+		</h1>
+
+		<div class="textareas">
+			<h2>textareas expansíveis</h2>
+			<label>Mensagem:</label>
+			<textarea>Lorem ipsum</textarea>
+			<textarea>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor sed ut incididunt ut labore.</textarea>
+		</div>
+
+		<div class="emails">
+			<h2>correção de email</h2>
+			<label>Email:</label>
+			<input value="sergio@gnail.cm">
+			<p>Você quis dizer <b>sergio@gmail.com</b>?</p>
+		</div>
+	</div>
+
+	<aside class="notes">
+		<p>Há muitas formas de melhorar a vida do usuário mobile que preenche um formulário. É só lembrar da tela pequena e da dificuldade em escrever certo naquele tecladinho.</p>
+
+		<p>Você pode fazer textareas expansíveis que começam pequeno e automaticamente crescem conforme o usuário digita mais texto. Há <a href="http://www.jacklmoore.com/autosize">plugins pro jQuery</a> disponíveis. Ou se você prefere JS puro como eu, tenho um gist  com uma <a href="https://gist.github.com/3285566">função simples de autogrow</a> que uso.</p>
+
+		<p>Você pode também tentar corrigir erros comuns do usuário. Por exemplo, ao digitar o email, se o domínio parecer errado (gnail? hotnail? .co.br?). Há uma excelente <a href="https://github.com/Kicksend/mailcheck">lib JavaScript</a> disponível pra isso!</p>
+	</aside>
+
+	<!--
+		TODO fazer audience com corrigidor de email e autogrow
+     -->
+</section>
+
+<section class="slide" id="geolocation">
+	<div class="content">
+		<h1><b>APIs avançadas</b> pra simplificar</h1>
+		<h2>geolocation</h2>
+
+		{% code javascript %}
+		navigator.geolocation
+		  .getCurrentPosition(function(p){
+
+		    var lat = p.coords.latitude;
+		    var lon = p.coords.longitude;
+
+		    // descobre a cidade
+		});
+		{% endcode %}
+
+		<div class="iphone portrait form">
+			<div class="screen">
+				<label>Nome</label>
+				<input type=text>
+
+				<label>Cidade</label>
+				<input name="cidade" type=text>
+				<svg viewBox="0 0 57 57" width="60" height="60">
+					<path d="m48.2,23.4a22.3,22.3,0,1,1,-44.6,0,22.3,22.3,0,1,1,44.6,0z" transform="matrix(0.80784559,0,0,0.80784559,7.56586,9.6059416)" stroke="#666" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="8.6650219" fill="none"/>
+					<rect height="7" width="21" y="25" x="0" fill="#666"/>
+					<rect height="7" width="21" y="25" x="36" fill="#666"/>
+					<rect transform="matrix(0,1,-1,0,0,0)" height="7" width="21" y="-32" x="0" fill="#666"/>
+					<rect transform="matrix(0,1,-1,0,0,0)" height="7" width="21" y="-32" x="36" fill="#666"/>
+				</svg>
+
+				<label>Cor do cabelo</label>
+				<input type=text>
+			</div>
+		</div>
+	</div>
+
+	<aside class="notes">
+		<p>Estamos falando de simplificar input de usuário. E podemos pensar em mais técnicas avançadas!</p>
+
+		<p>Por exemplo: você pede pro usuário digitar o endereço dele (cidade etc). Isso é um saco, muitos campos a mais. E o celular costuma ter acesso ao GPS facilmente com a <a href="https://developer.mozilla.org/en/Using_geolocation">Geolocation API</a> do HTML5.</p>
+
+		<p>Juntando a geolocation API que tá as coordenadas com um serviço de mapas como o <a href="http://wiki.openstreetmap.org/wiki/Nominatim">OpenStreetMap</a>, você consegue obter o endereço da pessoa e preencher os campos pra ela.</p>
+
+		<p>Deixe como opcional, pra quem quiser usar. E pode ser uma boa também indicar sua política de privacidade de que o dado será usado apenas para preencher o formulário.</p>
+	</aside>
+	<aside class="audience">
+		<label>Digite sua cidade:</label>
+		<input id="cidade">
+		<span class="icone">
+			<svg viewBox="0 0 57 57">
+				<path d="m48.2,23.4a22.3,22.3,0,1,1,-44.6,0,22.3,22.3,0,1,1,44.6,0z" transform="matrix(0.80784559,0,0,0.80784559,7.56586,9.6059416)" stroke="#666" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="8.6650219" fill="none"/>
+				<rect height="7" width="21" y="25" x="0" fill="#666"/>
+				<rect height="7" width="21" y="25" x="36" fill="#666"/>
+				<rect transform="matrix(0,1,-1,0,0,0)" height="7" width="21" y="-32" x="0" fill="#666"/>
+				<rect transform="matrix(0,1,-1,0,0,0)" height="7" width="21" y="-32" x="36" fill="#666"/>
+			</svg> +
+		</span>
+
+		<div class="aviso"></div>
+	</aside>
+</section>
+
+<section class="slide" id="usermedia">
+	<div class="content">
+		<h1><b>APIs avançadas</b> pra simplificar</h1>
+		<h2>Media Capture</h2>
+
+		{% code html %}
+		<input type="file" accept="audio/*;capture=microphone">
+		<input type="file" accept="image/*;capture=camera">
+		<input type="file" accept="video/*;capture=camcorder">
+
+		<!-- último draft -->
+		<input type="file" accept="image/*" capture="camera">
+		{% endcode %}
+
+		<h2>* getUserMedia em breve</h2>
+	</div>
+
+	<aside class="notes">
+		<p>Uma ideia maluca: você tem um form de contato no site que o usuário põe o email e manda uma mensagem. Digitar uma mensagem grande no celular é um saco. O usuário pode tentar usar o reconhecimento de voz do aparelho (Siri, Android), mas é bem chatinho ainda e dá vários erros. E se você permitisse que ele te enviasse uma mensagem gravada? Não reconhecer voz, mas literalmente gravar um áudio e enviar pra você. Nunca vi um site fazendo isso, mas a ideia que quero dar é de pensar fora da caixa e usar as novidades do HTML5 pra ajudar os usuários nos problemas mais simples, como preencher um formulário.</p>
+
+		<p>A <a href="http://www.w3.org/TR/html-media-capture/">Media Capture API</a> é a forma mais simples de obter um áudio/vídeo/foto do usuário. Basta um atributo especial no `input type=file`. Em compensação, não traz muito controle, só permite o upload de um arquivo gravado para o servidor.</p>
+
+		<p>A API <a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/">getUserMedia</a> já traz uma solução multimedia completa e permite a manipulação do vídeo/foto/som direto no browser com Canvas por exemplo. É mais complexa de usar porém traz mais opções.</p>
+		
+		<p>O suporte a essas APIs ainda é bem baixo. Em Agosto de 2012, temos a <i>Media Capture API</i> apenas no Chrome, Firefox e Android 3+. A <i>getUserMedia</i>, apenas no Opera do Android, e no Chrome e Opera do Desktop.</p>
+	</aside>
+</section>
+
+<!--
+####   REDE INSTAVEL, DISPOSITIVOS LIMITADOS
+####   26 min
+ -->
+
+<section class="slide destaque" id="performance">
+	<div class="content">
+		<h1>
+			<span>Rede e dispositivos</span>
+			<span>limitados</span>
+		</h1>
+		
+	</div>
+
+	<aside class="notes">
+		<p>Mobile tem desafios importantes de performance. Ano passado falei de <a href="http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/">otimizações de páginas Web</a> aqui mesmo no QCon, e tudo aquilo lá vale pro mobile como nunca. <a href="http://sergiolopes.org/a-funcionalidade-mobile-mais-importante/">Performance é a funcionalidade mobile mais importante</a>.</p>
+
+		<p>Mas há alguns pontos e desafios adicionais importantes.</p>
+	</aside>
+	<aside class="audience">
+		<h2>Performance é a funcionalidade mobile mais importante</h2>
+	</aside>
+</section>
+
+<section class="slide" id="latencia">
+	<div class="content">
+		<h1>
+			<span>Latência de rede</span>
+			<span>absurda</span>
+		</h1>
+
+		<h2>* então, diminua o número de requests.</h2>
+	</div>
+
+	<aside class="notes">
+		<p>Diminuir o número de requests é o ponto principal de performance mobile. As redes 3G hoje, principalmente nos grandes centros, tem uma banda razoavelmente boa. Mas a latência é um problemão, até nos 4G americanos.</p>
+
+		<p>Há o problema de toda a infra de rede e protocolos envolvidos. E ainda os aparelhos desligam o radio quando fica poucos segundos sem uso. E pra conectar o radio de novo vão alguns segundos antes mesmo de se fazer o primeiro request.</p>
+
+		<p>A solução é diminuir <b>radicalmente</b> o número de requests.</p>
+	</aside>
+</section>
+
+<section class="slide" id="localstorage">
+	<div class="content">
+		<h1>
+			<span>Inline</span>
+			<span>com cache no </span>
+			<b>localStorage</b>
+		</h1>
+
+		{% code javascript %}
+		// primeiro acesso
+		localStorage.setItem('estilo.css', '... css ...')
+		document.cookie = 'arquivos=estilo.css'
+		{% endcode %}
+
+		{% code javascript %}
+		// depois...
+		var css = document.createElement('style')
+		css.textContent = localStorage.getItem('estilo.css')
+		document.head.appendChild(css)
+		{% endcode %}
+
+	</div>
+
+	<aside class="notes">
+		<p>Uma ideia recorrente é fazer inline de várias coisas direto no HTML inicial. Fazemos inline de CSS e JS, e data-uris com imagens. O ponto ruim é que perdemos o cache desses recursos e precisaríamos baixar tudo de novo a cada request.</p>
+
+		<p>É possível então, via JS, salvar esses componentes no `localStorage` e indicar ao servidor, via um cookie, que não precisamos mais daquilo num próximo request. Há o overhead do processamento JS mas economizamos muitos bytes. E há a dificuldade de ter que se implementar algo no servidor.</p>
+
+		<p>Outro recurso que podemos usar é a HTML5 offline API. Embora um pouco complicada de usar direito, ainda mais pra controlar futuras invalidações e updates, é uma solução bacana e bem suportada em smartphones.</p>
+
+		<p>Aliás, essas soluções de inline, localStorage e offline resolvem outros problemas que veremos a seguir.</p>
+	</aside>
+	<aside class="audience">
+		<p>Lembra da palestra do Gabriel mais cedo?</p>
+
+		<p>Essas anotações mobile usaramm a <b>HTML5 offline API</b> pra guardar todo o conteúdo no device durante a palestra de verdade. Como havia centenas de usuários conectados ao mesmo tempo na rede do evento, preferi disponibilizar tudo offline também pra evitar problemas. O usuário podia dar um refresh e ver que a página voltava instantaneamente. Nessa versão dos slides aqui do blog, desabilitei o offline.</p>
+	</aside>
+</section>
+
+<section class="slide" id="limitacoes">
+	<div class="content">
+		<h1>
+			<span>Browser mais</span>
+			<b>limitado</b>
+		</h1>
+
+		<ul class="ul-pontos">
+			<li>connections</li>
+			<li>cache</li>
+			<li>memória</li>
+			<li>cpu</li>
+			<li>...</li>
+		</ul>
+	</div>
+	<aside class="notes">
+		<p>Os navegadores mobile têm mais restrições importantes.</p>
+
+		<p>Primeiro, o número de requisições simultâneas é menor que nos browsers Desktop (2 ou 4 vs 6 ou 8). Como se já não bastasse a latência ruim, temos menos conexões disponíveis. Então diminuir requisições e fazer mais inline é uma boa ideia.</p>
+
+		<p>E os caches dos navegadores mobile são bem limitados. O tamanho total, compartilhado por todos os sites que você abre, é bem pequeno, às vezes poucas dezenas de megabytes, incapazer de guardar no cache mais que algumas páginas, mesmo a gente colocando todos os headers corretos de expiração.</p>
+
+		<p>Fora isso, há muitas vezes limites no tamanho máximo de um componente cacheado. Um iPhone, por exemplo, não salva nada no cache que tenha mais de 25 KB. Quer dizer: use jQuery, por exemplo, e você perde o cache, não interessa o header.</p>
+
+		<p>Com um cache no controle da aplicação com localStorage ou offline API, não temos tantas limitações e podemos controlar na aplicação a forma de cache.</p>
+	</aside>
+</section>
+
+<section class="slide" id="frameworks">
+	<div class="content">
+		<h1>
+			<span class="e">Evite</span>
+			<span class="f">os frameworks</span>
+			<span class="s">de sempre</span>
+		</h1>
+
+		<ul class="ul-simples">
+			<li>jQuery</li>
+			<li>jQuery UI, jQuery mobile, YUI etc</li>
+			<li>Widgets: Facebook, Twitter etc</li>
+		</ul>
+	</div>
+
+	<aside class="notes">
+		<p>Aliás, é uma boa ideia evitar o jQuery como um todo no mobile. Ele tem 96KB de tamanho, o que o tira dos caches do iOS e ainda traz uma imensa lerdeza de parse - <a href="http://calendar.perfplanet.com/2011/lazy-evaluation-of-commonjs-modules/">um iPhone 4 demora 10x mais que o Desktop</a> só na execução do arquivo, depois do download. Imagine outros smartphones mais simples?</p>
+
+		<p>Alternativas ao jQuery com foco no mundo móvel existem aos montes. O <a href="http://blog.caelum.com.br/nao-use-jquery-no-seu-site-mobile-conheca-o-zepto-js/">ZeptoJS</a> é um famoso. Cuidado apenas para não usar frameworks de <b>apps</b> móveis JS em <b>sites</b> móveis - como Sencha Touch, jQuery Mobile, jqTouch etc. Pra sites, inclusive, prefiro hoje JavaScript puro com algumas funções auxiliares do que frameworks gigantes como jQuery.</p>
+
+		<p>Os widgets de redes sociais como Facebook, Twitter e Google+ então são atrocidades mobile. Já são lentos no Desktop e trazem problemas sérios de indisponibilidade se não carregados assincronamente. No celular? São suicídio. Mas o legal é que a maioria da plataformas móveis já vem com recurso de Compartilhar embutido. Tanto no iOS quanto no Android você pode compartilhar uma página no Facebook ou Twitter direto do navegador sem nenhum widget.</p>
+	</aside>
+	<aside class="audience">
+		<p>Esses slides foram feitos com <B>JavaScript puro</B>, sem uso de framework algum. No total, tem menos de 6KB de tamanho (gzipado).</p>
+		<!--
+		   TODO linkar por source no github
+		  -->
+	</aside>
+</section>
+
+<section class="slide" id="displaynone">
+	<div class="content">
+		<h1>
+			<code>display: none</code> 
+			<span>nunca</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>Não use `display: none` pra esconder conteúdo no celular. Ele será carregado mesmo assim. (uma imagem, ou anúncio)</p>
+
+		<p>Uma ideia melhor é fazer carregamento condicional de conteúdo via Ajax por exemplo. Usando Mobile First, voc6e pode fazer seu HTML inicial apenas com o conteúdo usado por todos os devices. E se houver mais conteúdo para telas maiores, por exemplo, carregue via Ajax posteriormente.</p>
+	</aside>
+</section>
+
+<section class="slide" id="fastbutton">
+	<div class="content">
+		<h1>
+			<span>Fast</span>
+			<span>Buttons</span>
+		</h1>
+
+		{%code javascript %}
+		$('a').tap(function(event){
+			location.href = this.href;
+			event.preventDefault();
+		});
+		{% endcode %}
+		
+	</div>
+
+	<aside class="notes">
+		<p>Há questões de performance que dizem respeito também a UI. Por exemplo, o tratamento de eventos.</p>
+
+		<p>Navegadores Desktop estão acostumados a lidar com o onclick, disparado pelo mouse. No mobile os cliques também são suportados (automaticamente) mas são disparados pelos toque. O problema é que os dedos num mundo multitouch não servem apenas para cliques, mas para um monte de gestos como vimos.</p>
+
+		<p>O que acaba acontecendo então é que quando você põe o dedo na tela, o navegador precisa adivinhar que gesto você está fazendo. Será um clique? Será que você vai arrastar o dedo? Será um scroll? Assim, quando damos um toque indicando clique, o navegador ainda espera uns 300ms antes de disparar o clique pra tentar adivinhar se na verdade você não queria fazer outro toque.</p>
+
+		<p>O problema? Cliques com onclick são lentos no touch. O usuário aperta um botão ou link e há uma demora na execução do callback. Por isso, o pessoal do Google inventou uma técnica chamada de <a href="https://developers.google.com/mobile/articles/fast_buttons">Fast Button</a> que usa gestures e taps pra acionar o evento bem antes do `onclick` normal.</p>
+	</aside>
+	<aside class="audience">
+		<h1>
+			<span class="t">Tap</span>
+			<span class="v">vs</span>
+			<span class="b">Click</span>
+		</h1>
+		<p>Aperte os dois botões abaixo várias vezes o mais rápido que conseguir! Quem ganha?</p>
+
+		<div class="buttons">
+			<div class="tap">tap</div>
+			<div class="click">click</div>
+		</div>
+
+		<p class="ps">P.S. desabilitei o zoom nessa página também pra evitar que o navegador dê zoom quando você for clicar rapidamente.</p>
+		<p class="ps">P.P.S. se estiver no Desktop, os dois botões vão disparar no onclick e vai empatar.</p>
+
+	</aside>
+</section>
+
+<section class="slide" id="animacoes">
+	<div class="content">
+		<h1>
+			<b>CSS3</b>
+		</h1>
+
+		<ul>
+			<li>transform 2D e 3D</li>
+			<li>transition</li>
+			<li>animation</li>
+		</ul>
+
+		{% code css %}
+		@keyframes gira {
+		  0% { transform: rotate(0deg) }
+		  100% { transform: rotate(360deg) }
+		}
+		h1 { animation: gira 4s linear infinite; }
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Prefira animações via CSS transitions e animations, que sao mais performáticas que via JavaScript. Foi justo por causa do iPhone que a Apple as inventou no Webkit.</p>
+
+		<p>Além disso, transformações 3D, WebGL, canvas, etc são acelerados via GPU e têm performance maior.</p>
+	</aside>
+
+	<aside class="audience">
+		<h1>Animações CSS3!</h1>
+		<h2>Super rápidas</h2>
+	</aside>
+</section>
+
+<section class="slide" id="aceleracao">
+	<div class="content">
+		<h1>
+			<span>Truque sujo:</span>
+			<b>Aceleração de hardware</b>
+		</h1>
+		
+		{% code css %}
+		transform: translateZ(0);
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>No Webkit (incluindo iOS), CSS transform 2D não são acelerados via GPU. Mas há um truque pra fazer ser acelerado, fazendo uma <a href="http://www.html5rocks.com/en/tutorials/speed/html5/">transformação nula em 3D</a>: `transform: translateZ(0);`.</p>
+	</aside>
+</section>
+
+
+
+<!--
+####   RETINA
+####   38min
+ -->
+
+<section class="slide destaque" id="retina">
+	<div class="content">
+		<h1>
+			<span>Resoluções</span>
+			<span>incríveis</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>As telas de alta resolução chegaram aos smartphones e tablets há algum tempo. E isso coloca novos desafios pra gente. Como fazer sites bonitos que não fiquem pixelados sem prejudicar a performance?</p>
+	</aside>
+
+	<aside class="audience">
+		<p>Temos que repensar as <b>imagens</b>...</p>
+	</aside>
+</section>
+
+<section class="slide" id="deviceratio">
+	<div class="content">
+		<h1><b>Media queries</b> pra salvar o dia</h1>
+
+		{% code css %}
+		#super { background: url(foto@1x.png); }
+
+		@media (-webkit-min-device-pixel-ratio: 2), 
+		       (min--moz-device-pixel-ratio: 2), 
+		       (-o-min-device-pixel-ratio: 2/1), 
+		       (min-device-pixel-ratio: 2) {
+		  
+			#super {
+			   background-image: url(foto@2x.png);
+			   background-size: 50%;
+			}
+		}
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Telas comuns, como na maioria dos Desktops, têm pixels físicos numa razão de 1:1 com os pixels que usamos no nosso código (CSS, HTML etc). Mas telas retina aumentam essa razão e passamos a trabalhar com pixels virtuais. Um iPhone 4 têm 640 pixels físicos de largura mas representados como 320 pixels virtuais. É uma razão 2:1.</p>
+
+		<p>Com media queries podemos lidar com essa situação carregando imagens diferentes de acordo com a razão de pixels virtuais sobre os físicos. As telas da Apple costuma usar a razão 2, assim como celulares mais highend como Samsung Galaxy S III (chamado de xhdpi).</p>
+
+		<p>Mas vários celulares Android famosos (como o Galaxy S II) usam razão 1.5 (ou 3:2), a chamada hdpi. É comum também celulares medianos usarem a razão normal 1:1 (mdpi) e celulares mais simples (como o Galaxy 5) usarem resolução mais baixa de 0.75 (3:4, ldpi). Há ainda razões mais estranhas, como a tvdpi do tablet Nexus 7 e sua razão de 1.33.</p>
+
+		<p>Você pode lidar com diferentes densidades de pixel usando media queries (que, infelizmente, ainda exigem muitos prefixos proprietários). Cuidado apenas com a questão de performance. Mesmo tendo uma tela retina, às vezes pode não ser interessante dar um arquivo em alta resolução para o dispositivo, já que ele demorará para carregar.</p>
+
+		<p>Para imagens com tag `img`, não há uma solução definitiva. Há alguns <a href="http://retinajs.com/">hacks em JavaScript</a> e uma discussão acalorada no W3C sobre responsive images para o futuro. Mas nada certo ainda.</p>
+	</aside>
+</section>
+
+<section class="slide" id="graficos">
+	<div class="content stripes">
+		<h1>Gráficos estão bem servidos</h1>
+
+		<div class="bolas">
+			<div class="basquete1" alt="Bola de basquete em SVG grande"></div>
+			<div class="basquete2" alt="Mesma bola, em tamanho menor."></div>
+		</div>
+
+		<div class="logos">
+			<div class="font-caelum ex1"></div>
+			<div class="font-caelum ex2"></div>
+			<div class="font-caelum ex3"></div>
+		</div>
+	</div>
+
+	<aside class="notes">
+		<p>Se gerar imagens em 5 resoluções diferentes não parece ser muito divertido pra você, cogite usar formatos de imagens vetoriais independentes de resolução. Gráficos vetoriais podem hoje ser facilmente aplicados com SVG, com fontes customizadas e `@font-face` e por técnicas de CSS3.</p>
+
+		<p>Fontes são legais pq dá pra estilizar e escalar mais facilmente. Mas são limitadas no desenho a um path e há diferencas de renderizacao nos navegadores, sobretudo no cleartype do windows (IE9).</p>
+
+		<p>Use CSS3 pra maioria dos efeitos. Bordas redondas, sombras, gradientes. Fica mais fácil de manter o código (do que imagens no Photoshop) e ficam excelentes mesmo dando zoom e escalando. Cuidado apenas pra não abusar desses efeitos e sobrecarregar a CPU, memória e bateria.</p>
+	</aside>
+	<aside class="audience">
+		<p>Exemplos de gráficos vetoriais na Web. Dê um zoom e veja a qualidade.</p>
+
+		<h2>SVG</h2>
+		<div class="basquete2" alt="Mesma bola, em tamanho menor."></div>
+
+		<h2>@font-face</h2>
+		<div class="font-caelum"></div>
+
+		<h2>CSS3: gradiente e bordas redondas</h2>
+		<div class="gradiente"></div>
+	</aside>
+</section>
+
+<!--
+####   MAIS INTEGRADO COM APARELHO
+####   41min
+ -->
+
+<section class="slide destaque" id="mais-integrado">
+	<div class="content">
+		<h1>
+			<span>Mais integrado</span>
+			<span>com o aparelho</span>
+			<span>do que nunca</span>
+		</h1>
+	</div>
+
+	<aside class="notes">
+		<p>Embora seja Web, a integração com o aparelho e suas funções nativas está mais forte do que nunca. E isso melhora a experiência do usuário!</p>
+	</aside>
+</section>
+
+<section class="slide" id="protocolos">
+	<div class="content">
+		<h1>URLs <b>mágicas</b></h1>
+
+		{% code html %}
+		<!-- envie um email -->
+		<a href="mailto:contato@caelum.com.br">email</a>
+
+		<!-- disque esse número -->
+		<a href="tel:+551155712751">ligue já</a>
+
+		<!-- abra o app de Maps -->
+		<a href="http://maps.google.com/?q=Caelum">mapa</a>
+
+		<!-- instale uma app -->
+		<a href="https://play.google.com/store/apps/details?id=br.com.caelum.ondeestaobusao.activity">busão sp</a>
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>Desde o simples `mailto:` que, assim como no Desktop, abre o programa de email, até o utilíssimo `tel:` que disca um número telefônico automaticamente. Simples tecnicamente, o tel é responsável por um fundamental pattern de UX, o click to call, uma das maiores utilidades de se ter um celular com acesso a Web.</p>
+
+		<p>Há ainda as URLs que disparam apps. Comece com <i>maps.google.com</i> e o App do Google Maps abre no celular, o que é melhor por ser integrado à navegação etc. Use <i>play.google.com</i> e o App abre na loja para instalação imediata.</p>
+
+		<p>No futuro, teremos ainda Web Intents, para integração inclusive entre webapps. É algo que Google e Mozilla têm trabalhado bastante ultimamente.</p>
+	</aside>
+	<aside class="audience">
+		<p>Testa <a href="tel:+551155712751">ligar lá na Caelum</a> ou abrir o <a href="http://maps.google.com/?q=Caelum">mapa</a> de lá.</p>
+	</aside>
+</section>
+
+<section class="slide" id="webapp">
+	<div class="content">
+		<h1><b>Webapps</b> iOS</h1>
+
+		{% code html %}
+		<!-- webapp 'instalável' -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+
+		<!-- estilo da barra do topo -->
+		<meta name="apple-mobile-web-app-status-bar-style" 
+		   content="black">
+
+		<!-- ícone do atalho  -->
+		<link rel="apple-touch-icon" href="icone.png">
+
+		<!-- imagem de startup -->
+		<link rel="apple-touch-startup-image" href="start.png">
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>O iOS sempre esteve a frente da concorrência na ideia de transformar a experiência de webapps em algo quase nativo. Com uma simples meta tag, você indica que é uma webapp e deve ser lançada pelo ícone da home, num browser embutido sem barra de endereços ou ferramentas. O usuário precisa "instalar" na home a webapp, mas a projetos pra <a href="http://cubiq.org/add-to-home-screen">ajudá-lo com o processo</a>.</p>
+
+		<p>Você pode ainda configurar várias coisas, como o estilo da barra do topo, ícone do atalho da home e até uma imagem de startup. Você também pode passar várias imagens pra resoluções diferentes, usando media queries. Veja a <a href="http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html">documentação</a> dessas opções.</p>
+
+		<p>Use ainda HTML5 offline API, navegação via Ajax, e transições bonitinhas na App e você tem uma app mobile com muito cara de nativa. Infelizmente, ainda não há nada parecido no Android e outros browsers. Há muito trabalho sendo feito pela <a href="https://developer.mozilla.org/en/Apps/">Mozilla</a> principalmente por causa do Firefox OS, mas ainda é algo proprietário. O Google tem <a href="https://developers.google.com/chrome/apps/docs/developers_guide">iniciativa própria semelhante</a> mas ainda só para o Desktop.</p>
+	</aside>
+	<aside class="audience">
+		<p>Tá no <b>iOS</b>? Clique nos favoritos e <b>"Add to Home Screen"</b>. Isso vai instalar essa aplicação no seu dispositivo.</p>
+	</aside>
+</section>
+
+<section class="slide" id="apis">
+	<div class="content">
+		<h1>APIs <b>fantásticas</b></h1>
+
+		<ul class="ul-pontos">
+			<li>geolocation</li>
+			<li>orientationchange</li>
+			<li>devicemotion</li>
+			<li>getUserMedia</li>
+			<li>navigator.onLine</li>
+			<li>fullscreen API</li>
+			<li>telephone, sms</li>
+			<li>battery api</li>
+			<li>WebGL</li>
+		</ul>
+	</div>
+
+	<aside class="notes">
+		<p>A Web hoje faz coisas que nunca imaginamos serem possíveis. As novas APIs JS, HTML5 etc surgem a cada dia. E, incrivelmente, o mundo mobile tem uma taxa de adesão a essas novidades muito mais rápida do que estamos acostumados no Desktop.</p>
+
+		<p>Explore essas possibilidades pra criar experiência marcantes e para facilitar a vida do seu usuário móvel.</p>
+	</aside>
+</section>
+
+<section class="slide" id="conclusao">
+	<div class="content">
+		<h1>Performance é a funcionalidade mobile mais importante.</h1>
+		<h1>Otimize para tela pequena e dedos.</h1>
+		<h1>Facilite a entrada de dados.</h1>
+		<h1>Prefira gráficos vetoriais.</h1>
+		<h1>Use recursos do aparelho e integrações.</h1>
+	</div>
+	<aside class="notes">
+		<p>Esses são os pontos chave da palestra.</p>
+	</aside>
+</section>
+
+<section class="slide" id="fim">
+	<div class="content">
+		<h1>Obrigado</h1>
+
+		<div class="contato">
+			<a href="http://sergiolopes.org/">sergiolopes.org</a>
+			<a href="http://twitter.com/sergio_caelum">@sergio_caelum</a>
+		</div>
+	</div>
+</section>
+</article>
+
+
+
+
+
+
+
+<!--
+####   BARRAS DE APRESENTACAO
+ -->
+<aside class="bars">
+	<div class="content">
+		<div class="sync-clients"></div>
+		<div class="poster">
+			sergiolopes.org<span>/aovivo</span>
+		</div>
+	</div>
+	<div class="audience">
+		<div class="title">
+			Truques de Web Mobile <span class="aovivo">Ao Vivo</span><span class="desconectado">Offline</span>
+		</div>
+
+		<div class="slide-toggle">
+			<span class="close-info">ver slide</span>
+			<span>esconder slide</span>
+		</div>
+
+		<div class="manual-sync">
+			Sincronização manual: <span class="do-sync">sincronizar</span>
+		</div>
+	</div>
+</aside>
+
+
+<div class="initial-info">
+	<h1>Acompanhe a palestra no celular!</h1>
+
+	<p>Vou mostrar na palestra uns exemplos bacanas pra você testar. Pra participar, é <b>só deixar essa página aberta</b> no navegador durante a palestra.</p>
+
+	<p class="erro">Parece que seu navegador não suporta WebSockets, que precisamos pra sincronização automática. Você pode dar refresh manual durante a palestra ou ver um navegador mais recente:</p>
+
+	<p>No <b>iOS</b>, tudo funciona bem da versão 4.2 pra cima.</p>
+
+	<p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. (<a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">clique pra instalar</a>)</p>
+
+	<p>O browser padrão do Android 4+ funciona bem. Pra versões anteriores, recomendo usar o Firefox. (Opera não serve)</p>
+
+	<p>Dá pra acompanhar no <b>Notebook</b> também. Nesse caso, use um Chrome ou Firefox recente. Nem sonhe em abrir no IE, claro.</p>
+
+	<div class="close-info">Fechar info e acompanhar palestra</div>
+</div>

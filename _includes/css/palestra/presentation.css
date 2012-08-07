@@ -1,0 +1,413 @@
+/* BASE */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+code {
+  font-family: 'Droid Sans Mono', 'Bitstream Vera Sans Mono', 'Courier', monospace;
+}
+pre code {
+  font-size: 87.5%;
+/* 14px */
+}
+@media only screen and (max-width: 599px) {
+  body {
+    font-size: 87.5%;
+  }
+}
+/* PRESENTATION STRUCTURE */
+/* apresentacao inteira */
+.presentation {
+  position: relative;
+  max-width: none;
+  margin: 0;
+  width: 50%;
+/* hides initially, since we don't know the correct mode yet */
+  display: none;
+}
+/* 1 slide */
+.slide {
+/* 4:3 flexible box */
+  padding-top: 75%;
+  height: 0;
+  width: 100%;
+  position: relative;
+/* hw accelerate */
+}
+.slide .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+/* slide size. 4:3 fixed */
+  height: 768px;
+  width: 1024px;
+  overflow: hidden;
+/* prepare to scale */
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -o-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+}
+/* hides notes and audience */
+.slide .notes,
+.slide .audience {
+  display: none;
+}
+/* loading spinner */
+.loading {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  display: block;
+  color: #fff;
+  font-size: 1000%;
+  line-height: 0;
+  text-align: center;
+  width: 100%;
+  -webkit-animation: loading 1.5s linear infinite;
+  -moz-animation: loading 1.5s linear infinite;
+  -o-animation: loading 1.5s linear infinite;
+  -ms-animation: loading 1.5s linear infinite;
+  animation: loading 1.5s linear infinite;
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+}
+.bars {
+  display: none;
+}
+/***
+	PRESENTATION and AUDIENCE MODE commons
+ ***/
+.presentation-mode body > *,
+.audience-mode body > * {
+  display: none;
+}
+.presentation-mode .presentation,
+.audience-mode .presentation {
+  display: block;
+}
+.presentation-mode .slide,
+.audience-mode .slide {
+/* hide by default */
+  display: none;
+/* show selected slide */
+}
+.presentation-mode .slide.active,
+.audience-mode .slide.active {
+  display: block;
+}
+.presentation-mode .loading,
+.audience-mode .loading {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+  -ms-animation: none;
+  animation: none;
+  display: none;
+}
+/**
+    PRESENTATION MODE
+**/
+html.presentation-mode,
+.presentation-mode body,
+.presentation-mode .presentation {
+  height: 100%;
+  width: 100%;
+}
+.presentation-mode .audience,
+.presentation-mode .notes {
+  display: none;
+}
+.presentation-mode .bars {
+  display: block;
+}
+.presentation-mode .bars .content {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -32em;
+  overflow: hidden;
+  height: 2em;
+  width: 64em;
+  padding: 0 4em;
+  color: #fff;
+}
+.presentation-mode .slide:first-child.active ~ .bars,
+.presentation-mode .slide.active + .bars {
+  display: none;
+}
+/* iPhone hack to fullscreen */
+/* prevent scroll */
+.presentation-mode body,
+.presentation-mode html,
+.presentation-mode .presentation {
+  overflow: hidden;
+}
+.presentation-mode .presentation {
+  margin: 0 auto;
+  width: 100%;
+}
+/* hide audience and presentation notes */
+.presentation-mode .slide .notes,
+.presentation-mode .slide .audience {
+  display: none;
+}
+/***
+    SITE MODE
+ ***/
+.site-mode .presentation {
+  display: block;
+}
+.site-mode .slide {
+  overflow: visible;
+}
+.site-mode .notes {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: block;
+}
+/***
+    AUDIENCE MODE
+ ***/
+.audience-mode .content,
+.audience-mode .notes,
+.audience-mode .manual-sync {
+  display: none;
+}
+.audience-mode .slide {
+  height: auto;
+  padding-top: 0;
+}
+.audience-mode .bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3em;
+  width: 100%;
+  display: block;
+}
+.audience-mode .bars .content {
+  display: none;
+}
+.audience-mode .slide.audience-active {
+  display: block;
+/* show audience notes */
+/* hide slide from background rendering */
+}
+.audience-mode .slide.audience-active .audience {
+  display: block;
+}
+.audience-mode .slide.audience-active .audience:before {
+  content: '';
+  display: block;
+  height: 3em;
+  width: 100%;
+}
+.audience-mode .slide.audience-active .content {
+  visibility: hidden;
+}
+.audience-mode .slide.audience-active.active .content {
+  visibility: visible;
+}
+.audience-mode .slide.active {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.audience-mode .slide.audience-active {
+  position: relative;
+}
+.audience-mode.show-slide .slide {
+  padding-top: 75%;
+}
+.audience-mode.show-slide .slide.audience-active {
+  margin-top: 3em;
+}
+.audience-mode.show-slide .slide .content {
+  display: block;
+}
+.audience-mode.show-slide .slide .audience:before {
+  display: none;
+}
+.audience-mode .presentation {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.no-websocket.audience-mode .bars,
+.no-websocket.audience-mode .slide.audience-active .audience:before {
+  height: 6em;
+}
+.viewing-info.no-websocket.audience-mode .bars,
+.viewing-info.no-websocket.audience-mode .slide.audience-active .audience:before {
+  height: 3em;
+}
+.no-websocket.audience-mode.show-slide .slide.audience-active {
+  margin-top: 6em;
+}
+.no-websocket.audience-mode .manual-sync {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3em;
+  width: 100%;
+}
+.viewing-info.no-websocket.audience-mode .manual-sync {
+  display: none;
+}
+.slide .audience p {
+  margin: 0;
+  padding: 1em;
+  font-size: 100%;
+}
+/**
+	INITIAL INFO MESSAGE
+ **/
+.initial-info {
+  display: none;
+}
+.viewing-info.audience-mode .slide {
+  display: none;
+}
+.viewing-info.audience-mode .initial-info {
+  display: block;
+  padding-top: 3em;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*************
+ BASE LAYOUT
+ *************/
+body,
+.bars {
+  background: #000;
+}
+.slide .content {
+  background-color: #f90;
+  padding: 5%;
+}
+.slide .notes {
+  background-color: #222;
+  background-image: url("/img/base/noise.png");
+  color: #fff;
+}
+.slide .audience,
+.slide .audience p {
+  color: #fff;
+}
+.slide li,
+.slide p,
+.slide blockquote {
+  font-size: 3em;
+  line-height: 1.2;
+}
+.highlight {
+  font-size: 1.9em;
+}
+@-moz-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,64 @@
+---
+layout: null
+pagetype: blog
+---
+
+<!doctype html>
+<html class="no-js" {% if page.offlineManifest %}manifest="{{ page.offlineManifest }}"{% endif %}>
+<head>
+	<!-- inclui head comum, sem assets -->
+	{% include snippets/head.html %}
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="apple-touch-icon" href="/img/palestra/{{ page.slug }}/appicon.png">
+
+	<style>
+	{% include css/syntax.css %}
+	{% include css/palestra/presentation.css %}
+	</style>
+
+	{% if page.slug %}
+		<!-- 
+			TODO
+				fazer isso dinamico no jekyll
+		-->
+		<style>
+		{% if page.slug == 'mobile-web' %}
+			{% include css/palestra/mobile-web.css %}
+		{% endif %}
+		</style>
+	{% endif %}
+
+</head>
+<body>
+	<!--
+	<div class="controls">
+		<button class="enter-mode" data-mode="presentation">Presentation Mode</button>
+		<button class="enter-mode" data-mode="site">Site Mode</button>
+		<button class="enter-mode" data-mode="audience">Audience Mode</button>
+	</div>
+	-->
+
+	{{ content }}	
+
+	<span class="loading">&#8635;</span>
+
+
+	<script>
+	{% include js/presentation.js %}
+	</script>
+
+	{% if page.slug %}
+		<!-- 
+			TODO
+				fazer isso dinamico no jekyll
+		-->
+		<script>
+		{% if page.slug == 'mobile-web' %}
+			{% include js/palestra/mobile-web.js %}
+		{% endif %}
+		</script>
+	{% endif %}
+</body>
+</html>
