@@ -1,9 +1,50 @@
 // inicialização e slides da palestra de mobile web
 P.init({
 	slideViewport: [1024, 768],
-	possibleModes: ['audience', 'presentation']
+	possibleModes: ['site', 'audience', 'presentation']
 });
 
+// warning de browser sem sync
+if (!WS.isSupported() && P.mode() === 'audience') {
+	alert('Desculpe, mas esse navegador não suporta sincronização com WebSockets.');
+}
+
+// mostra avisos de room
+Q(window).on('roomconnect', function(){
+
+	var room = WS.myRoom();
+	var html = '';
+
+	var hostname = 'sergiolopes.org';
+	var pathname = location.pathname;
+	var url = 'http://' + hostname + pathname + '?mode=audience&room=' + room;
+
+	// bitly callback
+	window.roomURLshortened = function(data) {
+
+		if (data.status_code === 200)
+			var finalUrl = data.data.url;
+		else
+			var finalUrl = url;
+
+		html += '<img src="http://chart.apis.google.com/chart?cht=qr&chs=420x420&chl='+escape(finalUrl)+'&chld=H|0">';
+		html += '<a href="' + finalUrl + '">'+finalUrl+'</a>'
+
+		// update
+		Q('.room-linker').each(function(el){
+			el.innerHTML = html;
+		});	
+	};
+
+	// call bitly
+	var bitly = 'http://api.bitly.com/v3/shorten?login=o_60gq2pt0li&apiKey=R_f51c69b408f8b5ed3049a85fd49f57e1&callback=roomURLshortened&longUrl=' + escape(url);
+	var s = document.createElement('script');
+	s.src = bitly;
+	document.head.appendChild(s);
+});
+
+
+// aux
 function disableZoom() {
 	Q('meta[name="viewport"]').get().setAttribute('content', 'width=device-width, minimum-scale=1.0, maximum-scale=1.0');
 }
@@ -104,7 +145,7 @@ P.on('geolocation', {
 		Q(el).find('.aviso').get().innerHTML = "";
 
 		if (firstTime) {
-			Q(el).on('tap', function(){
+			Q(el).find('.icone').on('tap', function(){
 				if ("geolocation" in navigator) {
 					navigator.geolocation.getCurrentPosition(function(p){
 
@@ -112,13 +153,18 @@ P.on('geolocation', {
 					    var lon = p.coords.longitude;
 
 					    // descobre a cidade
-					    // TODO fazer ajax de verdade antes de subir no site
-					    Q(el).find('.aviso').get().innerHTML = "DEBUG: Sua localização é " + lat + ", " + lon + ".<br><br>Você está em SP, Fecomércio, na QCon 2012, auditório Web. Não muito perto da porta.";
+					    Q(el).find('.aviso').get().innerHTML = "DEBUG: Sua localização é " + lat + ", " + lon + ".";
 
-					    // cidade fake só pro evento
-					    setTimeout(function() {
-					    	Q('#geolocation .audience input').get().value = 'São Paulo';
-					    }, 1000);
+					    // coloca cidade no campo
+					    window.exCidadeGeolocation = function(data) {
+					    	Q('#geolocation .audience input').get().value = data.address.city;
+					    };
+
+						// jsonp openstreetmap
+						var script = document.createElement('script');
+						script.src = "http://nominatim.openstreetmap.org/reverse?format=json&json_callback=exCidadeGeolocation&lat="+ lat+"&lon=" + lon;
+						document.head.appendChild(script)
+
 					}, function(error) {
 						Q(el).find('.aviso').get().innerHTML = "Não consegui pegar a localização do seu aparelho. Error: " + error.message + ' [' + error.code + ']';
 						console.log(error);

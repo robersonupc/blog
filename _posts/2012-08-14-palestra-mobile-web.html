@@ -1,10 +1,14 @@
 ---
 layout: presentation
-title: 'Uma tonelada de truques de Web mobile. - Palestra QCon SP 2012'
+title: 'Palestra: Truques de Web mobile'
 category: mobile
-description: Uma cacetada de truques de performance, otimizações, UX, HTML5 e CSS3 pra deixar seu site mobile tinindo. E são dicas valiosas mesmo que você prefira um site exclusivo mobile ao invés de responsivo, ou mesmo uma webapp.
+description: Muitas dicas de performance, otimizações, UX, HTML5 e CSS3 pra deixar seu site mobile tinindo. Slides comentados, cheios de referências e exemplos práticos. Veja demos no smartphone/tablet.
+ogtype: article
+shareImage: /img/palestra/mobile-web/appicon.png
 slug: mobile-web
-offlineManifest: /manifest/palestra/mobile-web.manifest
+class: destaque
+
+feedWarning: Essa palestra é completamente interativa, o que não é suportado nos feeds RSS. Recomendo que visite a página e leia por lá. (é otimizado também para mobile)
 ---
 
 <article class="presentation">
@@ -20,21 +24,29 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 			<span>Web mobile</span>
 		</h1>
 
+		<p class="subtitulo">Palestra interativa com slides, anotações e <b>testes pra rodar no celular/tablet</b>.</p>
+
+		<!--
 		<div class="aovivo">
 			<a href="http://sergiolopes.org/aovivo">sergiolopes.org<span>/aovivo</span></a>
 			<div>(acesse agora no celular, tablet ou desktop pra acompanhar a palestra)</div>
 		</div>
+	    -->
 	</div>
 	<aside class="notes">
-		TODO abertura explicando sincronizacao
+		<h1>Como navegar no Desktop:</h1>
+		<ul>
+			<li>Use as <b>setas do teclado</b> pra passar os slides;</li>
+			<li>O slide é mostrado com anotações complementares cheias de links adicionais;</li>
+			<li>Pra esconder as notas e entrar em 'modo apresentação', aperte <b>P</b>;</li>
+			<li>Aperte <b>ESC</b> pra sair do 'modo apresentação'.</li>
+		</ul>
 
-		Essa é a palestra sobre Mobile Web que dei no QCon 2012.
-
-		- abertura
-		- Apresenta interatividade da palestra beta
-	</aside>
-	<aside class="audience">
-		<h2>Se prepara aí que já já vai começar a palestra!</h2>
+		<h1>Como navegar no Tablet/Smartphone touchscreen:</h1>
+		<ul>
+			<li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
+			<li>Pra esconder as notas e entrar em 'modo apresentação', <b>toque e segure</b> (<em>hold</em>) o título da palestra no topo.</li>
+		</ul>
 	</aside>
 </section>
 
@@ -50,15 +62,39 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 			<li><a href="http://sergiolopes.org">sergiolopes.org</a></li>
 		</ul>
 	</div>
-
 	<aside class="notes">
-		<p>Sou instrutor e desenvolvedor na Caelum. Trabalho com Web há 12 anos e ultimamente tenho me dedicado a Web Mobile.</p>
-	</aside>
-	<aside class="audience">
-		<p>Aproveita e já <a href="http://twitter.com/sergio_caelum" target="_blank">me segue aí no Twitter</a>.</p>
+		<p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front end e Web, em especial Web Mobile.</p>
+
+		<p>Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
 	</aside>
 </section>
 
+<section class="slide" id="audience">
+	<div class="content">
+		<h1>Sincronize seu dispositivo!</h1>
+		<div class="room-linker"></div>
+
+		<p>Acesse o endereço acima no seu smartphone ou tablet.<br>É necessário um navegador com suporte a WebSockets.</p>
+	</div>
+	<aside class="notes">
+		<p>Sincronizando seu dispositivo, você acompanha <b>exemplos em tempo real</b> dos assuntos tratados aqui nos slides. Único requisito é usar um navegador moderno com suporte a <b>WebSockets</b>.</p>
+
+		<p>No <b>iOS</b>, tudo funciona bem da versão 4.2 pra cima.</p>
+
+		<p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. O browser padrão do <em>Android 4+</em> também funciona bem. Pra versões anteriores, recomendo usar o Firefox Mobile. (Opera não serve)</p>
+
+		<p>Dá pra acompanhar no computador também. Nesse caso, use um Chrome ou Firefox recente. IE só 10.</p>
+
+		<p>A sincronização estará ativa entre esse navegador e seu dispositivo se a <b>bolinha</b> no título da palestra estiver <b>verde</b>.</p>
+	</aside>
+	<aside class="audience">
+		<p>Se estiver lendo isso no seu dispositivo, então conseguimos parear os slides!</p>
+
+		<p>Volte pro computador e vá acompanhando a palestra normalmente, passando os slides. Aqui, vamos ver alguns <b>exemplos adicionais</b> e <b>demos</b> pra você rodar.</p>
+
+		<p>Você pode ver o slide aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
+	</aside>
+</section>
 
 <!--
 ####   INTRODUCAO
@@ -93,7 +129,7 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 		<p>Um <a href="http://sergiolopes.org/responsive-web-design/">design responsivo</a> é um site único pro Desktop e mobile que se adapta. O segredo aqui é pensar em adaptação e flexibilidade. Só relembrando, o ponto central são as <a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/">media queries</a>, que serão importantes pra algumas coisas que faremos aqui também.</p>
 	</aside>
 	<aside class="audience">
-		<p>Teve <a href="http://www.slideshare.net/eshiota/responsive-web-design-e-a-ubiquidade-da-web">palestra do Shiota</a> mais cedo aqui no QCon sobre <b>design responsivo</b>.</p>
+		<p>Tenho um post aqui no blog só sobre <a href="http://sergiolopes.org/responsive-web-design/">design responsivo</a>. Vale a pena vê-lo.</p>
 	</aside>
 </section>
 
@@ -576,27 +612,27 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 
 		<p>Neste exemplo, temos um campo texto normal e um campo com tipo URL. Repare como iOS coloca a tecla <b>.com</b> pra ajudá-lo a preencher o endereço.</p>
 	</aside>
-	<aside class="audience">
+	<aside class="audience exemplo-form">
 
-		<label for="campo1">Texto</label>
+		<label for="campo1">Texto:</label>
 		<input type=text id="campo1">
 
-		<label for="campo2">URL</label>
+		<label for="campo2">URL:</label>
 		<input type=url id="campo2">
 
-		<label for="campo3">Email</label>
+		<label for="campo3">Email:</label>
 		<input type=email autocapitalize="off" autocorrect="off" id="campo3">
 
-		<label for="campo4">Telefone</label>
+		<label for="campo4">Telefone:</label>
 		<input type=tel id="campo4">
 
-		<label for="campo5">Data</label>
+		<label for="campo5">Data:</label>
 		<input type=date id="campo5">
 
-		<label for="campo6">Hora</label>
+		<label for="campo6:">Hora</label>
 		<input type=time id="campo6">
 
-		<label for="campo7">Numérico</label>
+		<label for="campo7:">Numérico</label>
 		<input type=text pattern="[0-9]*" id="campo7">
 
 		<button>Enviar</button>
@@ -760,11 +796,31 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 
 		<p>Outra opção importante é deixar o usuário visualizar a senha digitada como texto, não apenas como password com asteriscos. Acho essa uma boa prática até para o Desktop, mas no mobile é mais importante ainda porque senhas costumam ser difíceis de digitar e errá-las é muito fácil.</p>
 	</aside>
-
 	<!--
-		TODO fazer audience com label na esquerda, no topo e dentro pra comparar.
-			 e com password mostrável.
-     -->
+	TODO audience com labels em posições diferentes e mostrar senha
+
+	<aside class="audience exemplo-form">
+
+		<p class="ps">(com label na esquerda)</p>
+		<label class="label-left">
+			Nome:
+			<input type="text">
+		</label>
+		
+		<p class="ps">(com label dentro)</p>
+		<input type="email" placeholder="Email">
+
+		<p class="ps">(com label em cima)</p>
+		<label>Senha:</label>
+		<input type="password">
+
+		<label class="show-password">
+			<input type="checkbox" checked>
+			<span>mostrar senha</span>
+		</label>
+
+	</aside>
+    -->
 </section>
 
 <section class="slide" id="form-js">
@@ -1042,7 +1098,7 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 	</div>
 
 	<aside class="notes">
-		<p>Não use `display: none` pra esconder conteúdo no celular. Ele será carregado mesmo assim. (uma imagem, ou anúncio)</p>
+		<p>Não use <code>display: none</code> pra esconder conteúdo no celular. Ele será carregado mesmo assim. (uma imagem, ou anúncio)</p>
 
 		<p>Uma ideia melhor é fazer carregamento condicional de conteúdo via Ajax por exemplo. Usando Mobile First, voc6e pode fazer seu HTML inicial apenas com o conteúdo usado por todos os devices. E se houver mais conteúdo para telas maiores, por exemplo, carregue via Ajax posteriormente.</p>
 	</aside>
@@ -1364,6 +1420,15 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 			<a href="http://twitter.com/sergio_caelum">@sergio_caelum</a>
 		</div>
 	</div>
+
+	<aside class="notes">
+		<p>Gostou? Compartilhe no Facebook e no Twitter usando os botões aí do topo!</p>
+		<p>Não de me seguir também no <a href="http://twitter.com/sergio_caelum">Twitter</a> e de acompanhar <a href="http://sergiolopes.org/">meu blog</a> para mais artigos.</p>
+		<p>E o código dessa palestra está todo disponível no <a href="https://github.com/sergiolopes/blog">Github do blog</a>. É bastante CSS, JavaScript e HTML!</p>
+	</aside>
+	<aside class="audience">
+		<p>Fim! Valeu por ter acompanhado.</p>
+	</aside>
 </section>
 </article>
 
@@ -1385,35 +1450,32 @@ offlineManifest: /manifest/palestra/mobile-web.manifest
 	</div>
 	<div class="audience">
 		<div class="title">
-			Truques de Web Mobile <span class="aovivo">Ao Vivo</span><span class="desconectado">Offline</span>
+			Truques de Web Mobile <span class="aovivo"></span><span class="desconectado"></span>
 		</div>
 
-		<div class="slide-toggle">
-			<span class="close-info">ver slide</span>
-			<span>esconder slide</span>
+		<div class="slide-toggle navigation">
+			<span class="b">ver só demos</span>
+			<span class="b">ver demos + slide</span>
+		</div>
+	</div>
+
+	<div class="site">
+		<div class="title goto-presentation-mode">
+			Truques de Web Mobile <span class="aovivo"></span><span class="desconectado"></span>
 		</div>
 
-		<div class="manual-sync">
-			Sincronização manual: <span class="do-sync">sincronizar</span>
+		<div class="share">
+			compartilhe:
+			
+            <a class="facebook" title="Compartilhar no Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsergiolopes.org%2Fpalestra-mobile-web%2F">Facebook</a>
+
+			<a class="twitter" title="Compartilhar no Twitter" href="https://twitter.com/intent/tweet?text=Palestra%20interativa%20de%20Web%20Mobile%20via%20@sergio_caelum&amp;url=http%3A%2F%2Fsergiolopes.org%2Fpalestra-mobile-web%2F">Twitter</a>
+
+		</div>
+
+		<div class="navigation">
+			<span class="goto-previous b">Anterior</span>
+			<span class="goto-next b">Próximo</span>
 		</div>
 	</div>
 </aside>
-
-
-<div class="initial-info">
-	<h1>Acompanhe a palestra no celular!</h1>
-
-	<p>Vou mostrar na palestra uns exemplos bacanas pra você testar. Pra participar, é <b>só deixar essa página aberta</b> no navegador durante a palestra.</p>
-
-	<p class="erro">Parece que seu navegador não suporta WebSockets, que precisamos pra sincronização automática. Você pode dar refresh manual durante a palestra ou ver um navegador mais recente:</p>
-
-	<p>No <b>iOS</b>, tudo funciona bem da versão 4.2 pra cima.</p>
-
-	<p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. (<a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">clique pra instalar</a>)</p>
-
-	<p>O browser padrão do Android 4+ funciona bem. Pra versões anteriores, recomendo usar o Firefox. (Opera não serve)</p>
-
-	<p>Dá pra acompanhar no <b>Notebook</b> também. Nesse caso, use um Chrome ou Firefox recente. Nem sonhe em abrir no IE, claro.</p>
-
-	<div class="close-info">Fechar info e acompanhar palestra</div>
-</div>

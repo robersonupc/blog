@@ -56,3 +56,10 @@ AddType text/cache-manifest .manifest
 
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
+
+
+
+
+
+# REDIRECTS
+Redirect /aovivo /palestra-mobile-web

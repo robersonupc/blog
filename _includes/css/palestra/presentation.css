@@ -26,14 +26,11 @@ pre code {
   }
 }
 /* PRESENTATION STRUCTURE */
-/* apresentacao inteira */
 .presentation {
   position: relative;
   max-width: none;
   margin: 0;
-  width: 50%;
-/* hides initially, since we don't know the correct mode yet */
-  display: none;
+  width: 100%;
 }
 /* 1 slide */
 .slide {
@@ -42,7 +39,12 @@ pre code {
   height: 0;
   width: 100%;
   position: relative;
-/* hw accelerate */
+/* hide all slides */
+  display: none;
+/* shows only active */
+}
+.slide.active {
+  display: block;
 }
 .slide .content {
   position: absolute;
@@ -88,35 +90,9 @@ pre code {
 }
 .bars {
   display: none;
+  width: 100%;
 }
-/***
-	PRESENTATION and AUDIENCE MODE commons
- ***/
-.presentation-mode body > *,
-.audience-mode body > * {
-  display: none;
-}
-.presentation-mode .presentation,
-.audience-mode .presentation {
-  display: block;
-}
-.presentation-mode .slide,
-.audience-mode .slide {
-/* hide by default */
-  display: none;
-/* show selected slide */
-}
-.presentation-mode .slide.active,
-.audience-mode .slide.active {
-  display: block;
-}
-.presentation-mode .loading,
-.audience-mode .loading {
-  -webkit-animation: none;
-  -moz-animation: none;
-  -o-animation: none;
-  -ms-animation: none;
-  animation: none;
+.bars > div {
   display: none;
 }
 /**
@@ -130,6 +106,9 @@ html.presentation-mode,
 }
 .presentation-mode .audience,
 .presentation-mode .notes {
+  display: none;
+}
+.presentation-mode .loading {
   display: none;
 }
 .presentation-mode .bars {
@@ -147,11 +126,6 @@ html.presentation-mode,
   padding: 0 4em;
   color: #fff;
 }
-.presentation-mode .slide:first-child.active ~ .bars,
-.presentation-mode .slide.active + .bars {
-  display: none;
-}
-/* iPhone hack to fullscreen */
 /* prevent scroll */
 .presentation-mode body,
 .presentation-mode html,
@@ -172,30 +146,60 @@ html.presentation-mode,
  ***/
 .site-mode .presentation {
   display: block;
+  margin: 3em auto;
+  max-width: 700px;
 }
 .site-mode .slide {
+  height: auto;
   overflow: visible;
+  margin-bottom: 1em;
 }
 .site-mode .notes {
+  display: block;
+  padding: 0.5em 1em;
+  width: 100%;
+}
+.site-mode .bars {
   position: absolute;
   top: 0;
-  right: -100%;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
+  left: 0;
+  height: 3em;
   display: block;
+}
+.site-mode .bars .site {
+  display: block;
+}
+.site-mode .loading {
+  display: none;
+}
+@media (min-width: 800px) and (orientation: landscape), (min-width: 1200px) {
+  .site-mode .presentation {
+    margin-right: 0;
+    max-width: none;
+    width: 50%;
+  }
+  .site-mode .slide {
+    padding-top: 0;
+  }
+  .site-mode .slide .content {
+    left: -1024px;
+  }
 }
 /***
     AUDIENCE MODE
  ***/
 .audience-mode .content,
-.audience-mode .notes,
-.audience-mode .manual-sync {
+.audience-mode .notes {
+  display: none;
+}
+.audience-mode .loading {
   display: none;
 }
 .audience-mode .slide {
   height: auto;
-  padding-top: 0;
+}
+.audience-mode .slide .content {
+  display: block;
 }
 .audience-mode .bars {
   position: absolute;
@@ -205,8 +209,8 @@ html.presentation-mode,
   width: 100%;
   display: block;
 }
-.audience-mode .bars .content {
-  display: none;
+.audience-mode .bars .audience {
+  display: block;
 }
 .audience-mode .slide.audience-active {
   display: block;
@@ -215,12 +219,6 @@ html.presentation-mode,
 }
 .audience-mode .slide.audience-active .audience {
   display: block;
-}
-.audience-mode .slide.audience-active .audience:before {
-  content: '';
-  display: block;
-  height: 3em;
-  width: 100%;
 }
 .audience-mode .slide.audience-active .content {
   visibility: hidden;
@@ -236,66 +234,33 @@ html.presentation-mode,
 .audience-mode .slide.audience-active {
   position: relative;
 }
-.audience-mode.show-slide .slide {
-  padding-top: 75%;
-}
-.audience-mode.show-slide .slide.audience-active {
-  margin-top: 3em;
-}
-.audience-mode.show-slide .slide .content {
-  display: block;
-}
-.audience-mode.show-slide .slide .audience:before {
-  display: none;
-}
 .audience-mode .presentation {
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 3em auto;
   width: 100%;
 }
-.no-websocket.audience-mode .bars,
-.no-websocket.audience-mode .slide.audience-active .audience:before {
-  height: 6em;
+.hide-slide .slide {
+  padding-top: 0;
 }
-.viewing-info.no-websocket.audience-mode .bars,
-.viewing-info.no-websocket.audience-mode .slide.audience-active .audience:before {
-  height: 3em;
-}
-.no-websocket.audience-mode.show-slide .slide.audience-active {
-  margin-top: 6em;
-}
-.no-websocket.audience-mode .manual-sync {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3em;
-  width: 100%;
-}
-.viewing-info.no-websocket.audience-mode .manual-sync {
+.hide-slide .slide .content {
   display: none;
+}
+.bars .slide-toggle .b:first-child {
+  display: inline-block;
+}
+.bars .slide-toggle .b:last-child {
+  display: none;
+}
+.hide-slide .bars .slide-toggle .b:first-child {
+  display: none;
+}
+.hide-slide .bars .slide-toggle .b:last-child {
+  display: inline-block;
 }
 .slide .audience p {
   margin: 0;
   padding: 1em;
   font-size: 100%;
-}
-/**
-	INITIAL INFO MESSAGE
- **/
-.initial-info {
-  display: none;
-}
-.viewing-info.audience-mode .slide {
-  display: none;
-}
-.viewing-info.audience-mode .initial-info {
-  display: block;
-  padding-top: 3em;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*************
  BASE LAYOUT
@@ -308,20 +273,60 @@ body,
   background-color: #f90;
   padding: 5%;
 }
-.slide .notes {
-  background-color: #222;
-  background-image: url("/img/base/noise.png");
-  color: #fff;
+.slide .content li,
+.slide .content p,
+.slide .content blockquote {
+  font-size: 3em;
+  line-height: 1.2;
 }
+.slide .notes,
 .slide .audience,
 .slide .audience p {
   color: #fff;
 }
-.slide li,
-.slide p,
-.slide blockquote {
-  font-size: 3em;
-  line-height: 1.2;
+.site-mode .bars {
+  text-align: center;
+}
+.share {
+  color: #fff;
+  display: inline-block;
+  line-height: 3em;
+  vertical-align: middle;
+}
+.share a {
+  color: #fff;
+  display: inline-block;
+  line-height: 2em;
+  padding: 0 0.5em;
+  line-height: 2.1em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 0.2em;
+}
+.share .twitter {
+  background: #00aced;
+}
+.share .twitter:hover {
+  background: #0099d4;
+}
+.share .facebook {
+  background: #3b5998;
+}
+.share .facebook:hover {
+  background: #344e86;
+}
+@media (max-width: 880px) {
+  .bars .share {
+    display: none;
+  }
+}
+.navigation {
+  display: inline-block;
+  line-height: 3em;
+  vertical-align: middle;
+  float: right;
+  margin-right: 0.5em;
 }
 .highlight {
   font-size: 1.9em;

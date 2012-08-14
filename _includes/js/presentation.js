@@ -1,26 +1,3 @@
-/* Before everything:
-    JSONP fallback for non-WebSockets users
- */
-
-jsonLastSlide = undefined;
-if (!window.WebSocket) {
-
-    // jsonp callback
-    function lastSlide(slide) {
-        jsonLastSlide = slide;
-    }
-
-    function loadLastSlideViaAjax() {
-        // script async calling
-        var script  = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src  = 'http://sergiolopes.org/sync/mobile-web.js?' + new Date().getTime();
-        document.getElementsByTagName('head')[0].appendChild(script);
-    }
-
-    loadLastSlideViaAjax();
-}
-
 /*
  * Hammer.JS version 0.6.1
  */
@@ -815,18 +792,18 @@ function Q(elements, fn) {
             var _events = events.split(/\s*,\s*/);
             
             return _this.each(function(el) {
-                for (var event = _events[0], i = 0; i < _events.length; event = _events[++i]) {
-                    if (event == 'tap') {
+                for (var evt = _events[0], i = 0; i < _events.length; evt = _events[++i]) {
+                    if (evt == 'tap' || evt == 'hold') {
                         // special touch event
-                        new Hammer(el, {drag: false, swipe: false, transform: false}).ontap = function() {
+                        new Hammer(el, {drag: false, swipe: false, transform: false})['on' + evt] = function() {
                             callback.apply(el, arguments);
                         };
                     } else {
                         // normal events
                         if (window.addEventListener) {
-                            el.addEventListener(event, callback, false);
+                            el.addEventListener(evt, callback, false);
                         } else {
-                            el.attachEvent('on' + event, callback); // IE
+                            el.attachEvent('on' + evt, callback); // IE
                         }
                     }
                 }
@@ -894,7 +871,13 @@ function C(tagName, options) {
     
     return el;
 }
+function getURLParameter(name) {
+    var params = location.search.replace(/\/$/, '');
 
+    return decodeURI(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(params)||[,null])[1]
+    );
+}
 
 
 // sync via WebSockets
@@ -924,10 +907,15 @@ var WS = (function(doc, win){
     }
     setStatus('offline');
 
+    // select first slide to show
+    var firstSlide = location.hash.replace('#slide-','');
+    if (getURLParameter('mode') === 'audience') // audience can't have first slide
+        firstSlide = '';
 
     // function reconnect
     var _url = undefined;
     var _secret = undefined;
+    var _room = undefined;
     function tryToReconnect() {
         // TODO extract max_retries
         if (retries > 20) {
@@ -938,7 +926,7 @@ var WS = (function(doc, win){
         }
 
         if (!connected && _url !== undefined) {
-            WS.connect(_url, _secret);
+            WS.connect(_url, _room, _secret);
         }
     }
 
@@ -964,13 +952,19 @@ var WS = (function(doc, win){
     
     // public API
     return {
-        connect: function(url, secret) {
+        connect: function(url, room, secret) {
             // cache values
             _url = url;
+            _room = room;
             _secret = secret;
 
             if (!supported) return;
-            if (secret) url += '?secret=' + secret;
+
+            // validate params
+            if (room === undefined || room === 'null' || room === 'undefined') room = '';
+            if (secret === undefined || secret === 'null' || secret === 'undefined') secret = '';
+
+            url += '?room=' + room + '&secret=' + secret;
 
             // open connection
             try {
@@ -986,9 +980,14 @@ var WS = (function(doc, win){
 
                 webSocket.onopen = function(event) {
                     // introducing myself
-                    webSocket.send(':' + navigator.userAgent);
+                    webSocket.send(': ' + navigator.userAgent);
                 
+                    // change status to online
                     setStatus('online');
+
+                    // syncing first slide
+                    if (firstSlide !== '')
+                        webSocket.send('# ' + firstSlide);
 
                     // clear retry counter
                     retries = 0;
@@ -999,19 +998,32 @@ var WS = (function(doc, win){
                     lastMessageReceivedAt = new Date().getTime();
 
                     // new slide message
-                    if (message.indexOf('#') === 0)
-                        P.showSlide(message.substr(1));
+                    if (message.indexOf('# ') === 0) {
+                        P.showSlide(message.substr(2));
+                    }
 
                     // total clients message
-                    else if(message.indexOf('+') === 0)
-                        Q('.sync-clients').text(message.substr(1));
+                    else if(message.indexOf('+ ') === 0) {
+                        Q('.sync-clients').text(message.substr(2));
+                    }
 
                     // handshake, approving this client
-                    else if (message === '$$' + secret) {
+                    else if (message === '$ ' + secret) {
                         isOwner = true;
 
                         // if owner, send current slide
                         WS.sendSlide(P.activeSlide().id);
+                    }
+
+                    // client room 
+                    else if (message.indexOf('= ') === 0) {
+                        _room = message.substr(2);
+                        if (console) console.log('Connected to room ' + _room);
+
+                        // notify room callbacks
+                        var evt = document.createEvent('Event');
+                        evt.initEvent('roomconnect', true, true);
+                        document.dispatchEvent(evt);
                     }
                 };
 
@@ -1036,18 +1048,13 @@ var WS = (function(doc, win){
         },
 
         sendSlide: function(id) {
-            if (!supported || !connected || !isOwner) return;
+            if (!supported || !connected) return;
 
-            // prevent bug on iOS
+            // setTimeout prevent bug on iOS
             // (according to socket-io)
             setTimeout(function(){
-                webSocket.send('#' + id);    
+                webSocket.send('# ' + id);    
             }, 0);
-        },
-
-        ping: function() {
-            if (!supported || !connected) return;
-            webSocket.send('!ping');
         },
 
         close: function() {
@@ -1070,6 +1077,10 @@ var WS = (function(doc, win){
 
         isOwner: function() {
             return isOwner;
+        },
+
+        myRoom: function(){
+            return _room;
         }
     };
 
@@ -1077,9 +1088,8 @@ var WS = (function(doc, win){
 
 
 // WS.connect("ws://" + location.hostname + ":8080/websockets-server/sync", localStorage.getItem('sync-secret'));
-// MICRO: WS.connect("ws://ec2-177-71-238-112.sa-east-1.compute.amazonaws.com:8080/websockets-server/sync", localStorage.getItem('sync-secret'));
-MEDIUM: WS.connect("ws://ec2-177-71-170-21.sa-east-1.compute.amazonaws.com:8080/websockets-server/sync", localStorage.getItem('sync-secret'));
-
+// WS.connect("ws://ec2-177-71-170-21.sa-east-1.compute.amazonaws.com:8080/websockets-server/sync", localStorage.getItem('sync-secret'));
+WS.connect("ws://ec2-23-22-59-142.compute-1.amazonaws.com:8080/websockets-server/sync", getURLParameter('room'), localStorage.getItem('sync-secret'));
 
 
 
@@ -1087,33 +1097,11 @@ MEDIUM: WS.connect("ws://ec2-177-71-170-21.sa-east-1.compute.amazonaws.com:8080/
 
 PRESENTATION LOGIC
 
-MODES:
-
-- presentation mode
-    * full screen
-    * sem anotacoes
-    * navegacao via teclado
-        - setas, espaco e enter pra passar slides
-        - esc pra sair
-    * TODO navegacao via touch
-        - swipe pra passar slides
-        - hold pra sair
-    * TODO offline html5
-- site mode
-    * slides na sequencia
-    * navegacao via scroll
-    * anotacoes do lado (ou embaixo em portrait)
-    * responsivo
 - TODO presenter mode
     * só anotacoes
     * contador de tempo
     * proximo slide
     * navegacao via teclado e touch
-- TODO audience mode
-    * full screen
-    * só mostra slide atual
-    * mostra anotacoes do slide atual
-    * identifica desconexao e oferece botao de reconectar
 - TODO controller mode
     * mobile, touch mode
     * botoes de avancar e voltar
@@ -1128,15 +1116,6 @@ var P = (function(doc, userAgent, location, win){
     // TODO make the selector configurable
     var presentationContainer = Q('.presentation');
     var slides = presentationContainer.find('.slide');
-
-
-
-    // small browser detection
-    // TODO improve this
-    var iPhone = userAgent.indexOf('iPod') >= 0 || userAgent.indexOf('iPhone') >= 0;
-    var android = userAgent.indexOf('Android') >= 0;
-    var smallAndroid = android && userAgent.indexOf('Mobile') >= 0;
-    //doc.documentElement.className += ' ' + (android? 'android' : iPhone? 'iphone' : '');
 
     
 
@@ -1173,13 +1152,6 @@ var P = (function(doc, userAgent, location, win){
 
         audience: {
             enter: function() {
-                if (localStorage.getItem('info-viewed') == undefined) {
-                    Q(doc.documentElement).addClass('viewing-info');
-                    Q('.close-info').on('tap', function(){
-                        localStorage.setItem('info-viewed', 'true')
-                        Q(doc.documentElement).removeClass('viewing-info');
-                    });
-                }
             },
             exit: function() {
             }
@@ -1195,7 +1167,7 @@ var P = (function(doc, userAgent, location, win){
 
     // button to toggle slide view on audience mode
     Q('.slide-toggle').on('tap', function() {
-        Q(doc.documentElement).toggleClass('show-slide');
+        Q(doc.documentElement).toggleClass('hide-slide');
 
         // notify slide resizer to do its magic
         var evt = document.createEvent('Event');
@@ -1203,6 +1175,18 @@ var P = (function(doc, userAgent, location, win){
         document.dispatchEvent(evt);
     });
 
+    // buttons to navigate
+    Q('.goto-previous').on('tap', function(){
+        P.showPreviousSlide();
+    })
+    Q('.goto-next').on('tap', function(){
+        P.showNextSlide();
+    })
+
+    // touch to enter presentation mode on mobile
+    Q('.goto-presentation-mode').on('hold', function(){
+        P.enter('presentation');
+    })
 
     // buttons to do manual sync
     Q('.do-sync').on("tap", function() {
@@ -1245,12 +1229,14 @@ var P = (function(doc, userAgent, location, win){
 
             // navigate to previous slide:
             case 37: // left arrow
+            case 38: // Key up.
                 P.showPreviousSlide();
                 event.preventDefault();
                 break;
 
             // navigate to next slide:
             case 39: // Key right.
+            case 40: // Key down.
             case 32: // space
             case 13: // enter
                 P.showNextSlide();
@@ -1263,9 +1249,10 @@ var P = (function(doc, userAgent, location, win){
                 event.preventDefault();
                 break;
 
-            // show navigation options
-            case 38: // Key up.
-            case 65: // 'a' key
+            // enter presentation mode:
+            case 80: // 'p' key
+                P.enter('presentation');
+                event.preventDefault();
                 break;
 
             // force slide sync
@@ -1358,7 +1345,6 @@ var P = (function(doc, userAgent, location, win){
                 slideCallbacks.firstTime[name] = false;
             }
 
-
             // changes URL
             location.hash = 'slide-' + name;
 
@@ -1372,6 +1358,12 @@ var P = (function(doc, userAgent, location, win){
             slides.removeClass('audience-active');
             var audience = slide.getAttribute('data-audience');
             Q('#' + audience).addClass('audience-active');
+
+            // notify slide change event
+            var evt = document.createEvent('Event');
+            evt.initEvent('showslide', true, true);
+            evt.slideName = name;
+            document.dispatchEvent(evt);
         },
 
         showNextSlide: function() {
@@ -1406,6 +1398,10 @@ var P = (function(doc, userAgent, location, win){
 
         activeSlide: function(){
             return activeSlide;
+        },
+
+        mode: function() {
+            return mode;
         },
 
         before: function(slide, callback) {
@@ -1454,18 +1450,13 @@ var P = (function(doc, userAgent, location, win){
             }
 
             // enter the first, initial mode
-            var initialMode = location.search.replace('?','').replace('/','') || 'site';
+            var initialMode = getURLParameter('mode') || 'site';
             if (possibleModes.indexOf(initialMode) == -1) initialMode = possibleModes[0];
             this.enter(initialMode);
 
+            // show first slide
+            this.showSlide(activeSlide.id);
 
-            // overwrite sync function
-            window.lastSlide = function(slide) {
-                P.showSlide(slide);
-                Q(doc.documentElement).removeClass('doing-manual-sync');
-            }
-            if (jsonLastSlide != undefined) 
-               lastSlide(jsonLastSlide);
 
             // config params
             options.slideViewport = options.slideViewport || [1024, 768]
@@ -1497,7 +1488,7 @@ var P = (function(doc, userAgent, location, win){
                     // scale slide content
                     var slideContainer = activeSlide || slides.get(0);
                     if (mode === 'presentation') {
-                        // if presentation, scales to occupy 100% screen size.
+                        // if presentation, scales to fit 100% screen size.
                         // don't allow overflow on any size, so we resize according to the smallest orientation.
                         var scaleFactor = Math.min(slideContainer.offsetWidth / slideWidth, slideContainer.offsetHeight / slideHeight);
                     } else {
@@ -1544,6 +1535,11 @@ var P = (function(doc, userAgent, location, win){
 
 
 
+// analytics
+Q(window).on('showslide', function(evt){
+    _gaq.push(['_trackEvent', 'Presentation', document.title, 'Slide ' + evt.slideName]);
+});
+
 
 
 // analytics
@@ -1554,8 +1550,10 @@ _gaq.push(['_setAccount', 'UA-61051-6']);
 _gaq.push(['_trackPageview']);
 
 (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var url = 'http://www.google-analytics.com/';
+    if (location.hostname === 'localhost' || location.hostname.indexOf('192.168') !== -1) return;//url+="u/ga_debug.js";
+    else url+="ga.js";
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = url;
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 

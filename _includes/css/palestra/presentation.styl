@@ -33,17 +33,11 @@ pre code {
 
 /* PRESENTATION STRUCTURE */
 
-/* apresentacao inteira */
-.presentation {
+.presentation
 	position: relative
-	max-width: none;
-	margin: 0;
-	width: 50%;
-	//overflow-x: hidden
-
-	/* hides initially, since we don't know the correct mode yet */
-	display: none;
-}
+	max-width: none
+	margin: 0
+	width: 100%
 
 /* 1 slide */
 .slide  
@@ -54,8 +48,12 @@ pre code {
 
 	position: relative;
 
-	/* hw accelerate */
-	// transform: translateX(0)
+	/* hide all slides */
+	display: none
+
+	/* shows only active */
+	&.active
+		display: block
 
 	.content
 		// slide anchored to top but we need to adjust this value
@@ -99,32 +97,11 @@ pre code {
 
 .bars
 	display: none
+	width: 100%
 
-
-/***
-	PRESENTATION and AUDIENCE MODE commons
- ***/
-
-.presentation-mode, .audience-mode
-	/* hide everything except '.presentation' */
-	body > *
+	> div
 		display: none
-	.presentation
-		display: block
 
-	/* control slide display */
-	.slide
-		/* hide by default */
-		display: none;
-		
-		/* show selected slide */
-		&.active
-			display: block;
-
-	/* disable loading animation */
-	.loading
-		animation: none
-		display: none
 
 /**
     PRESENTATION MODE
@@ -137,6 +114,10 @@ pre code {
 		width: 100%;
 
 	.audience, .notes
+		display: none
+
+	// hide loading spinner
+	.loading
 		display: none
 
 	/* show bottom fixed bar */
@@ -156,18 +137,6 @@ pre code {
 			padding: 0 4em;
 
 			color: white;
-
-	/* hides presentation bar on first and last slides */
-	/* BROKEN */
-	.slide:first-child.active ~ .bars,
-	.slide.active + .bars
-		display: none
-	
-
-/* iPhone hack to fullscreen */
-// .iphone.presentation-mode {
-// 	height: 118%;
-// }
 
 /* prevent scroll */
 .presentation-mode body,
@@ -192,24 +161,52 @@ pre code {
     SITE MODE
  ***/
 
-.site-mode 
+.site-mode
+
 	.presentation
-		display: block;
+		display: block
+		margin: 3em auto
+		max-width: 700px
 
 	.slide
+		height: auto
 		overflow: visible;
+		margin-bottom: 1em
 
 	/* show presentation notes */
 	.notes
-		position: absolute;
-		top: 0;
-		right: -100%;
-
-		height: 100%;
+		display: block;
+		padding: 0.5em 1em
 		width: 100%;
 
-		overflow: auto;
-		display: block;
+	.bars
+		absolute: top left
+		height: 3em
+		display: block
+
+		.site
+			display: block
+
+	// hide loading spinner
+	.loading
+		display: none
+
+
+// big screen landscape oriented
+@media (min-width: 800px) and (orientation: landscape), (min-width: 1200px)
+
+	// big desktop screen:
+	// put notes next to the slide
+	.site-mode
+		.presentation
+			margin-right: 0
+			max-width: none
+			width: 50%
+		.slide
+			padding-top: 0
+
+			.content
+				left: -1024px
 
 
 /***
@@ -217,20 +214,19 @@ pre code {
  ***/
  
 .audience-mode
-	
-	/* prevents vertical scroll caused by big slide canvas */
-	// html&, body, .presentation
-	// 	//overflow: hidden
-	// 	height: auto
-	// 	width: 100%
 
 	/* hide slide contents and presenter notes */
-	.content, .notes, .manual-sync
+	.content, .notes
+		display: none
+
+	// hide loading spinner
+	.loading
 		display: none
 
 	.slide
 		height: auto
-		padding-top: 0;
+		.content
+			display: block
 
 	/* show audience bar */
 	.bars
@@ -239,8 +235,8 @@ pre code {
 		width: 100%
 		display: block
 
-		.content
-			display: none
+		.audience
+			display: block
 
 	/* show last .audience */
 	.slide.audience-active
@@ -249,12 +245,6 @@ pre code {
 		/* show audience notes */
 		.audience
 			display: block;
-
-			&:before
-				content: ''
-				display: block
-				height: 3em
-				width: 100%
 
 		/* hide slide from background rendering */
 		.content
@@ -270,68 +260,37 @@ pre code {
 	.slide.audience-active
 		position: relative;
 
-	/* show slide if asked */
-	&.show-slide 
-		.slide 
-			padding-top: 75%;
-
-			&.audience-active
-				margin-top: 3em // bar size
-
-			.content
-				display: block
-
-			.audience:before
-				display: none
-
 	.presentation
 		max-width: 500px
-		margin-left: auto
-		margin-right: auto
+		margin: 3em auto
 		width: 100%
 
-.no-websocket.audience-mode
-	.bars, .slide.audience-active .audience:before
-		height: 6em
-
-		.viewing-info&
-			height: 3em
-
-	&.show-slide .slide.audience-active
-		margin-top: 6em
-
-	.manual-sync
-		display: block
-		absolute: bottom left
-		height: 3em
-		width: 100%
-
-		.viewing-info&
+// hide slide if asked
+.hide-slide 
+	.slide
+		padding-top: 0
+		.content
 			display: none
+
+// show/hide slide view
+.bars .slide-toggle
+	.b:first-child
+		display: inline-block
+	.b:last-child
+		display: none
+
+	.hide-slide & 
+		.b:first-child
+			display: none
+		.b:last-child
+			display: inline-block
+
 
 .slide .audience
 	p
 		margin: 0
 		padding: 1em
 		font-size: 100%
-
-
-/**
-	INITIAL INFO MESSAGE
- **/
-
-.initial-info
-	display: none
-
-.viewing-info.audience-mode
-	.slide
-		display: none
-	.initial-info
-		display: block
-		padding-top: 3em
-		max-width: 500px
-		margin-left: auto
-		margin-right: auto
 
 
 
@@ -347,21 +306,53 @@ body, .bars
 		background-color: #f90;
 		padding: 5%;
 
-	.notes
-		background-color: #222;
-		background-image: url(/img/base/noise.png);
-		color: white;
+		li, p, blockquote
+			font-size: 3em
+			line-height: 1.2
 
-	.audience, .audience p
+	.notes, .audience, .audience p
 		color: white
-	
-.slide li,
-.slide p,
-.slide blockquote {
-	font-size: 3em;
-	line-height: 1.2;
-}
 
-.highlight {
+.site-mode .bars
+	text-align: center
+
+.share
+	color: white
+	display: inline-block
+	line-height: 3em
+	vertical-align: middle
+
+	a
+		color: white
+		display: inline-block;
+		line-height: 2em
+		padding: 0 0.5em
+		line-height: 2.1em
+		vertical-align: middle
+		text-align: center
+		text-decoration: none
+		margin: 0 0.2em
+
+	.twitter
+		background: #00aced
+		&:hover
+			background: #0099d4
+
+	.facebook
+		background: #3b5998
+		&:hover
+			background: #344e86
+
+@media (max-width: 880px)
+	.bars .share
+		display: none
+
+.navigation
+	display: inline-block
+	line-height: 3em
+	vertical-align: middle
+	float: right
+	margin-right: 0.5em
+	
+.highlight
 	font-size: 1.9em;
-}
