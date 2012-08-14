@@ -22,13 +22,19 @@ title : sergiolopes.org
    <updated>{{ post.date | date_to_xmlschema }}</updated>
    <id>h{{ site.production_url }}{{ post.id }}/</id>
    <content type="html">
-   	{% if post.feedWarning %}
-   		&lt;p style=&quot;padding:10px; background-color:#FFF0A5&quot;&gt;&lt;i&gt;{{ post.feedWarning }}&lt;/i&gt;&lt;/p&gt;
-   	{% endif %}
+      {% if post.feedReplace %}
+         &lt;p style=&quot;padding:10px; background-color:#FFF0A5&quot;&gt;&lt;i&gt;{{ post.feedReplace }}&lt;/i&gt;&lt;/p&gt;
 
-   		{{ post.content | prepare_feed | xml_escape }}
+         {{ post.description | prepare_feed | xml_escape }}
+      {% else %}
+         {% if post.feedWarning %}
+            &lt;p style=&quot;padding:10px; background-color:#FFF0A5&quot;&gt;&lt;i&gt;{{ post.feedWarning }}&lt;/i&gt;&lt;/p&gt;
+         {% endif %}
 
-   		&lt;hr&gt;&lt;p&gt;Conteúdo original do blog &lt;a href=&quot;http://sergiolopes.org&quot;&gt;sergiolopes.org&lt;/a&gt;.&lt;/p&gt;
+         {{ post.content | prepare_feed | xml_escape }}
+
+         &lt;hr&gt;&lt;p&gt;Conteúdo original do blog &lt;a href=&quot;http://sergiolopes.org&quot;&gt;sergiolopes.org&lt;/a&gt;.&lt;/p&gt;
+      {% endif %}
    </content>
  </entry>
  {% endif %}
