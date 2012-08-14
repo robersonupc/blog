@@ -2,6 +2,9 @@
 
 rm -rf _deploy
 
+# build stylus
+stylus _includes/css/palestra/ -u nib
+
 echo Regenerating site
 jekyll _deploy
 cp .htaccess _deploy/.htaccess
