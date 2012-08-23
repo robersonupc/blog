@@ -22,6 +22,8 @@ ogtype: website
 <h3>Meus principais posts no Blog da Caelum</h3>
 
 <ul class="posts">
+  <li><a href="http://blog.caelum.com.br/websockets-html5-em-java-com-jetty-web-em-tempo-real/">WebSockets HTML5 em Java com Jetty: Web em tempo real</a></li>
+
   <li><a href="http://blog.caelum.com.br/nao-use-jquery-no-seu-site-mobile-conheca-o-zepto-js/">Não use jQuery no seu site mobile: conheça o Zepto.JS</a></li>
   
   <li><a href="http://blog.caelum.com.br/css-facil-flexivel-e-dinamico-com-less/">CSS fácil, flexível e dinâmico com LESS</a></li>
