@@ -10,7 +10,7 @@ shareImage: /img/posts/responsive-email/share.jpg
 class: destaque
 ---
 
-Muita gente abre emails no celular. Falamos que a web mobile tem crescido, mas abrir emails fora do Desktop já é uma tendência ainda maior. Há [pesquisas][cmclients] que apontam mais de 20% de taxa de abertura de emails em mobile. E é bom estar preparado, se você manda emails para seus usuários -- newsletters, informativos, emails de confirmação, notificações.
+Muita gente abre emails no celular. Falamos que a web mobile tem crescido, mas abrir emails fora do Desktop já é uma tendência ainda maior. Há [pesquisas][cmclients] que apontam mais de 20% de taxa de abertura de emails em mobile. E é bom estar preparado, se você manda emails para seus usuários -- newsletters, informativos, emails de confirmação, notificações. O papa da usabilidade, Jacok Nielsen, também apoia o [design responsivo como solução para emails](http://www.useit.com/alertbox/mobile-email-newsletters.html).
 
 Recentemente, trabalhei na reestruturação da [newsletter da Caelum][newsletter] e um dos focos foi a criação de um **email responsivo**. Reparamos que a taxa de visitantes mobile no site da Caelum vindas da newsletter é **o dobro** dos visitantes normais. E nossa newsletter não era responsiva ainda.
 
