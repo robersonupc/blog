@@ -1,11 +1,12 @@
 CACHE MANIFEST
-# REV 14
+# REV 24
 
 CACHE:
 
 # fontes
 /img/palestra/mobile-web/YanoneKaffeesatz-Regular.ttf
 /img/palestra/mobile-web/YanoneKaffeesatz-Bold.ttf
+/img/palestra/mobile-web/caelum-logo.ttf
 
 # base das palestras
 /img/palestra/sergio-lopes.jpg
@@ -28,9 +29,6 @@ CACHE:
 /img/palestra/mobile-web/appicon.png
 
 NETWORK:
-
-# ajax manual sync
-/sync/mobile-web.js
 
 # other, like analytics
 *

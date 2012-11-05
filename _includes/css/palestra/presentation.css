@@ -331,6 +331,19 @@ body,
 .highlight {
   font-size: 1.9em;
 }
+.presentation-mode-only,
+.site-mode-only,
+.audience-mode-only,
+.show-on-main-room,
+.main-room .hide-on-main-room {
+  display: none;
+}
+.presentation-mode .presentation-mode-only,
+.audience-mode .audience-mode-only,
+.site-mode .site-mode-only,
+.main-room .show-on-main-room {
+  display: block;
+}
 @-moz-keyframes loading {
   0% {
     -webkit-transform: rotate(0deg);

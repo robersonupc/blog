@@ -24,16 +24,16 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 			<span>Web mobile</span>
 		</h1>
 
-		<p class="subtitulo">Palestra interativa com slides, anotações e <b>testes pra rodar no celular/tablet</b>.</p>
+		<div class="site-mode-only">
+			<p class="subtitulo">Palestra interativa com slides, anotações e <b>testes pra rodar no celular/tablet</b>.</p>
 
-		<div class="font-caelum ex1 logo"></div>
+			<div class="font-caelum ex1 logo"></div>
+		</div>
 
-		<!--
-		<div class="aovivo">
+		<div class="aovivo presentation-mode-only">
 			<a href="http://sergiolopes.org/aovivo">sergiolopes.org<span>/aovivo</span></a>
 			<div>(acesse agora no celular, tablet ou desktop pra acompanhar a palestra)</div>
 		</div>
-	    -->
 	</div>
 	<aside class="notes">
 		<h3>Como navegar no Desktop:</h3>
@@ -48,6 +48,20 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<ul>
 			<li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
 		</ul>
+
+		<p><i><b>Último update:</b> Novembro/2012.</i></p>
+	</aside>
+	<aside class="audience">
+		<p>Aqui você acompanha <b>exemplos e demos em tempo real</b> dos assuntos tratados na palestra. Você pode ver o slide atual aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
+
+		<p>Único requisito é usar um navegador moderno com suporte a <b>WebSockets</b>. No <b>iOS</b>, tudo
+		 funciona bem da versão 4.2 pra cima.</p>
+
+		<p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. O browser padrão do <em>Android 4+</em> também funciona bem. (Opera não serve)</p>
+
+		<p>Dá pra acompanhar no computador também. Nesse caso, use um Chrome ou Firefox recente, ou IE 10.</p>
+
+		<p>A sincronização estará ativa entre esse navegador e seu dispositivo se a <b>bolinha</b> no título da palestra estiver <b>verde</b>.</p>
 	</aside>
 </section>
 
@@ -72,9 +86,16 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
 	</aside>
+
+	<aside class="audience">
+		<p>Sou instrutor e desenvolvedor na <a href="http://www.caelum.com.br/">Caelum</a>. Aliás,
+			<b>estamos contratando instrutores de front-end</b>; fale comigo depois se te interessar.</p>
+
+		<p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front. Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
+	</aside>
 </section>
 
-<section class="slide" id="audience">
+<section class="slide skip-on-presentation" id="audience">
 	<div class="content">
 		<h1>Sincronize seu dispositivo!</h1>
 		<div class="room-linker"></div>
@@ -88,7 +109,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. O browser padrão do <em>Android 4+</em> também funciona bem. Pra versões anteriores, recomendo usar o Firefox Mobile. (Opera não serve)</p>
 
-		<p>Dá pra acompanhar no computador também. Nesse caso, use um Chrome ou Firefox recente. IE só 10.</p>
+		<p>Dá pra acompanhar no computador também. Nesse caso, use um Chrome ou Firefox recente, ou IE 10.</p>
 
 		<p>A sincronização estará ativa entre esse navegador e seu dispositivo se a <b>bolinha</b> no título da palestra estiver <b>verde</b>.</p>
 
@@ -120,7 +141,10 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>A Web é essencial. Mesmo que você goste de Apps, você precisa de web mobile. O usuário recebe links de amigos no email ou Facebook, ele busca algo no Google etc. Ele navega. E isso é web. Eu, pessoalmente, acredito que o futuro mobile é web, não apps nativas, mas isso é assunto pra uma outra palestra inteira.</p>
 
-		<p>Aqui, vamos focar na Web mobile. E basicamente atacamos o mundo Web mobile de duas formas.</p>
+		<p>Aqui, vamos focar na <B>Web mobile</B>. E basicamente atacamos o mundo Web mobile de duas formas.</p>
+	</aside>
+	<aside class="audience">
+		<p>Mobile é o futuro da computação e o futuro da Web. Na palestra, vamos focar na <b>Web Mobile</b>.</p>
 	</aside>
 </section>
 
@@ -316,6 +340,32 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	</aside>
 </section>
 
+<section class="slide" id="css-viewport">
+	<div class="content">
+		<h1>
+			<span>Novo</span>
+			<b>@viewport</b>
+		</h1>
+
+		{% code css %}
+		@viewport {
+			width: device-width;
+		}
+
+		/* e os prefixos */
+		@-ms-viewport { width: device-width; }
+		@-o-viewport  { width: device-width; }
+		{% endcode %}
+	</div>
+	<aside class="notes">
+		<p>Falando em viewport, é importante lembrar que a meta tag é algo proprietário inventado pelo iPhone
+			e depois copiado por vários browsers (Android, Firefox, Chrome etc). Mas não é oficial da 
+			<a href="http://dev.w3.org/csswg/css-device-adapt/">especificação</a>.</p>
+		<p>O jeito oficial é usando CSS através da nova regra <strong>@viewport</strong>. É importanta colocá-la
+			desde já pois o <a href="http://msdn.microsoft.com/en-us/library/ie/hh708740(v=vs.85).aspx">Internet Explorer 10</a> exige essa regra no novo <em>Snap Mode</em> do Windows 8 e <a href="http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/">ignora a meta tag</a>. O <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">Opera</a> também suporta essa nova spec.</p>
+	</aside>
+</section>
+
 <section class="slide" id="scroll">
 	<div class="content">
 		<h1><b>Elimine</b> a barra de endereços</h1>
@@ -469,7 +519,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	</aside>
 
 	<aside class="audience">
-		<p>Atividade do dia: aperte apenas as bolinhas ímpares. <b>Com o dedão.</b></p>
+		<p>Atividade do dia: aperte apenas as bolinhas ímpares (primeira, terceira, etc). <b>Com o dedão.</b></p>
 
 		<div class="bolinhas">
 			<span data-num=1></span><span data-num=2></span><span data-num=3></span><span data-num=4></span><span data-num=5></span><span data-num=6></span><span data-num=7></span><span data-num=8></span><span data-num=9></span><span data-num=10></span><span data-num=11></span><span data-num=12></span><span data-num=13></span><span data-num=14></span>
@@ -490,6 +540,10 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>Pode usar hover puramente como decoração, adicional no Desktop, totalmente progressive enhancement.
 		Mas não dependa dele pra mostrar conteúdo ou fazer alguma interação.</p>
+
+		<p><em>A única implementação de hover decente que vi em mobile foi no Samsung Galaxy Note II com
+			sua caneta S Pen inteligente. A tela wacom do aparelho reconhece a proximidade da caneta mesmo
+			sem tocá-la, e dispara um evento de hover na página corretamente.</em></p>
 	</aside>
 </section>
 
@@ -512,7 +566,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	<aside class="notes">
 		<p>E falando em outras coisas para esquecer, temos mais alguns.</p>
 
-		<p>A famosa barra fixa no topo com `position: relative` fica péssima no mobile. A maioria dos navegadores não suporta fixed e, os poucos que suportam, o fazem de maneira bem esquisita. Na verdade, a grande questão é como essas barras fixas devem se comportar quando temos zoom. No Android por exemplo, o fixed só funciona se você desabilita o zoom, algo que vimos que é bem ruim.</p>
+		<p>A famosa barra fixa no topo com <code>position: fixed</code> fica péssima no mobile. A maioria dos navegadores não suporta fixed e, os poucos que suportam, o fazem de maneira bem esquisita. Na verdade, a grande questão é como essas barras fixas devem se comportar quando temos zoom. No Android antes do 4, por exemplo, o fixed só funciona se você desabilita o zoom, algo que vimos que é bem ruim.</p>
 
 		<p>Aqueles irritantes lightboxes que abrem uma espécie de popup JavaScript na página mostrando fotos e outros conteúdos estão presentes em toda a Web. Mas no celular costumam ser uma péssima ideia. Costumam depender de position fixed e de ocupar o viewport como um todo, duas coisas dificeis de se fazer no mobile. Evite.</p>
 
@@ -1032,9 +1086,10 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<p>Aliás, essas soluções de inline, localStorage e offline resolvem outros problemas que veremos a seguir.</p>
 	</aside>
 	<aside class="audience">
-		<p>Lembra da palestra do Gabriel mais cedo?</p>
-
-		<p>Essas anotações mobile usaramm a <b>HTML5 offline API</b> pra guardar todo o conteúdo no device durante a palestra de verdade. Como havia centenas de usuários conectados ao mesmo tempo na rede do evento, preferi disponibilizar tudo offline também pra evitar problemas. O usuário podia dar um refresh e ver que a página voltava instantaneamente. Nessa versão dos slides aqui do blog, desabilitei o offline.</p>
+		<p class="hide-on-main-room">Essas anotações mobile usaramm a <b>HTML5 offline API</b> pra guardar todo o conteúdo no device durante a palestra de verdade. Como havia centenas de usuários conectados ao mesmo tempo na rede do evento, preferi disponibilizar tudo offline também pra evitar problemas. O usuário podia dar um refresh e ver que a página voltava instantaneamente. Nessa versão dos slides aqui do blog, desabilitei o offline.</p>
+		<p class="show-on-main-room">Esses slides usam a <b>HTML5 offline API</b> pra guardar o conteúdo
+			no seu device durante a palestra. Você pode dar um refresh aqui e deve ser praticamente 
+			instatâneo!</p>
 	</aside>
 </section>
 
@@ -1107,7 +1162,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	<aside class="notes">
 		<p>Não use <code>display: none</code> pra esconder conteúdo no celular. Ele será carregado mesmo assim. (uma imagem, ou anúncio)</p>
 
-		<p>Uma ideia melhor é fazer carregamento condicional de conteúdo via Ajax por exemplo. Usando Mobile First, voc6e pode fazer seu HTML inicial apenas com o conteúdo usado por todos os devices. E se houver mais conteúdo para telas maiores, por exemplo, carregue via Ajax posteriormente.</p>
+		<p>Uma ideia melhor é fazer carregamento condicional de conteúdo via Ajax por exemplo. Usando Mobile First, você pode fazer seu HTML inicial apenas com o conteúdo usado por todos os devices. E se houver mais conteúdo para telas maiores, por exemplo, carregue via Ajax posteriormente.</p>
 	</aside>
 </section>
 
@@ -1130,7 +1185,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	<aside class="notes">
 		<p>Há questões de performance que dizem respeito também a UI. Por exemplo, o tratamento de eventos.</p>
 
-		<p>Navegadores Desktop estão acostumados a lidar com o onclick, disparado pelo mouse. No mobile os cliques também são suportados (automaticamente) mas são disparados pelos toque. O problema é que os dedos num mundo multitouch não servem apenas para cliques, mas para um monte de gestos como vimos.</p>
+		<p>Navegadores Desktop estão acostumados a lidar com o onclick, disparado pelo mouse. No mobile, os cliques também são suportados (automaticamente) mas são disparados pelos toque. O problema é que os dedos num mundo multitouch não servem apenas para cliques, mas para um monte de gestos como vimos.</p>
 
 		<p>O que acaba acontecendo então é que quando você põe o dedo na tela, o navegador precisa adivinhar que gesto você está fazendo. Será um clique? Será que você vai arrastar o dedo? Será um scroll? Assim, quando damos um toque indicando clique, o navegador ainda espera uns 300ms antes de disparar o clique pra tentar adivinhar se na verdade você não queria fazer outro toque.</p>
 
@@ -1234,15 +1289,15 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<h1><b>Media queries</b> pra salvar o dia</h1>
 
 		{% code css %}
-		#super { background: url(foto@1x.png); }
+		#banner { background: url(foto_normal.png); }
 
 		@media (-webkit-min-device-pixel-ratio: 2), 
 		       (min--moz-device-pixel-ratio: 2), 
 		       (-o-min-device-pixel-ratio: 2/1), 
 		       (min-device-pixel-ratio: 2) {
 		  
-			#super {
-			   background-image: url(foto@2x.png);
+			#banner {
+			   background-image: url(foto_retina.png);
 			   background-size: 50%;
 			}
 		}
@@ -1257,8 +1312,43 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<p>Mas vários celulares Android famosos (como o Galaxy S II) usam razão 1.5 (ou 3:2), a chamada hdpi. É comum também celulares medianos usarem a razão normal 1:1 (mdpi) e celulares mais simples (como o Galaxy 5) usarem resolução mais baixa de 0.75 (3:4, ldpi). Há ainda razões mais estranhas, como a tvdpi do tablet Nexus 7 e sua razão de 1.33.</p>
 
 		<p>Você pode lidar com diferentes densidades de pixel usando media queries (que, infelizmente, ainda exigem muitos prefixos proprietários). Cuidado apenas com a questão de performance. Mesmo tendo uma tela retina, às vezes pode não ser interessante dar um arquivo em alta resolução para o dispositivo, já que ele demorará para carregar.</p>
+	</aside>
+</section>
 
-		<p>Para imagens com tag `img`, não há uma solução definitiva. Há alguns <a href="http://retinajs.com/">hacks em JavaScript</a> e uma discussão acalorada no W3C sobre responsive images para o futuro. Mas nada certo ainda.</p>
+<section class="slide" id="srcset">
+	<div class="content">
+		<h1><b>srcset</b> e <b>image-set</b> pro futuro</h1>
+
+		{% code html %}
+			<img src="foto_normal.jpg"
+				srcset="foto_retina.jpg 2x, foto_mobile.jpg 400w">
+		{% endcode %}
+
+		{% code css %}
+			#banner {
+				background: image-set(
+					url(foto_normal.jpg) 1x, 
+					url(foto_retina.jpg) 2x
+				);
+			}
+		{% endcode %}		
+	</div>
+
+	<aside class="notes">
+		<p>Para imagens com a tag <code>img</code>, a solução é uma nova especificação no W3C que cria
+			o atributo <a href="http://dev.w3.org/html5/srcset/">srcset</a>. Com ele, é possível indicar
+			uma série de URLs de imagens e uma espécia de media querie para indicar densidade de pixels
+			ou tamanho do viewport. Não são media queries de verdade pois o objetivo é não depender
+			do parser CSS nesse ponto, fazendo o browser baixar a imagem o mais rápido possível.
+			<em>Ainda não há suporte em nenhum navegador</em>.</p>
+
+		<p>Similar ao srcset, foi criado no rascunho do CSS4 uma proposta pra função <a href="http://dev.w3.org/csswg/css4-images/#image-set-notation">image-set()</a> no background. Ela recebe uma lista
+			de imagens e configurações de densidade de pixels ou tamanho do viewport. <em>O image-set
+			já funciona a partir do Chrome 21 e do Safari 6 com o prefixo -webkit-.</em></p>
+
+		<p>Tem um <a href="http://codepen.io/keithchu/pen/nFmlb">demo</a> no CodePen dessas duas funcionalidades pra testar o suporte dos futuros navegadores.</p>
+
+		<p>Além dessas duas especificações, há uma <a href="http://www.w3.org/community/respimg/wiki/Picture_Element_Proposal">proposta</a> para se criar um novo elemento <code>&lt;picture&gt;</code> que suportaria várias imagens usando media queries completas, além do srcset.</p>
 	</aside>
 </section>
 
@@ -1349,7 +1439,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	</aside>
 </section>
 
-<section class="slide" id="webapp">
+<section class="slide" id="webapp-ios">
 	<div class="content">
 		<h1><b>Webapps</b> iOS</h1>
 
@@ -1378,6 +1468,30 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	</aside>
 	<aside class="audience">
 		<p>Tá no <b>iOS</b>? Clique nos favoritos e <b>"Add to Home Screen"</b>. Isso vai instalar essa aplicação no seu dispositivo.</p>
+	</aside>
+</section>
+
+<section class="slide" id="webapp-win8">
+	<div class="content">
+		<h1><b>Webapps</b> Windows 8</h1>
+
+		{% code html %}
+		<!-- imagem pra startup screen -->
+		<meta name="msapplication-TileImage" content="tile.png">
+
+		<!-- cor de fundo -->
+		<meta name="msapplication-TileColor" content="#ef0303">
+
+		<!-- live tile -->
+		<meta name="msapplication-badge" content="frequency=1440; polling-uri=http://exemple.com/badge.xml">
+		{% endcode %}
+	</div>
+
+	<aside class="notes">
+		<p>O Windows 8 também traz recursos pra permitir que uma webapp seja adicionada à startup
+			screen do usuário. Há alguns metadados que devem ser colocados, de maneira parecida
+			ao iOS.</p>
+		<p>Recomendo esse artigo para saber mais sobre <a href="http://www.mobilexweb.com/blog/windows-8-surface-ie10-html5">as novidades de HTML5 e CSS3 no IE10 e Windows 8</a>.</p>
 	</aside>
 </section>
 

@@ -873,10 +873,9 @@ function C(tagName, options) {
 }
 function getURLParameter(name) {
     var params = location.search.replace(/\/$/, '');
+    var value = decodeURI((RegExp(name + '=' + '(.+?)(&|$)').exec(params)||[,null])[1]);
 
-    return decodeURI(
-        (RegExp(name + '=' + '(.+?)(&|$)').exec(params)||[,null])[1]
-    );
+    return value === 'null'? undefined : value;
 }
 
 
@@ -1087,9 +1086,18 @@ var WS = (function(doc, win){
 })(document, window);
 
 
-// WS.connect("ws://" + location.hostname + ":8080/websockets-server/sync", localStorage.getItem('sync-secret'));
-// WS.connect("ws://ec2-177-71-170-21.sa-east-1.compute.amazonaws.com:8080/websockets-server/sync", localStorage.getItem('sync-secret'));
-WS.connect("ws://ec2-23-22-59-142.compute-1.amazonaws.com:8080/websockets-server/sync", getURLParameter('room'), localStorage.getItem('sync-secret'));
+(function(){
+    // initial room
+    var room = document.documentElement.getAttribute('data-room') || getURLParameter('room');
+
+    // set room class
+    document.documentElement.className += (room === 'main-room')? ' main-room' : ' normal-room';
+
+    // connect sync
+    WS.connect("ws://ec2-23-22-59-142.compute-1.amazonaws.com:8080/websockets-server/sync", room, localStorage.getItem('sync-secret') );
+
+})();
+
 
 
 
@@ -1368,16 +1376,19 @@ var P = (function(doc, userAgent, location, win){
 
         showNextSlide: function() {
             // find next slide
+            var actual = activeSlide;
             var next;
-            if (activeSlide) {
-                next = activeSlide.getAttribute('data-next');
-            } else {
-                next = slides.get(0).id; // first slide
-            }
+            do {
+                if (activeSlide) {
+                    next = actual.getAttribute('data-next');
+                } else {
+                    next = slides.get(0).id; // first slide
+                }
+                actual = document.getElementById(next);
+            } while (next && Q('#'+next).hasClass('skip-on-' + mode));
             
-            // show next slide
             if (next) { 
-                // broadcast change
+                // show next slide and broadcast change
                 WS.sendSlide(next);
                 this.showSlide(next); 
             }
@@ -1386,10 +1397,16 @@ var P = (function(doc, userAgent, location, win){
         showPreviousSlide: function() {
             if (activeSlide) {
                 // select previous slide
-                var previous = activeSlide.getAttribute('data-previous');
-                if (previous) {
+                var actual = activeSlide;
+                var previous;
 
-                    // broadcast change
+                do {
+                    previous = actual.getAttribute('data-previous');
+                    actual = document.getElementById(previous);
+                } while(previous && Q('#'+previous).hasClass('skip-on-' + mode));
+                
+                if (previous) {
+                    // show slide and broadcast change
                     WS.sendSlide(previous);
                     this.showSlide(previous);
                 }
@@ -1450,7 +1467,7 @@ var P = (function(doc, userAgent, location, win){
             }
 
             // enter the first, initial mode
-            var initialMode = getURLParameter('mode') || 'site';
+            var initialMode = getURLParameter('mode') || document.documentElement.getAttribute('data-initial-mode') || 'site';
             if (possibleModes.indexOf(initialMode) == -1) initialMode = possibleModes[0];
             this.enter(initialMode);
 
@@ -1532,6 +1549,24 @@ var P = (function(doc, userAgent, location, win){
     };
 
 })(document, navigator.userAgent, location, window);
+
+
+// offline: supports update
+(function(){
+
+    function updateAvailable() {
+        // TODO extrair mensagem
+        if (confirm('Uma atualização está disponível. Recarregar a página?')) {
+            window.location.reload();
+        }
+    }
+
+    window.applicationCache.addEventListener('updateready', updateAvailable);
+    if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+      updateAvailable();
+    }
+
+})();
 
 
 

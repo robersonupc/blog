@@ -1429,30 +1429,18 @@ html.height100.audience-mode,
   -webkit-background-size: 50px 50px;
   -moz-background-size: 50px 50px;
   background-size: 50px 50px;
-  -moz-border-radius-topleft: 50px;
   -webkit-border-top-left-radius: 50px;
-  -o-border-top-left-radius: 50px;
-  -ms-border-top-left-radius: 50px;
   border-top-left-radius: 50px;
-  -moz-border-radius-topright: 50px;
   -webkit-border-top-right-radius: 50px;
-  -o-border-top-right-radius: 50px;
-  -ms-border-top-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 #graficos h1 {
   background: rgba(255,255,255,0.3);
   color: #3299bb;
   font-size: 700%;
-  -moz-border-radius-topleft: 50px;
   -webkit-border-top-left-radius: 50px;
-  -o-border-top-left-radius: 50px;
-  -ms-border-top-left-radius: 50px;
   border-top-left-radius: 50px;
-  -moz-border-radius-topright: 50px;
   -webkit-border-top-right-radius: 50px;
-  -o-border-top-right-radius: 50px;
-  -ms-border-top-right-radius: 50px;
   border-top-right-radius: 50px;
   text-align: center;
 }
