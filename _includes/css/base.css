@@ -4,15 +4,21 @@
 	box-sizing : border-box;
 }
 
-html, body {
+html, 
+body {
 	margin: 0;
 	padding: 0;
 }
-header, article, .container {
+header, 
+article, 
+.container {
 	margin: 0 auto;
 	max-width: 900px;
 	position: relative;
 	width: 98%;
+}
+article.post {
+	max-width: 45em;
 }
 
 header {

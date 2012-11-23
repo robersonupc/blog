@@ -2,7 +2,7 @@ body {
 	font-family: 'Droid Sans', sans-serif;
 	font-size: 100%;
 	font-weight: 400;
-	line-height: 1.5em;
+	line-height: 1.55;
 }
 
 h1 {
@@ -24,6 +24,10 @@ h3 {
 	font-size: 1.3em;
 	line-height: 1.4;
 	font-weight: 400;	
+}
+
+article.post {
+	font-size: 1.125em; /* 18em */
 }
 
 code {

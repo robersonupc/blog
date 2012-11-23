@@ -1,12 +1,13 @@
 body {
-	background: #FAFBFF;
+	background: #FFF;
 }
 
 body:before {
 	background: #36393B;
 }
 
-header #sergio, header #org {
+header #sergio, 
+header #org {
 	color: #3299BB;
 }
 header #lopes {
@@ -31,6 +32,7 @@ article.post blockquote {
 h2, h3 {
 	color: #424242;
 }
-div#social, article h4 {
+div#social, 
+article h4 {
 	background: #E7E7E9;
 }
