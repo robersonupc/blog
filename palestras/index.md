@@ -1,0 +1,70 @@
+---
+layout: page
+title: Palestras
+---
+
+Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vários eventos Brasil a fora sobre Front-end, cloud, mobile, Java e muito mais. **Adoro palestrar** e, se você quiser me chamar pra algum evento, é só falar comigo!
+
+Lista das palestras mais recentes que dei e links pros slides:
+
+# 2012
+
+* *05/Dez* - **JavaOne Latin America** - [Porque você deveria usar CDI em todos os seus projetos Java](http://www.slideshare.net/caelumdev/porque-voc-deveria-usar-cdi-nos-seus-projetos-java-javaone-la-2012-srgio-lopes) 
+* *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *08/Set* - **Joomla Day Brasil** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
+* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *14/Jul* - **Front in BH** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
+* *19/Abr* - **Caelum Night** - [CDI e as ideias para o futuro do VRaptor](http://www.slideshare.net/caelumdev/vraptor-cdiideias)
+
+# 2011
+
+* *10/Set* - **QCon SP** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/qcon-2011-por-uma-web-mais-rpida-tcnicas-de-otimizao-de-sites) - **keynote**
+* *02/Jul* - **CaelumDay in Rio** - [Práticas para um Site Otimizado](http://www.slideshare.net/caelumdev/prticas-para-um-site-otimizado-caelumday-in-rio-2011)
+* *12/Abr* - **FIAP** - *Cloud computing e Google AppEngine*
+
+# 2010
+
+* *Out* - **2o Workshop de Tecnologia Jataí/GO** - [Introdução ao Google Android](http://www.slideshare.net/caelumdev/google-android-wtjatai)
+* *14/Out* - **Java vs. Net** - [O Java móvel e o Android](http://www.slideshare.net/caelumdev/o-java-mvel-e-o-android-evento-java-vs-net)
+* *14/Out* - **Java vs. Net** - [Persistência Java: Hibernate e JPA](http://www.slideshare.net/caelumdev/persistncia-java-hibernate-e-jpa)
+* *30/Set* - **Encontro GTUG** - *VRaptor no Google AppEngine*
+* *19/Set* - **QCon SP** - [Mitos e verdades do cloud do Google: 1 ano de experiências no AppEngine](http://www.slideshare.net/caelumdev/mitos-e-verdades-do-cloud-do-google-1-ano-de-experincias-no-appengine-sergio-lopes-qcon-sp-2010)
+* *15/Mai* - **Caelum Tech Day** - *Como o site da Caelum atingiu 100% no YSlow*
+* *Maio* - **SESTINFO - Faculdade Metodista** - *Hibernate e JPA*
+* **PHP Conf** - [Como fabricar dinheiro: Otimizações de Sites e porque isso vai deixá-lo rico](http://www.slideshare.net/caelumdev/como-fabricar-dinheiro-otimizaes-de-sites-e-porque-isso-vai-deixlo-rico-php-conf-2010)
+* **Dev In Sampa** - [Desenvolvimento móvel com Google Android](http://www.slideshare.net/caelumdev/desenvolvimento-mvel-com-google-android)
+
+# 2009
+
+* **USP**: Lançamento do livro do Frederick Brooks - *Arquitetura Java e SOA*
+* *Setembro* - **II Fórum de Java SERPRO** - *Arquitetura Java e SOA*
+* *Setembro* - **JustJava** - *Como dormir tranquilo: Segurança em Aplicações Web*
+* *17/Agosto* - **Boehringer** - *Introdução a Java e J2ME*
+* *Maio* - **Falando em Java** - *Arquitetura para aplicações Java de médio porte*, com Guilherme Moreira
+* *25/Mar* - **Faculdade Metodista** - *Plataforma Java (iniciante)*
+* *26/Fev* - **SouJava** - *Domain Driven Design*
+
+# 2008
+
+* **Just Java** - [Domain Driven Design](http://www.slideshare.net/caelumdev/domain-driven-design-sergio-lopes-falando-em-java-2008)
+* **Falando em Java** - [Domain Driven Design](http://www.slideshare.net/caelumdev/domain-driven-design-sergio-lopes-falando-em-java-2008)
+* *Maio* - **FAAC** - *JavaME*
+* *Maio* - **FAAC** - *JavaFX*
+
+# 2007
+
+* **Falando em Java** - [JavaFX](http://www.slideshare.net/caelumdev/javafx-no-falando-em-java-2007-sergio-lopes)
+* **Conexão Java** - *Workshop de Java ME*
+* **WebMobile TechWeek** - *Workshop JavaFX*
+* **IMES** - *JavaFX*
+
+# 2006
+
+* **III Simpósio de Técnologia da Informação da Fundação Educacional de Fernandópolis** - *Java para desenvolvimento Web*
+* **Conexão Java** - *Workshop Hibernate*
+* **Conexão Java** - *Java ME e Game API*
+
+# 2005
+
+* *20/Ago* - **Conexão Java** - [Dite as regras na sua aplicação: Web MVC com IoC e Reflection](http://www.tatanka.com.br/palestras/cj2005-Web+MVC+IoC+Reflection/) - *minha grande estreia :)*

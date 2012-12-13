@@ -15,7 +15,7 @@ Atividades
 
 * Instrutor e desenvolvedor na [Caelum](http://www.caelum.com.br/)
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
-* Palestrante em diversos eventos
+* [Palestrante em diversos eventos](/palestras/)
 * Co-autor do livro [Introdução a arquitetura e design Java](http://www.arquiteturajava.com.br/)
 
 Interesses atuais
