@@ -36,11 +36,11 @@ class FigureTag < Liquid::Block
     		end
 
     		# get image size
-			image = Magick::ImageList.new("img/posts/#{img}").first
-	        original_width, original_height = image.columns, image.rows
+			  image = Magick::ImageList.new("img/posts/#{img}").first
+	      original_width, original_height = image.columns, image.rows
 
-	        #output image
-    		r += "<img src=\"/img/posts/#{img}\" style=\"max-width:#{original_width}px;max-height:#{original_height}px\" alt=\"#{alt}\" title=\"#{alt}\">"
+	      #output image
+    		r += "<img src=\"/img/posts/#{img}\" style=\"max-width:#{original_width}px;max-height:#{original_height}px\" alt=\"#{alt}\">"
     	end
     end
 
