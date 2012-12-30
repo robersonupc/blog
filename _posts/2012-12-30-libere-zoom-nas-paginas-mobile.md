@@ -3,6 +3,8 @@ layout: post
 title: 'Sempre libere o zoom do usuário em suas páginas mobile'
 category: mobile
 description: Nunca proíba o usuário de dar zoom nas páginas. É péssima usabilidade.
+originalDate: 2012-07-20
+version: 2
 ---
 
 As telas pequenas dos smartphones ensinaram algo simples para os usuários: se algo estiver pequeno, apenas arraste os dedos (*pinch*) e **dê zoom**! É um gesto básico de dispositivos touch e conhecido por todo mundo. Mas, mesmo assim, muitos sites bloqueiam o zoom nas páginas. **Não faça isso**.
@@ -19,15 +21,15 @@ Mas, na esmagadora maioria dos casos, você não deveria fazer isso. Exceções 
 
 Há um mito que circula por aí de que limitar o zoom faz com que nossa página fique mais parecida com uma *App*. Primeiro: site não é App, então não tente parecer uma. Segundo: se algumas Apps têm essa *limitação* de não deixar dar zoom, porque copiar essa *deficiência* pra sua página?
 
-### Mas meu iPhone dá zoom quando deito o aparelho!
+### Mas meu iPhone <del>dá</del>dava zoom quando deito o aparelho!
 
-Eu acho que o grande culpado da proliferação de páginas com zoom desabilitado é um famoso **bug no iOS** que faz com que a página dê um zoom quando você gira o aparelho em modo paisagem. Se você desabilita o zoom, o bug não acontece. Mas é um jeito covarde de resolver o problema.
+Eu acho que o grande culpado da proliferação de páginas com zoom desabilitado é um famoso **bug no iOS** até a versão 5.x que faz com que a página dê um zoom quando você gira o aparelho em modo paisagem. Se você desabilita o zoom, o bug não acontece. Mas é um jeito covarde de resolver o problema.
 
-Antes de tudo, saiba que o **iOS 6** resolve esse bug do Mobile Safari. Então, em breve, não dá pra usar mais isso como desculpa pra desabilitar o zoom.
+O **iOS 6** resolve esse bug do Mobile Safari. E como a maioria dos usuários Apple atualiza rapidamente, isso quer dizer que esse bug deve ser coisa do passado em breve.
 
 Mas mesmo que o bug do iOS seja um problema pra você e seus usuários com iOS antes do 6, pense em alguma opção:
 
-* **Não faça nada**. Sim, uma opção é deixar o bug acontecer. Lembre que um usuário de iOS está *acostumado* a isso, afinal todos os sites do mundo são afetados!
+* **Não faça nada**. Sim, uma opção é deixar o bug acontecer. Lembre que um usuário de iOS está *acostumado* a isso, afinal todos os sites do mundo são afetados! E a maioria dos usuários com iOS 6+ está ok.
 * Se incomodar muito e você quiser tirar o zoom do usuário por causa do bug, pelo menos faça isso **apenas no iOS** e não limite todos os outros dispositivos do mundo que funcionam direito. Lembre que, principalmente no Brasil, o Android é muito mais usado que o iOS (às vezes, até em audiências mais nerds como nós).
 * Há **hacks em JavaScript** que solucionam o problema em 99% dos cenários. O mais famoso é o [do Scott Jehl](https://github.com/scottjehl/iOS-Orientationchange-Fix) mas há outros - até eu tenho [uma solução](https://github.com/sergiolopes/ios-zoom-bug-fix), baseada em CSS. Veja um [comparativo de hacks](https://github.com/sergiolopes/ios-zoom-bug-fix#other-solutions) que resolvem o bug.
 
@@ -45,3 +47,7 @@ O Mobile Safari do iOS infelizmente ainda não tem uma opcão dessas. Também n�
 {% code javascript %}
 javascript:document.querySelector('meta[name=viewport]').setAttribute('content','width=device-width,initial-scale=1,maximum-scale=10,user-zoom=yes');
 {% endcode %}
+
+---
+
+**Atualização Dez/2012**: coloquei informações sobre o iOS 6 e o bug que não existe mais.
