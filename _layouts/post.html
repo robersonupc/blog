@@ -9,7 +9,15 @@ ogtype: article
 
 {{ content }}
 
-<h4>Escrito por <a rel="author" href="https://plus.google.com/u/0/116277751891701467725">Sérgio Lopes</a> em <span class="data">{{ page.date | date_to_string }}</span>.</h4>
+<h4>
+	Escrito por <a rel="author" href="https://plus.google.com/u/0/116277751891701467725">Sérgio Lopes</a> 
+	
+	{% if page.originalDate %}
+		originalmente em {{ page.originalDate | date_to_string }} e atualizado em <span class="data">{{ page.date | date_to_string }}</span>.
+	{% else %}
+		em <span class="data">{{ page.date | date_to_string }}</span>.
+	{% endif %}
+</h4>
 
 <h3 class="fb">Comentários via Facebook</h3>
 
