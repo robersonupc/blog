@@ -1,12 +1,22 @@
+#
+#  Extensão pro Jekyll pra facilitar a entrada de código.
+#  Uso:
+#
+#    {% code css %}
+#      body { background: #fff; }
+#    {% endcode %}
+#
 module Jekyll
   class CodeTag < Jekyll::HighlightBlock
 
     def initialize(tag_name, text, tokens)
+      # passa argumento de numeros de linha sempre
       super(tag_name, text + ' linenos', tokens)
     end
 
     def render_pygments(context, code)
       
+      # normaliza espaços no início do código a partir da primeira linha
       newcode = ''
       
       first_line_analyzed = false
@@ -26,6 +36,7 @@ module Jekyll
       	newcode << line.gsub(Regexp.new('^' + initial_spaces), '')
       end
 
+      # chama o HighlightBlock nativo do jekyll
       super(context, newcode)
     end
   end
