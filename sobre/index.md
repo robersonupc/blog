@@ -3,8 +3,7 @@ layout: page
 title: Sobre
 ---
 
-Eu
-----
+# Sobre mim
 
 * **Nome:** Sérgio Lopes
 * **Cidade:** São Paulo
@@ -17,6 +16,14 @@ Atividades
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
 * [Palestrante em diversos eventos](/palestras/)
 * Co-autor do livro [Introdução a arquitetura e design Java](http://www.arquiteturajava.com.br/)
+
+Social
+------
+
+* Twitter: [@sergio_caelum](http://twitter.com/sergio_caelum)
+* Facebook: [sergio.caelum](http://facebook.com/sergio.caelum)
+* Github: [@sergiolopes](http://github.com/sergiolopes)
+* Delicious: [sergiolopes](http://delicious.com/sergiolopes)
 
 Interesses atuais
 -----------------
@@ -36,14 +43,6 @@ Desinteresses atuais
 * Buzzwords e modinhas -- Lean Startup, Node.JS etc
 * Ruby on Rails, .Net, Scala (entre outros)
 
-Social
-------
-
-* Twitter: [@sergio_caelum](http://twitter.com/sergio_caelum)
-* Facebook: [sergio.caelum](http://facebook.com/sergio.caelum)
-* Github: [@sergiolopes](http://github.com/sergiolopes)
-* Delicious: [sergiolopes](http://delicious.com/sergiolopes)
-
 Este blog
 ---------
 
@@ -51,6 +50,5 @@ Este blog
 * Baseado no [Jekyll](https://github.com/mojombo/jekyll/)
 * Estático, rápido e otimizado -- não lerdo igual Wordpress
 * [Código fonte disponível](https://github.com/sergiolopes/blog) -- layout, estrutura, códigos e conteúdo
-* Suporte para Chrome16+, Firefox9+, iOS 4.2+, Android 2.2+, Opera 11.5+. IE9 fica razoável mas não suporta tudo.
 * Todo conteúdo e códigos liberados para consumo pessoal e aprendizado -- **não copie e poste em outros lugares**
 * No ar desde **Março de 2012**
