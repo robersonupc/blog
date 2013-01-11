@@ -7,7 +7,7 @@ echo Build stylus
 stylus _includes/css/palestra/ -u nib
 
 echo Regenerating site
-jekyll _deploy
+jekyll --no-future _deploy
 cp .htaccess _deploy/.htaccess
 cp aovivo/.htaccess _deploy/aovivo/.htaccess
 
