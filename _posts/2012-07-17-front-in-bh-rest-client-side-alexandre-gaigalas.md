@@ -11,7 +11,7 @@ Alexandre Gaigalas ([twitter](https://twitter.com/alganet/)), do Yahoo, palestro
 	frontinbh2012/alexandre.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * Links são as coisas mais legais na Internet.
 * Antigamente usávamos referências estáticas, bibliografia, apontando livro, página etc.
@@ -36,7 +36,7 @@ Alexandre Gaigalas ([twitter](https://twitter.com/alganet/)), do Yahoo, palestro
 * HTTP auth: suporte básico a autenticação
 * HTTP digest é mais seguro que cookies, oauth
 
-### Meus comentários
+## Meus comentários
 
 O protocolo HTTP é realmente muito rico e extremanente interessante para basear APIs Web. Concordo com o uso do protocolo mais a fundo, ao invés de criar mini protocolos proprietários. E achei bem interessante a ideia do Alexandre de se usar os status code HTTP com mensagem customizada - sempre pensei em mandar a mensagem no body, além do status code.
 

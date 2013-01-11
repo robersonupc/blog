@@ -11,7 +11,7 @@ Alexandre Tabor, CTO do Peixe Urbano, palestrou no evento [Front In BH 2012](htt
 	frontinbh2012/tabor.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * Pioneiro em compras coletivas, 20 milhões de usuários hoje, 1.5 bilhão de reais economizados em promoções.
 * Peixe Urbano não foi o primeiro serviço deles. Lançaram outro e não deu certo, foram pra compras coletivas.
@@ -31,7 +31,7 @@ Alexandre Tabor, CTO do Peixe Urbano, palestrou no evento [Front In BH 2012](htt
 	* Implementar outras otimizações: gzip no squid, fingerprint nas URLs, minificação de JS e CSS
 	* Configurar proxies nos outros países do peixe urbano.
 
-### Meus comentários
+## Meus comentários
 
 Foram muitas histórias sobre o Peixe Urbano, como abriram a empresa, como ela cresceu e seus desafios. Já tinha ouvido alguns no QCon SP 2011 mas ouvi novas histórias agora. O Peixe Urbano é um excelente case da Amazon AWS e seus gráficos mostram como a elasticidade do cloud é fundamental pro modelo de negócios deles. Não sou muito fã de IaaS - sou mais PaaS e SaaS -, mas é certamente bom ver casos de uso tão bacanas de cloud.
 

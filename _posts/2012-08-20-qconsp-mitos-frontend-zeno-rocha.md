@@ -7,7 +7,7 @@ description: Minhas anotações da palestra do Zeno Rocha no evento QCon SP 2012
 
 Zeno Rocha ([blog](http://zenorocha.com/), [twitter](https://twitter.com/zenorocha)), da Liferay, palestrou na track de **Front End** do evento [QCon SP 2012](http://www.qconsp.com/) sobre vários **Mitos do front end** ([slides](http://talks.zenorocha.com/2012/qconsp/)).
 
-### Minhas anotações
+## Minhas anotações
 
 - Backend costuma ver frontend como fácil, mas não é verdade
 	* Mas CSS3 permite muita coisa avançada e complexa
@@ -64,7 +64,7 @@ Zeno Rocha ([blog](http://zenorocha.com/), [twitter](https://twitter.com/zenoroc
 	* Occupy Flash é babaquice
 	* sucesso da aplicacao nao é a tecnologia
 
-### Meus comentários
+## Meus comentários
 
 Palestra divertida do Zeno com ótimos slides. É um tema que pra gente que está há mais tempo no frontend não tem muita novidade. Mas foi uma palestra essencial pro público-alvo do QCon, que tem muitos arquitetos e pessoal de infra. 
 

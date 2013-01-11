@@ -11,7 +11,7 @@ Leandro Vieira ([blog](http://leandrovieira.com/), [twitter](https://twitter.com
 	frontinbh2012/leandro.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * Wordpress cresce absurdamente em adoção. 22% em 2012, perspectiva de 50% pra 2017.
 * 1a fase: blog. 2a fase: CMS. 3a fase: plataforma de aplicação.
@@ -31,7 +31,7 @@ Leandro Vieira ([blog](http://leandrovieira.com/), [twitter](https://twitter.com
 * WP faz fingerprint de arquivos CSS/JS via param na URL.
 * WP cospe HTML semântico, temas novos em HTML5. Usa microformats, tem preocupações com SEO.
 
-### Meus comentários
+## Meus comentários
 
 Confesso que não sou o maior fã do Wordpress. Acho ele um tanto inflado demais, com muitos recursos e muita complicação pra se fazer coisas até simples. E curioso que, pra mim, o grande ponto onde o Wordpress é mais fraco é *justo no front end*. Acho ele legal como plataforma CMS pra controlar os conteúdos, mas o HTML gerado costuma ser péssimo e os plugins só pioram isso.
 

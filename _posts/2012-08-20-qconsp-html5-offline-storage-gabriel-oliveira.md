@@ -11,7 +11,7 @@ Gabriel Oliveira ([twitter](https://twitter.com/gabaiel)), da [Caelum](http://ww
 	qconsp2012/gabriel.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 - Web é plataforma pra aplicações distribuídas
 - Normal: fazer cache de componentes com Expires no HTTP cache
@@ -60,7 +60,7 @@ Gabriel Oliveira ([twitter](https://twitter.com/gabaiel)), da [Caelum](http://ww
 	* localStorage e session: 5MB minimo
 	* IndexedDB: Indeterminado
 
-### Meus comentários
+## Meus comentários
 
 As soluções para offline melhoraram muito com o HTML5. E isso é essencial para o mundo mobile dos smartphones e tablets que nem sempre têm conexão disponível. Eu mesmo, na minha [palestra do QCon](/palestra-mobile-web/) fiz os participantes abrirem umas demonstrações no celular, e usei HTML5 offline pra evitar problemas com intermitência de rede durante a palestra.
 

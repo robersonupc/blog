@@ -21,7 +21,7 @@ Mas, na esmagadora maioria dos casos, você não deveria fazer isso. Exceções 
 
 Há um mito que circula por aí de que limitar o zoom faz com que nossa página fique mais parecida com uma *App*. Primeiro: site não é App, então não tente parecer uma. Segundo: se algumas Apps têm essa *limitação* de não deixar dar zoom, porque copiar essa *deficiência* pra sua página?
 
-### Mas meu iPhone <del>dá</del>dava zoom quando deito o aparelho!
+## Mas meu iPhone <del>dá</del>dava zoom quando deito o aparelho!
 
 Eu acho que o grande culpado da proliferação de páginas com zoom desabilitado é um famoso **bug no iOS** até a versão 5.x que faz com que a página dê um zoom quando você gira o aparelho em modo paisagem. Se você desabilita o zoom, o bug não acontece. Mas é um jeito covarde de resolver o problema.
 
@@ -33,13 +33,13 @@ Mas mesmo que o bug do iOS seja um problema pra você e seus usuários com iOS a
 * Se incomodar muito e você quiser tirar o zoom do usuário por causa do bug, pelo menos faça isso **apenas no iOS** e não limite todos os outros dispositivos do mundo que funcionam direito. Lembre que, principalmente no Brasil, o Android é muito mais usado que o iOS (às vezes, até em audiências mais nerds como nós).
 * Há **hacks em JavaScript** que solucionam o problema em 99% dos cenários. O mais famoso é o [do Scott Jehl](https://github.com/scottjehl/iOS-Orientationchange-Fix) mas há outros - até eu tenho [uma solução](https://github.com/sergiolopes/ios-zoom-bug-fix), baseada em CSS. Veja um [comparativo de hacks](https://github.com/sergiolopes/ios-zoom-bug-fix#other-solutions) que resolvem o bug.
 
-### Controle na mão do usuário!
+## Controle na mão do usuário!
 
 Desabilitar o zoom das páginas é tão irritante, mas tão irritante, que os browsers mobile modernos estão deixando esse controle na mão do usuário! O browser do **Android 4 e o Chrome Mobile**, por exemplo, têm essa opção nas configurações:
 
-{% figure Forçando zoom nas páginas %}
-	mobile-user-zoom/android4.png Configurações de zoom do Android 4
-	mobile-user-zoom/chrome.png   Configurações de zoom do Chrome Mobile
+{% figure %}
+	mobile-user-zoom/android4.png Screenshot com configurações de zoom do Android 4
+	mobile-user-zoom/chrome.png   Screenshot com configurações de zoom do Chrome Mobile
 {% endfigure %}
 
 O Mobile Safari do iOS infelizmente ainda não tem uma opcão dessas. Também não consegui achar no Opera e no Firefox uma opção semelhante. Uma gambiarra útil pra usuários dessas plataformas, é usar um **bookmarklet que reescreva a tag viewport** dos sites pra habilitar o zoom sempre:

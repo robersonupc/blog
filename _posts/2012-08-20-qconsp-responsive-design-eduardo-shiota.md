@@ -11,7 +11,7 @@ Eduardo Shiota ([blog](http://www.eshiota.com/), [twitter](https://twitter.com/s
 	qconsp2012/shiota.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 - A Web em 1996 (ex. [home do UOL na época](http://web.archive.org/web/19961223175947/http://uol.com.br/)) era sem muitas práticas de design.
 - Mas design existe há centenas de anos, com grids, espaçamento, harmonia etc em impressos.
@@ -75,7 +75,7 @@ Eduardo Shiota ([blog](http://www.eshiota.com/), [twitter](https://twitter.com/s
 	* há plugins como Respond.js. mas só tem max/min-width/height 
 	* há o css3-mediaqueries.js
 
-### Meus comentários
+## Meus comentários
 
 Quem acompanha o blog sabe que sou praticante do [design responsivo](/responsive-web-design/) então essa palestra do Shiota me interessou bastante. Foi uma boa apresentação para introduzir o tema pra quem ainda não conhecia.
 

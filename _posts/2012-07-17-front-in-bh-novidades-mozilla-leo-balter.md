@@ -11,7 +11,7 @@ Leo Balter ([blog](http://leobalter.net/), [twitter](https://twitter.com/leobalt
 	frontinbh2012/leo.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * Representante Mozilla no Brasil.
 * Missão da Mozilla é dar opções pros usuários, mesmo perdendo market share pro Chrome.
@@ -30,7 +30,7 @@ Leo Balter ([blog](http://leobalter.net/), [twitter](https://twitter.com/leobalt
 * Mozilla aposta que o mercado mobile tem espaço pra eles. No Desktop era a mesma coisa e eles conseguiram uma boa fatia.
 * 100% open source.
 
-### Meus comentários
+## Meus comentários
 
 Acompanho com bastante esperança o desenrolar do Firefox OS e as investidas do pessoal da Mozilla no mundo mobile. Em especial, porque acho que eles são os únicos a tentar levar a ideia de **webapps** pro próximo nível. A Apple tentou quando lançou o iPhone 1 mas parou aí; o Google não fez nada no Android pelas webapps, embora as promessas sejam muitas. Já a Mozilla tá investindo na criação de muitas APIs novas (telefonia, SMS etc) e, principalmente, na integração da webapp com o SO e um processo de "instalação".
 

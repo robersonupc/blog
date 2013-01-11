@@ -7,7 +7,7 @@ description: Minhas anotações da palestra do Bernard De Luna no evento Front i
 
 Bernard De Luna ([blog](http://bernarddeluna.com/blog/), [twitter](https://twitter.com/bernarddeluna/)), da MeltDSP, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre boas práticas de CSS com o título **Estilizando Folhas de Estilo com Estilo** ([slides](http://bernarddeluna.com/talks/)).
 
-### Minhas anotações
+## Minhas anotações
 
 * Ninguém sabe CSS.
 * CSS é muito fácil e aí vc vai testando na tentativa e erro.
@@ -39,7 +39,7 @@ Bernard De Luna ([blog](http://bernarddeluna.com/blog/), [twitter](https://twitt
 	* Muitos potenciais hoje em dia.
 	* [old radio em css3 puro](https://developer.mozilla.org/en-US/demosdetail/old-radio/launch) - impressionante!
 
-### Meus comentários
+## Meus comentários
 
 O Bernard focou bastante nas questões de performance de código CSS, evitar reflows, usar seletores otimizados etc. Concordo que são pontos válidos e realmente eficazes. Só deixo uma ressalva que essas micro otimizações de código CSS só devem ser feitas depois que otimizações maiores já foram feitas - como habilitar gzip ou jogar o JS pra baixo. A não ser que você tenha uma página gigantesca, o impacto prático de usar seletores mais rápidos é bem menor do que a gente imagina.
 

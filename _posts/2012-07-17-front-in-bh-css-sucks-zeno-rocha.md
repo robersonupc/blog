@@ -11,7 +11,7 @@ Zeno Rocha ([blog](http://zenorocha.com/), [twitter](https://twitter.com/zenoroc
 	frontinbh2012/zeno.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * CSS3 faz muitas coisas ferradas
 * Mas é CSS é desorganizado (não tem padrão de código)
@@ -43,7 +43,7 @@ Zeno Rocha ([blog](http://zenorocha.com/), [twitter](https://twitter.com/zenoroc
 	* Less é mais simples
 	* é em JavaScript
 
-### Meus comentários
+## Meus comentários
 
 Sou bastante fã de pré processadores, e usuário assíduo do LESS - tenho até um [post sobre LESS](http://blog.caelum.com.br/css-facil-flexivel-e-dinamico-com-less/) no blog da Caelum. Gostei de ver na palestra um pouco dos outros, em especial o Stylus que eu só conhecia de nome e não tinha visto código ainda.
 

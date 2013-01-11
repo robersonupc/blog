@@ -7,7 +7,7 @@ description: Minhas anotações da palestra do Bernard De Luna no evento QCon SP
 
 Bernard De Luna ([blog](http://bernarddeluna.com/blog/), [twitter](https://twitter.com/bernarddeluna/)), da MeltDSP, palestrou palestrou na track de **Front End** do evento [QCon SP 2012](http://www.qconsp.com/) sobre boas práticas de CSS e modularidade com o título **Modular CSS: projetando CSS para aplicativos** ([slides](http://www.slideshare.net/bernarddeluna/modular-css-projetando-css-para-aplicativos)).
 
-### Minhas anotações
+## Minhas anotações
 
 - Muitos projetos são focados no visual, e produção linear, página a página. Mas é ruim. Refazemos muitas coisas.
 - Designer projeta a interface. Se ele fizer de forma modular, já facilitaria tudo.
@@ -63,7 +63,7 @@ Bernard De Luna ([blog](http://bernarddeluna.com/blog/), [twitter](https://twitt
 - Prototipe
 - Crie caixas e containers pra deixar o conteudo mais alteravel
 
-### Meus comentários
+## Meus comentários
 
 Excelente palestra do Bernard. É uma das poucas pessoas que conheço que consegue falar com propriedade de arquitetura de CSS e apontas aspectos positivos e negativos não triviais. As dicas de modularização de se trabalhar com várias classes pequenas e independentes são muito boas.
 

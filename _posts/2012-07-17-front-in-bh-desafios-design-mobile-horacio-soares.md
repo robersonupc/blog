@@ -11,7 +11,7 @@ Horácio Pastor Soares ([blog](http://horaciosoares.blogspot.com.br/), [twitter]
 	frontinbh2012/horacio.jpg
 {% endfigure %}
 
-### Minhas anotações
+## Minhas anotações
 
 * "Design for mobile people not mobile devices"
 * Ambiente, Tempo, Cultura, Dispositivos diversos.
@@ -58,7 +58,7 @@ Horácio Pastor Soares ([blog](http://horaciosoares.blogspot.com.br/), [twitter]
 * Difícil teste real de mobile, no contexto real em movimento.
 * Devemos manter o mesmo conteúdo sempre, no mobile e desktop.
 
-### Meus comentários
+## Meus comentários
 
 Eu acredito muito na web mobile. Falo nesse blog bastante sobre o assunto e acho que [2012 é o ano do grande boom mobile no Brasil](http://blog.caelum.com.br/2012-e-o-ano-do-mercado-mobile-no-brasil/). Essa excelente palestra do Horácio trouxe novos dados e mais argumentos pra nos convencermos de que o futuro é realmente mobile.
 

@@ -20,20 +20,20 @@ Tive a oportunidade de palestrar sobre esse tema que gosto bastante e considero 
 
 A palestra tratou de diversos tópicos de otimização, mas, claro, pelo tempo curto, não focou em detalhes de implementação. Se você gostou e quer se aprofundar no tema, sugiro alguns links:
 
-### Sobre estudos de caso e impactos
+## Sobre estudos de caso e impactos
 
 * Tenho um post com [14 fatos tweetáveis sobre performance web](/tweetables-performance-web-otimizacoes/). Lá há links pra muitos estudos de caso de empresas famosas.
 * Um link recente do SEOmoz sobre os [impactos de performance em SEO](http://www.seomoz.org/ugc/13-questions-and-answers-about-google-site-speed-and-seo).
 * Considerações sobre latência e o [mito da banda larga](http://zoompf.com/blog/2011/12/i-dont-care-how-big-yours-is).
 
-### Pra se aprofundar nas técnicas de otimização
+## Pra se aprofundar nas técnicas de otimização
 
 * Tenho um post bem completo no [blog da Caelum com 26 práticas de otimizações](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/). Recomendo.
 * Os guias de boas práticas do [Google](https://developers.google.com/speed/docs/best-practices/rules_intro) e do [Yahoo](http://developer.yahoo.com/performance/rules.html) são excelentes.
 * Livros nós temos: *High Performance Web Sites*, 2007, O'Reilly e *Even Faster Web Sites*, 2009, O'Reilly, do Steve Souders.
 * **[Curso Online de Otimizações Web](http://www.caelum.com.br/curso/online/otimizacoes-web/) da Caelum que estou fazendo (lançamento em breve)**
 
-### Ferramentas pra implementar as técnicas vistas
+## Ferramentas pra implementar as técnicas vistas
 
 * Minificação de CSS, JS e HTML: [YUI Compressor](http://developer.yahoo.com/yui/compressor/), [Google Closure Compiler](https://developers.google.com/closure/compiler/), [uglifyjs](http://marijnhaverbeke.nl//uglifyjs), [htmlcompressor](http://code.google.com/p/htmlcompressor/).
 * Compressão de imagens: [Smushit](http://smushit.com/), [Kraken.io](http://kraken.io/), [JPEGmini](http://www.jpegmini.com/), [ImageOptim](http://imageoptim.com/).
