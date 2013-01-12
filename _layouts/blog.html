@@ -3,37 +3,35 @@ layout: base
 pagetype: blog
 ---
 <header>
-	<a href="/">
+	<a href="/" class="header-foto header-item">
 		<img src="/img/base/sergiolopes.jpg" alt="Foto de Sérgio Lopes">
 	</a>
-	<div>
-		<a href="/">
-			<span id="sergio">sergio</span><span id="lopes">lopes</span><span id="org">.org</span>
-		</a>
-	</div>
+	
+	<span class="header-nome header-item like-h">Sérgio Lopes</span>
+	
+	<p class="header-sobre header-item">
+		Desenvolvedor Web, focado em front-end, mobile e otimizações. 
+		<span class="extra">
+			<a href="/palestras/">Palestrante</a> e instrutor na <a href="http://www.caelum.com.br/">Caelum</a>.
+		</span>
+		Saiba mais <a href="/sobre/">sobre mim</a><!--
+	 --><span class="extra">
+			e me siga no <a href="https://twitter.com/sergio_caelum">twitter</a> ou no 
+			<a href="https://www.facebook.com/sergio.caelum">facebook</a>
+		</span>.
+	</p>
 
-	<nav class="top">
-		<a href="#nav-bottom" class="menu">Menu</a>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/sobre/">Sobre</a></li>
-			<li><a href="/feed.xml">Feed</a></li>
-			<li><a href="https://twitter.com/sergio_caelum">Twitter</a></li>
-			<li><a href="https://www.facebook.com/sergio.caelum">Facebook</a></li>
-			<li><a href="https://github.com/sergiolopes">Github</a></li>
-		</ul>
+	<nav class="header-menu header-item">
+		<a href="/" class="icone">
+			<span aria-hidden="true" class="icone-home"></span>
+			<span class="icone-alt">Home</a>
+		</a>
+		<a href="/feed.xml" class="icone">
+			<span aria-hidden="true" class="icone-feed"></span>
+			<span class="icone-alt">Feed RSS</a>
+		</a>
 	</nav>
+
 </header>
 
 {{ content }}
-
-<nav class="bottom" id="nav-bottom">
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/sobre/">Sobre</a></li>
-		<li><a href="/feed.xml">Feed</a></li>
-		<li><a href="https://twitter.com/sergio_caelum">Twitter</a></li>
-		<li><a href="https://www.facebook.com/sergio.caelum">Facebook</a></li>
-		<li><a href="https://github.com/sergiolopes">Github</a></li>
-	</ul>
-</nav>

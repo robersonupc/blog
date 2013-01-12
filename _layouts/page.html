@@ -2,6 +2,6 @@
 layout: blog
 pagetype: blog
 ---
-<article>
+<article class="container text-page narrow-lists page-{{ page.url | replace: '/index.html' '' | replace: '/','' }}">
 {{ content }}
 </article>

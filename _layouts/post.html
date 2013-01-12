@@ -2,20 +2,45 @@
 layout: blog
 ogtype: article
 ---
-<article class="post">
-<h1>{{ page.title }}</h1>
-
-{{ content }}
-
-<h4>
-	Escrito por <a rel="author" href="https://plus.google.com/u/0/116277751891701467725">Sérgio Lopes</a> 
+<article class="text-page post limit-line-length container">
 	
-	{% if page.originalDate %}
-		originalmente em {{ page.originalDate | date_to_string }} e atualizado em <span class="data">{{ page.date | date_to_string }}</span>.
-	{% else %}
-		em <span class="data">{{ page.date | date_to_string }}</span>.
+	{% if page.showTitleH1 != 'false' %}
+		<h1>{{ page.title }}</h1>
 	{% endif %}
-</h4>
+
+	{{ content }}
+	
+	<aside class="post-info">
+		<p class="post-author like-h">
+			Escrito por <a href="https://plus.google.com/116277751891701467725?rel=author">Sérgio Lopes</a> 
+			
+			{% if page.originalDate %}
+				originalmente em {{ page.originalDate | date_to_string }} e atualizado em <span class="post-data">{{ page.date | date_to_string }}</span>.
+			{% else %}
+				em <span class="post-data">{{ page.date | date_to_string }}</span>.
+			{% endif %}
+		</p>
+	
+		<div class="post-social">
+			
+			<a href="http://www.facebook.com/sharer/sharer.php?u={{ 'http://sergiolopes.org' | cgi_escape }}{{ page.url | cgi_escape }}" rel="nofollow" class="share-facebook">
+				<span aria-hidden="true" class="icone-facebook"></span>
+				Compartilhar no Facebook
+			</a>
+			
+			<a href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&amp;url={{ 'http://sergiolopes.org' | cgi_escape }}{{ page.url | cgi_escape }}&amp;via=sergio_caelum" rel="nofollow" class="share-twitter">
+				<span aria-hidden="true" class="icone-twitter"></span>
+				Compartilhar no Twitter
+			</a>
+			
+			<a href="/comentarios/?url={{ page.url | cgi_escape }}&amp;title={{ page.title | cgi_escape }}" rel="nofollow" class="share-comment">
+				<span aria-hidden="true" class="icone-bubbles"></span>
+				Comentários
+			</a>
+			
+		</div>
+	</aside>
+</article>
 
 
 	
