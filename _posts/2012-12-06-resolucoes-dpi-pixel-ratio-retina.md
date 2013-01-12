@@ -100,7 +100,7 @@ Olhando essa lista, percebemos que o estranho é o iPad normal, com um dpi bem m
 
 Na prática, o que a Apple está dizendo é que o **iPad mini foi feito para ser usado na mesma distância que você usa o iPhone**, e não como você usa o iPad normal.
 
-<div style="max-width: 70%; margin: 0 auto;">
+<div style="max-width: 70%">
 	{% figure iPad Mini vs. iPad %}
 		resolucoes/ipad-ipadmini.jpg
 	{% endfigure %}
