@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /comentarios/
+Allow: /
+Sitemap: http://sergiolopes.org/sitemap.txt
