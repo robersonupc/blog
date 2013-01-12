@@ -3,7 +3,9 @@
 <head>
 
 	<!-- Fontes -->
-	<link href='//fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Sans+Mono|Droid+Serif:700|{{ page.googlefonts }}' rel='stylesheet' type='text/css'>
+	{% if page.googlefonts %}
+		<link href='//fonts.googleapis.com/css?family={{ page.googlefonts }}' rel='stylesheet'>
+	{% endif %}
 
 	<!-- Estilos -->
 	<link rel="stylesheet" type="text/css" href="/style.css?10">
