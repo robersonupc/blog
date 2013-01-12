@@ -104,30 +104,7 @@ article.post blockquote {
 	width: 100% !important;
 }
 
-div#social {
-	float: right;
-	margin: 0 0 0 1em;
-	padding: 0.6em 0 0 0;
-	text-align: center;
-	height: 80px;
-	width: 250px;
-}
-div#social div.fb-like, div#social #___plusone_0, div#social .twitter-share-button {
-	display: inline-block;
-	margin: 0 1em;
-	vertical-align: top;
-}
-div#social #___plusone_0 {
-	-webkit-transform: scale(1.038);
-	-moz-transform: scale(1.038);
-	-o-transform: scale(1.038);
-	transform: scale(1.038);
 
-	-o-tranform-origin: top center;
-	-webkit-tranform-origin: top center;
-	-moz-tranform-origin: top center;
-	tranform-origin: top center;
-}
 
 article h4 {
 	font-weight: normal;
