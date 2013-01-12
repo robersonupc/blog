@@ -100,8 +100,6 @@ article.post blockquote {
 	box-shadow: 1px 1px 3px rgba(30,30,30,0.25);
 }
 
-.fb-comments, .fb-comments > span, .fb-comments iframe {
-	width: 100% !important;
 }
 
 
