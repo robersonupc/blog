@@ -1,216 +1,116 @@
-* {
-	-moz-box-sizing : border-box;
-	-webkit-box-sizing : border-box;
-	box-sizing : border-box;
+/* RESET */
+*, 
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+
+	padding: 0;
+	margin: 0;
 }
 
-html, 
+/* body e base */
 body {
-	margin: 0;
-	padding: 0;
-}
-header, 
-article, 
+	border-right: 0.5em solid #F90;
+
+	font-family: 'Arial', sans-serif;
+	font-weight: 400;
+	line-height: 1.55;
+
+	/* evita resizes chatos do iOS */
+	-webkit-text-size-adjust: 100%;
+	}
+	/* pra dar a sensação de body 100% em pg com pouco conteudo, 
+	   posiciona uma faixa na direita igual a borda do body.
+	   ela pega 100% do viewport, mesmo se o body for menor. */
+	body:after {
+		content: '';
+		display: block;
+
+		position: absolute; /* fallback pra browsers sem fixed */
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+
+		background: #F90;
+		width: 0.5em;
+	}
+
+
 .container {
-	margin: 0 auto;
-	max-width: 900px;
+	max-width: 52em;
+	padding: 0 2em;
 	position: relative;
-	width: 98%;
-}
-article.post {
-	max-width: 45em;
 }
 
-header {
-	
-}
-header img {
-	border: 0.5em solid white;
-	display: inline-block;
-	vertical-align: top;
-	
-	-moz-box-shadow: 0 0 0.35em #556270;
-	-webkit-box-shadow: 0 0 0.35em #556270;
-	box-shadow: 0 0 0.35em #556270;
 
-	margin: 1em 1.5em 1em 0;
-	
-	height: 150px;
-	width: 150px;
+/* pagina de texto puro como posts e pages (sobre, home) */
+.text-page {
+	color: #333;
+	padding: 2.5%;
+	}
+	.text-page p, 
+	.text-page blockquote { /* normaliza espaçamentos entre elementos de texto */
+		margin: 1.5em 0; 
+		}
+		.text-page ul {
+			margin-bottom: 1.5em;
+		}
+		.text-page li {
+			margin: 0 0 1em 0;
+		}
+
+/* legibilidade: em torno de 60 caracteres por linha */
+.limit-line-length p, 
+.limit-line-length li {
+	max-width: 30em;
 }
-header a {
-	text-decoration: none;
-}
-header div {
-	display: inline-block;
-	margin: 0.65em 0 0 0;
-	padding: 0;
-	vertical-align: top;
+.limit-line-length blockquote {
+	max-width: 32em;
 }
 
-nav.top {
-	position: absolute;
-	top: 6.56em;
-	left: 178px;
-}
-nav.bottom {
-	display: none;
-	margin: 2em auto;
-	text-align: center;
-	width: 90%;
-}
-nav .menu {
-	display: none;
-}
-nav ul {
-	list-style-type: none;
+/* listas não devem ser espaçadas */
+.narrow-lists li {
 	margin: 0;
-	padding: 0;
-}
-nav li {
-	display: inline-block;
-	margin: 0 0.5em 0.5em 0;
-}
-nav a {
-	display: block;
-	padding: 0.25em 0.5em;
-	text-decoration: none;
-}
-
-article {
-	clear: both;
-	margin: 2em auto;
-}
-article h1 {
-	margin-top: 0;
-	padding: 1em 0 0.5em 0;
-}
-article.post > p:first-of-type {
-	font-size: 1.125em;
-	line-height: 1.6em;
-}
-
-article.post blockquote {
-	background: #eee;
-	border-left: 10px solid #ccc;
-	padding: 0.1em 0.5em;
-
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-	box-shadow: 1px 1px 3px rgba(30,30,30,0.25);
-}
-
 }
 
 
-
-article h4 {
-	font-weight: normal;
-	margin: 2em 0;
-	padding: 0.5em 2em;
+/* RESPONSIVE: scaling basico da fonte  */
+@media (min-width: 37em) { /* 592px */
+	body { font-size: 1.125em; /* 18px */ }
 }
-article h4 .data {
-	font-weight: bold;
+@media (min-width: 47em) { /* 752px */
+	body { font-size: 1.1875em; /* 19px */ }
 }
-article h3.fb {
-	margin-top: 1em;
+@media (min-width: 68em) { /* 1088px */
+	body { font-size: 1.25em; /* 20px */ }
 }
-
-/* imagens e videos */
-figure {
-	counter-increment: figure;
-	clear: both;
-	display: block;
-}
-figure.responsive {
-	margin: 2.5em auto;
-	position: relative;
-	text-align: center;
-}
-figure.video {
-	max-width: 600px;
-}
-figure.responsive img {
-	display: inline-block;
-	vertical-align: middle;
-	width: 100%;
-}
-.video-wrapper {
-    height: 0;
-    padding-top: 0;
-    position: relative;
-
-    /* default: 4/3 */
-    padding-bottom:75%;
-}
-.video-wrapper.r16x9 {
-	padding-bottom:56.25%;
-}
-.slideshare .video-wrapper {
-	padding-bottom: 83.3723653%;
-}
-.video-wrapper video, .video-wrapper iframe  {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
-figcaption {
-	display: block;
-	margin-top: 0.5em;
-	padding: 0.2em;
-	text-align: center;
-}
-figcaption:before {
-	content: 'Figura ' counter(figure) ': ';
+@media (min-width: 82em) { /* 1312px */
+	body { font-size: 1.375em; /* 22px base */ }
+} 
+@media (min-width: 100em) { /* 1600px */
+	body { font-size: 1.5em; /* 24px base */ }
 }
 
-article.post .tweetable {
-	background: #c0deed;
-	border: 0;
-	font-size: 1.1875em;
-	margin: 1em 0 0 1em;
-	padding: 0.8em 4.5em 0.8em 0.8em;
-	position: relative;
-
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	-o-border-radius: 2px;
-	border-radius: 2px;
-
-	-moz-box-shadow: 0 0 0.25em #8ec1da;
-	-webkit-box-shadow: 0 0 0.25em #8ec1da;
-	box-shadow: 0 0 0.25em #8ec1da;
+/* RESPONSIVE (mobile first): layout */
+@media (min-width: 37em) { /* 592 px */
+	body {
+		border-right-width: 1em;
+	}
+		body:after {
+			width: 1em;
+		}
+	.text-page {
+		padding: 2em;
+	}
 }
-article.post .tweetable iframe {
-	position: absolute;
-	top: 0.9em;
-	right: 0.8em;
-}
-article.post .tweetable + p {
-	font-style: italic;
-	margin: 0.5em 0 2.5em 2em;
-}
-
-.posts li {
-	margin-bottom: 0.5em;
-}
-.posts .destaque:before {
-	background: #FA6900;
-	border-radius: 3px;
-	color: white;
-	content: 'destaque';
-	font-size: 68.75%;
-	text-transform: uppercase;
-	margin-right: 0.2em;
-	padding: 3px 7px;
-	vertical-align: middle;
-}
-.posts .date {
-	color: #777;
-	font-size: 75%;
-	padding-left: 5px;
-	text-transform: uppercase;
-	vertical-align: baseline;
+@media (min-width: 41em) { /* 656 px */
+	body {
+		border-right-width: 1.5em;
+	}
+		body:after {
+			width: 1.5em;
+		}
 }

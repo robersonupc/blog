@@ -1,8 +1,11 @@
 ---
 title: Junta arquivos CSS
 ---
-{% include css/syntax.css %}
+
 {% include css/base.css %}
-{% include css/fonts.css %}
-{% include css/colors.css %}
-{% include css/responsive.css %}
+{% include css/icones.css %}
+{% include css/code.css %}
+{% include css/header.css %}
+{% include css/elements.css %}
+{% include css/post.css %}
+{% include css/paginas.css %}

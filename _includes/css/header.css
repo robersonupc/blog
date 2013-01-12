@@ -1,0 +1,165 @@
+/* HEADER (mobile first) */
+header {
+	background: #efefed
+}
+
+.header-item {
+	display: inline-block;
+	vertical-align: middle;
+
+	text-align: center;
+}
+
+.header-foto {
+	text-decoration: none;
+	overflow: hidden; /* esconde sobras da foto no truque do crop */
+	width: 3.5em; /* tamanho padrão da foto em dispositivos móveis */
+	}
+	.header-foto img {
+		display: block;
+		border: 0;
+
+		/* faz um crop na lateral da imagem */
+		margin: 0 -20%;
+		max-width: 140%;
+	}
+
+.header-nome {
+	color: #f90;
+	font-size: 1.4em;
+	line-height: 0.9;
+	text-transform: uppercase;
+
+	margin: 0 0.25em;
+	max-width: 4.5em;
+}
+
+.header-sobre,
+header .extra { /* não mostra o curriculo em telas pequenas */
+	display: none;
+}
+
+
+.header-menu {
+	font-size: 2.5em;
+	line-height: 1.2;
+	text-align: center;
+	}
+	.header-menu .icone {
+		color: #f90;
+
+		display: inline-block;
+		text-decoration: none;
+		margin-left: 0.1em;
+	}
+	.header-menu .icone:hover {
+		color: #fa0;
+	}
+	.header-menu .icone:active {
+		position: relative;
+		top: 1px;
+	}
+
+
+/* RESPONSIVE MOBILE FIRST */
+
+/* mostra curriculo do topo em tablets medios */
+@media (min-width: 37em) { /* 592px */
+
+	/* curriculo aparece aqui */
+	.header-sobre {
+		display: inline-block;
+
+		color: #666;
+		font-size: 0.75em;
+		margin: 0 0.5em;
+		text-align: center;
+		width: 35%;
+		}
+		header:hover .header-sobre {
+			color: #444;
+		}
+
+	.header-nome {
+		font-size: 1.6em;
+	}
+
+	.header-foto {
+		width: 4em;
+	}
+}
+
+/* aumenta menu em tablets grandes */
+@media (min-width: 50em) { /* 800px */
+	/* mostra curriculo full */
+	header .extra {
+		display: inline;
+	}
+	.header-item {
+		width: 14%;
+	}
+	.header-sobre {
+		width: 40%;
+	}
+	.header-nome {
+		font-size: 2em;
+		width: 20%;
+	}
+}
+
+/* header vai pra lateral em telas grandes */
+@media (min-width: 60em) { /* 960px */
+	header {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 14em; /* 280px */
+		text-align: center;
+	}
+
+	/* "fundo" da lateral infinito até embaixo em pgs grandes */
+	body { 
+		border-left: 14em solid #efefed;
+	}
+
+	/* faixa da esquerda infinita (ver 'base.css' > 'body:after') */
+	body:before {
+		content: '';
+		display: block;
+
+		position: absolute; 
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+
+		background: #efefed;
+		width: 14em;
+		}
+
+	.header-item {
+		width: 100%;
+	}
+	.header-nome {
+		margin: 0.8em 0;
+	}
+	.header-sobre {
+		padding: 0 1.25em;
+		margin: 0;
+	}
+	.header-menu {
+		margin-top: 0.75em;
+	}
+	.header-foto img { /* descropa imagem */
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+/* header fixo na lateral se altura for razoável */
+@media (min-width: 60em) and (min-height: 40em) {
+	header { 
+		position: fixed; 
+	}
+}

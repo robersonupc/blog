@@ -1,8 +1,26 @@
+/* CODE */
+
+code {
+	/*
+		Consolas: Windows Vista + ou Mac com Office
+		Monaco: Mac
+		Droid Sans Mono: Android 2+
+		DejaVu Sans Mono: Linux
+	 */
+  font-family: 'Consolas', 'Monaco', 'DejaVu Sans Mono', 'Droid Sans Mono', 'Courier', monospace;
+}
+
+pre code {
+	font-size: 0.875em;
+}
+
 p code, 
 li code {
 	color: #555;
 }
 
+
+/* PYGMENTS */
 .highlight { 
 	clear: both;
 	padding: 0;
@@ -37,6 +55,7 @@ li code {
 
 .highlight pre {
 	padding: 2em 0.5em 0 0.5em;
+	margin: 1em 0;
 }
 .highlight pre code:before {
 	content: "   " attr(class);

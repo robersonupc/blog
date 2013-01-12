@@ -1,0 +1,98 @@
+
+
+/* primeiro paragrafo dos posts com destaque */
+.post > p:first-of-type { 
+	font-style: italic;
+}
+
+
+.post-info {
+	border-top: 2px solid #ddd;
+
+	margin-top: 3em;
+	padding: 1.5em 1em;
+}
+
+.post-author {
+	font-style: italic;
+}
+.post-data {
+	font-weight: bold;
+}
+
+/* barra social no fim do post */
+.post-social {
+	font-size: 0.9em; /* muda base pra 18px */
+}
+	.post-social a {
+		color: white;
+
+		display: inline-block;
+		line-height: 1;
+		margin: 0 1em 1em 0;
+		padding: 0.5em;
+		position: relative;
+		text-decoration: none;
+	}
+		.post-social a:hover {
+			opacity: 0.9;
+		}
+		.post-social a:active {
+			top: 1px;
+		}
+		.post-social a span {
+			font-size: 1.222222em; /* 22px */
+			padding-right: 0.25em;
+			vertical-align: middle;
+		}
+	.share-twitter { 
+		background: #00aced;
+	}
+	.share-facebook {
+		background: #3b5998;
+	}
+	.share-comment {
+		background: #424242;
+	}
+
+
+
+
+
+
+
+.post .tweetable {
+	background: #c0deed;
+	border: 0;
+	font-size: 1.1875em;
+	margin: 1em 0 0 1em;
+	padding: 0.8em 4.5em 0.8em 0.8em;
+	position: relative;
+
+	border-radius: 2px;
+	box-shadow: 0 0 0.25em #8ec1da;
+	}
+	.post .tweetable iframe {
+		position: absolute;
+		top: 0.9em;
+		right: 0.8em;
+	}
+	.post .tweetable + p {
+		font-style: italic;
+		margin: 0.5em 0 2.5em 2em;
+	}
+
+
+
+/* RESPONSIVE (mobile first) */
+@media (min-width: 37em) {
+	/* primeiro paragrafo dos posts com letra maior */
+	.post > p:first-of-type { 
+		font-size: 1.2em;
+	}
+}
+
+
+
+
+

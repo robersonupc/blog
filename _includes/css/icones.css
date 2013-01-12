@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'sergiolopes-org';
+	src:url('fonts/sergiolopes-org.eot');
+	src:url('fonts/sergiolopes-org.eot?#iefix') format('embedded-opentype'),
+		url('fonts/sergiolopes-org.svg#sergiolopes-org') format('svg'),
+		url('fonts/sergiolopes-org.woff') format('woff'),
+		url('fonts/sergiolopes-org.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'sergiolopes-org';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icone-"]:before, [class*=" icone-"]:before {
+	font-family: 'sergiolopes-org';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icone-feed:before {
+	content: "\e000";
+}
+.icone-twitter:before {
+	content: "\e001";
+}
+.icone-facebook:before {
+	content: "\e002";
+}
+.icone-bubbles:before {
+	content: "\e003";
+}
+.icone-twitter-2:before {
+	content: "\e004";
+}
+.icone-clock:before {
+	content: "\e005";
+}
+.icone-menu:before {
+	content: "\e006";
+}
+.icone-home:before {
+	content: "\e007";
+}
+.icone-alt {
+	display: none;
+}
