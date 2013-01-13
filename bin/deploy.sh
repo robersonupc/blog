@@ -5,6 +5,9 @@ rm -rf _deploy
 # build stylus
 echo Build stylus
 stylus _includes/css/palestra/ -u nib
+stylus _includes/css/ -w -u nib  
+stylus css/ -w -u nib  
+stylus . -w -u nib  
 
 echo Regenerating site
 jekyll --no-future _deploy

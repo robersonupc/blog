@@ -1,8 +1,18 @@
-/* HEADER (mobile first) */
-header {
-	background: #efefed
-}
+@import "nib"
+@import "tema/header"
 
+/* TEMA (customizacao): cor de fundo do header */
+.classic-theme
+	cores-header #efefed #F90 #555
+
+.dark-theme
+	cores-header rgba(0,0,0,0.5) #F90 #555
+
+.light-theme
+	cores-header rgba(0,0,0,0.05) #333 #444 #009
+
+
+/* HEADER (mobile first) */
 .header-item {
 	display: inline-block;
 	vertical-align: middle;
@@ -12,20 +22,20 @@ header {
 
 .header-foto {
 	text-decoration: none;
-	overflow: hidden; /* esconde sobras da foto no truque do crop */
-	width: 3.5em; /* tamanho padrão da foto em dispositivos móveis */
-	}
-	.header-foto img {
+	overflow: hidden; // esconde sobras da foto no truque do crop
+	width: 3.5em; // tamanho padrão da foto em dispositivos móveis
+
+	img {
 		display: block;
 		border: 0;
 
-		/* faz um crop na lateral da imagem */
+		// faz um crop na lateral da imagem 
 		margin: 0 -20%;
 		max-width: 140%;
 	}
+}
 
 .header-nome {
-	color: #f90;
 	font-size: 1.4em;
 	line-height: 0.9;
 	text-transform: uppercase;
@@ -44,21 +54,18 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 	font-size: 2.5em;
 	line-height: 1.2;
 	text-align: center;
-	}
-	.header-menu .icone {
-		color: #f90;
-
+	
+	.icone {
 		display: inline-block;
 		text-decoration: none;
 		margin-left: 0.1em;
+
+		&:active {
+			position: relative;
+			top: 1px;
+		}
 	}
-	.header-menu .icone:hover {
-		color: #fa0;
-	}
-	.header-menu .icone:active {
-		position: relative;
-		top: 1px;
-	}
+}
 
 
 /* RESPONSIVE MOBILE FIRST */
@@ -69,16 +76,12 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 	/* curriculo aparece aqui */
 	.header-sobre {
 		display: inline-block;
-
-		color: #666;
-		font-size: 0.75em;
 		margin: 0 0.5em;
-		text-align: center;
 		width: 35%;
-		}
-		header:hover .header-sobre {
-			color: #444;
-		}
+
+		font-size: 0.75em;
+		text-align: center;
+	}
 
 	.header-nome {
 		font-size: 1.6em;
@@ -110,17 +113,22 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 /* header vai pra lateral em telas grandes */
 @media (min-width: 60em) { /* 960px */
 	header {
-		position: absolute;
-		top: 0;
-		left: 0;
+		// move header pra esquerda, absoluto
+		absolute: top 0 left 0
+		width: 14em;
 
-		width: 14em; /* 280px */
 		text-align: center;
+
+		// sobrescreve background pra usar só borda do body
+		&, .themed-body & {
+			background-color transparent
+		}
 	}
 
 	/* "fundo" da lateral infinito até embaixo em pgs grandes */
 	body { 
-		border-left: 14em solid #efefed;
+		border-left-style solid 
+		border-left-width 14em
 	}
 
 	/* faixa da esquerda infinita (ver 'base.css' > 'body:after') */
@@ -134,9 +142,8 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 		bottom: 0;
 		left: 0;
 
-		background: #efefed;
 		width: 14em;
-		}
+	}
 
 	.header-item {
 		width: 100%;

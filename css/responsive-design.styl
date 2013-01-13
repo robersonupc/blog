@@ -105,14 +105,15 @@ article a:hover {
 
 .comeco {
 	padding-left: 210px;
-}
-	.comeco .destaque {
+
+	.destaque {
 		color: #FFB03B;
 		font-family: 'Della Respira', serif;
 		font-size: 1.5em;
 		padding: 0.5em;
 		text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
 	}
+}
 
 h1.sub {
 	color: #FFB03B;
@@ -123,25 +124,26 @@ h1.sub {
 	padding: 0;
 	line-height: 0.8em;
 	text-transform: lowercase;
-}
-	h1.sub span {
+
+	span {
 		display: block;
 	}
+}
 
 .rwd  h1{
 	width: 4.8em;
 }
-	.rwd div.txt {
-		float: right;
-		padding-left: 1em;
-		max-width: 32em;
-		margin-top: 1em;
-	}
-	.rwd:after {
-		content: ' ';
-		display: block;
-		clear: both;
-	}
+.rwd div.txt {
+	float: right;
+	padding-left: 1em;
+	max-width: 32em;
+	margin-top: 1em;
+}
+.rwd:after {
+	content: ' ';
+	display: block;
+	clear: both;
+}
 
 
 /* demo */
@@ -199,20 +201,11 @@ h1.sub {
 	-webkit-overflow-scrolling: touch; /* ios 5 */
 }
 .demo.up .wrapper iframe {
-	-o-transition: width 5s linear;
-	-ms-transition: width 5s linear;
-	-moz-transition: width 5s linear;
-	-webkit-transition: width 5s linear;
 	transition: width 5s linear;
 	height: 100%;
 }
 .demo.up .wrapper {
-	-o-transition: height 3s linear;
-	-ms-transition: height 3s linear;
-	-moz-transition: height 3s linear;
-	-webkit-transition: height 3s linear;
 	transition: height 3s linear;
-
 	height: 470px;
 }
 
@@ -231,7 +224,6 @@ h1.sub {
 	width: 96%;
 
 	border-radius: 0.3em;
-	-webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
 	box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
 	text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.6);
 }
@@ -239,31 +231,32 @@ h1.sub {
 	position: relative;
 	top: 1px;
 	text-shadow: none;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 }
 
+.oque {
+	ul {
+		font-size: 1.125em; /* 18px */
+		padding-left: 14em;
+		width: 100%;
+		float: right;
 
-.oque ul {
-	font-size: 1.125em; /* 18px */
-	padding-left: 14em;
-	width: 100%;
-	float: right;
-
-	list-style-type: none;
-}
+		list-style-type: none;
+	}
 	.oque li {
 		color: #EFE0E0;
 		font-style: italic;
 		font-size: 0.833em; /* 15px */
 		padding-bottom: 1.8em;
+	
+		span {
+			color: #FFF0A5;
+			display: block;
+			font-size: 1.2em; /* 18px */
+			font-style: normal;
+		}
 	}
-	.oque li span {
-		color: #FFF0A5;
-		display: block;
-		font-size: 1.2em; /* 18px */
-		font-style: normal;
-	}
+}
 
 .como h2, .mas h2, .fim h2 {
 	color: #123745;
@@ -275,17 +268,17 @@ h1.sub {
 }
 
 .como {
-	
-}
-	.como h2 {
+
+	h2 {
 		display: inline-block;
 		margin: 0;
 		vertical-align: baseline;
-	}
-		.como h2 span {
+	
+		span {
 			display: none;
 		}
-	.como .destaque {
+	}
+	.destaque {
 		color: #153f4f;
 		display: inline-block;
 		font-size: 1.8em;
@@ -293,24 +286,31 @@ h1.sub {
 		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
 	}
 
-	.como ol {
+	ol {
 		margin-top: 2em;
 		list-style-type: none;
 		padding: 0;
 	}
-		.como li {
-			position: relative;
+	li {
+		position: relative;
+
+		&:first-child h3:before {
+			background-position: 0 0;
 		}
-		.como h3 {
-			font-family: 'Della Respira', serif;
-			font-size: 3em;
-			font-weight: normal;
-			line-height: 128px;
-			height: 128px;
-			padding-left: 1.6em;
-			text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+		&:last-child h3:before {
+			background-position: -258px 0;
 		}
-		.como h3:before {
+	}
+	h3 {
+		font-family: 'Della Respira', serif;
+		font-size: 3em;
+		font-weight: normal;
+		line-height: 128px;
+		height: 128px;
+		padding-left: 1.6em;
+		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
+	
+		&:before {
 			background: url(/img/posts/responsive-design/numeros.png) no-repeat;
 			background-position: -129px 0;
 			content: ' ';
@@ -320,66 +320,65 @@ h1.sub {
 			vertical-align: middle;
 			width: 129px;
 		}
-			.como li:first-child h3:before {
-				background-position: 0 0;
-			}
-			.como li:last-child h3:before {
-				background-position: -258px 0;
-			}
+	}
+			
 
-	.como .txt {
+	.txt {
 		position: relative;
-	}
-	.como .txt p {
-		padding-right: 310px;
+	
+		p {
+			padding-right: 310px;
+		}
 	}
 
-	.como .mq {
+	.mq {
 		position: absolute;
 		top: 0;
 		right: 0;
 	}
-		.como small {
-			display: block;
-			max-width: 240px;
-			margin: 0 auto;
-			font-style: italic;
-		}
-	.como .highlight {
+	small {
+		display: block;
+		max-width: 240px;
+		margin: 0 auto;
+		font-style: italic;
+	}
+
+	.highlight {
 		margin-top: 0;
 	}
-	.como pre {
+	pre {
 		padding: 0 0.5em;
 	}
-	.como pre code:before {
+	pre code:before {
 		display: none;
 	}
 
-.como .fluido .txt p {
-	padding-right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 600px;
-	width: 95%;
-}
-.como .imagens .txt p {
-	padding-right: 0;
-	padding-left: 310px;
+	.fluido .txt p {
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 600px;
+		width: 95%;
+	}
+	.imagens .txt p {
+		padding-right: 0;
+		padding-left: 310px;
+	}
 }
 
 .mas {
 
-}
-	.mas h2 {
+
+	h2 {
 		margin-bottom: 0;
 	}
-	.mas p {
+	p {
 		margin-left: auto;
 		max-width: 680px;
 		padding-right: 8%;
 		width: 94%;
 	}
-	.mas h3 {
+	h3 {
 		color: #FFB03B;
 		font-family: 'Della Respira', serif;
 		font-size: 1.8em;
@@ -388,6 +387,7 @@ h1.sub {
 		padding-top: 1.5em;
 		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
 	}
+}
 
 .mb h1 {
 	line-height: 0.9em;
@@ -409,23 +409,6 @@ h1.sub {
 	line-height: 1.6em;
 	max-width: 780px;
 	padding-top: 1.2em;
-}
-
-/* facebook */
-#facebook {
-	background: rgba(30,30,30, 0.5);
-	padding-top: 3em;
-	padding-bottom: 3em;
-	margin-bottom: 0;
-}
-#facebook .fb-comments {
-	display: block;
-}
-#facebook .fb {
-	color: white;
-	font-size: 400;
-	margin-bottom: 1em;
-	text-shadow: -1px -1px 2px rgba(30, 30, 50, 0.6);
 }
 
 
@@ -469,18 +452,19 @@ h1.sub {
 		top: auto;
 		right: auto;
 	}
-		.como small {
-			max-width: 43%;
-			position: absolute;
-			top: 3em;
-			right: 0;
-		}
+	.como small {
+		max-width: 43%;
+		position: absolute;
+		top: 3em;
+		right: 0;
+	}
 	.como .imagens {
 		background-position: 0 center;
-	}
-		.como .imagens .txt p {
+	
+		.txt p {
 			padding-left: 265px;
 		}
+	}
 	.mas h3 {
 		padding-left: 0;
 	}
@@ -574,12 +558,13 @@ h1.sub {
 		padding-right: 0;
 		margin-bottom: 0;
 	}
-		.como small {
-			max-width: 80%;
-			position: relative;
-			top: auto;
-		}
+	.como small {
+		max-width: 80%;
+		position: relative;
+		top: auto;
+	}
 }
+
 
 @media (max-width: 460px) {
 	body:before {

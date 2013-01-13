@@ -1,0 +1,29 @@
+/* customizacoes de tema pro header */
+
+cores-header(fundo, base, texto, link=#0000FD)
+
+	// fundo do header
+	border-left-color fundo
+
+	&:before
+		background fundo
+
+	header
+		background fundo
+
+	// cor base do logo e icones
+	.header-nome
+		color base
+
+	.header-menu .icone
+		color base
+
+		&:hover
+			color ligthen(base, 5%)
+
+	// cor do texto
+	.header-sobre
+		color texto
+
+		a
+			color link

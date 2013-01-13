@@ -20,7 +20,7 @@
 	{% include snippets/head.html %}
 
 </head>
-<body>
+<body class="{% if page.theme %}{{ page.theme }}{% else %}classic{% endif %}-theme themed-body">
 
 	{{content}}
 

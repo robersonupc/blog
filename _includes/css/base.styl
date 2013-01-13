@@ -1,18 +1,31 @@
+@import "nib"
+@import "tema/base"
+
 /* RESET */
 *, 
 *:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+*:before
+	box-sizing border-box
+	padding 0
+	margin 0
 
-	padding: 0;
-	margin: 0;
-}
+
+/* TEMA (customizacao)
+	cor da borda da direita no body
+ */
+.classic-theme
+	borda-direita #F90
+
+.dark-theme
+	borda-direita rgba(255,153,0, 0.5)
+
+.light-theme
+	borda-direita darken(#F90, 10%)
 
 /* body e base */
-body {
-	border-right: 0.5em solid #F90;
+body
+	border-right-style solid
+	border-right-width 0.5em
 
 	font-family: 'Arial', sans-serif;
 	font-weight: 400;
@@ -20,61 +33,54 @@ body {
 
 	/* evita resizes chatos do iOS */
 	-webkit-text-size-adjust: 100%;
-	}
+
+
 	/* pra dar a sensação de body 100% em pg com pouco conteudo, 
 	   posiciona uma faixa na direita igual a borda do body.
 	   ela pega 100% do viewport, mesmo se o body for menor. */
-	body:after {
+	&:after
 		content: '';
 		display: block;
 
-		position: absolute; /* fallback pra browsers sem fixed */
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		right: 0;
+		position: absolute; // fallback pra browsers sem fixed
+		fixed: top 0 bottom 0
+		right: 0
 
-		background: #F90;
 		width: 0.5em;
-	}
 
 
-.container {
+.container
 	max-width: 52em;
 	padding: 0 2em;
 	position: relative;
-}
+
 
 
 /* pagina de texto puro como posts e pages (sobre, home) */
-.text-page {
+.text-page
 	color: #333;
 	padding: 2.5%;
-	}
-	.text-page p, 
-	.text-page blockquote { /* normaliza espaçamentos entre elementos de texto */
-		margin: 1.5em 0; 
-		}
-		.text-page ul {
-			margin-bottom: 1.5em;
-		}
-		.text-page li {
-			margin: 0 0 1em 0;
-		}
+
+	// normaliza espaçamentos entre elementos de texto
+	p, blockquote
+		margin 1.5em 0
+	ul
+		margin-bottom 1.5em
+	li
+		margin 0 0 1em 0
+
 
 /* legibilidade: em torno de 60 caracteres por linha */
-.limit-line-length p, 
-.limit-line-length li {
-	max-width: 30em;
-}
-.limit-line-length blockquote {
-	max-width: 32em;
-}
+.limit-line-length 
+	p, li
+		max-width: 30em;
+	blockquote
+		max-width: 32em;
 
 /* listas não devem ser espaçadas */
-.narrow-lists li {
+.narrow-lists li
 	margin: 0;
-}
+
 
 
 /* RESPONSIVE: scaling basico da fonte  */
@@ -95,22 +101,23 @@ body {
 }
 
 /* RESPONSIVE (mobile first): layout */
-@media (min-width: 37em) { /* 592 px */
-	body {
+@media (min-width: 37em) // 592px
+	body
 		border-right-width: 1em;
-	}
-		body:after {
+
+		&:after 
 			width: 1em;
-		}
-	.text-page {
+
+
+	.text-page
 		padding: 2em;
-	}
-}
-@media (min-width: 41em) { /* 656 px */
-	body {
+
+
+@media (min-width: 41em) // 656px
+	body
 		border-right-width: 1.5em;
-	}
-		body:after {
-			width: 1.5em;
-		}
-}
+
+		&:after
+			width 1.5em
+
+

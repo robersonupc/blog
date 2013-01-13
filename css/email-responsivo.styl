@@ -1,24 +1,13 @@
+@import 'nib'
+
 body {
-	background: #EBCC6E url(/img/base/noise.png);
+	background: #EBCC6E url('/img/base/noise.png');
 }
-header #sergio, header #org {
-	color: #4E6B66;
-	text-shadow: 1px 1px 1px #EBE1C5;
-}
-header #lopes {
-	color: #595643;
-	text-shadow: 1px 1px 1px #EBE1C5;
-}
-nav a {
-	background-color: #ED834E;
-}
-p code, li code {
+p code, 
+li code {
 	background-color: #EBE1C5;
 	color: #222;
-}
-
-div#social, article h4 {
-	background: rgba(0,0,0,0.15);
+	padding: 1px 3px;
 }
 
 article h1 {
@@ -33,39 +22,34 @@ article h1 {
 	text-indent: -999em;
 }
 .svg article h1 {
-	/* TODO trocar URL */
-	background-image: url(/img/posts/responsive-email/titulo.svgz);
+	background-image: url('/img/posts/responsive-email/titulo.svgz');
 }
 
 .nosvg article h1, .nojs article h1 {
-	background-image: url(/img/posts/responsive-email/titulo.png);
+	background-image: url('/img/posts/responsive-email/titulo.png');
 }
 @media (max-width: 540px) {
 	.nosvg article h1, .nojs article h1 {
-		background-image: url(/img/posts/responsive-email/titulo-mobi.png);
+		background-image: url('/img/posts/responsive-email/titulo-mobi.png');
 		padding-top: 25%;
-	}
-	header #sergio, header #org, header #lopes {
-		text-shadow: none;
 	}
 }
 
 h2 {
 	color: rgba(30, 30, 30, 0.7);
 	counter-increment: subtitulo;
-	font-size: 1.8em;
 	padding-left: 3em;
 	padding-top: 1em;
 	position: relative;
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.25);
 	margin-bottom: 1.25em;
 }
-h2:before{
+h2:before {
 	background: rgba(255,255,255,0.5);
 	content: counter(subtitulo);
-	font-size: 1.6em;
+	font-size: 1.5em;
+	font-family: sans-serif;
 	text-align: center;
-	vertical-align: bottom;
 
 	height: 1.5em;
 	line-height: 1.5em;
@@ -79,11 +63,9 @@ h2:before{
 
 	box-shadow: inset 1px 1px 5px rgba(30, 30, 30, 0.3);
 	color: #EBCC6E;
-	text-shadow: 0px 1px 1px rgba(30, 30, 30, 0.3);
+	text-shadow: 0px 1px 1px rgba(30, 30, 30, 0.4);
 
-	-webkit-border-radius: 5em;
-	   -moz-border-radius: 5em;
-	        border-radius: 5em;
+	border-radius: 5em;
 }
 article a {
 	color: #004e66;
