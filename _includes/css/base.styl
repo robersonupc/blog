@@ -1,5 +1,5 @@
 @import "nib"
-@import "tema/base"
+@import "tema"
 
 /* RESET */
 *, 
@@ -10,23 +10,9 @@
 	margin 0
 
 
-/* TEMA (customizacao)
-	cor da borda da direita no body
- */
-.classic-theme
-	borda-direita #F90
-
-.dark-theme
-	borda-direita rgba(255,153,0, 0.5)
-
-.light-theme
-	borda-direita darken(#F90, 10%)
 
 /* body e base */
 body
-	border-right-style solid
-	border-right-width 0.5em
-
 	font-family: 'Arial', sans-serif;
 	font-weight: 400;
 	line-height: 1.55;
@@ -34,20 +20,7 @@ body
 	/* evita resizes chatos do iOS */
 	-webkit-text-size-adjust: 100%;
 
-
-	/* pra dar a sensação de body 100% em pg com pouco conteudo, 
-	   posiciona uma faixa na direita igual a borda do body.
-	   ela pega 100% do viewport, mesmo se o body for menor. */
-	&:after
-		content: '';
-		display: block;
-
-		position: absolute; // fallback pra browsers sem fixed
-		fixed: top 0 bottom 0
-		right: 0
-
-		width: 0.5em;
-
+	fundo-body()
 
 .container
 	max-width: 52em;
@@ -103,10 +76,7 @@ body
 /* RESPONSIVE (mobile first): layout */
 @media (min-width: 37em) // 592px
 	body
-		border-right-width: 1em;
-
-		&:after 
-			width: 1em;
+		padding-right 1em
 
 
 	.text-page
@@ -115,9 +85,6 @@ body
 
 @media (min-width: 41em) // 656px
 	body
-		border-right-width: 1.5em;
-
-		&:after
-			width 1.5em
+		padding-right 1.5em
 
 

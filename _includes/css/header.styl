@@ -1,5 +1,5 @@
 @import "nib"
-@import "tema/header"
+@import "tema"
 
 /* TEMA (customizacao): cor de fundo do header */
 .classic-theme
@@ -115,7 +115,7 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 	header {
 		// move header pra esquerda, absoluto
 		absolute: top 0 left 0
-		width: 14em;
+		width: header-largura;
 
 		text-align: center;
 
@@ -123,26 +123,6 @@ header .extra { /* não mostra o curriculo em telas pequenas */
 		&, .themed-body & {
 			background-color transparent
 		}
-	}
-
-	/* "fundo" da lateral infinito até embaixo em pgs grandes */
-	body { 
-		border-left-style solid 
-		border-left-width 14em
-	}
-
-	/* faixa da esquerda infinita (ver 'base.css' > 'body:after') */
-	body:before {
-		content: '';
-		display: block;
-
-		position: absolute; 
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-
-		width: 14em;
 	}
 
 	.header-item {

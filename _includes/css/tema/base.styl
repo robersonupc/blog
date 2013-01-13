@@ -1,6 +1,40 @@
-// borda direita do body
-borda-direita(cor)
-	border-right-color cor
+/*
+	Gera o fundo do body com barras laterais via imagens pra ficar 100% do viewport
+ */
+fundo-body(custom = none)
 
-	&:after
-		background cor
+	padding-right 0.5em
+	background-image bg-fundo-laranja, bg-fundo-cinza, custom
+	background-position top right, top left, 0% 0%
+	background-repeat repeat-y, repeat-y, repeat
+
+	/* tamanho de cada faixa:
+		1) largura da faixa laranja (mobile first)
+		2) largura do header lateral fixo (começa em 0 no mobile first)
+		3) possível tile customizado (auto)
+	 */
+	background-size 0.5em, 0, auto
+
+	/* aplica o fundo cinza mobile first no header tbm */
+	header
+		background bg-fundo-cinza repeat
+
+	/* ajusta largura da faixa laranja em telas maiores */
+	@media (min-width: 37em) // 592px
+		padding-right 1em
+		background-size 1em, 0, auto
+
+	@media (min-width: 41em) // 656px
+		padding-right 1.5em
+		background-size 1.5em, 0, auto
+
+	/* 
+		header fixo na esquerda em telas maiores 
+		(coordenar essa media querie com o header.styl)
+	 */
+	@media (min-width: 60em) // 960px
+		background-size 1.5em, header-largura, auto
+		padding-left header-largura
+
+		header
+			background none
