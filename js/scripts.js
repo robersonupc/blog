@@ -5,7 +5,7 @@ _gaq.push(['_trackPageview']);
 
 (function() {
 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = 'http://www.google-analytics.com/' + (location.hostname == 'localhost'? 'u/ga_debug.js' : 'ga.js');
+	ga.src = 'http://www.google-analytics.com/' + (location.hostname == 'localhost' || location.hostname.indexOf('192.168') >= 0? 'u/ga_debug.js' : 'ga.js');
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
 
