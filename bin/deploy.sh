@@ -19,4 +19,4 @@ bin/build.sh _deploy
 
 # upload
 echo Upload to server
-rsync -avh --progress _deploy/ lowpis@sergiolopes.org:/home/lowpis/sergiolopes.org/
+rsync -avHz --delete --progress _deploy/ lowpis@sergiolopes.org:/home/lowpis/sergiolopes.org/
