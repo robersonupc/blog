@@ -2,7 +2,7 @@
 layout: blog
 ogtype: article
 ---
-<article class="text-page post limit-line-length container">
+<article class="text-page post container {% if page.fullPagePost != 'true' %}limit-line-length{%endif%}">
 	
 	{% if page.showTitleH1 != 'false' %}
 		<h1>{{ page.title }}</h1>
