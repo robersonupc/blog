@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 
 css: /css/responsive-design.css
 script: /js/responsive-design.js
@@ -9,209 +9,212 @@ ogtype: article
 shareImage: /img/posts/responsive-design/share.jpg
 
 title: "Design Responsivo Por Uma Web Única"
+showTitleH1: 'false'
+fullPagePost: 'true'
+
+class: destaque
+theme: dark
+
 category: mobile
 description: Responsive Web Design para um único site funcionar em todos os dispositivos. [artigo completo e interativo]
 
 feedWarning: Esse post possui design e interatividade não suportados nos feeds RSS. Recomendo que visite a página e leia por lá. (é otimizado também para mobile)
 
-class: destaque
 ---
 
-<article>
-	<h1 class="title">
-		<span class="dr">Design Responsivo</span> 
-		<span class="pu">por uma</span> 
-		<span class="wu">Web Única</span>
-	</h1>
+<h1 class="title">
+	<span class="dr">Design Responsivo</span> 
+	<span class="pu">por uma</span> 
+	<span class="wu">Web Única</span>
+</h1>
+
+<!--
+	TODO controle pra desabilitar layout customizado
+-->
+<section class="intro">
+	<p><em>Mobile cresce como nunca</em>. Vende-se mais smartphones e tablets que computadores. A banda larga móvel cresce assustadoramente. Web não é mais sinônimo de desktops e notebooks. Novos meios de acesso, novos usuários, novos hábitos... <strong>como oferecer uma boa experiência na nova Web?</strong></p>
+</section>
+
+<section class="comeco">
+	<p>A Web mobile surgiu em 2007. Sim, dava pra navegar no celular antes disso, mas o iPhone mudou o jogo. Desde então, temos um browser completo e usável sempre à mão. Mas abrir aquele site Desktop clássico no smartphone não é lá a melhor experiência. Abrir até abre, mas costuma ser lento, com informações demais e difícil de navegar.</p>
+
+	<p><em>E assim nasceram os sites mobile</em>. Criar uma página otimizada pra iPhone é bastante fácil: basta um design de 320px e um truque com <a href="http://blog.caelum.com.br/pixels-pixels-ou-pixels-dicas-de-web-mobile-com-viewport/" title="Artigo: Pixels, pixels ou pixels? Dicas de Web Mobile com viewport">viewport</a>.</p>
+
+	<p>Mas o mundo mudou desde então. Bastante.</p> 
+
+	<p>Veio o Android com seus tamanhos e formatos variáveis. Vieram o iPad e os tablets, com resolução de computador e mobilidade de smartphone. Levaram o Android e o iOS pra TV e, agora, até pra óculos. Navegamos em todo tipo de aparelho, a todo momento, em qualquer lugar.</p> 
+
+	<p>Smartphones, tablets, televisões, celulares, ereaders, video games, netbooks, óculos, relógios... <em>até desktops e notebooks!</em></p>
+
+	<p class="destaque">Como, então, atacar o mundo móvel de hoje e de amanhã?</p>
+
+	<p>Criar um site para smartphones, outro pra tablets, outro pra Desktop, mais um pra TVs, outro pra <em>[insira tecnologia do futuro]</em>...? Impraticável.</p>
+</section>
+
+<section class="rwd">
+	<h2 class="sub">
+		<span class="r">Responsive</span>
+		<span class="w">Web</span>
+		<span class="d">Design</span>
+	</h2>
+
+	<div class="txt">
+		<p>Um site. Um design. Um conteúdo. <em>Incontáveis dispositivos</em>.</p>
+
+		<p>Design responsivo é oferecer um único site pra todo mundo e, usando técnicas avançadas de CSS3, <strong>adaptar a experiência</strong> de acordo com o dispositivo.</p>
+
+		<p>Há <a href="http://mediaqueri.es" title="Site MediaQueri.es com galeria de páginas responsivas">vários bons exemplos</a>. Recentemente, desenvolvi a página do nosso <a href="http://www.arquiteturajava.com.br">Livro Arquitetura Java</a> com <em>design responsivo</em>. Observe:</p>
+
+		<button>responsive play</button>
+	</div>
+
+	<section class="demo">			
+		<div class="wrapper">
+		</div>
+	</section>
+
+	<noscript>
+		{% youtube N_17S54YNhE %}
+	</noscript>
+
+	<div class="txt">
+		<p>Diferente de muitos sites mobile atuais que só pensam nos 320px do iPhone, um site responsivo <em>se adapta a todo tipo de resolução</em>, aproveitando o melhor que cada dispositivo tem a oferecer.</p>
+
+		<p>Queremos um site responsivo porque é a <strong>melhor experiência para o usuário</strong>, não porque seja fácil &mdash; não é! &mdash; e nem porque está na moda.</p>
+	</div>
+</section>
+
+
+<section class="como">
+	<hgroup>
+		<h2>Como<span> fazer um design responsivo</span>?</h2>
+		<p class="destaque">São três ingredientes principais:</p>
+	</hgroup>
+
+	<ol>
+		<li>
+			<h3>Media Queries</h3>
+
+			<div class="txt">
+			<p>Com as media queries do CSS3, é possível criar regras no CSS que só se aplicam em determinadas situações, como em <em>resoluções de tela específicas</em> e até de acordo com a orientação do dispositivo ou sua densidade de pixels.</p>
+
+			<div class="mq">
+				{% code css %}
+				@media (max-width: 500px) {
+				  body { font-size: 87.5%; }
+				}
+				@media (max-width: 390px) {
+				  body { font-size: 80%; }
+				}
+				{% endcode %}
+
+				<small>(se você não conhece media queries, leia <a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/" title="Artigo: Flexibilidade em páginas para dispositivos móveis com media queries">esse meu post</a> e depois volte aqui)</small>
+
+			</div>
+
+			<p>E que valores usar nas media queries? Há <a href="http://stuffandnonsense.co.uk/projects/320andup/" title="320andup">vários</a> <a href="http://twitter.github.com/bootstrap/index.html" title="Twitter Bootstrap">frameworks</a> CSS que trazem valores pré-definidos para os <em>breakpoints</em> do layout, como os comuns 320px, 480px, 600px, 768px e 992px. Não à toa, são valores derivados de tamanhos do iPhone, do iPad e tablets de 7".</p>
+
+			<p>Mas um layout responsivo é aquele que se adapta a todo tipo de resolução. Usar valores pensados em dispositivos comuns (<strong>device driven breakpoints</strong>) pode levar nosso layout a quebrar em certas resoluções intermediárias se não formos cuidadosos.</p>
+
+			<p>Já que queremos suportar todas as resoluções possíveis, porque não criar as media queries a partir das necessidades do nosso layout? (<strong>content driven breakpoints</strong>). Faça a página e vá redimensionando; no pontos que o layout quebrar, coloque uma media querie pra ajustar.</p>
+			</div>
+
+		</li>
+		<li class="fluido">
+			<h3>Layout fluído</h3>
+
+			<div class="txt">
+			<p>Só media queries não bastam. Seria impraticável criar uma media querie para cada resolução existente &mdash; seriam milhares! Devemos usar poucas media queries e fazer o <em>layout fluir entre os breakpoints</em>.</p>
+
+			<p>O segredo é <em>não usar pixels nas medidas</em>, mas priorizar um layout mais fluído e flexível baseado em <strong>porcentagens e ems</strong>.</p>
+
+			<p>Seria até possível criar um site mobile apenas com essa ideia, sem usar media queries. Se tudo for porcentual, o design se adaptaria a todas as resoluções. Mas, na prática, não seria um design capaz de aproveitar o potencial de cada dispositivo. As media queries permitem ajustar o design pensando em adaptar e melhorar a experiência do usuário.</p>
+			</div>
+		</li>
+		<li class="imagens">
+			<h3>Imagens flexíveis</h3>
+
+			<div class="txt">
+			<p>Um layout verdadeiramente fluído precisa de <strong>imagens que se adaptem</strong> à todo tipo de resolução. E isso merece uma atenção especial, já que imagens são baseadas em pixels e, portanto, não muito fáceis de flexibilizar.</p>
+
+			<p>Podemos usar <em>porcentagens para dimensionar imagens</em>, mas é preciso cuidado. Aumentá-la além do seu tamanho original deixará o layout pixelizado. E carregar uma imagem de alta resolução para depois diminuí-la via código vai deixar a página muito carregada.</p>
+
+			<p>Precisamos de várias imagens em resoluções diferentes, uma para cada contexto. Mas ainda há o problema de como servir a imagem certa pra cada dispositivo. Com media queries, conseguimos ajustar as imagens vindas de CSS via <code>background-image</code>.</p>
+
+			<p>Mas para as <code>&lt;img&gt;</code>, não há solução muito elegante. Há <a href="https://github.com/filamentgroup/Responsive-Images" title="Projeto: Responsive Images">alguns</a> <a href="http://adaptive-images.com/" title="Projeto: Adaptative Images">projetos</a> e <a href="http://www.sencha.com/learn/how-to-use-src-sencha-io/" title="Sencha.io Src">produtos</a> com soluções razoáveis, geralmente envolvendo algum tipo de código no servidor, mas todas com algum "porém". O W3C também está discutindo o assunto no <a href="http://www.w3.org/community/respimg/">responsive images workgroup</a> já pensando em incluir algo na especificação pra facilitar.</p>
+
+			<p>Além disso, é importante lembrar que muitas imagens decorativas podem (e devem!) ser substituídas por <strong>efeitos CSS3</strong> &mdash; sombras, bordas redondas, gradientes etc. E ainda podemos usar <strong>SVG</strong> para gráficos vetoriais que escalam em todo tipo de resolução.</p>
+			</div>
+		</li>
+	</ol>
+</section>
+
+<section class="mas">
+	<h2>Responsivo, mas...</h2>
+
+	<p>Só jogar umas media queries e trocar tudo pra porcentagem no CSS não vai fazer do seu site responsivo o com a melhor experiência para o usuário.</p> 
+
+	<p><a href="/palestra-mobile-web/">Desenvolver para mobile têm vários outros desafios</a>, ainda mais se queremos que o mesmo site sirva todo mundo.</p>
+
+	<h3>O conteúdo que importa</h3>
+
+	<p>Há quem diga que é impraticável oferecer o mesmo site para todo mundo porque, quando navegamos em telas pequenas, <em>queremos conteúdo mais focado e páginas mais simples e diretas</em>. É absolutamente verdade que usuários mobile têm menos paciência pra páginas grandes e carregadas, mas isso não inviabiliza um design responsivo.</p>
+
+	<p>A chave é a <strong>priorização de conteúdo</strong>. É preciso repensar todo o conteúdo para descobrir o que realmente importa, e remover todo o excesso. Uma página mobile não deve ser apenas um design menor, mas uma <em>completa reestruturação de conteúdo</em>. Por isso que só adaptar o design de um site Desktop já existente dificilmente funciona.</p>
+
+	<p>E, se você já gastou um bom tempo <em>cortando coisas secundárias</em> e <em>priorizando o importante</em>, porque oferecer essa versão mais simples e funcional apenas para usuários mobile? Porque temos mania de pensar que usuários Desktop devem receber páginas cheias de informações inúteis?</p>
+
+	<p><strong>Responsive design</strong> é entregar a mesma informação &mdash; útil e priorizada &mdash; para todo mundo!</p>
+
+	<p>Mais: mesmo que, após a priorização, você perceba que o conteúdo está grande, <strong>jamais corte conteúdo dos usuários mobile</strong>. Se faz parte do conteúdo principal, deixe lá para todos. Usuários mobile não gostam de experiência capada. Otimizar para mobile não significa diminuir funcionalidades, <strong>significa focar</strong>.</p>
 
 	<!--
-		TODO controle pra desabilitar layout customizado
+	CORTADO
+
+	<p>Aliás, esse artigo é um exemplo disso. Pelas estatísticas de acesso, existe 20% de chance de você estar lendo isso num dispositivo móvel. E esse é um artigo grande, mesmo no Desktop. Eu poderia ter resumido em alguns parágrafos para os usuários mobile, mas isso seria piorar a experiência desses usuários. O artigo foi revisado e teve seu conteúdo priorizado &mdash; acredite, eu cortei várias frases! E o <em>mesmo artigo é disponibilizado para todos</em>.</p>
 	-->
-	<section class="intro">
 
-		<p><em>Mobile cresce como nunca</em>. Vende-se mais smartphones e tablets que computadores. A banda larga móvel cresce assustadoramente. Web não é mais sinônimo de desktops e notebooks. Novos meios de acesso, novos usuários, novos hábitos... <strong>como oferecer uma boa experiência na nova Web?</strong></p>
-	</section>
+	<h3>Otimizar é essencial</h3>
 
-	<section class="comeco">
-		<p>A Web mobile surgiu em 2007. Sim, dava pra navegar no celular antes disso, mas o iPhone mudou o jogo. Desde então, temos um browser completo e usável sempre à mão. Mas abrir aquele site Desktop clássico no smartphone não é lá a melhor experiência. Abrir até abre, mas costuma ser lento, com informações demais e difícil de navegar.</p>
+	<p>Sou grande militante de otimizações web. Acredito que cada segundo importa, e que otimizar o carregamento traz <a href="/tweetables-performance-web-otimizacoes/">resultados fantásticos</a> de satisfação do usuário e conversões. <em>E isso é mais verdade ainda no mundo mobile.</em></p>
 
-		<p><em>E assim nasceram os sites mobile</em>. Criar uma página otimizada pra iPhone é bastante fácil: basta um design de 320px e um truque com <a href="http://blog.caelum.com.br/pixels-pixels-ou-pixels-dicas-de-web-mobile-com-viewport/" title="Artigo: Pixels, pixels ou pixels? Dicas de Web Mobile com viewport">viewport</a>.</p>
+	<p>Mesmo smartphones modernos são dispositivos bastante limitados. Baixo poder de processamento, pouca memória, imensa latência da redes 3G etc. <strong>Otimizar o carregamento do seu site é imprescindível</strong>.</p>
 
-		<p>Mas o mundo mudou desde então. Bastante.</p> 
+	<p>E, repito a pergunta de antes: se você gastar um tempo otimizando seu site para mobile, porquê não servi-lo também aos usuários Desktop? Porque a versão Desktop tem que ser mais lenta que a versão mobile? <strong>Responsive design</strong> é entregar um site otimizado para todo mundo!</p>
 
-		<p>Veio o Android com seus tamanhos e formatos variáveis. Vieram o iPad e os tablets, com resolução de computador e mobilidade de smartphone. Levaram o Android e o iOS pra TV e, agora, até pra óculos. Navegamos em todo tipo de aparelho, a todo momento, em qualquer lugar.</p> 
+	<p>Aliás, se você só tiver tempo para seguir uma dica mobile desse artigo, esqueça media queries, responsividade e etc. <strong>Otimize o carregamento do seu site</strong>, é <a href="/a-funcionalidade-mobile-mais-importante/">a funcionalidade mobile mais importante</a>. O melhor que você pode fazer pelos usuários mobile é deixar seu site mais rápido.</p>
+</section>
 
-		<p>Smartphones, tablets, televisões, celulares, ereaders, video games, netbooks, óculos, relógios... <em>até desktops e notebooks!</em></p>
+<section class="mb">
+	<h2 class="sub">
+		<span class="m">Mobile</span>
+		<span class="f">first</span>
+	</h2>
 
-		<p class="destaque">Como, então, atacar o mundo móvel de hoje e de amanhã?</p>
+	<p>Antes de criar um site responsivo você precisa escolher: começa pelo Desktop e vai ajustando até chegar no mobile ou o contrário? No site do Livro de Arquitetura Java, eu escrevi o CSS todo 2x, uma em cada abordagem. E digo, <strong>começar pelo mobile é muito melhor</strong>.</p>
 
-		<p>Criar um site para smartphones, outro pra tablets, outro pra Desktop, mais um pra TVs, outro pra <em>[insira tecnologia do futuro]</em>...? Impraticável.</p>
-	</section>
+	<p>Essa estratégia, chamada de <strong>Mobile First</strong>, tem muitas vantagens. Como o mobile vai te forçar a <em>priorizar o conteúdo</em>, quando chegar a parte do Desktop você não precisará mexer em conteúdo. No caso contrário, é fácil o site Desktop ter conteúdo demais e, quando chega a parte mobile, você descobre que precisava ter focado mais e priorizado melhor.</p>
 
-	<section class="rwd">
-		<h1 class="sub">
-			<span class="r">Responsive</span>
-			<span class="w">Web</span>
-			<span class="d">Design</span>
-		</h1>
+	<p>No layout é a mesma coisa. <em>Comece pelo layout mobile simples e incremente e ajuste as coisas para resoluções maiores</em>. Começar com um layout complexo, cheio de colunas, e simplificar para mobile é bem mais complicado.</p>
 
-		<div class="txt">
-			<p>Um site. Um design. Um conteúdo. <em>Incontáveis dispositivos</em>.</p>
+	<p>Programar mobile first é seguir o princípio do <em>progressive enhancement</em> &mdash; melhoria progressiva. Você cria uma base de conteúdo e marcação semântica ultra portável e vai incrementando-a conforme o dispositivo permitir. Com media queries, você vai ajustando o layout e, com JavaScript, pode ir adicionando capacidades novas avançadas. Mas sua <strong>base é simples e sólida, conteúdo puro e simples</strong>, que abre até nos <i>dumbphones</i> de 5 anos atrás.</p>
+</section>
 
-			<p>Design responsivo é oferecer um único site pra todo mundo e, usando técnicas avançadas de CSS3, <strong>adaptar a experiência</strong> de acordo com o dispositivo.</p>
+<section class="fim">
+	<h2>Por fim</h2>
 
-			<p>Há <a href="http://mediaqueri.es" title="Site MediaQueri.es com galeria de páginas responsivas">vários bons exemplos</a>. Recentemente, desenvolvi a página do nosso <a href="http://www.arquiteturajava.com.br">Livro Arquitetura Java</a> com <em>design responsivo</em>. Observe:</p>
+	<p><em>Criar um site responsivo não é fácil.</em> Trabalhar com flexibilidade e adaptação é bem mais complicado que um site fixo em pixels. As ferramentas de desenho ainda não estão preparadas e os designer gráficos costumam ter dificuldades para criar com responsividade em mente.</p>
 
-			<button>responsive play</button>
-		</div>
+	<p>O código fica mais complexo também. Há dificuldades para se trabalhar com imagens e vídeos responsivos. É bastante complicado adaptar um site Desktop já existente para ser responsivo.</p>
 
-		<section class="demo">			
-			<div class="wrapper">
-			</div>
-		</section>
+	<p>Apesar de tudo isso, <strong>designs resposivos são o futuro</strong>. Pelo simples motivo de que a <strong>Web é única</strong> e criar sites separados para cada categoria de dispositivos é impossível.</p>
 
-		<noscript>
-			{% youtube N_17S54YNhE %}
-		</noscript>
+	<p>Mas, claro que nenhuma solução é <em>bala de prata</em>. Aplicações web complexas que exijam experiências diferentes em mobile e Desktop podem ser fortes candidatas a terem páginas completamente diferentes. Se você têm recursos e tempo, criar diversos sites separados e otimizados certamente é o que trará a melhor experiência pro usuário. Mas não faça um site Desktop e outro para iPhones e ache que acabou.</p>
 
-		<div class="txt">
-			<p>Diferente de muitos sites mobile atuais que só pensam nos 320px do iPhone, um site responsivo <em>se adapta a todo tipo de resolução</em>, aproveitando o melhor que cada dispositivo tem a oferecer.</p>
+	<p><strong>Faça um site responsivo</strong> sempre disponível para qualquer dispositivo de hoje e do futuro. E, se for o caso, crie mais versões separadas otimizadas para dispositivos específicos.</p>
 
-			<p>Queremos um site responsivo porque é a <strong>melhor experiência para o usuário</strong>, não porque seja fácil &mdash; não é! &mdash; e nem porque está na moda.</p>
-		</div>
-	</section>
-
-
-	<section class="como">
-		<hgroup>
-			<h2>Como<span> fazer um design responsivo</span>?</h2>
-			<p class="destaque">São três ingredientes principais:</p>
-		</hgroup>
-
-		<ol>
-			<li>
-				<h3>Media Queries</h3>
-
-				<div class="txt">
-				<p>Com as media queries do CSS3, é possível criar regras no CSS que só se aplicam em determinadas situações, como em <em>resoluções de tela específicas</em> e até de acordo com a orientação do dispositivo ou sua densidade de pixels.</p>
-
-				<div class="mq">
-{% code css %}
-@media (max-width: 500px) {
-	body { font-size: 87.5%; }
-}
-@media (max-width: 390px) {
-	body { font-size: 80%; }
-}
-{% endcode %}
-
-					<small>(se você não conhece media queries, leia <a href="http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/" title="Artigo: Flexibilidade em páginas para dispositivos móveis com media queries">esse meu post</a> e depois volte aqui)</small>
-
-				</div>
-
-				<p>E que valores usar nas media queries? Há <a href="http://stuffandnonsense.co.uk/projects/320andup/" title="320andup">vários</a> <a href="http://twitter.github.com/bootstrap/index.html" title="Twitter Bootstrap">frameworks</a> CSS que trazem valores pré-definidos para os <em>breakpoints</em> do layout, como os comuns 320px, 480px, 600px, 768px e 992px. Não à toa, são valores derivados de tamanhos do iPhone, do iPad e tablets de 7".</p>
-
-				<p>Mas um layout responsivo é aquele que se adapta a todo tipo de resolução. Usar valores pensados em dispositivos comuns (<strong>device driven breakpoints</strong>) pode levar nosso layout a quebrar em certas resoluções intermediárias se não formos cuidadosos.</p>
-
-				<p>Já que queremos suportar todas as resoluções possíveis, porque não criar as media queries a partir das necessidades do nosso layout? (<strong>content driven breakpoints</strong>). Faça a página e vá redimensionando; no pontos que o layout quebrar, coloque uma media querie pra ajustar.</p>
-				</div>
-
-			</li>
-			<li class="fluido">
-				<h3>Layout fluído</h3>
-
-				<div class="txt">
-				<p>Só media queries não bastam. Seria impraticável criar uma media querie para cada resolução existente &mdash; seriam milhares! Devemos usar poucas media queries e fazer o <em>layout fluir entre os breakpoints</em>.</p>
-
-				<p>O segredo é <em>não usar pixels nas medidas</em>, mas priorizar um layout mais fluído e flexível baseado em <strong>porcentagens e ems</strong>.</p>
-
-				<p>Seria até possível criar um site mobile apenas com essa ideia, sem usar media queries. Se tudo for porcentual, o design se adaptaria a todas as resoluções. Mas, na prática, não seria um design capaz de aproveitar o potencial de cada dispositivo. As media queries permitem ajustar o design pensando em adaptar e melhorar a experiência do usuário.</p>
-				</div>
-			</li>
-			<li class="imagens">
-				<h3>Imagens flexíveis</h3>
-
-				<div class="txt">
-				<p>Um layout verdadeiramente fluído precisa de <strong>imagens que se adaptem</strong> à todo tipo de resolução. E isso merece uma atenção especial, já que imagens são baseadas em pixels e, portanto, não muito fáceis de flexibilizar.</p>
-
-				<p>Podemos usar <em>porcentagens para dimensionar imagens</em>, mas é preciso cuidado. Aumentá-la além do seu tamanho original deixará o layout pixelizado. E carregar uma imagem de alta resolução para depois diminuí-la via código vai deixar a página muito carregada.</p>
-
-				<p>Precisamos de várias imagens em resoluções diferentes, uma para cada contexto. Mas ainda há o problema de como servir a imagem certa pra cada dispositivo. Com media queries, conseguimos ajustar as imagens vindas de CSS via <code>background-image</code>.</p>
-
-				<p>Mas para as <code>&lt;img&gt;</code>, não há solução muito elegante. Há <a href="https://github.com/filamentgroup/Responsive-Images" title="Projeto: Responsive Images">alguns</a> <a href="http://adaptive-images.com/" title="Projeto: Adaptative Images">projetos</a> e <a href="http://www.sencha.com/learn/how-to-use-src-sencha-io/" title="Sencha.io Src">produtos</a> com soluções razoáveis, geralmente envolvendo algum tipo de código no servidor, mas todas com algum "porém". O W3C também está discutindo o assunto no <a href="http://www.w3.org/community/respimg/">responsive images workgroup</a> já pensando em incluir algo na especificação pra facilitar.</p>
-
-				<p>Além disso, é importante lembrar que muitas imagens decorativas podem (e devem!) ser substituídas por <strong>efeitos CSS3</strong> &mdash; sombras, bordas redondas, gradientes etc. E ainda podemos usar <strong>SVG</strong> para gráficos vetoriais que escalam em todo tipo de resolução.</p>
-				</div>
-			</li>
-		</ol>
-	</section>
-
-	<section class="mas">
-		<h2>Responsivo, mas...</h2>
-
-		<p>Só jogar umas media queries e trocar tudo pra porcentagem no CSS não vai fazer do seu site responsivo o com a melhor experiência para o usuário.</p> 
-
-		<p><a href="/palestra-mobile-web/">Desenvolver para mobile têm vários outros desafios</a>, ainda mais se queremos que o mesmo site sirva todo mundo.</p>
-
-		<h3>O conteúdo que importa</h3>
-
-		<p>Há quem diga que é impraticável oferecer o mesmo site para todo mundo porque, quando navegamos em telas pequenas, <em>queremos conteúdo mais focado e páginas mais simples e diretas</em>. É absolutamente verdade que usuários mobile têm menos paciência pra páginas grandes e carregadas, mas isso não inviabiliza um design responsivo.</p>
-
-		<p>A chave é a <strong>priorização de conteúdo</strong>. É preciso repensar todo o conteúdo para descobrir o que realmente importa, e remover todo o excesso. Uma página mobile não deve ser apenas um design menor, mas uma <em>completa reestruturação de conteúdo</em>. Por isso que só adaptar o design de um site Desktop já existente dificilmente funciona.</p>
-
-		<p>E, se você já gastou um bom tempo <em>cortando coisas secundárias</em> e <em>priorizando o importante</em>, porque oferecer essa versão mais simples e funcional apenas para usuários mobile? Porque temos mania de pensar que usuários Desktop devem receber páginas cheias de informações inúteis?</p>
-
-		<p><strong>Responsive design</strong> é entregar a mesma informação &mdash; útil e priorizada &mdash; para todo mundo!</p>
-
-		<p>Mais: mesmo que, após a priorização, você perceba que o conteúdo está grande, <strong>jamais corte conteúdo dos usuários mobile</strong>. Se faz parte do conteúdo principal, deixe lá para todos. Usuários mobile não gostam de experiência capada. Otimizar para mobile não significa diminuir funcionalidades, <strong>significa focar</strong>.</p>
-
-		<!--
-		CORTADO
-
-		<p>Aliás, esse artigo é um exemplo disso. Pelas estatísticas de acesso, existe 20% de chance de você estar lendo isso num dispositivo móvel. E esse é um artigo grande, mesmo no Desktop. Eu poderia ter resumido em alguns parágrafos para os usuários mobile, mas isso seria piorar a experiência desses usuários. O artigo foi revisado e teve seu conteúdo priorizado &mdash; acredite, eu cortei várias frases! E o <em>mesmo artigo é disponibilizado para todos</em>.</p>
-		-->
-
-		<h3>Otimizar é essencial</h3>
-
-		<p>Sou grande militante de otimizações web. Acredito que cada segundo importa, e que otimizar o carregamento traz <a href="/tweetables-performance-web-otimizacoes/">resultados fantásticos</a> de satisfação do usuário e conversões. <em>E isso é mais verdade ainda no mundo mobile.</em></p>
-
-		<p>Mesmo smartphones modernos são dispositivos bastante limitados. Baixo poder de processamento, pouca memória, imensa latência da redes 3G etc. <strong>Otimizar o carregamento do seu site é imprescindível</strong>.</p>
-
-		<p>E, repito a pergunta de antes: se você gastar um tempo otimizando seu site para mobile, porquê não servi-lo também aos usuários Desktop? Porque a versão Desktop tem que ser mais lenta que a versão mobile? <strong>Responsive design</strong> é entregar um site otimizado para todo mundo!</p>
-
-		<p>Aliás, se você só tiver tempo para seguir uma dica mobile desse artigo, esqueça media queries, responsividade e etc. <strong>Otimize o carregamento do seu site</strong>, é <a href="/a-funcionalidade-mobile-mais-importante/">a funcionalidade mobile mais importante</a>. O melhor que você pode fazer pelos usuários mobile é deixar seu site mais rápido.</p>
-	</section>
-
-	<section class="mb">
-		<h1 class="sub">
-			<span class="m">Mobile</span>
-			<span class="f">first</span>
-		</h1>
-
-		<p>Antes de criar um site responsivo você precisa escolher: começa pelo Desktop e vai ajustando até chegar no mobile ou o contrário? No site do Livro de Arquitetura Java, eu escrevi o CSS todo 2x, uma em cada abordagem. E digo, <strong>começar pelo mobile é muito melhor</strong>.</p>
-
-		<p>Essa estratégia, chamada de <strong>Mobile First</strong>, tem muitas vantagens. Como o mobile vai te forçar a <em>priorizar o conteúdo</em>, quando chegar a parte do Desktop você não precisará mexer em conteúdo. No caso contrário, é fácil o site Desktop ter conteúdo demais e, quando chega a parte mobile, você descobre que precisava ter focado mais e priorizado melhor.</p>
-
-		<p>No layout é a mesma coisa. <em>Comece pelo layout mobile simples e incremente e ajuste as coisas para resoluções maiores</em>. Começar com um layout complexo, cheio de colunas, e simplificar para mobile é bem mais complicado.</p>
-
-		<p>Programar mobile first é seguir o princípio do <em>progressive enhancement</em> &mdash; melhoria progressiva. Você cria uma base de conteúdo e marcação semântica ultra portável e vai incrementando-a conforme o dispositivo permitir. Com media queries, você vai ajustando o layout e, com JavaScript, pode ir adicionando capacidades novas avançadas. Mas sua <strong>base é simples e sólida, conteúdo puro e simples</strong>, que abre até nos <i>dumbphones</i> de 5 anos atrás.</p>
-	</section>
-
-	<section class="fim">
-		<h2>Por fim</h2>
-
-		<p><em>Criar um site responsivo não é fácil.</em> Trabalhar com flexibilidade e adaptação é bem mais complicado que um site fixo em pixels. As ferramentas de desenho ainda não estão preparadas e os designer gráficos costumam ter dificuldades para criar com responsividade em mente.</p>
-
-		<p>O código fica mais complexo também. Há dificuldades para se trabalhar com imagens e vídeos responsivos. É bastante complicado adaptar um site Desktop já existente para ser responsivo.</p>
-
-		<p>Apesar de tudo isso, <strong>designs resposivos são o futuro</strong>. Pelo simples motivo de que a <strong>Web é única</strong> e criar sites separados para cada categoria de dispositivos é impossível.</p>
-
-		<p>Mas, claro que nenhuma solução é <em>bala de prata</em>. Aplicações web complexas que exijam experiências diferentes em mobile e Desktop podem ser fortes candidatas a terem páginas completamente diferentes. Se você têm recursos e tempo, criar diversos sites separados e otimizados certamente é o que trará a melhor experiência pro usuário. Mas não faça um site Desktop e outro para iPhones e ache que acabou.</p>
-
-		<p><strong>Faça um site responsivo</strong> sempre disponível para qualquer dispositivo de hoje e do futuro. E, se for o caso, crie mais versões separadas otimizadas para dispositivos específicos.</p>
-
-		<p class="ultimo">E você, o que acha? Gosta de acessar sites em mobile com a experiência completa? Tem adotado qual prática em seus projetos móveis? <strong>Comente!</strong> Tem exemplos de designs responsivos brasileiros? Comente também!</p>
-	</section>
+	<p class="ultimo">E você, o que acha? Gosta de acessar sites em mobile com a experiência completa? Tem adotado qual prática em seus projetos móveis? <strong>Comente!</strong> Tem exemplos de designs responsivos brasileiros? Comente também!</p>
+</section>
 
 	<!--
 	PRA VERSAO 2.0:
@@ -242,7 +245,6 @@ class: destaque
 	</section>
 	-->
 
-</article>
 
 <!--
 bg: http://www.backgroundlabs.com/

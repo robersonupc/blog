@@ -1,62 +1,40 @@
-/* background geral */
-body {
-	background: #004e66 url(/img/posts/responsive-design/background.jpg);
-}
+@import 'nib'
+@import '_includes/css/tema'
 
-/* sobrescreve header pra combinar */
-body:before {
-	background: rgba(30, 30, 30, 0.15);
-	content: " ";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 182px;
-	width: 100%;
-}
-header div span {
-	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
-}
 
-header #sergio, header #org {
-	color: #FFF0A5;
-}
-header #lopes {
-	color: #FFB03B;
-}
-nav a {
-	background-color: #222;
-}
-nav a:hover {
-	background-color: #111;
-}
+// base vars
+fonte-destaque = 'Della Respira', serif;
 
-/* titulo principal */
-h1 {
+
+
+// background geral
+body
+	background-color: #004e66
+	fundo-body: url(/img/posts/responsive-design/background.jpg)
+
+/* titulo principal da abertura */
+h1 
 	color: white;
 	color: rgba(255,255,255,0.9);
-	font-family: 'Della Respira', serif;
-	font-size: 4em;
+	font-family: fonte-destaque
+	font-size: 3.4em;
 	font-weight: 400;
+	line-height 1.4
 	text-align: right;
 
-	float: right;
-	margin-right: 0.5em;
+	margin: 0.75em 0 1em;
+	max-width 10.3em /* ~700px */
 
 	text-shadow: -1px -1px 2px rgba(30, 30, 50, 0.6);
-}
-h1 .dr {
-	display: block;
-	margin-right: 1em;
-}
-h1 .pu {
-	font-size: 0.6em;
-	font-style: italic;
-	line-height: 1.5em;
-	vertical-align: top;
-}
-h1 .wu {
-}
+
+	.dr 
+		display: block;
+		margin-right: 1em;
+	.pu 
+		font-size: 0.6em;
+		font-style: italic;
+		line-height: 1.5em;
+		vertical-align: top;
 
 /* base */
 section {
@@ -64,156 +42,154 @@ section {
 	margin-bottom: 5em;
 	position: relative;
 }
-article p, article li, blockquote {
-	color: white;
-	color: rgba(255,255,255,0.95); 
-	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
-}
-section em {
-	color: #FFF0A5;
-	font-style: normal;
-}
-section strong {
-	color: #EDC951;
-	font-weight: normal;	
-}
-article a {
-	color: #edaa51;
-}
-article a:hover {
-	text-decoration: none;
-}
+article p, 
+article li, 
+blockquote
+	color: white
+	color: rgba(255,255,255,0.95)
 
-/* intro */
-.intro {
+section 
+	em
+		color: #FFF0A5;
+		font-style: normal;
+
+	strong 
+		color: #EDC951;
+		font-weight: normal;	
+
+	p code, li code
+		color: #ffa
+
+	h2
+		margin: 1em 0
+
+article a
+	color: #edaa51;
+
+	&:hover
+		text-decoration: none
+
+
+/* SECOES */
+.intro
 	font-size: 1.125em;
 	font-weight: normal;
 	line-height: 1.6em;
-	margin-left: 10%;
-}
-.intro p {
-	width: 62%;
-}
+	margin-left: 7%;
 
-/* social */
-.intro #social {
-	background: none;
-	position: absolute;
-	right: 0;
-	top: 1em;
-}
+	p
+		max-width 30em
+		width: 90%;
 
-.comeco {
+.comeco
 	padding-left: 210px;
 
-	.destaque {
+	.destaque
 		color: #FFB03B;
-		font-family: 'Della Respira', serif;
+		font-family: fonte-destaque;
 		font-size: 1.5em;
-		padding: 0.5em;
+		padding: 0.5em 0;
 		text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
-	}
-}
 
-h1.sub {
+h2.sub
 	color: #FFB03B;
-	font-family: 'Della Respira', serif;
+	font-family: fonte-destaque;
 	font-size: 5em; /* 64 px */
 	float: none;
 	margin: 0;
 	padding: 0;
 	line-height: 0.8em;
+	text-align: right;
 	text-transform: lowercase;
+	text-shadow: -1px -1px 2px rgba(30, 30, 50, 0.6);
 
-	span {
+	span 
 		display: block;
-	}
-}
 
-.rwd  h1{
-	width: 4.8em;
-}
-.rwd div.txt {
-	float: right;
-	padding-left: 1em;
-	max-width: 32em;
-	margin-top: 1em;
-}
-.rwd:after {
-	content: ' ';
-	display: block;
-	clear: both;
-}
+.rwd  
+	.sub
+		width: 4.8em;
+
+	div.txt
+		float: right;
+		padding-left: 1em;
+		max-width: 32em;
+		margin-top: 1em;
+
+	&:after
+		content: ' ';
+		display: block;
+		clear: both;
+
 
 
 /* demo */
-.no-js .demo, .no-js .rwd button, .no-responsive-play .rwd button {
+.no-js .demo, 
+.no-js .rwd button, 
+.no-responsive-play .rwd button {
 	display: none;
 }
-.demo {
+
+
+.demo
 	background: url(/img/posts/responsive-design/regua.png) no-repeat 7px 0;
 	padding-top: 2.4em;
 	margin-bottom: 2em;
-}
-.demo.video {
-	background: none;
-	padding-top: 0;
-}
-.demo .wrapper {
-	background: url(/img/posts/responsive-design/demobg.png);
-	border-radius: 8px;
-	box-shadow: inset 1px 1px 12px rgba(0,0,0,0.35);
-	padding: 10px;
-	position: relative;
-	overflow: hidden;
-	height: 340px;
-	width: 100%;
-}
-.demo .wrapper:before {
-	content: url(/img/posts/responsive-design/seta.png);
-	height: 117px;
-	width: 300px;
-	left: 300px;
-	position: absolute;
-	top: 100px;
-}
-.demo .protector {
-	content: ' ';
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0px;
-	bottom: 0;
-	right: 0;
-	z-index: 3;
-}
-.demo .protector:after {
-	content: url(/img/posts/responsive-design/ativar.png);
-	position: absolute;
-	bottom: -70px;
-	left: 5px;
-}
-.demo .wrapper iframe {
-	border: 0;
-	position: relative;
-	width: 240px;
-	z-index: 2;
-	-webkit-overflow-scrolling: touch; /* ios 5 */
-}
-.demo.up .wrapper iframe {
-	transition: width 5s linear;
-	height: 100%;
-}
-.demo.up .wrapper {
+
+	&.video
+		background: none;
+		padding-top: 0;
+
+	.wrapper
+		background: url(/img/posts/responsive-design/demobg.png);
+		border-radius: 8px;
+		box-shadow: inset 1px 1px 12px rgba(0,0,0,0.35);
+		padding: 10px;
+		position: relative;
+		overflow: hidden;
+		height: 340px;
+		width: 100%;
+
+		&:before
+			content: url(/img/posts/responsive-design/seta.png);
+			height: 117px;
+			width: 300px;
+			absolute: left 300px top 100px
+
+		iframe
+			border: 0;
+			position: relative;
+			width: 240px;
+			z-index: 2;
+			-webkit-overflow-scrolling: touch; /* ios 5 */
+
+	.protector
+		content: ' ';
+		display: block;
+		absolute: top 0 left 0
+		bottom: 0;
+		right: 0;
+		z-index: 3;
+
+		&:after
+			content: url(/img/posts/responsive-design/ativar.png);
+			absolute: bottom -70px left 5px
+
+.demo.up .wrapper
 	transition: height 3s linear;
 	height: 470px;
-}
 
-.rwd button {
+	iframe
+		transition: width 5s linear;
+		height: 100%;		
+
+
+
+.rwd button
 	background: #FFB03B;
 	border: 0;
 	color: #222;
-	font-size: 2em;
+	font-size: 1.5em;
 
 	padding: 0.2em 0.7em 0.3em 0.7em;
 	text-align: center;
@@ -226,13 +202,13 @@ h1.sub {
 	border-radius: 0.3em;
 	box-shadow: 1px 1px 5px rgba(0,0,0,0.35);
 	text-shadow: 0 -1px 2px rgba(255, 255, 255, 0.6);
-}
-.rwd button:active {
-	position: relative;
-	top: 1px;
-	text-shadow: none;
-	box-shadow: none;
-}
+
+	&:active
+		position: relative;
+		top: 1px;
+		text-shadow: none;
+		box-shadow: none;
+
 
 .oque {
 	ul {
@@ -258,9 +234,11 @@ h1.sub {
 	}
 }
 
-.como h2, .mas h2, .fim h2 {
+.como h2, 
+.mas h2, 
+.fim h2 {
 	color: #123745;
-	font-family: 'Della Respira', serif;
+	font-family: fonte-destaque;
 	font-size: 5em;
 	text-shadow: -1px -1px 2px rgba(0,0,0,0.65);
 	font-weight: normal;
@@ -269,9 +247,14 @@ h1.sub {
 
 .como {
 
+	hgroup {
+		margin-bottom 3.5em
+	}
+
 	h2 {
 		display: inline-block;
 		margin: 0;
+		line-height 0.7
 		vertical-align: baseline;
 	
 		span {
@@ -282,6 +265,7 @@ h1.sub {
 		color: #153f4f;
 		display: inline-block;
 		font-size: 1.8em;
+		margin: 0
 		padding-left: 1em;
 		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
 	}
@@ -298,24 +282,24 @@ h1.sub {
 			background-position: 0 0;
 		}
 		&:last-child h3:before {
-			background-position: -258px 0;
+			background-position: 100% 0;
 		}
 	}
 	h3 {
-		font-family: 'Della Respira', serif;
+		color: #123745;
+		font-family: fonte-destaque
 		font-size: 3em;
 		font-weight: normal;
 		line-height: 128px;
 		height: 128px;
-		padding-left: 1.6em;
 		text-shadow: -1px -1px 1px rgba(0,0,0,0.6);
 	
 		&:before {
 			background: url(/img/posts/responsive-design/numeros.png) no-repeat;
-			background-position: -129px 0;
+			background-position: 50% 0;
 			content: ' ';
 			display: inline-block;
-			margin-right: 0.5em;
+			margin-right: 0.25em;
 			height: 128px;
 			vertical-align: middle;
 			width: 129px;
@@ -327,14 +311,12 @@ h1.sub {
 		position: relative;
 	
 		p {
-			padding-right: 310px;
+			padding-right: 350px;
 		}
 	}
 
 	.mq {
-		position: absolute;
-		top: 0;
-		right: 0;
+		absolute: top 0 right 0
 	}
 	small {
 		display: block;
@@ -345,6 +327,7 @@ h1.sub {
 
 	.highlight {
 		margin-top: 0;
+		font-size 0.85em
 	}
 	pre {
 		padding: 0 0.5em;
@@ -362,13 +345,11 @@ h1.sub {
 	}
 	.imagens .txt p {
 		padding-right: 0;
-		padding-left: 310px;
+		padding-left: 290px;
 	}
 }
 
 .mas {
-
-
 	h2 {
 		margin-bottom: 0;
 	}
@@ -380,7 +361,7 @@ h1.sub {
 	}
 	h3 {
 		color: #FFB03B;
-		font-family: 'Della Respira', serif;
+		font-family: fonte-destaque
 		font-size: 1.8em;
 		font-weight: normal;
 		padding-left: 6em;
@@ -389,7 +370,7 @@ h1.sub {
 	}
 }
 
-.mb h1 {
+.mb h2 {
 	line-height: 0.9em;
 	width: 3.5em;
 }
@@ -405,8 +386,8 @@ h1.sub {
 }
 
 .fim .ultimo {
-	font-size: 1.25em;
-	line-height: 1.6em;
+	font-size: 1.125em;
+	line-height: 1.5;
 	max-width: 780px;
 	padding-top: 1.2em;
 }
@@ -418,15 +399,19 @@ h1.sub {
 	/* só mostra imagens decorativas a partir de 700px */
 	h1 {
 		background: url(/img/posts/responsive-design/h1.png) no-repeat center center;
-		background-size: 100%;
 	}
 	.comeco {
 		background: url(/img/posts/responsive-design/iphone-sketch.png) no-repeat left top;
 	}
 	.como .imagens {
-		background: url(/img/posts/responsive-design/pagedesign.png) no-repeat 10px center;
+		background: url(/img/posts/responsive-design/pagedesign.png) no-repeat 0 center;
 	}
+}
 
+@media (max-width: 1088px) {
+	.como .txt p {
+		padding-right: 290px
+	}
 }
 
 @media (max-width: 880px) {
@@ -469,30 +454,25 @@ h1.sub {
 		padding-left: 0;
 	}
 }
+@media (max-width: 720px) {
+	.como h3 {
+		padding-left 0
+	}
+}
 
 @media (max-width: 699px) {
-	article h1 {
-		padding: 0.5em 0 0 0;
-	}
 	h1.title {
-		font-size: 3.5em;	
+		font-size: 3em;
 	}
 	.intro p {
 		margin-left: auto;
 		margin-right: auto;
 		width: 80%;
 	}
-	.intro #social {
-		float: none;
-		position: relative;
-		right: auto;
-		top: auto;
-		margin: 0 auto;
-	}
 	.comeco {
 		padding-left: 0;
 		margin-left: auto;
-		width: 96%;
+		width: auto;
 	}
 	.como .destaque {
 		font-size: 1.4em;
@@ -506,18 +486,31 @@ h1.sub {
 		padding-left: 0;
 		width: 95%;
 	}
-
 }
+
+@media (max-width: 650px) {
+	.como h3 {
+		font-size 2.5em
+	}
+}
+
 
 @media (max-width: 600px) {
 	.rwd .txt:last-child {
 		margin-top: 0;
 	}
-	.como h3 {
-		padding-left: 0.5em;
-	}
 	.demo .wrapper:before, .demo .protector:after {
 		display: none;
+	}
+	.como h3 {
+		line-height 64px
+		height 64px
+		vertical-align bottom
+	}
+	.como h3:before {
+		background-size auto 64px
+		height: 64px;
+		width: 64px;
 	}
 }
 
@@ -537,22 +530,43 @@ h1.sub {
 }
 
 @media (max-width: 520px) {
+	h1 {
+		font-size 2.8em
+	}
+	.intro {
+		margin: 0
+		font-size inherit
+
+		p {
+			width: auto;
+		}
+	}
 	.rwd {
 		margin-bottom: 2em;
+
+		div.txt {
+			padding-left 0
+		}
 	}
 	.como h3 {
-		padding-bottom: 4em;
-		padding-left: 0;
-		line-height: 1em;
+		padding-bottom: 2.7em;
+		line-height: 1;
 	}
 	.como h3:before {
 		display: block;
+	}
+
+	.mas, .mb, .fim {
+		p {
+			padding-right 0
+			width auto
+		}
 	}
 }
 
 @media (max-width: 479px) {
 	h1.title {
-		font-size: 3em;	
+		font-size: 2.5em;	
 	}
 	.como .mq {
 		padding-right: 0;
@@ -571,20 +585,15 @@ h1.sub {
 		height: 73px;
 	}
 	h1.title {
-		font-size: 2.5em;	
-	}
-	.intro p {
-		width: 100%;
+		font-size: 2.3em;	
 	}
 }
 
 @media (max-width: 400px) {
-	h1.sub {
-		font-size: 4em;
+	h2.sub {
+		font-size: 3.5em;
 	}
 	h1.title {
-		font-size: 2.2em;	
+		font-size: 2em;	
 	}
 }
-
-/* TODO suportar 240px */
