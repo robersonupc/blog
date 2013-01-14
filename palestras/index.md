@@ -3,6 +3,8 @@ layout: page
 title: Palestras
 ---
 
+<h1>Minhas palestras</h1>
+
 Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vários eventos Brasil a fora sobre Front-end, cloud, mobile, Java e muito mais. **Adoro palestrar** e, se você quiser me chamar pra algum evento, é só falar comigo!
 
 Lista das palestras mais recentes que dei e links pros slides:
@@ -12,9 +14,13 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *05/Dez* - **JavaOne Latin America** - [Porque você deveria usar CDI em todos os seus projetos Java](http://www.slideshare.net/caelumdev/porque-voc-deveria-usar-cdi-nos-seus-projetos-java-javaone-la-2012-srgio-lopes) 
 * *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 * *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+	* Vídeo da [mesa redonda do 7 masters](http://www.youtube.com/watch?v=bRrZYlbre7M) com minha participação
 * *08/Set* - **Joomla Day Brasil** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
-* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/) 
+	* [Vídeo oficial](http://www.infoq.com/br/presentations/tonelada-truques-web) gravado no evento (by InfoQ Brasil)
+	* [Entrevista sobre mobile web](http://www.infoq.com/br/interviews/novidades-no-web-mobile) gravada no evento pelo InfoQ Brasil por Rafael Sakurai
 * *14/Jul* - **Front in BH** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
+	* [Vídeo](http://www.youtube.com/watch?v=GuPEcngbNAw) amador com áudio da palestra e slides sincronizados
 * *19/Abr* - **Caelum Night** - [CDI e as ideias para o futuro do VRaptor](http://www.slideshare.net/caelumdev/vraptor-cdiideias)
 
 # 2011
@@ -30,6 +36,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *14/Out* - **Java vs. Net** - [Persistência Java: Hibernate e JPA](http://www.slideshare.net/caelumdev/persistncia-java-hibernate-e-jpa)
 * *30/Set* - **Encontro GTUG** - *VRaptor no Google AppEngine*
 * *19/Set* - **QCon SP** - [Mitos e verdades do cloud do Google: 1 ano de experiências no AppEngine](http://www.slideshare.net/caelumdev/mitos-e-verdades-do-cloud-do-google-1-ano-de-experincias-no-appengine-sergio-lopes-qcon-sp-2010)
+	* [Vídeo oficial](http://www.infoq.com/br/presentations/appengine-google-cloud) gravado no evento
 * *15/Mai* - **Caelum Tech Day** - *Como o site da Caelum atingiu 100% no YSlow*
 * *Maio* - **SESTINFO - Faculdade Metodista** - *Hibernate e JPA*
 * **PHP Conf** - [Como fabricar dinheiro: Otimizações de Sites e porque isso vai deixá-lo rico](http://www.slideshare.net/caelumdev/como-fabricar-dinheiro-otimizaes-de-sites-e-porque-isso-vai-deixlo-rico-php-conf-2010)
