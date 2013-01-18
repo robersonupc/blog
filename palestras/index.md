@@ -15,6 +15,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 * *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 	* Vídeo da [mesa redonda do 7 masters](http://www.youtube.com/watch?v=bRrZYlbre7M) com minha participação
+	* [Vídeo oficial](https://www.youtube.com/watch?v=aH9eVa2cTcM) da palestra feito pela organização do evento
 * *08/Set* - **Joomla Day Brasil** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
 * *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/) 
 	* [Vídeo oficial](http://www.infoq.com/br/presentations/tonelada-truques-web) gravado no evento (by InfoQ Brasil)
