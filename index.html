@@ -12,8 +12,12 @@ name: home
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.category != 'evento' %}
-    	<li class="{{ post.class }} category-{{ post.category }} type-{{ post.layout }}">
-          <span class="post-date">{{ post.date | date_to_string }}</span>           
+    	<li class="one-post {{ post.class }} category-{{ post.category  | to_url_slug }} type-{{ post.layout }}">
+          <div class="post-info">
+            <span class="post-date">{{ post.date | date_to_string }}</span> 
+            <span class="post-category">{{ post.category }}</span> 
+          </div>
+                          
           <a class="post-link" href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
       </li>
     {% endif %}
@@ -24,9 +28,11 @@ name: home
 <ul class="posts">
   {% for post in site.posts %}
     {% if post.category == 'evento' %}
-      <li class="{{ post.class }} category-{{ post.category }}">
-          <a href="{{ post.url }}">{{ post.title }}</a> 
-          <span class="date">{{ post.date | date_to_string }}</span>
+      <li class="one-post {{ post.class }} category-{{ post.category  | to_url_slug }} type-{{ post.layout }}">
+        <div class="post-info">
+          <span class="post-date">{{ post.date | date_to_string }}</span>
+        </div>
+        <a class="post-link" href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
       </li>
      {% endif %}
   {% endfor %}

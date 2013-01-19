@@ -1,38 +1,89 @@
 /* LISTA HOME */
-.posts li {
-	margin-bottom: 0.5em;
-}
+.page-home
+	.posts
+		list-style-type none
+		margin-left 0
 
-.posts
-	.destaque, .category-review, .category-caelum
+	.one-post
+		margin-bottom: 1.5em
+		line-height 1.4
+
+	.destaque .post-link:before
+		color #F90
+		font-size: 1em;
+		margin-right: 0.35em;
+		
+		content: "\e008"
+		font-family: 'sergiolopes-org';
+		speak: none;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+
+		display: inline-block
+		text-decoration: none
+
+	.post-category
+		font-size: 0.6em;
+		text-transform: uppercase;
+		padding: 0 0.3em;
+
+		display none // esconde por padrão, só mostra os aprovados
+		vertical-align: middle
+		text-decoration: none
+
+		&:before, &:after
+			font-size 1.2em
+
 		&:before
-			border-radius: 3px;
-			color: white;
-			font-size: 0.65em;
-			text-transform: uppercase;
-			margin-right: 0.5em;
-			padding: 3px 7px;
-			vertical-align: middle;
+			content '[ '
 
-	.destaque:before
-		background: #FA6900
-		content: 'destaque';
+		&:after
+			content ' ]'
 
-	.category-review:before
-		background: #555
-		content: 'review'
+	categoria(cor)
+		.post-category
+			color cor
+			display inline-block
 
-	.category-caelum:before
-		background: #339
-		content: 'blog caelum'
+	.category-review 
+		categoria #444
 
-.posts .date {
-	color: #777;
-	font-size: 75%;
-	padding-left: 5px;
-	text-transform: uppercase;
-	vertical-align: baseline;
-}
+	.category-blog-caelum
+		categoria #33c
+
+	.category-mobile
+		categoria #F33
+
+	.category-web
+		categoria #393
+
+	.category-otimizacoes
+		categoria #D80
+
+	.post-info
+		position: relative
+
+	.type-redirect .post-info:after
+		color #777
+		font-size: 0.9em;
+		line-height 0
+		
+		content: "\e009"
+		font-family: 'sergiolopes-org';
+		speak: none;
+		font-weight: normal;
+		-webkit-font-smoothing: antialiased;
+
+		display: inline-block
+		text-decoration: none
+		vertical-align middle
+
+	.post-date
+		color: #777;
+		font-size: 75%;
+		text-transform: uppercase;
+		vertical-align: baseline;
 
 
 .page-sobre h2 {
