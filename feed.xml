@@ -15,7 +15,6 @@ title : sergiolopes.org
  </author>
 
  {% for post in site.posts %}
- {% if post.draft != true %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="{{ site.production_url }}{{ post.url }}"/>
@@ -41,7 +40,6 @@ title : sergiolopes.org
       {% endif %}
    </content>
  </entry>
- {% endif %}
  {% endfor %}
  
 </feed>
