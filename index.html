@@ -8,13 +8,26 @@ ogtype: website
 <p>Artigos sobre <strong>Web</strong>, <strong>front-end</strong> e <strong>mobile web</strong>. Minhas palestras, reviews de livros, relatos de eventos e experimentos. <strong>Bem vindo!</strong></p>
 
 <h2>Últimos posts</h2>
-
 <ul class="posts">
   {% for post in site.posts %}
+    {% if post.category != 'evento' %}
     	<li class="{{ post.class }} category-{{ post.category }}">
           <a href="{{ post.url }}">{{ post.title }}</a> 
           <span class="date">{{ post.date | date_to_string }}</span>
       </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<h2>Cobertura de eventos</h2>
+<ul class="posts">
+  {% for post in site.posts %}
+    {% if post.category == 'evento' %}
+      <li class="{{ post.class }} category-{{ post.category }}">
+          <a href="{{ post.url }}">{{ post.title }}</a> 
+          <span class="date">{{ post.date | date_to_string }}</span>
+      </li>
+     {% endif %}
   {% endfor %}
 </ul>
 
