@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'sergiolopes-org';
-	src:url('fonts/sergiolopes-org.eot');
-	src:url('fonts/sergiolopes-org.eot?#iefix') format('embedded-opentype'),
-		url('fonts/sergiolopes-org.svg#sergiolopes-org') format('svg'),
-		url('fonts/sergiolopes-org.woff') format('woff'),
-		url('fonts/sergiolopes-org.ttf') format('truetype');
+	src:url('fonts/sergiolopes-org-1.eot');
+	src:url('fonts/sergiolopes-org-1.eot?#iefix') format('embedded-opentype'),
+		url('fonts/sergiolopes-org-1.svg#sergiolopes-org') format('svg'),
+		url('fonts/sergiolopes-org-1.woff') format('woff'),
+		url('fonts/sergiolopes-org-1.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -20,10 +20,15 @@
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-[class^="icone-"]:before, [class*=" icone-"]:before {
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icone-"]:before {
+*/
+.icone-feed:before, .icone-twitter:before, .icone-facebook:before, .icone-bubbles:before, .icone-home:before, .icone-star:before, .icone-new-tab:before {
 	font-family: 'sergiolopes-org';
-	font-style: normal;
 	speak: none;
+	font-style: normal;
 	font-weight: normal;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
@@ -40,18 +45,17 @@
 .icone-bubbles:before {
 	content: "\e003";
 }
-.icone-twitter-2:before {
-	content: "\e004";
-}
-.icone-clock:before {
-	content: "\e005";
-}
-.icone-menu:before {
-	content: "\e006";
-}
 .icone-home:before {
 	content: "\e007";
 }
+.icone-star:before {
+	content: "\e008";
+}
+.icone-new-tab:before {
+	content: "\e009";
+}
+
+// alt
 .icone-alt {
 	display: none;
 }
