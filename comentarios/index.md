@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Comentários
+name: comentarios
 ---
 
 <h1 id="artigo">Comentários do artigo:<br></h1>

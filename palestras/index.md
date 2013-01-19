@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Palestras
+name: palestras
 ---
 
 <h1>Minhas palestras</h1>

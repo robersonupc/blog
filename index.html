@@ -2,6 +2,7 @@
 layout: page
 title: Home
 ogtype: website
+name: home
 ---
 
 <h1>Blog do Sérgio Lopes</h1>
@@ -12,9 +13,8 @@ ogtype: website
   {% for post in site.posts %}
     {% if post.category != 'evento' %}
     	<li class="{{ post.class }} category-{{ post.category }} type-{{ post.layout }}">
-          <a href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>           
-          
-          <span class="date">{{ post.date | date_to_string }}</span>
+          <span class="post-date">{{ post.date | date_to_string }}</span>           
+          <a class="post-link" href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a>
       </li>
     {% endif %}
   {% endfor %}
