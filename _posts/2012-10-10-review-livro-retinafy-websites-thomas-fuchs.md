@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Review do livro "Retinafy your web sites & apps" do Thomas Fuchs'
-category: blog
+category: review
 description: Um livro focado em como pensar em telas retina, otimizar imagens e CSS. Leia o meu review.
 shareImage: /img/posts/retinafy-websites/retinafy-websites-share.png
 ---

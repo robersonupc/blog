@@ -2,17 +2,26 @@
 .posts li {
 	margin-bottom: 0.5em;
 }
-.posts .destaque:before {
-	background: #FA6900;
-	border-radius: 3px;
-	color: white;
-	content: 'destaque';
-	font-size: 68.75%;
-	text-transform: uppercase;
-	margin-right: 0.2em;
-	padding: 3px 7px;
-	vertical-align: middle;
-}
+
+.posts
+	.destaque, .category-review
+		&:before
+			border-radius: 3px;
+			color: white;
+			font-size: 0.65em;
+			text-transform: uppercase;
+			margin-right: 0.5em;
+			padding: 3px 7px;
+			vertical-align: middle;
+
+	.destaque:before
+		background: #FA6900
+		content: 'destaque';
+
+	.category-review:before
+		background: #447
+		content: 'review'
+
 .posts .date {
 	color: #777;
 	font-size: 75%;

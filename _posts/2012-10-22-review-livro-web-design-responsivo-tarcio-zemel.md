@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Review do livro "Web Design Responsivo" do Tárcio Zemel'
-category: blog
+category: review
 description: Livro em português sobre Web Design Reponsivo, com muitas dicas interessantes pra quem está começando na área.
 shareImage: /img/posts/livro-web-design-responsivo/capa-livro-responsivo.jpg
 ---
@@ -10,7 +10,7 @@ Primeiro livro em português sobre **Web Design Responsivo** é uma excelente fo
 
 Acompanho o mercado de [design responsivo](/responsive-web-design/) há algum tempo, e escrevo bastante sobre ele. Mas sabemos que a maior parte do conteúdo e do conhecimento ainda está em inglês. Por isso que, quando ouvi que o [Tárcio Zemel](http://twitter.com/tarciozemel) estava pensando em um livro em português sobre o assunto, me interessei logo de cara.
 
-O [livro](http://www.casadocodigo.com.br/products/livro-web-design-responsivo) **acabou de sair**, editado pela [Casa do Código](http://www.casadocodigo.com.br/), nova editora nacional com foco em livros de TI, ebooks, preços competitivos e grandes nomes do mercado brasileiro. Tive o prazer de partipar do projeto com o Tárcio, ajudando na revisão do livro ainda em beta, e com o prefácio.
+O [livro](http://www.casadocodigo.com.br/products/livro-web-design-responsivo) **acabou de sair**, editado pela [Casa do Código](http://www.casadocodigo.com.br/), nova editora nacional com foco em livros de TI, ebooks, preços competitivos e grandes nomes do mercado brasileiro. Tive o prazer de participar do projeto com o Tárcio, ajudando na revisão do livro ainda em beta, e com o prefácio.
 
 {% figure "Livro 'Web Design Responsivo: Páginas adaptáveis para todos os dispositivos' de Tárcio Zemel." %}
 	livro-web-design-responsivo/capa-livro-responsivo.jpg

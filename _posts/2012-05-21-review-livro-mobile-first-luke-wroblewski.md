@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Review do livro "Mobile First" do Luke Wroblewski'
-category: blog
+category: review
 description: Uma maneira inovadora de desenvolver sites responsivos, pensando primeiro em mobile e depois no Desktop. Review do livro com trechos destacados.
 shareImage: /img/posts/livro-mobile-first-luke/livro-mobile-first-share.jpg
 ---

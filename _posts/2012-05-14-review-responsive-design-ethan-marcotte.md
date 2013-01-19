@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Review do livro "Responsive Web Design" do Ethan Marcotte'
-category: blog
+category: review
 description: Conheça o livro referência de design responsivo, escrito pelo criador da técnica, Ethan Marcotte
 shareImage: /img/posts/livro-rwd-ethan/livro-rwd-share.jpg
 ---
