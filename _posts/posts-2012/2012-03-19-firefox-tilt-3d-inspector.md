@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualize em 3D a complexidade da sua página no Firefox Tilt
-category: webdev
+category: web
 
 description: Visualize a hierarquia dos elementos no novo web inspector do Firefox 11
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Tweetables: 14 fatos sobre performance Web e otimizações"
-category: wpo
+category: otimizações
 description: Descubra porque um site rápido é importante em 14 fatos tweetáveis
 ---
 

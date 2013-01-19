@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Screencast com análise de performance web do datafilme.com.br"
-category: otimizacoes
+category: otimizações
 description: Nesse vídeo, analiso o site do DataFilme e mostro como observar problemas de performance não tão triviais. E dou umas dicas de como poderiam melhorar.
 ---
 

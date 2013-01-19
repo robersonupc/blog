@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS: Você deveria usar box-sizing: border-box em todas as suas páginas"
-category: css3
+category: web
 description: O box model padrão do CSS é uma pedra no sapato. Com o box-sizing, você troca para um esquema mais fácil. Confira!
 shareImage: /img/posts/box-sizing.png
 

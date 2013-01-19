@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "A Newsletter Responsiva do QCon 2012"
-category: blog
+category: mobile
 description: Como foi o processo de criação e desenvolvimento da newsletter responsiva do QCon
-
 shareImage: /img/posts/newsletter-qcon-2012/qcon-share.png
 ---
 
