@@ -30,7 +30,7 @@ O curioso é que o CSS tem algumas unidades para tamanho físico -- você pode c
 
 Telas retina são telas de alta resolução com tantos pixels que eles acabam sendo pequenos fisicamente, tornando difícil o olho identificar um individualmente. Com isso, o conteúdo mostrado ficaria muito pequeno na tela, então a grande novidade é que **um pixel de conteúdo é renderizado com mais de um pixel físico**. *Ãhn?*
 
-A ideia é simples: se você desenhar uma linha de 1px na tela (com CSS ou mesmo uma app nativa), ela será renderizada como uma linha de 2px físicos. Isso melhora, e muito, a definição dos elementos na tela. Existe, então, uma *razão de multiplicação* entre pixels lógicos e pixels físicos. Essa razão é o **device pixel ratio**, acessível em JS pela propriedade `devicePixelRatio` e nas media queries CSS com `device-pixel-ratio`.
+A ideia é simples: se você desenhar uma linha de 1px na tela (com CSS ou mesmo uma app nativa), ela será renderizada como uma linha de 2px físicos. Isso melhora, e muito, a definição dos elementos na tela. Existe, então, uma *razão de multiplicação* entre pixels lógicos e pixels físicos. Essa razão é o **device pixel ratio**, acessível em JS pela propriedade `devicePixelRatio` e nas [media queries CSS de alta resolução](/media-queries-retina/).
 
 No mundo Apple, as telas retina têm *device pixel ratio* 2, o que facilita as contas. [No mundo Android](http://developer.android.com/guide/practices/screens_support.html), essas mesmas telas são chamadas de xhdpi -- como num Galaxy S3 ou num Nexus 4. Mas, no Android, temos mais possibilidades:
 
