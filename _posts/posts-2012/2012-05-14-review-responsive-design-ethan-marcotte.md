@@ -20,7 +20,7 @@ São cinco capítulos, que giram em torno dos três ingredientes principais dos 
 
 *Mas o livro é bastante básico*. Não me entenda mal, livros básicos são ótimos e precisamos deles. Porém, se você já leu e estudou um pouco de responsive design, não vai achar nenhuma grande revelação no livro. A parte de media queries, por exemplo, aborda poucas opções em comparação ao que temos hoje nos navegadores; o capítulo de imagens flexíveis então, é bastante superficial dado o estado das [discussões atuais](http://css-tricks.com/which-responsive-images-solution-should-you-use/ "Vários frameworks de imagens responsivas") sobre o tema. Eu, que acompanho bastante a comunidade de design responsivo, leio muitos blogs e artigos sobre o assunto, não aprendi nada de muito novo. Mas **gostei do livro pelo formato e objetividade**, e vou **recomendá-lo pra quem estiver começando** na área.
 
-Alguns destaques das anotações que fiz no Kindle durante a leitura (e se você quiser saber mais sobre design responsivo, recomendo esse [meu artigo aqui no blog](/responsive-web-design/ "Artigo: Design Responsivo por uma Web Única")):
+Alguns destaques das anotações que fiz no Kindle durante a leitura (e se você quiser saber mais sobre design responsivo, recomendo esse [meu artigo aqui no blog](/responsive-web-design/ "Artigo: Design Responsivo por uma Web Única") ou esse meu post com [links de artigos, palestras, livros e cursos em português](/diretorio-design-responsivo/)):
 
 > We need to break our habit of translating pixels from Photoshop directly into our CSS, and focus our attention on the proportions behind our designs. It's about becoming *context-aware*: better understanding the ratio-based relationships between element and container.
 
