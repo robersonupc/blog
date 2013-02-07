@@ -1,0 +1,38 @@
+@import "../_includes/css/tema"
+
+bg-fundo-verde = url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEUTVyh5VUOaAAAACklEQVQI12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==') //'
+
+amarelo = #ffda48
+verde = #135728
+azul  = #003A9C
+
+.brasil-theme
+	background-color: amarelo
+	cores-header verde #333 azul
+	fundo-body: url('/img/base/noise.png') bg-fundo-verde
+
+	.post-content
+		color: #111
+
+		a
+			color: azul
+
+			&:visited
+				color: #603A6C
+
+		h2
+			color: verde
+
+		h1
+			.azul
+				color azul
+			.verde
+				color verde
+		hr
+			border-color #FCD111
+
+		li
+			margin-bottom: 0.5em
+
+	.post-info
+		border-color: azul

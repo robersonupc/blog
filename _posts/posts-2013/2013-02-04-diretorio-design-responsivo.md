@@ -41,6 +41,7 @@ Então você quer aprender **design responsivo**? Ou já sabe o conceito e quer 
 * [Design Responsivo & Retina Display: desenvolvimento web em alta resolução](http://blog.popupdesign.com.br/design-responsivo-e-retina-display-desenvolvimento-web-em-tempos-de-alta-resolucao/), por Dani Guerrato.
 * [DevCast sobre Design Responsivo](http://devcastbrasil.com/videos/devcast_design_responsivo_media_queries/) com Leandro Lima.
 * [Media queries verticais](http://www.frontendbrasil.com.br/artigos/design-responsivo/media-queries-verticais/), por [Ofelquis Gimenes](https://twitter.com/felquis).
+* [As muitas faces do Mobile First](http://tableless.com.br/as-muitas-faces-do-mobile-first/), artigo de Brad Frost, traduzido pelo Will Sales no Tableless.
 
 ## 2. Palestras
 
@@ -73,7 +74,7 @@ Então você quer aprender **design responsivo**? Ou já sabe o conceito e quer 
 * Vários subsites da Globo.com, como [Globo TV](http://globotv.globo.com/) e [ETC](http://etc.globo.com/).
 * [Tableless](http://tableless.com.br)
 * [Livro Arquitetura Java](http://www.arquiteturajava.com.br/)
-* [Plataforma Tec](http://plataformatec.com.br/)
+* [Plataformatec](http://plataformatec.com.br/)
 * [Umobi](http://umobi.com.br/)
 
 ## 6. Evento
