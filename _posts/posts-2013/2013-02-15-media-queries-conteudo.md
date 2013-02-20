@@ -8,7 +8,7 @@ shareImage: /img/posts/responsive-design/share.jpg
 
 Ao escrever [medias queries](http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/), você precisa escolher algum *valor* pra colocar lá. É o que chamamos dos **breakpoints**, os pontos onde seu layout vai ser ajustado por causa de uma resolução diferente. E **escrever bons breakpoints** é essencial para um *design responsivo* de qualidade.
 
-É o que mais aparece de pergunta de quem tá começando com design responsivo: *quais os valores padrões de se colocar nas media queries*? E logo aparece uma lista parecida com essa:
+E o que mais aparece de pergunta de quem tá começando com design responsivo é: *quais os valores padrões de se colocar nas media queries*? E logo surge uma lista parecida com essa:
 
 {% code css %}
 @media only screen and (min-width: 480px) { ... }
