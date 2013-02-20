@@ -53,7 +53,7 @@ Então você quer aprender **design responsivo**? Ou já sabe o conceito e quer 
 ### Mais avançadas
 
 * [Uma tonela de truques de Web Mobile](/palestra-mobile-web/), palestra minha no QCon SP 2012 - [vídeo oficial](http://www.infoq.com/br/presentations/tonelada-truques-web)
-* Slides: [Os Caminhos do Design Mobile](http://www.slideshare.net/horacio.soares/caminhos-domobilecampusparty2013reduzida), por [Horácio Soares](https://twitter.com/horaciosoares), na Campus Party 2013.
+* Slides: [Os Caminhos do Design Mobile](http://www.slideshare.net/horacio.soares/caminhos-domobilecampusparty2013reduzida) e [vídeo](https://www.youtube.com/watch?v=rBy08DL5b74), por [Horácio Soares](https://twitter.com/horaciosoares), na Campus Party 2013.
 * Slides: [Mobile First](http://www.slideshare.net/horacio.soares/mobile-first-w3c-webbr-2012), por [Horácio Soares](https://twitter.com/horaciosoares), na web.br 2012.
 
 ## 3. Livros e cursos
