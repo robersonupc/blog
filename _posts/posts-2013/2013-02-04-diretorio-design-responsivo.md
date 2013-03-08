@@ -31,6 +31,7 @@ Então você quer aprender **design responsivo**? Ou já sabe o conceito e quer 
 * [10 dicas para fazer um email responsivo](/email-newsletter-mobile-responsivo/), artigo meu aqui no Blog.
 * [Pixels, pixels ou pixels? Dicas de Web Mobile com viewport](http://blog.caelum.com.br/pixels-pixels-ou-pixels-dicas-de-web-mobile-com-viewport/), artigo meu no Blog da Caelum.
 * [Responsive Web Design – Adaptação vs Otimização](http://tableless.com.br/responsive-web-design-adaptacao-vs-otimizacao/), do [Diego Eis](https://twitter.com/diegoeis/), Tableless.
+* [E você jura que ainda não sabe o que é Responsive Webdesign? Vamos mudar isso já!](http://imasters.com.br/linguagens/css/e-voce-jura-que-ainda-nao-sabe-o-que-e-responsive-webdesign-vamos-mudar-isso-ja/), do Bernard de Luna no iMasters.
 
 ### Mais avançados
 

@@ -8,13 +8,13 @@ description: Use o debugger do Chrome no seu Desktop para inspecionar página ro
 
 O desenvolvimento de página web mobile é difícil de testar por envolver outros aparelhos. Mas os browsers mais novos já possuem recurso de debug remoto. Além do [iOS](/debug-mobile-safari-ios/ 'Meu post sobre remote debug no iOS 5'), o **Chrome Mobile** também traz esse recurso.
 
-Embora ainda não haja suporte nativo para debug do browser padrão do Android, o suporte no Chrome é muito. Ele está disponível ainda em beta apenas para *Android 4* mas já foi anunciado como futuro substituto do browser padrão do Android.
+Embora ainda não haja suporte nativo para debug do browser padrão do Android, o suporte no Chrome é muito bom. Ele apenas para *Android 4* e já foi anunciado como futuro substituto do browser padrão do Android.
 
 *(eu já escrevi aqui no blog também como debugar páginas no [Mobile Safari do iOS 5+](/debug-mobile-safari-ios/ 'Meu post sobre remote debug no iOS 5'))*
 
 ## Pré-requisitos
 
-* Instale o [Chrome Mobile Beta](https://play.google.com/store/apps/details?id=com.android.chrome) no seu Android 4.
+* Instale o [Chrome Mobile](https://play.google.com/store/apps/details?id=com.android.chrome) no seu Android 4.
 * Baixe o [Android SDK](http://developer.android.com/sdk/index.html) pra sua máquina.
 * Instale o [Google Chrome](http://www.google.com/chrome) no seu Desktop.
 * Tenha um cabo USB à mão pra conectar o dispositivo no computador.
