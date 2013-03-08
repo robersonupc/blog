@@ -14,13 +14,7 @@ amarelo = #FFD700
 amarelo_claro = #F5E617
 branco = #F0F0D8
 marrom = #5E412F
-verde = #0FC00F
 
-// icon font Caelum
-@font-face {
-	font-family: Caelum;
-	src: url(/img/palestra/mobile-web/caelum-logo.ttf)
-}
 @font-face {
   font-family: 'Yanone Kaffeesatz';
   font-style: normal;
@@ -37,13 +31,9 @@ verde = #0FC00F
 
 .slide .content
 	background-color: fundo
-	padding: 0;
-
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	font-size: 16px; // unifica default por causa do mobile
-	-webkit-text-size-adjust: none
 
-	 h1 
+	h1 
 		color: azul
 		font-family: 'Yanone Kaffeesatz', sans-serif;
 		font-weight: normal
@@ -69,17 +59,6 @@ verde = #0FC00F
 		margin: 0;
 		padding: 0 2%;
 
-.slide .audience, .slide .notes
-	b
-		color: amarelo_claro
-		font-weight: normal
-
-	a
-		color: laranja
-
-		&:visited
-			color: laranja_meio
-
 .highlight {
 	margin: 22px;
 
@@ -99,112 +78,16 @@ verde = #0FC00F
 /** SLIDE SPECIFICS **/
 @import 'mobile-web-slides'
 
-
-.notes
-	font-family: Arial;
-	padding: 0.5em;
-
 .bars
 	.content
-		background: black
-
-		// main heading
 		.poster
-			absolute: top 0.1em left 0.1em
-			font-family: Arial, sans-serif
-			line-height: 1em
-			font-size: 170%
-			color: #999
-
 			span
 				color: azul
 
-		// small oval client counter
-		.sync-clients
-			absolute: top 0.4em right 0.1em
-
-			border-radius: 1000px;
-			display: inline-block;
-			padding: 0
-
-			font-family: Arial;
-			font-size: 82%
-			line-height: 1.8em
-			width: 1.8em
-
-			text-align: center
-			vertical-align: middle
-
-			.sync-online &
-				background-color: #758918
-			
-			.sync-offline &
-				background-color: #DE3C2F
-
-	.audience, .site
-		background: #222 url(/img/base/noise.png);
-		box-shadow: 0 0 6px rgba(255,255,255,0.25)
-		height: 100%
-		width: 100%
-
-		// navigation button
-		.b
-			background: azul
-			border-radius: 0.3em
-			color: white
-			cursor: pointer
-			text-align: center
-
-			display: inline-block	
-
-			padding: 0 0.6em
-			line-height: 2.5em
-			vertical-align: top
-			margin-top: 0.23em
-
 		// window title
 		.title
-			absolute: top 0 left 0.25em
-			color: #ccc
 			font-family: 'Yanone Kaffeesatz', sans-serif;
 			font-size: 150%
-			line-height: 1.8em
-
-			span
-				display: none
-				margin-left: 0.3em
-				border: 6px solid white;
-				border-radius: 1000px
-
-			.sync-online & .aovivo
-				border-color: verde
-				display: inline-block
-			.sync-offline & .desconectado
-				border-color: vermelho
-				display: inline-block
-
-		// manual sync for incompatible clients
-		.manual-sync
-			background: #292929 url(/img/base/noise.png);
-			box-shadow: 0 0 6px rgba(255,255,255,0.25)
-			color: white
-			line-height: 3em
-			font-size: 90%
-
-			.do-sync
-				cursor: pointer
-				background: vermelho
-				line-height: 2
-				display: inline-block
-				border-radius: 0.3em
-				color: white
-				padding: 0.1em 0.4em
-				text-align: center
-
-				.doing-manual-sync &
-					background: cinza
-					color: #777 
-
 
 /** AUDIENCE MODE **/
 

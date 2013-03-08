@@ -369,3 +369,103 @@ body, .bars
 .site-mode .site-mode-only,
 .main-room .show-on-main-room
 	display: block
+
+
+
+/* BARS layout */
+.bars
+	.content
+		background: black
+
+		// main heading
+		.poster
+			absolute: top 0.1em left 0.1em
+			font-family: Arial, sans-serif
+			line-height: 1em
+			font-size: 170%
+			color: #999
+
+		// small oval client counter
+		.sync-clients
+			absolute: top 0.4em right 0.1em
+
+			border-radius: 1000px;
+			display: inline-block;
+			padding: 0
+
+			font-family: Arial;
+			font-size: 82%
+			line-height: 1.8em
+			width: 1.8em
+
+			text-align: center
+			vertical-align: middle
+
+			.sync-online &
+				background-color: #758918
+			
+			.sync-offline &
+				background-color: #DE3C2F
+
+	.audience, .site
+		background: #222 url(/img/base/noise.png);
+		box-shadow: 0 0 6px rgba(255,255,255,0.25)
+		height: 100%
+		width: 100%
+
+		// navigation button
+		.b
+			background #3299BB
+			border-radius: 0.3em
+			color: white
+			cursor: pointer
+			text-align: center
+
+			display: inline-block	
+
+			padding: 0 0.6em
+			line-height: 2.5em
+			vertical-align: top
+			margin-top: 0.23em
+
+		// window title
+		.title
+			absolute: top 0 left 0.25em
+			color: #ccc
+			font-size: 150%
+			line-height: 1.8em
+
+			span
+				display: none
+				margin-left: 0.3em
+				border: 6px solid white;
+				border-radius: 1000px
+
+			.sync-online & .aovivo
+				border-color: #0FC00F
+				display: inline-block
+			.sync-offline & .desconectado
+				border-color: #C00F0F
+				display: inline-block
+
+		// manual sync for incompatible clients
+		.manual-sync
+			background: #292929 url(/img/base/noise.png);
+			box-shadow: 0 0 6px rgba(255,255,255,0.25)
+			color: white
+			line-height: 3em
+			font-size: 90%
+
+			.do-sync
+				cursor: pointer
+				background: #C00F0F
+				line-height: 2
+				display: inline-block
+				border-radius: 0.3em
+				color: white
+				padding: 0.1em 0.4em
+				text-align: center
+
+				.doing-manual-sync &
+					background: #333
+					color: #777 
