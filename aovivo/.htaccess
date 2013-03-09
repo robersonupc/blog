@@ -2,7 +2,7 @@ RewriteEngine on
 
 # redirect pra palestra atual
 # editar pra palestras novas
-RewriteRule ^$ /aovivo/mobile-web/ [R=302,L]
+RewriteRule ^$ /aovivo/appcache-html5-offline/ [R=302,L]
 
 # redirect pro live
 RewriteRule ^([a-zA-Z0-9\-]+)/ live.php?p=$1 [L]

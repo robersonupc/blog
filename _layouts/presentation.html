@@ -27,6 +27,9 @@ pagetype: blog
 		{% if page.slug == 'mobile-web' %}
 			{% include css/palestra/mobile-web.css %}
 		{% endif %}
+		{% if page.slug == 'appcache' %}
+			{% include css/palestra/appcache.css %}
+		{% endif %}
 		</style>
 	{% endif %}
 
@@ -57,6 +60,9 @@ pagetype: blog
 		<script>
 		{% if page.slug == 'mobile-web' %}
 			{% include js/palestra/mobile-web.js %}
+		{% endif %}
+		{% if page.slug == 'appcache' %}
+			{% include js/palestra/appcache.js %}
 		{% endif %}
 		</script>
 	{% endif %}

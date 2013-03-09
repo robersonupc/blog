@@ -1,0 +1,303 @@
+@import "nib"
+
+
+cor_base = #FF0
+cor_sombra = #333
+cor_ruim = #F02
+
+@font-face {
+  font-family: 'Acme';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Acme-Regular.ttf);
+}
+
+
+/*--- Layout base ---*/
+.slide .content
+	font-size: 2em
+
+	h1, h2
+		font-family: "Acme", sans-serif;
+		font-size: 3.3em
+		font-weight normal
+		margin: 0.4em
+		line-height 1
+
+		color: cor_base
+		text-shadow 0.05em 0.06em cor_sombra
+
+	h2
+		font-size 3em
+
+	.balao
+		color: white
+		background cor_sombra
+		border-radius: 0.25em
+		text-shadow none
+		display: inline-block
+		padding: 0.25em 0.5em
+
+.highlight
+	margin 0.4em
+
+	pre code:before
+		background-color #FFE600
+
+pre
+	font-size: 0.5em
+
+.presentation-mode .bars .content
+	display none
+
+/*--- Barras ---*/
+.bars
+	.site, .audience
+		.title
+			font-family: 'Acme', sans-serif;
+			font-size: 110%
+			line-height 2.75
+
+/*--- Slides comuns ---*/
+
+#quem, #fim
+	.content
+		font-family: 'Acme', sans-serif;
+
+#quem .content
+	h1
+		color: cor_base
+		text-shadow 0.05em 0.05em cor_sombra
+		font-size 900%
+
+	ul a
+		color cor_sombra
+
+#fim .content
+	h1
+		color: cor_base
+		text-shadow 0.05em 0.05em cor_sombra
+		font-size 8em
+
+	.contato a
+		font-size 2.75em
+
+
+
+/*--- Sérgios Mallandros ---*/
+.ra1, .ra2, .ra3, .ra4
+	.content
+		background url(/img/palestra/appcache/mallandro1.jpg) no-repeat center center
+		background-size cover
+
+		h1
+			color: cor_ruim
+			font-size: 6em
+			margin: 0.02em
+			line-height 1
+			text-shadow 0.05em 0.05em #333
+
+.ra2 .content
+	background-image url(/img/palestra/appcache/mallandro2.jpg)
+
+	h1
+		text-align right
+
+.ra3 .content
+	background-image url(/img/palestra/appcache/mallandro3.jpg)
+
+.ra4 .content
+	background-image url(/img/palestra/appcache/mallandro4.jpg)
+
+	h1
+		color: #f90
+
+/*--- Browser ---*/
+.browser
+	border 10px solid #333
+	border-radius 0.25em
+	border-top-width 80px
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.5)
+	margin: 1em
+	padding: 0.5em
+	position relative
+
+	background white
+	height 700px
+
+	// barra de enderecos
+	&:before
+		content: 'http://sergiolopes.org'
+		color: #666
+		background: #ededed
+		font-size 0.75em
+		line-height 40px
+		padding-left 0.5em
+
+		position absolute 
+		top -60px 
+		left 0
+		right 90px
+		height 40px
+
+	// icones do browser
+	&:after
+		content '\27F3   x'
+		color #ddd
+
+		position absolute 
+		top -50px 
+		right 10px
+		height 40px
+
+.site-bonitao
+	background #8800AD
+	color #ACE500
+
+	h3
+		font-size 2em
+
+
+	.site-foto
+		background-color #ACE500
+		background-size 40px 40px
+		height: 240px
+		width: 400px
+		margin-right 1em
+		display inline-block
+		text-align center
+
+		&:before
+			content: '\2693'
+			color: rgba(0,0,0,0.5)
+			font-size 8em
+			line-height 240px
+			float left
+			width 100%
+
+		&.heart
+			background-color #d08
+			width: 320px
+
+			&:before
+				content '\2766'
+
+		&.smile
+			background-color #aaa
+			width: 320px
+
+			&:before
+				content '\263A'
+				margin-top -20px
+
+		&.snow
+			background-color #d08
+			font-weight bold
+			width: 320px
+
+			&:before
+				content '\2603'
+				margin-top 10px
+
+		&.coffee
+			background-color #ACE500
+			font-size 120%
+			width: 320px
+
+			&:before
+				content '\2615'
+
+	@css {
+		.site-foto {
+			background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), to(transparent));
+			background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+			background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+			background-image: -ms-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+			background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+			background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+		}
+	}
+
+	.site-foto-error
+		background-color #ededed
+		border 4px solid #999
+		height: 240px
+		width: 320px
+		margin-right 1em
+		display inline-block
+		text-align center
+
+		&:before
+			content '\2716'
+			color: red
+			font-size 4em
+			line-height 240px
+			float left
+			width 100%
+
+
+
+
+
+/*--- Slides base tela cheia ---*/
+.destaque, .problema 
+	.content
+		line-height 768px
+		text-align center
+		vertical-align middle
+
+		h1
+			display inline-block
+			vertical-align middle
+
+			font-size 5em
+			line-height 1
+
+			small
+				display block
+				font-size 0.75em
+				line-height 1.1
+
+			big
+				display block
+				font-size 2em
+				line-height 0.9
+
+			code
+				display block
+				font-size: 0.4em
+				text-shadow 4px 4px cor_sombra
+
+.destaque .content
+	h1
+		color: cor_base
+		text-shadow: 0.05em 0.06em cor_sombra
+
+.problema .content
+	background cor_ruim
+
+	h1
+		color white
+		text-shadow: 0.05em 0.06em #111
+
+
+/*--- Slides ---*/
+#capa .content
+	text-align: center
+
+	h1
+		color: cor_base
+		font-size: 3.7em
+		line-height 1
+		margin: 0.5em 0
+		text-shadow: 0.06em 0.08em cor_sombra
+
+		small
+			display block
+			font-size 0.75em
+			line-height 1.2
+
+		big
+			display: block
+			font-size: 2em
+

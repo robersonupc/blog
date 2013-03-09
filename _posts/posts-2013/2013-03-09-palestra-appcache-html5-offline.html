@@ -1,0 +1,1665 @@
+---
+layout: presentation
+title: 'Palestra: Dominando HTML5 offline com AppCache'
+category: html5
+description: Como criar sites e webapps offline com Application Cache. Palestra completa com dicas avançadas, exemplos e explicações. 
+ogtype: article
+shareImage: /img/palestra/appcache/appicon.png
+slug: appcache
+class: destaque
+
+feedReplace: Essa palestra é completamente interativa, o que não é suportado nos feeds RSS. Recomendo que visite o site e leia por lá. (é otimizado também para mobile)
+---
+
+<article class="presentation">
+
+<!--
+####   ABERTURA
+ -->
+
+<section class="slide" id="capa">
+    <div class="content">
+        <h1>
+            <small>Dominando</small>
+            HTML5 offline com 
+            <big>AppCache</big>
+        </h1>
+        <div class="font-caelum ex1 logo"></div>
+    </div>
+    <aside class="notes">
+        <h3>Como navegar no Desktop:</h3>
+        <ul>
+            <li>Use as <b>setas do teclado</b> pra passar os slides;</li>
+            <li>O slide é mostrado com anotações complementares cheias de links adicionais;</li>
+            <li>Pra esconder as notas e entrar em 'modo apresentação', aperte <b>P</b>;</li>
+            <li>Aperte <b>ESC</b> pra sair do 'modo apresentação'.</li>
+        </ul>
+
+        <h3>Como navegar no Tablet/Smartphone touchscreen:</h3>
+        <ul>
+            <li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
+        </ul>
+
+        <p><i><b>Data:</b> Março/2013.</i></p>
+    </aside>
+</section>
+
+<section class="slide" id="quem">
+    <div class="content">
+        <h1>
+            <span>Sérgio</span>
+            <span>Lopes</span>
+        </h1>
+
+        <ul>
+            <li><a href="https://twitter.com/sergio_caelum">@sergio_caelum</a></li>
+            <li><a href="http://sergiolopes.org">sergiolopes.org</a></li>
+        </ul>
+
+        <div class="font-caelum ex1 logo"></div>
+    </div>
+    <aside class="notes">
+        <p>Sou instrutor e desenvolvedor na <a href="http://www.caelum.com.br/">Caelum</a>.</p>
+
+        <p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front end e Web, em especial Web Mobile. Posto bastante coisa no <a href="http://blog.caelum.com.br/">blog da Caelum</a> também.</p>
+
+        <p>Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
+        
+        <p>Essa palestra surgiu de um cenário que passamos na Caelum. Temos várias <a href="http://www.caelum.com.br/apostilas/">apostilas</a> que são disponibilizadas para download gratuito e também para consulta via Web. Sempre me incomodou que o usuário era obrigado a baixar algum formato bizarro pra poder ler offline (PDF, epub ou mobi), então eu resolvi fazer <a href="http://blog.caelum.com.br/apostilas-da-caelum-offline-com-application-cache-do-html-5/">as apostilas funcionarem offline no navegador</a>.</p>
+    </aside>
+</section>
+
+<!--
+####   INTRODUCAO
+ -->
+
+<section class="slide destaque" id="pqoffline">
+    <div class="content">
+        <h1>
+            Offline?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Porque você ia querer algo offline na Web? Soa até contraditório, já que a Web é <i>justo pra ficar online</i>.</p>
+        
+        <p>Mas, você pode ter uma <b>WebApp</b> que o usuário pode usar offline, no avião, no meio do mato etc. Pode querer disponibilizar os dados como um webmail ou um livro.</p>
+        
+        <p>Offline é útil pra dispositivos móveis, onde a conexão é intermitente, cara e nem sempre disponível. Offline, como vamos ver, também pode útil pra performance.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="appcacheapi">
+    <div class="content">
+        <h1>
+            Application Cache API
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>O ponto central pra se fazer HTML offline é usar essa API do HTML 5 chamada <em>Application Cache</em>. Ela existe há alguns anos e o <a href="http://caniuse.com/offline-apps">suporte nos navegadores</a> é muito bom—Chrome, Firefox, Opera, Internet Explorer (10+), iOS, Android, Blackberry. As maiores exceções são IE 9 e anteriores e o Opera Mini.</p>
+        
+        <p>Se você já leu algum tutorial de AppCache, viu como ela é <b>bem simples</b>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="manifest1">
+    <div class="content">
+        <h1>Arquivo manifesto</h1>
+        
+        {% code text %}
+        CACHE MANIFEST
+        
+        /index.html
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>A gente começa definindo um arquivo de manifesto. Nada mais é que um arquivo texto que lista
+        <b>todos os recursos da página</b> que devem ser cacheados pra usarmos offline, uma URL por linha.</p>
+    </aside>
+</section>
+
+<section class="slide" id="usar-manifest">
+    <div class="content">
+        <h1>Linkar pro manifesto</h1>
+        
+        {% code html %}
+        <html manifest="demo.appcache">
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Depois, é só ir no topo do seu arquivo HTML e apontar o arquivo do manifesto no atributo <code>manifest</code>. A extensão do arquivo pode ser qualquer uma, é um arquivo texto, mas na especificação vemos bastante o uso do sufixo <code>.appcache</code>.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="pronto1">
+    <div class="content">
+        <h1>
+            Pronto! Fácil!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>É isso! A página já funciona offline. Você pode abri-la, depois desconectar da rede, e quando voltar nela, tudo vai estar disponível.</p>
+        
+        <p>Fácil e rápido! Só que não.</p>
+    </aside>
+</section>
+
+<section class="slide ra3" id="ra1">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="dificil">
+    <div class="content">
+        <h1>
+            Não é fácil!
+        </h1>
+    </div>
+    
+    <aside class="notes">
+        <p>É muito mais difícil do que parece. A <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html">especificação</a> é bem curta e aparentemente simples, mas envolve um monte malandragens. É esse o foco da palestra!</p>
+    </aside>
+</section>
+
+
+<!--
+####   Gotchas iniciais
+ -->
+<section class="slide" id="mime-type">
+    <div class="content">
+        <h1>Mime-type</h1>
+        
+        <h2 class="balao">text/cache-manifest</h2>
+    </div>
+
+    <aside class="notes">
+        <p>Primeiro truque que muita gente demora uma eternidade pra perceber quando dá problema: seus arquivos de manifest <strong>precisam</strong> ser servidos com mime type <code>text/cache-manifest</code>.</p>
+        
+        <p>A configuração depende de servidor pra servidor, claro. Mas se você usar o Apache, por exemplo, pode acrescentar no <code>.htaccess</code> a configuração: <code>AddType text/cache-manifest .appcache</code></p>
+    </aside>
+</section>
+
+
+<section class="slide" id="browser1">
+    <div class="content">
+        <div class="browser site-bonitao">
+            <h3>Meu site bonitão!</h3>
+            
+            <div class="site-foto"></div>
+            <div class="site-foto heart"></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Beleza, vou lá acesso meu site bonitão que está com manifesto do AppCache declarado. Meu site tem duas imagens legais lá e vou ver tudo bonitão lá.</p>
+    </aside>
+</section>
+
+<section class="slide" id="browser2">
+    <div class="content">
+        <div class="browser site-bonitao">
+            <h3>Meu site bonitão!</h3>
+            
+            <div class="site-foto"></div>
+            <div class="site-foto-error"></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Aí quando eu acesso de novo ele não carrega uma foto. Tento recarregar a página e nada. Shift+F5 e nada. O que aconteceu? Esqueci de colocar a imagem no manifesto.</p>
+    </aside>
+</section>
+
+<section class="slide ra1" id="ra2">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="problema-network">
+    <div class="content">
+        <h1>
+            <small>Fora do manifesto?</small>
+            Não funciona!
+        </h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Tudo que tá fora do manifesto não é mais carregado, <b>até quando estou online</b>. Solução? Colocar tudo bonitinho no manifesto.</p>
+        
+        <p> Mas e se não quero fazer cache de algo? Por exemplo, o script do Google Analytics. É algo dinâmico e quero sempre pegar na rede. No caso de estar offline, ignora pois não faz sentido cachear.</p>
+    </aside>
+</section>
+
+<section class="slide" id="network">
+    <div class="content">
+        <h1>Seção network</h1>
+        
+        {% code text %}
+        CACHE MANIFEST
+
+        /index.html
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+
+        NETWORK:
+        http://www.google-analytics.com/ga.js
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Existe uma seção no manifesto para indicarmos recursos de rede, que só funcionarão se estiver online. Preciso listar tudo lá, senão ele não carrega nunca mais.</p>
+        
+        <p>Bons casos de uso são o script do Analytics, widgets de serviços de terceiros (tipo Facebook) ou chamadas Ajax dinâmicas que faço pro meu backend.</p>
+    </aside>
+</section>
+
+<section class="slide" id="network2">
+    <div class="content">
+        <h1>Seção network</h1>
+        
+        {% code text %}
+        CACHE MANIFEST
+
+        /index.html
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+
+        NETWORK:
+        *
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Essa seção network aceita alguns tipos de coringas. Posso colocar o asterisco falando que qualquer coisa não listada no cache deve ser pego da rede, ou posso listar diretórios apenas e todos os recursos daquela pasta serão pegos na rede.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="problema-fallback">
+    <div class="content">
+        <h1>
+            E quando estou offline?
+        </h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Tudo que é marcado como NETWORK vai falhar quando estivermos offline. Mas existem alguns casos onde você gostaria de obter algum <i>conteúdo alternativo</i> no lugar, já que a rede não está disponível.</p>
+    </aside>
+</section>
+
+<section class="slide" id="fallback1">
+    <div class="content">
+        <div class="browser site-bonitao">
+            <h3>Usuários:</h3>
+            
+            <div class="site-foto snow"></div>
+            <div class="site-foto coffee"></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Por exemplo, você está em um fórum onde cada usuário tem um avatar próprio. Você não vai colocar todos os avatares de todos os usuários no cache. Se eu colocar na NETWORK, quando estiver online, ele baixa o avatar correto.</p>
+    </aside>
+</section>
+
+<section class="slide" id="fallback2">
+    <div class="content">
+        <div class="browser site-bonitao">
+            <h3>Usuários:</h3>
+            
+            <div class="site-foto-error"></div>
+            <div class="site-foto-error"></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Mas aí, se estou offline, os requests falham pois são NETWORK. Offline eu gostaria de deixar uma imagem genérica no lugar, já que não é possível carregar a imagem de verdade. Quero uma <i>alternativa</i>, um <b>fallback</b>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="fallback3">
+    <div class="content">
+        <h1>Seção fallback</h1>
+        
+        {% code text %}
+        CACHE MANIFEST
+
+        /index.html
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+
+        NETWORK:
+        *
+        
+        FALLBACK:
+        /img/avatares/ /img/avatar-generico.png
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>A seção FALLBACK aceita que você especifique uma URL ou PATH e um recurso alterativo. Quando o usuário estiver offline, o conteúdo alternativo será carregado.</p>
+        
+        <p>No exemplo, falamos que qualquer request que comece com <code>/img/avatares/</code> deve carregar <code>/img/avatar-generico.png</code>. Por exemplo: <code>/img/avatares/lopes.png</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="fallback4">
+    <div class="content">
+        <div class="browser site-bonitao">
+            <h3>Usuários:</h3>
+            
+            <div class="site-foto smile"></div>
+            <div class="site-foto smile"></div>
+        </div>
+    </div>
+
+    <aside class="notes">
+        <p>Agora, quando estiver offline, a requisição pro avatar real vai falhar mas ele vai carregar o avatar genérico no lugar. Melhorando a experiência do usuário offline!</p>
+    </aside>
+</section>
+
+
+<!--
+#### Detalhes do arquivo
+-->
+<section class="slide destaque" id="detalhes">
+    <div class="content">
+        <h1>
+            Detalhes do manifesto
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Agora que estamos avançando no AppCache, precisamos só prestar atenção em alguns detalhes. Vamos ver alguns rapidamente.</p>
+        
+        <p>Por exemplo, se estivermos em uma página HTTPS, todos os recursos do manifesto precisam ser relativos ao domínio original (<i>same domain</i>).</p>
+    </aside>
+</section>
+
+<section class="slide" id="implicit">
+    <div class="content">
+        <h1>Página com manifesto</h1>
+    
+        {% code text %}
+        CACHE MANIFEST
+
+        /index.html
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+        {% endcode %}
+        
+        {% code html %}
+        <!-- index.html -->
+        <html manifest="demo.appcache">
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Outro detalhe: a gente estava colocando no manifesto a página HTML que aponta pro manifesto—primeira linha nesse código. Mas não precisamos.</p>
+    </aside>
+</section>
+
+<section class="slide" id="implicit2">
+    <div class="content">
+        <h1>Página com manifesto</h1>
+    
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+        {% endcode %}
+        
+        {% code html %}
+        <!-- index.html -->
+        <html manifest="demo.appcache">
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>A página que tiver o atributo do manifesto não precisa estar explicitamente listada no manifesto, ela já será cacheada implicitamente.</p>
+        
+         <p>Mais: por isso, você não consegue não cacheá-la! O HTML com manifest será sempre cacheado, você queira ou não! Isso faz a contrução de sites dinâmicos bem difícil; você não pode só colocar o manifest em todos os HTML do site.</p>
+    </aside>
+</section>
+
+<section class="slide ra2" id="ra3">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide" id="query-strings">
+    <div class="content">
+        <h1>Query strings</h1>
+    
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /javascript/script.js
+        /css/estilo.css
+        {% endcode %}
+        
+        {% code html %}
+        <img src="/imagens/logo.png?malandragem">
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Outro detalhe: cuidado com os parâmetros, eles mudam a URL e são considerados no AppCache. No exemplo aqui, estamos cacheando <b>logo.png</b> mas requisitando <b>logo.png?malandragem</b> e eles são recursos <i>totalmente diferentes</i>.</p>
+        
+        <p>Na prática, você não pode passar parâmetros pra nenhum dos recursos cacheados. Se precisar de algo assim, melhor fazer com hash e ler via JavaScript.</p>
+    </aside>
+</section>
+
+<section class="slide ra1" id="ra4">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="request-404-500">
+    <div class="content">
+        <h1>
+            <small>404 ou 500?</small>
+            Cache todo é descartado!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Se qualquer componente listado no manifesto não for encontrado (404) ou der erro (500), o cache todo é descartado!</p>
+    </aside>
+</section>
+
+<section class="slide ra3" id="ra5">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="no-store">
+    <div class="content">
+        <h1>
+            <small>Cache-Control:</small>
+            <small>no-store</small>
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Se o request devolver esse cabeçalho, o Firefox não vai cacheá-lo, mesmo estando listado no manifesto. Passei por isso nas apostilas da Caelum, pois meu servidor colocava esse header sem eu pedir. Gastei um bom tempo descobrindo isso!</p>
+        
+        <p>E falando em Firefox, ele sempre pede autorização pro usuário antes de usar o Application Cache. Isso é previsto na especificação, apesar dos outros browsers não pedirem.</p>
+    </aside>
+</section>
+
+
+
+<!--
+#### API JS
+ -->
+<section class="slide destaque" id="api-js">
+    <div class="content">
+        <h1>
+            API JavaScript
+            <code>window.applicationCache</code>
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Vamos ver um pouco de JavaScript agora. Existe uma API por trás do AppCache, acessível pelo objeto <code>window.applicationCache</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="feature-test">
+    <div class="content">
+        <h1>Feature test</h1>
+    
+        {% code javascript %}
+        if ('applicationCache' in window) {
+        
+            // AppCache disponível!
+        
+        } else {
+        
+            // sinto muito!
+        
+        }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Podemos detectar facilmente o suporte ao HTML 5 offline verificando a existência desse objeto.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-checking">
+    <div class="content">
+        <h1>Eventos JS</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Primeiro evento disparado quando o browser detecta o atributo <code>manifest</code> no HTML é o <code>checking</code>. Ele indica que o browser está verficando o manifesto e se devemos instalar ou não.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-downloading">
+    <div class="content">
+        <h1>Eventos JS</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Verificada a instalação, o browswer dispara o evento <code>downloading</code>, indicando que o download dos componentes do manifesto está começando.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-progress">
+    <div class="content">
+        <h1>Eventos JS</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        
+        applicationCache.onprogress = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Conforme o download dos itens vai acontecendo, é disparado o evento <code>progress</code>. Esse evento é disparado várias vezes, uma pra cada item baixado.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-progress2">
+    <div class="content">
+        <h1>Progresso</h1>
+    
+        {% code javascript %}       
+        applicationCache.onprogress = function(e){
+            log('Baixamos já ' + e.loaded + ' de ' + e.total);
+        }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>No progress, posso até saber quantos arquivos têm no total e quantos já foram
+        baixados, pra mostrar uma barra de progresso por exemplo</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-cached">
+    <div class="content">
+        <h1>Eventos JS</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        
+        applicationCache.onprogress = function(){ /* ... */ }
+        
+        applicationCache.oncached = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>No fim, quando o cache todo foi baixado e instalado, é disparado o evento <code>cached</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-error">
+    <div class="content">
+        <h1>Eventos JS</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        
+        applicationCache.onprogress = function(){ /* ... */ }
+        
+        applicationCache.oncached = function(){ /* ... */ }
+        
+        applicationCache.onerror = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Em qualquer ponto do processo pode acontecer algum problema. Nesse caso, o evento <code>error</code> é disparado.</p>
+        
+        <p>São esses os eventos previstos durante a instalação do cache pela primeira vez. Você pode ouvi-los usando a sintaxe acima com "on', ou usar o <code>addEventListener</code> como em qualquer evento JS.</p>
+    </aside>
+</section>
+
+<section class="slide" id="status">
+    <div class="content">
+        <h1>Status</h1>
+    
+        {% code javascript %}
+        applicationCache.status 
+           // 2 == CHECKING
+           // 3 == DOWNLOADING
+           // ...
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Esse objeto <code>applicationCache</code> ainda tem uma propriedade <code>status</code> que devolve como está o Application Cache. Mas ele <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=730424">não funciona no Firefox</a>.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="depois-instalacao">
+    <div class="content">
+        <h1>
+            E depois?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>A instalação é feita, ok. Mas a grande questão é o que acontece depois da instalação e como atualizamos.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="sempre-do-cache">
+    <div class="content">
+        <h1>
+            Servido sempre do cache!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Depois de cacheado, tudo é servido sempre do cache, <i>mesmo quando o usuário está online</i>. Isso é muito bom pra performance.</p>
+        
+        <p>Mas aí atualizo uma imagem no servidor, abro de novo a página, e lá está a antiga! Dou Shift+F5 e nada. Ele não refaz o request.</p>
+    </aside>
+</section>
+
+<section class="slide ra2" id="ra6">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="mudar-manifesto">
+    <div class="content">
+        <h1>
+            <small>Atualiza só quando</small>
+            o manifesto muda
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>As atualizações só acontecem quando o manifesto muda. Cada vez que acesso a página, o navegador checa o manifesto no servidor pra ver se tem mudanças.</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto2">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Por exemplo, temos esse manifesto. Se quero causar atualização, preciso mudá-lo de alguma forma.</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto3">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script.js
+        /javascript/jquery.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>A mudança mais simples, claro, é adicionar um arquivo novo.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="mudar-arquivo">
+    <div class="content">
+        <h1>
+            <small>Queria mudar o</small>
+            próprio arquivo
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Mas e se não quero adicionar um arquivo novo? Quero mudar um arquivo já existente.</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto4">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script.js
+        /javascript/jquery.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Tenho esse manifesto aqui mas mudei o arquivo <code>script.js</code>. Como fazer?</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto5">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script.js?v2
+        /javascript/jquery.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Primeira opção é passar um parâmetro a mais na URL dele. Isso muda o recurso e muda o manifesto. Não preciso renomear o arquivo mas vou precisar substituir a chamada ao script pra incluir o mesmo parâmetro.</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto6">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script-v2.js
+        /javascript/jquery.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Outra opção é mudar o nome do arquivo mesmo. É bem comum colocar um código de versão ou timestamp no nome do arquivo. Nesse caso, preciso renomear o arquivo e alterar a chamada a ele na página.</p>
+    </aside>
+</section>
+
+<section class="slide" id="mudar-manifesto7">
+    <div class="content">
+        {% code text %}
+        CACHE MANIFEST
+        # Versão 2
+
+        /index.html
+        /imagens/logo.png
+        /css/estilo.css
+        /javascript/script.js
+        /javascript/jquery.js
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Ou ainda, se não quero mexer nos arquivos individualmente, posso mudar o manifesto em si. Posso só colocar um comentário e mudar ele. É bem comum o pessoal fazer tipo um número de versão. Mas precisa lembrar de atualizá-lo, senão o cache não é atualizado!</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-update-checking">
+    <div class="content">
+        <h1>Eventos JS - Update</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Depois de cacheado, o AppCache vai disparar alguns eventos cada vez que carregar a página pra verificar atualizações.</p>
+    
+        <p>Uma vez cacheado, o manifesto é verificado depois a cada page load. Então, sempre vai ter um <code>checking</code> quando a página carregar.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-update-noupdate">
+    <div class="content">
+        <h1>Eventos JS - Update</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.onnoupdate = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Se não tiver atualização nenhuma—o manifesto não mudou—, é disparado um <code>noupdate</code> e tudo para aí.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-update-downloading">
+    <div class="content">
+        <h1>Eventos JS - Update</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.onnoupdate = function(){ /* ... */ }
+        
+        // ou
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        applicationCache.onprogress = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Mas, caso tenha atualizações—o manifesto mudou—, precisamos baixar tudo de novo. Nesse caso, o browser dispara os mesmos eventos da instalação—<code>downloading</code> e <code>progress</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-update-ready">
+    <div class="content">
+        <h1>Eventos JS - Update</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.onnoupdate = function(){ /* ... */ }
+        
+        // ou
+        
+        applicationCache.ondownloading = function(){ /* ... */ }
+        applicationCache.onprogress = function(){ /* ... */ }
+        
+        applicationCache.onupdateready = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>A diferença é que, no final, como se trata de atualização, é lançado um <code>updateready</code>, pra você saber que existe uma versão nova cacheada.</p>
+        
+        <p>Pronto, já conseguimos atualizar nossa aplicação.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="pq-nao-atualiza">
+    <div class="content">
+        <h1>
+            <small>Não tá</small>
+            atualizando!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Aí você vai e edita algum arquivo, mexe no comentário de versão do manifesto e atualiza a página. Ele baixa tudo de novo, dispara todos os eventos de atualização certinho, e a página continua a antiga.</p>
+    </aside>
+</section>
+
+<section class="slide ra2" id="ra12">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="http-cache">
+    <div class="content">
+        <h1>
+            Lembre do HTTP cache normal
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Importante: o AppCache é mais uma camada de cache no browser e não invalida o cache normal, baseado em <code>Expires</code> e <code>Cache-Control</code>.</p>
+
+        <p>O que isso quer dizer? Mesmo que haja atualização do manifesto, o browser vai tentar baixar as coisas de novo do servidor mas o que estiver no cache local ele não baixa (com Expires).</p>
+
+        <p>Isso é <b>bom</b> pra evitar downloads em excesso, já que todos os itens do manifesto seriam baixados novamente. Mas precisa tomar cuidado senão você não consegue atualizar os itens individualmente. O recomendado é sempre <b>mudar a versão na URL de cada componente do manifesto individualmente</b>. Mas, claro, dá um certo trabalhinho.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="manifest-no-cache">
+    <div class="content">
+        <h1>
+            Não cacheie o
+            manifesto!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Você não deve cachear seu manifesto, senão a App nunca será atualizada!
+        Seu manifesto deveria ter um <code>Expires</code> no passado pra forçar o redownload toda vez.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="atualizacao-escondida">
+    <div class="content">
+        <h1>
+            Atualizou?
+            <big>Não vi!</big>
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Quando há atualização, o usuário não vê de imediato!</p>
+
+        <p>Quando o usuário navega, a página é carregada primeiro, usando recursos do cache, e só depois é feita a verificação de atualizações. Isso pra performance, claro. Imagine se o navegador fosse baixar o cache inteiro toda vez antes de mostrar a página pro usuário.</p>
+
+        <p>Então se há atualizações, o usuário precisa dar <strong>reload</strong> pra ver as mudanças na página.</p>
+    </aside>
+</section>
+
+<section class="slide ra1" id="ra7">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide" id="reload">
+    <div class="content">
+        <h1>Reload</h1>
+        
+        {% code javascript %}
+        applicationCache.onupdateready = function() {
+            if (confirm('Tem atualização. Recarregar?')) {
+                location.reload();
+            }
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Claro, você pode avisar o usuário das mudanças e oferecer o reload facilmente.</p>
+    </aside>
+</section>
+
+<section class="slide" id="swapcache">
+    <div class="content">
+        <h1>Swap Cache</h1>
+        
+        {% code javascript %}
+        applicationCache.onupdateready = function() {
+            applicationCache.swapCache();
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Há ainda um método que faz a <b>troca do cache</b> caso tenha havido atualização, sem precisar do reload.</p>
+        
+        <p>Mas esse metodo não faz o que gostaríamos. Ele não vai recarregar todo o conteúdo da página com a versão nova, claro.</p>
+        
+        <p>O que ele faz é mudar o cache para usar o novo baixado e, a partir daí, todo <b>request seguinte</b> será feito pro cache novo. Ou seja, preciso ou fazer reload mesmo ou então recarregar tudo de novo via Ajax.</p>
+    </aside>
+</section>
+
+<section class="slide" id="swapcache2">
+    <div class="content">
+        <h1>Swap Cache</h1>
+        
+        {% code javascript %}
+        applicationCache.onupdateready = function() {
+
+            ajax('/teste.html', ...); // versão velha
+
+            applicationCache.swapCache();
+
+            ajax('/teste.html', ...); // versão nova!
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Resumo: vou precisar recarregar a página na prática, é o mais fácil e garantido.</p>
+
+        <p>Ou pelo menos avisar o usuário que ele precisa fazer isso alguma hora. Vários sites fazem esse aviso pro usuário dar refresh, como o Gmail ou o Google Reader.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="tem-atualizacao">
+    <div class="content">
+        <h1>
+            Tem atualização?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>A verificação das atualizações é feita pelo browser automaticamente no page load. Mas, e se eu não fico recarregando muito a página? Tipo um single page app, uma mobile app ou um Gmail da vida que fica aberto o tempo todo? Ele não vai verificar as atualizações nunca mais.</p>
+    </aside>
+</section>
+
+<section class="slide" id="js-update">
+    <div class="content">
+        <h1>Update</h1>
+        
+        {% code javascript %}
+        applicationCache.update();
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>A aplicação pode forçar a verificação de updates quando quiser usando o método <code>update</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="js-update2">
+    <div class="content">
+        <h1>Update</h1>
+
+        {% code javascript %}
+        setTimeout(function(){
+            applicationCache.update();  
+        }, 1000 * 60 * 60);
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Dá pra, por exemplo, verificar de hora em hora.</p>
+    </aside>
+</section>
+
+<!--
+#### REMOVE
+-->
+<section class="slide destaque" id="como-apagar">
+    <div class="content">
+        <h1>
+            Como apagar?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Ok, já sei instalar e atualizar, mas como apagar?</p>
+        
+        <p>O cache é apagado se o manifesto devolve 404 ou 410. Ou seja, é só apagar o arquivo do manifesto do servidor e pronto!</p>
+    </aside>
+</section>
+
+<section class="slide" id="evento-obsolete">
+    <div class="content">
+        <h1>Eventos JS - Remove</h1>
+    
+        {% code javascript %}
+        applicationCache.onchecking = function(){ /* ... */ }
+        
+        applicationCache.onobsolete = function(){ /* ... */ }
+        {% endcode %}
+    </div>
+
+    <aside class="notes">
+        <p>Nesse caso, o navegador dispara o evento de <code>checking</code>, descobre que o manifesto não existe mais, apaga o cache e me avisa com um evento <code>obsolete</code>.</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="sem-controle">
+    <div class="content">
+        <h1>
+            O usuário não controla nada!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Ok, funciona tudo isso. Mas o usuário não controla nada!!!</p>
+
+        <p>Instalação dispara sozinha só do cara visitar a página! E se eu não quiser instalar? Se estiver no 3G?</p>
+        
+        <p>Mesma coisa pra atualizações: visito a página e ele verifica e atualiza sozinho!</p>
+    
+        <p>E pra desinstalar? Não dá, só se o dev remover tudo do servidor!</p>
+    </aside>
+</section>
+
+<section class="slide ra2" id="ra8">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<!--
+#### CONTROLE
+-->
+<section class="slide destaque" id="controle-usuario">
+    <div class="content">
+        <h1>
+            Controle
+            <small>na mão do usuário</small>
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Queremos controlar tudo isso. Como fazer?</p>
+
+        <p>Vamos começar controlando a instalação. Suponha que temos a página <b>/apostila/</b> que queremos cachear.
+        Não posso colocar o manifest direto no HTML dessa página, senão a instalação dispara automaticamente. Solução: um <code>iframe</code> com o manifesto e coloco esse iframe só quando o usuário quiser instalar!</p>
+    </aside>
+</section>
+
+<section class="slide" id="iframe-install">
+    <div class="content">
+        <h1>instalar.html</h1>
+        
+        {% code html %}
+        <html manifest="apostila.appcache"></html>
+        {% endcode %}
+        
+        {% code text %}
+        CACHE MANIFEST
+
+        /apostila/
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide" id="iframe-install2">
+    <div class="content">
+        <h1>Disparar instalação</h1>
+
+        {% code javascript %}
+        botaoInstalar.onclick = function(){
+            document.body.innerHTML 
+                += '<iframe src="instalar.html"></iframe>';
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Na página principal, posso colocar um botão que carrega esse iframe pra mim quando o usuário decidir instalar.</p>
+        
+        <p>Simples e funciona! Usuário controla quando quer instalar!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="controlar-update">
+    <div class="content">
+        <h1>
+            E o update?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Os updates ainda vão executar automaticamente quando ele visitar qualquer página do cache.</p>
+        <p>Queria só avisar o usuário que há uma modificação e deixá-lo escolher se quer atualizar agora ou não.</p>
+        <p>Preciso de uma maneira de não deixar o browser fazer os downloads se o usuário não quiser.</p>
+    </aside>
+</section>
+
+<section class="slide" id="abort">
+    <div class="content">
+        <h1>Abort</h1>
+
+        {% code javascript %}
+        applicationCache.onchecking = function() {
+            applicationCache.abort();
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Lendo a spec, parece fácil, só chamar o método <code>abort</code>.</p>
+        
+        <p>Segundo a spec, isso interrompe o processo de verificação e download de novas versões.</p>
+        
+        <p>Mas não funciona em nenhum browser! (<a href="https://code.google.com/p/chromium/issues/detail?id=175063">bug Chrome</a>)</p>
+    </aside>
+</section>
+
+<section class="slide ra3" id="ra9">
+    <div class="content">
+        <h1>Rá!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Pegadinha do Mallandro!!</p>
+    </aside>
+</section>
+
+<section class="slide problema" id="impedir-update">
+    <div class="content">
+        <h1>
+            Impedir update automático
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Primeiro passo pra controlar o momento do update é evitar o update automático. Lembre: o update acontece quando o manifesto muda. Pra evitar o update? <b>É só não mudar o manifesto</b>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="request-condicional">
+    <div class="content">
+        <h1>Request do manifesto</h1>
+        
+        {% include svg/palestra-appcache-request-condicional.svg %}
+        
+    </div>
+    <aside class="notes">
+        <p>O problema é que a URL do manifesto está escrita direto no nosso HTML. Se eu mudar o arquivo, ele vai baixar tudo de novo. Preciso que o servidor me devolva o arquivo atualizado só se o usuário quiser atualizar. Se ele não quiser, continuo no antigo.</p>
+    
+        <p>Isso vai exigir uns truques ninja no servidor. Precisamos fazer o servidor devolver coisas diferentes dependendo do desejo do usuário. Pra sinalizar o desejo do usuário, vou usar <b>cookies</b>. (não posso, claro, passar um parâmetro normal, já que isso ia mudar a URL)</p>
+        
+        <p>Vou criar um cookie de marcação pra indicar que nao quero updates. Vou chamá-lo de <code>offline=noupdate</code>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="php0">
+    <div class="content">
+        <h1>Um pouco de PHP</h1>
+        
+        {% code php %}
+        <?php 
+          if ($_COOKIE['offline'] == 'noupdate') {
+            // falo que manifesto não mudou
+          } else {
+            // mando o manifesto novo
+          }
+        ?>
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Meu servidor é bem simples. Esse exemplo está em PHP, mas podia ser qualquer linguagem.</p>
+
+        <p>Se tiver esse valor <i>noupdate</i> especial no cookie, indico que o manifesto não mudou. Senão, se ele quiser atualizar, mando o manifesto novo pro cliente e pronto.</p>
+        
+        <p>Um detalhe importante, claro, é que meu HTML vai ter que apontar o atributo <code>manifest</code> pra esse <B>.php</B> agora, ao invés do arquivo texto do manifesto direto.</p>
+    </aside>
+</section>
+
+<section class="slide" id="php00">
+    <div class="content">
+        <h1>Enviando o manifesto</h1>
+        
+        {% code php %}
+        <?php 
+          if ($_COOKIE['offline'] == 'noupdate') {
+            // falo que manifesto não mudou
+          } else {
+            include('apostila.appcache');
+          }
+        ?>
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Mandar o manifesto mais novo é fácil, só incluir meu arquivo.</p>
+        
+        <p>O problema é indicar pro browser que o manifesto dele não mudou. Eu teria que mandar o manifesto antigo pra ele, assim ele pensa que ainda é igual e não atualiza. Mas são várias versões dos manifestos, eu precisaria guardar histórico de tudo isso e mandar a versão certa pra cada cliente. Inviável.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="http-304">
+    <div class="content">
+        <h1>
+            <big>304</big> Not Modified
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Truquezinho malandro no servidor: devolver 304 enquanto o usuário não quiser instalar.
+        HTTP 304 significa que não houve atualização no arquivo (not modified)!</p>
+    </aside>
+</section>
+
+<section class="slide" id="php1">
+    <div class="content">
+        <h1>304 no servidor</h1>
+        
+        {% code php %}
+        <?php 
+          if ($_COOKIE['offline'] == 'noupdate') {
+            header('HTTP/1.1 304 Not Modified');
+          } else {
+            include('apostila.appcache');
+          }
+        ?>
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Aqui, meu servidor final, que envia o 304 caso o usuário não queira atualizar ou manda o manifesto mais recente caso ele queira atualizar.</p>
+    </aside>
+</section>
+
+<section class="slide" id="cookie">
+    <div class="content">
+        <h1>Cookie no browser</h1>
+        
+        {% code javascript %}
+        // após a instalação inicial
+        applicationCache.oncached = function() {
+            document.cookie = 'offline=noupdate';
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Preciso só fazer meu cookie com valor certo no momento certo.</p>
+        
+        <p>Melhor coisa é, logo depois da primeira instalação, marcar o cookie como <b>noupdate</b> assim todas
+        as verificacoes futuras vão devolver 304.</p>
+    </aside>
+</section>
+
+<section class="slide" id="quero-atualizar">
+    <div class="content">
+        <h1>Quero atualizar!</h1>
+        
+        {% code javascript %}
+        botaoAtualizar.onclick = function() {
+            document.cookie = '';
+            
+            // recarrega o iframe de instalação
+        }
+        {% endcode %}
+
+    </div>
+    <aside class="notes">
+        <p>Usuario vai navegando a vontade no site até que <i>decide</i> fazer atualização. Ele clica num botão
+        'Atualizar' que apaga o cookie e dispara a instalação pelo nosso iframe mágico.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="tem-atualizacao2">
+    <div class="content">
+        <h1>
+            Tem atualização?
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>E como o usuário sabe que tem atualização pra poder clicar no botão? Precisamos verificar nós mesmos, já que desabilitamos a checagem do manifesto.</p>
+    </aside>
+</section>
+
+<section class="slide" id="versao-txt">
+    <div class="content">
+        <h1>versao.txt</h1>
+        
+        {% code text %}
+        10345675
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Imagine um arquivo texto simples com um número de versão dentro. Nada de mais.</p>
+    </aside>
+</section>
+
+<section class="slide" id="versao-txt0">
+    <div class="content">
+        <h1>versao.txt</h1>
+        
+        {% code text %}
+        10345675
+        {% endcode %}
+        
+        {% code text %}
+        CACHE MANIFEST
+
+        /apostila/
+        /versao.txt
+        # ....
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Vamos cachear a versão junto com a aplicação instalada. Assim, sabemos que versão foi instalada.</p>
+    </aside>
+</section>
+
+<section class="slide" id="versao-txt2">
+    <div class="content">
+        <h1>Qual versão tenho?</h1>
+        
+        {% code javascript %}
+        ajax('/versao.txt', function(versao){
+            alert('Versão instalada: ' + versao)
+        })
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Se eu pegar o valor dessa versão via Ajax, vai vir sempre a <b>versão cacheada</b>.</p>
+        
+        <p>O que preciso é checar esse valor cacheado com o <b>valor real do servidor</B>.</p>
+    </aside>
+</section>
+
+<section class="slide" id="versao-txt3">
+    <div class="content">
+        <h1>Qual a última versão?</h1>
+        
+        {% code javascript %}
+        ajax('/versao.txt?ultima', function(ultima){
+            alert('Versão no servidor: ' + ultima)
+        })
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Posso fazer um request pro arquivo real, mudando a URL, passando um parâmetro a mais pra pegar o valor mais novo.</p>
+        
+        <p>Não esqueça de habilitar o request pra <code>/versao.txt?ultima</code> na seção NETWORK do manifesto!</p>
+        
+        <p>Ou, melhor ainda, na seção FALLBACK, colocando o <code>/versao.txt</code> cacheado como fallback. Assim, se estiver offline, sempre vai funcionar o Ajax e, no máximo, ele vai achar que estamos na versão cacheada.</p>
+    </aside>
+</section>
+
+<section class="slide" id="versao-txt4">
+    <div class="content">
+        <h1>Aviso de update</h1>
+        
+        {% code javascript %}
+        ajax('/versao.txt', function(versao){
+            ajax('/versao.txt?ultima', function(ultima){
+                if (versao !== ultima) {
+                
+                    // avisa o usuario que tem nova versao
+                    // e dá opção de instalação
+                    
+                }
+            })
+        })
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Encadeando os ajax, posso pegar as duas versões, compará-las e avisar o usuário em caso de atualização. Aí ele opta se clica no botão atualizar que montamos antes.</p>
+        
+        <p>Pronto! Instalação e update totalmente na mão do usuário. Falta só a desinstalação.</p>
+    </aside>
+</section>
+
+<section class="slide destaque" id="quero-apagar">
+    <div class="content">
+        <h1>
+            Não quero mais!
+        </h1>
+    </div>
+    <aside class="notes">
+        <p>Último passo? Queria que o usuário controlasse a <b>desinstalação</b> também.</p>
+        
+        <p>Pra apagar a instalação, o manifesto precisa devolver 404. Com nosso cookie e o truque no servidor? Fácil.</p>
+    </aside>
+</section>
+
+<section class="slide" id="php2">
+    <div class="content">
+        <h1>404 no servidor</h1>
+        
+        {% code php %}
+        <?php 
+          if ($_COOKIE['offline'] == 'noupdate') {
+            header('HTTP/1.1 304 Not Modified');
+          } elseif ($_COOKIE['offline'] == 'remove') {
+            header('HTTP/1.1 404 Not Found');
+          } else {
+            include('apostila.appcache');
+          }
+        ?>
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Criei um valor novo pro cookie indicando que quero remover, aí mando 404 pro navegador remover todo o cache.</p>
+    </aside>
+</section>
+
+<section class="slide" id="cookie2">
+    <div class="content">
+        <h1>Cookie no browser</h1>
+        
+        {% code javascript %}
+        // quero atualizar!
+        botaoRemover.onclick = function() {
+            document.cookie = 'offline=remove';
+            // recarrega o iframe de instalação
+        }
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Voilá, tudo funcionando com controle do usuário!</p>
+    </aside>
+</section>
+
+<section class="slide" id="php3">
+    <div class="content">
+        {% code php %}
+        <?php 
+          header("Vary: Cookie");
+          header("Expires: Thu, 01 Jan 1970 00:00:00 GMT");
+
+          if ($_COOKIE['offline'] == 'noupdate') {
+            header('HTTP/1.1 304 Not Modified');
+          } elseif ($_COOKIE['offline'] == 'remove') {
+            header('HTTP/1.1 404 Not Found');
+          } else {
+            header('Content-Type: text/cache-manifest');
+            include('apostila.appcache');
+          }
+        ?>
+        {% endcode %}
+    </div>
+    <aside class="notes">
+        <p>Últimos detalhes no servidor: como nossa resposta varia de acordo com o valor do Cookie, é bom colocar <code>Vary:Cookie</code>. E já aproveito e coloco <code>Expires</code> no passado também, além do <code>Content-Type</code> correto.</p>
+    </aside>
+</section>
+
+<section class="slide ra4" id="ai-sim">
+    <div class="content">
+        <h1>Aí sim!</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>AppCache Pro! Agora sim, estamos no controle de tudo. Bem, quase tudo.</p>
+        
+        <p>AppCache é bom quando sabemos o que queremos cachear, como uma App fechada ou coisas estáticas. Mas imagine o usuário dinamicamente escolhendo conteúdo offline. Como uma revista onde ele escolhe os artigos que quer deixar disponíveis. Como fazer?</p>
+        
+        <p>Não existe API JS pra colocar ou remover coisas do cache. Precisamos então <B>gerar o manifesto dinamicamente no servidor</B> incluindo o que o usuário quer apenas. Vai demandar uma certa logica lá no server e uma forma de indicar no cookie/sessão quais artigos o usuário quer.</p>
+        
+        <p>Outra opção é usar o AppCache só pra base da instalação offline e arquivos estáticos comuns.
+        Pras coisas que o usuário vai escolher, usar algum Web Storage que você controla via JS: localStorage, IndexedDB,  WebSQL, File API.</p>
+        
+        <p>Em ambos os casos, você acaba escrevendo lógica de salvar, remover, atualizar, tudo não mão (seja no servidor ou no JS). O AppCache deixa a gente na mão em cenários mais complexos.</p>
+    </aside>
+</section>
+
+<section class="slide ra4" id="dicas-finais">
+    <div class="content">
+        <h1>Dicas <br>finais</h1>
+    </div>
+    
+    <aside class="notes">
+        <p>Últimas dicas</p>
+
+        <ul>
+            <li>Cuidado, AppCache é perigoso. Qualquer besteira e fica pra sempre no usuário.</li>
+            <li>Apagar algo cacheado é BEM complicado e nenhum usuário vai fazer.</li>
+            <li>Browser mais fácil pra desenvolver é o Chrome, que loga tudo no console e permite apagar/ver cache facilmente.</li>
+        </ul>
+        
+        <p>Boas referências pra ver mais:</p>
+        
+        <ul>
+            <li><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/offline.html">Especificação oficial</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/HTML/Using_the_application_cache">Using the Application Cache - MDN</a></li>
+            <li><a href="http://appcachefacts.info/">AppCache Facts</a></li>
+            <li><a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a douchbag</a></li>
+            <li><a href="http://diveintohtml5.info/offline.html">AppCache no Dive into HTML 5</a></li>
+        </ul>
+    </aside>
+</section>
+
+<section class="slide" id="fim">
+    <div class="content">
+        <h1>Obrigado</h1>
+
+        <div class="contato">
+            <a href="http://sergiolopes.org/">sergiolopes.org</a>
+            <a href="http://twitter.com/sergio_caelum">@sergio_caelum</a>
+        </div>
+
+        <div class="font-caelum ex1 logo"></div>
+    </div>
+
+    <aside class="notes">
+        <p>Gostou? <b>Compartilhe</b> no Facebook e no Twitter usando os botões aí do topo!</p>
+        <p>Não de me seguir também no <a href="http://twitter.com/sergio_caelum">Twitter</a> e de acompanhar <a href="http://sergiolopes.org/">meu blog</a> para mais artigos.</p>
+        <p>E o código dessa palestra está todo disponível no <a href="https://github.com/sergiolopes/blog">Github do blog</a>.</p>
+    </aside>
+</section>
+</article>
+
+
+
+
+
+
+
+<!--
+####   BARRAS DE APRESENTACAO
+ -->
+<aside class="bars">
+    <div class="content"></div>
+
+    <div class="site">
+        <div class="title goto-presentation-mode">
+            HTML5 offline e AppCache
+        </div>
+
+        <div class="share">
+            compartilhe:
+            
+            <a class="facebook" title="Compartilhar no Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsergiolopes.org%2Fpalestra-html5-offline%2F">Facebook</a>
+
+            <a class="twitter" title="Compartilhar no Twitter" href="https://twitter.com/intent/tweet?text=Palestra%20HTML5%20offline%20com%20AppCache%20via%20@sergio_caelum&amp;url=http%3A%2F%2Fsergiolopes.org%2Fpalestra-html5-offline%2F">Twitter</a>
+
+        </div>
+
+        <div class="navigation">
+            <span class="goto-previous b">Anterior</span>
+            <span class="goto-next b">Próximo</span>
+        </div>
+    </div>
+</aside>
