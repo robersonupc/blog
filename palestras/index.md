@@ -10,15 +10,22 @@ Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vári
 
 Lista das palestras mais recentes que dei e links pros slides:
 
+# 2013
+
+* *20/Jul* - **Web Day** - *Dominando HTML5 offline com AppCache*
+* *03/Mai* - **OlhóSEO - Florianópolis** - *Design Responsivo por uma Web única*
+* *05/Abr* - **Mobile Conf** - *Os caminhos de uma estratégia mobile* (keynote)
+* *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
+
 # 2012
 
-* *05/Dez* - **JavaOne Latin America** - [Porque você deveria usar CDI em todos os seus projetos Java](http://www.slideshare.net/caelumdev/porque-voc-deveria-usar-cdi-nos-seus-projetos-java-javaone-la-2012-srgio-lopes) 
+* *05/Dez* - **JavaOne Latin America** - [Porque você deveria usar CDI em todos os seus projetos Java](http://www.slideshare.net/caelumdev/porque-voc-deveria-usar-cdi-nos-seus-projetos-java-javaone-la-2012-srgio-lopes)
 * *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 * *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 	* Vídeo da [mesa redonda do 7 masters](http://www.youtube.com/watch?v=bRrZYlbre7M) com minha participação
 	* [Vídeo oficial](https://www.youtube.com/watch?v=aH9eVa2cTcM) da palestra feito pela organização do evento
 * *08/Set* - **Joomla Day Brasil** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
-* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/) 
+* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
 	* [Vídeo oficial](http://www.infoq.com/br/presentations/tonelada-truques-web) gravado no evento (by InfoQ Brasil)
 	* [Entrevista sobre mobile web](http://www.infoq.com/br/interviews/novidades-no-web-mobile) gravada no evento pelo InfoQ Brasil por Rafael Sakurai
 * *14/Jul* - **Front in BH** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
