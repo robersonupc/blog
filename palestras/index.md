@@ -15,7 +15,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *20/Jul* - **Web Day** - *Dominando HTML5 offline com AppCache*
 * *03/Mai* - **OlhóSEO - Florianópolis** - *Design Responsivo por uma Web única*
 * *05/Abr* - **Mobile Conf** - *Os caminhos de uma estratégia mobile* (keynote)
-* *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
+* *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/) - [vídeo](https://www.youtube.com/watch?v=mrS4ivgj1Es)
 
 # 2012
 
