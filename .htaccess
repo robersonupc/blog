@@ -58,3 +58,27 @@ AddType text/cache-manifest .appcache
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
 
+
+
+# Links simples
+RewriteEngine on
+
+# redirect dos exemplos do livro
+RewriteRule ^m0$ /livro-web-mobile/exemplos/grid-flexivel-simples.html [R=302,L]
+RewriteRule ^m1$ /livro-web-mobile/exemplos/media-queries1.html [R=302,L]
+RewriteRule ^m2$ /livro-web-mobile/exemplos/media-queries2.html [R=302,L]
+RewriteRule ^m3$ /livro-web-mobile/exemplos/viewport.html [R=302,L]
+RewriteRule ^m4$ /livro-web-mobile/exemplos/viewport-mobile.html [R=302,L]
+RewriteRule ^m5$ /livro-web-mobile/exemplos/retina.html [R=302,L]
+RewriteRule ^m6$ /livro-web-mobile/exemplos/touch-start-end.html [R=302,L]
+RewriteRule ^m7$ /livro-web-mobile/exemplos/touch-smart.html [R=302,L]
+RewriteRule ^m8$ /livro-web-mobile/exemplos/touch-slide.html [R=302,L]
+RewriteRule ^m9$ /livro-web-mobile/exemplos/input-html5.html [R=302,L]
+RewriteRule ^m10$ /livro-web-mobile/exemplos/input-date.html [R=302,L]
+RewriteRule ^m11$ /livro-web-mobile/exemplos/input-number.html [R=302,L]
+RewriteRule ^m12$ /livro-web-mobile/exemplos/input-range-color.html [R=302,L]
+RewriteRule ^m13$ /livro-web-mobile/exemplos/input-password.html [R=302,L]
+RewriteRule ^m14$ /livro-web-mobile/exemplos/select.html [R=302,L]
+RewriteRule ^m15$ /livro-web-mobile/exemplos/input-file.html [R=302,L]
+RewriteRule ^m16$ /livro-web-mobile/exemplos/labels.html [R=302,L]
+

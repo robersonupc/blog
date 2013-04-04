@@ -11,6 +11,8 @@ sleep 5
 stylus _includes/css/palestra/ -w -u nib  &
 stylus _includes/css/ -w -u nib  &
 stylus css/ -w -u nib  &
+stylus livro-web-mobile/ -w -u nib  &
+stylus livro-web-mobile/exemplos/ -w -u nib  &
 stylus . -w -u nib  &
 for file in _includes/css/palestra/ _includes/css/ css/ style.css; do
 	touch $file

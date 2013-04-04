@@ -7,6 +7,8 @@ echo Build stylus
 stylus _includes/css/palestra/ -u nib
 stylus _includes/css/ -u nib  
 stylus css/ -u nib  
+stylus livro-web-mobile/ -u nib  
+stylus livro-web-mobile/exemplos/ -u nib  
 stylus . -u nib  
 
 echo Regenerating site
