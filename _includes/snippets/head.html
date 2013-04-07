@@ -20,7 +20,7 @@
 
 <!-- Facebook -->
 <meta property="og:title" content="{{ page.title | escape }}">
-<meta property="og:url" content="{{site.production_url}}{{ page.url }}">
+<meta property="og:url" content="{{site.production_url}}{{ page.url | replace: 'index.html','' }}">
 <meta property="og:image" content="{{site.production_url}}{{ page.shareImage }}">
 <meta property="og:type" content="{{ page.ogtype }}">
 <meta property="og:site_name" content="{{ site.title }}">
@@ -34,7 +34,7 @@
 <meta itemprop="image" content="{{site.production_url}}{{ page.shareImage }}">
 
 <!-- SEO -->
-<meta name="description" content="{{ page.description | escape}}">
+<meta name="description" content="{{ page.description | escape }}">
 
 <!-- Feed -->
 <link rel="alternate" type="application/atom+xml" title="SergioLopes.org" href="{{site.production_url}}/feed.xml">

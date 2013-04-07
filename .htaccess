@@ -57,6 +57,7 @@ AddType text/cache-manifest .appcache
 
 AddType image/svg+xml svg svgz
 AddEncoding gzip svgz
+AddEncoding gzip ttf
 
 
 

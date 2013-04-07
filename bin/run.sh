@@ -4,11 +4,12 @@
 trap "killall ruby node" EXIT
 
 # starts jekyll in no-server mode
-jekyll --auto --limit_posts 3 &
+jekyll --auto --limit_posts 1 &
 sleep 5
 
 # compiles stylus
 stylus _includes/css/palestra/ -w -u nib  &
+stylus _includes/css/pagina/ -w -u nib  &
 stylus _includes/css/ -w -u nib  &
 stylus css/ -w -u nib  &
 stylus livro-web-mobile/ -w -u nib  &

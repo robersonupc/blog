@@ -5,6 +5,7 @@ rm -rf _deploy
 # build stylus
 echo Build stylus
 stylus _includes/css/palestra/ -u nib
+stylus _includes/css/pagina/ -u nib
 stylus _includes/css/ -u nib  
 stylus css/ -u nib  
 stylus livro-web-mobile/ -u nib  
