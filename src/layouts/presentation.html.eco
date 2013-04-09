@@ -10,7 +10,7 @@ pagetype: blog
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<link rel="apple-touch-icon" href="/img/palestra/{{ page.slug }}/appicon.png">
+	<link rel="apple-touch-icon" href="/img/palestra/<%= @document.slug %>/appicon.png">
 
 	<style>
 	{% include css/code.css %}
@@ -43,7 +43,7 @@ pagetype: blog
 	</div>
 	-->
 
-	{{ content }}	
+	<%- @content %>
 
 	<span class="loading">&#8635;</span>
 

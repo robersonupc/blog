@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="refresh" content="0;URL='<%= @document.originalURI %>'"> 
+	<meta name="robots" content="noindex">
+	<title>Redirecionando...</title>
+</head>
+<body>
+	<p>Redirecionando...</p>
+	<p><a href="<%= @document.originalURI %>"><%= @document.originalURI %></a></p>
+	
+	<script>location.href='<%= @document.originalURI %>';</script>
+</body>
+</html>

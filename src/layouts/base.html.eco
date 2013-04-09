@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" {% if page.offlineManifest %}manifest="<%= @document.offlineManifest %>"{% endif %}>
+<head>
+
+	{% if page.googlefonts %}
+		<!-- Fontes -->
+		<link href='//fonts.googleapis.com/css?family=<%= @document.googlefonts %>' rel='stylesheet'>
+	{% endif %}
+
+	<!-- Estilos -->	
+	{% unless page.noglobalcss %}
+		<link rel="stylesheet" href="/style.css?13">
+	{% endunless %}
+	{% if page.layoutcss %}
+		<link rel="stylesheet" href="<%= @document.layoutcss %>">
+	{% endif %}
+	{% if page.css %}
+		<link rel="stylesheet" href="<%= @document.css %>">
+	{% endif %}
+
+	<!-- inclui head comum, sem assets -->
+	{% include snippets/head.html %}
+
+</head>
+<body class="{% if page.theme %}<%= @document.theme %>{% else %}classic{% endif %}-theme themed-body">
+
+	<%- @content %>
+
+	<div id="fb-root"></div>
+	<script src="/js/scripts.js?4" async></script>
+
+	{% if page.layoutscript %}
+		<script src="<%= @document.layoutscript %>" async></script>
+	{% endif %}
+	{% if page.script %}
+		<script src="<%= @document.script %>" async></script>
+	{% endif %}
+</body>
+</html>

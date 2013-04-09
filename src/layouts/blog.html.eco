@@ -34,4 +34,4 @@ pagetype: blog
 
 </header>
 
-{{ content }}
+<%- @content %>

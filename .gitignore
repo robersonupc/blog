@@ -1,4 +1,3 @@
-_site
-_deploy
 _drafts
-*.css
+out
+node_modules
