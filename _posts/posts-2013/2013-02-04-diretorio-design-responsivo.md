@@ -59,6 +59,7 @@ Então você quer aprender **design responsivo**? Ou já sabe o conceito e quer 
 
 ## 3. Livros e cursos
 
+* **Meu novo livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**
 * [Web Design Responsivo](http://www.casadocodigo.com.br/products/livro-web-design-responsivo), do [Tárcio Zemel](http://twitter.com/tarciozemel), pela [editora Casa do Código](http://www.casadocodigo.com.br/) - meu [review](/review-livro-web-design-responsivo-tarcio-zemel/).
 * [Curso Web Design da Caelum - HTML, CSS e JavaScript](http://www.caelum.com.br/curso-html-css-javascript/). Design responsivo é um dos tópicos do curso.
 

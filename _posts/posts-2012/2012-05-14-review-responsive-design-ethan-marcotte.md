@@ -38,4 +38,4 @@ Alguns destaques das anotações que fiz no Kindle durante a leitura (e se você
 
 > In the age of portable 3G hotspots and wi-fi enabled phones, it can be dangerous to automatically equate screen's dimensions with the bandwidth available to it.
 
-Se você prefere um conteúdo em português, confira o excelente [livro do Tárcio Zemel](http://sergiolopes.org/review-livro-web-design-responsivo-tarcio-zemel/) sobre Design Resposivo. 
+Se você prefere um conteúdo em português, confira o **meu novo livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**. 
