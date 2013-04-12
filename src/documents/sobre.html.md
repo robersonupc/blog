@@ -16,6 +16,7 @@ Atividades
 * Instrutor e desenvolvedor na [Caelum](http://www.caelum.com.br/)
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
 * [Palestrante em diversos eventos](/palestras/)
+* **Autor do livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**
 * Co-autor do livro [Introdução a arquitetura e design Java](http://www.arquiteturajava.com.br/)
 
 Social

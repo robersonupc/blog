@@ -18,6 +18,8 @@ O [livro](http://www.casadocodigo.com.br/products/livro-web-design-responsivo) *
 
 **Recomendo o livro** para todos os Web Designers brasileiros que querem começar nessa área de design responsivo e web móvel -- e, aliás, recomendo que todos entrem nesse área o quanto antes, pois é o futuro. O livro é bastante inspirado nas ideias do [Ethan Marcotte](/review-responsive-design-ethan-marcotte/) mas traz uma abordagem mais **atualizada**, além, claro, de ser em português.
 
+Um bom complemento a se livro do Tárcio é **meu novo livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**, também da editora *Casa do Código*.
+
 O livro [Web Design Responsivo: Páginas adaptáveis para todos os dispositivos](http://www.casadocodigo.com.br/products/livro-web-design-responsivo) está disponível diretamente na editora *Casa do Código* em ebook -- PDF, mobi, epub -- por R$ 30, em versão impressa por R$ 60, ou o combo por R$ 70. 
 
 A seguir o prefácio que escrevi para o livro:
