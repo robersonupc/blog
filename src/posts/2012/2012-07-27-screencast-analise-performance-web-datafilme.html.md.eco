@@ -11,6 +11,6 @@ O site foi desenvolvido pelo pessoal da [Bind Solution](http://bindsolution.com)
 
 E este é também o **primeiro screencast aqui no Blog**. Pensei que um vídeo iria me ajudar a mostrar melhor o processo de análise e as dicas, ao invés de só escrever um texto. Mas como é o primeiro vídeo que gravo, vou botar um *selo de beta* aqui pra você não esperar um super vídeo profissional.
 
-{% youtube f5ZZEtGCxrQ %}
+<%- @youtube('f5ZZEtGCxrQ') %>
 
 O que achou? Acesse o site do [DataFilme.com.br](http://www.datafilme.com.br) também e veja o que mais melhoraria. E estou pensando em fazer mais análises como essas aqui no Blog, com sites indicados por leitores. Acha uma boa? Gosta do formato screencast? **Deixe um comentário**.

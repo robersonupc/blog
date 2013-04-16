@@ -65,7 +65,7 @@ Lembre que você não tem como ajustar o layout para diferentes *breakpoints* co
 
 Veja a nova newsletter da Caelum responsiva abrindo em diversas resoluções sem truques de media queries:
 
-{% youtube -ReoK_nzECw %}
+<%- @youtube('-ReoK_nzECw') %>
 
 Repare como, comparado a um site, a resposividade é menos... *glamurosa*. Mas completamente **funcional**.
 

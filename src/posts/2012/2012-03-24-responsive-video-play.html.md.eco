@@ -11,7 +11,7 @@ Ferramentas de testes para *mobile* e *responsive design* costumam focar nas res
 
 Assim nasceu meu *pet project* chamado **Responsive Play** -- [disponível no Github](https://github.com/sergiolopes/responsive-play). Com ele, você pode gerar um **vídeo** mostrando seu design responsivo em centenas de resoluções. Como o vídeo abaixo do [ArquiteturaJava.com.br](http://www.arquiteturajava.com.br), um site responsivo em que trabalhei:
 
-{% youtube N_17S54YNhE ArquiteturaJava.com.br no Responsive Play %}
+<%- @youtube('N_17S54YNhE', 'ArquiteturaJava.com.br no Responsive Play') %>
 
 Rodar o projeto é bem fácil:
 
@@ -27,16 +27,17 @@ play http://www.arquiteturajava.com.br 320 960
 
 Mais um demo: um vídeo do [Boston Globe](http://www.bostonglobe.com), um famoso caso de design responsivo que funciona em todo tipo de resolução:
 
-{% youtube xmyYz6D-jCA BostonGlobe.com no Responsive Play %}
+<%- @youtube('xmyYz6D-jCA', 'BostonGlobe.com no Responsive Play') %>
 
 Browser edition
 ---------------
 
 Além disso, o **Responsive Play** tem uma versão web pra você rodar no navegador e visualizar seu site em diversas resoluções, sem gerar o vídeo. É só [acessar a página](http://sergiolopes.github.com/responsive-play/) e colocar o endereço de teste.
 
-{% figure ArquiteturaJava.com.br no Responsive Play, Browser Edition %}
-	responsive-play/browser-edition.png
-{% endfigure %}
+<figure>
+	<img src="img/posts/responsive-play/browser-edition.png">
+	<figcaption>ArquiteturaJava.com.br no Responsive Play, Browser Edition</figcaption>
+</figure>
 
 Mais
 ----

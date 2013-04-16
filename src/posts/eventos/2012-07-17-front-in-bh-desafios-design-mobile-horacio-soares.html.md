@@ -7,9 +7,10 @@ description: Minhas anotações da palestra do Horácio Pastor Soares no evento 
 
 Horácio Pastor Soares ([blog](http://horaciosoares.blogspot.com.br/), [twitter](https://twitter.com/horaciosoares)), da Digital Acesso, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre os **Desafios do Design Mobile** ([slides](http://www.slideshare.net/horacio.soares/frontinbh-os-dasafios-do-desagin-mobile)).
 
-{% figure "Palestra do Horácio Soares no Front In BH 2012" %}
-	frontinbh2012/horacio.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/frontinbh2012/horacio.jpg">
+	<figcaption>"Palestra do Horácio Soares no Front In BH 2012"</figcaption>
+</figure>
 
 ## Minhas anotações
 

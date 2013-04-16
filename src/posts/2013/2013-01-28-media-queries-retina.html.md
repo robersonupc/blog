@@ -19,9 +19,9 @@ Nesse artigo, discuto a forma correta de se atacar telas de alta resolução com
 
 Sim, eu sei que você provavelmente já viu ou usou uma [versão bem maior dessa media query](https://gist.github.com/4161897), cheia de prefixos de navegadores e valores estranhos. Pois bem, não use mais, o **correto para os browsers de hoje e do futuro** é essa aí de cima.
 
-{% figure %}
-media-queries/media-queries-resolucao.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/media-queries/media-queries-resolucao.jpg">
+</figure>
 
 ## Porque essa media query pra telas retina?
 

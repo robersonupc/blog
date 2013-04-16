@@ -74,7 +74,7 @@ feedWarning: Esse post possui design e interatividade não suportados nos feeds 
 	</section>
 
 	<noscript>
-		{% youtube N_17S54YNhE %}
+		<%- @youtube('N_17S54YNhE') %>
 	</noscript>
 
 	<div class="txt">

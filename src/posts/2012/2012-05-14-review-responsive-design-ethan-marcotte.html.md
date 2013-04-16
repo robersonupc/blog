@@ -10,9 +10,10 @@ Design responsivo é o futuro da Web. Ethan Marcotte criou o termo em 2010 em um
 
 Há pouco tempo, li a versão em ebook do livro em meu Kindle Fire -- recomendo um leitor colorido como o Fire pelas imagens. Minha experiência começou no excelente processo de compra, extremamente descomplicado, da [A Book Apart](http://www.abookapart.com/). Dois cliques, nenhum campo preenchido e compra feita pelo PayPal -- e eu não tinha comprado nunca com eles, não tinha cadastro anterior nem nada. *(aliás, se você for comprar, recomendo o [combo com o "Mobile First" do Luke Wroblewski](http://www.abookapart.com/products/mobile-first-responsive-web-design-bundle))*
 
-{% figure "Livro Responsive Web Design de Ethan Marcotte. Editora A Book Apart." %}
-	livro-rwd-ethan/livro-rwd.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/livro-rwd-ethan/livro-rwd.jpg">
+	<figcaption>"Livro Responsive Web Design de Ethan Marcotte. Editora A Book Apart."</figcaption>
+</figure>
 
 Sobre o livro em si. **Leitura bastante agradável**, um livro **direto ao ponto** e **curto**, o que eu acho uma grande vantagem. Ethan Marcotte é o pai do design responsivo, então ler o que ele tem a dizer traz uma certa **autoridade**, além de ser interessante pra ver como surgiram as ideias desse movimento.
 

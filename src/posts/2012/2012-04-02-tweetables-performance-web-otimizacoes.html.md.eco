@@ -7,46 +7,46 @@ description: Descubra porque um site rápido é importante em 14 fatos tweetáve
 
 Por que otimizar seu site? Quais impactos de uma página lerda? E o que outras pessoas e empresas já descobriram quando melhoraram sua velocidade? Se você precisava de fatos para se convencer -- ou convencer alguém -- a otimizar, aproveite os **14 fatos tweetáveis** desse post.
 
-{% tweetable Pra Amazon, 1s a mais no carregamento da página custa 1.6 bilhão de dólares por ano %}
+<%- @tweetable('Pra Amazon, 1s a mais no carregamento da página custa 1.6 bilhão de dólares por ano') %>
 A maior varejista americana descobriu uma relação direta entre faturamento e a performance de seu site ([fonte](http://www.fastcompany.com/1825005/impatient-america-needs-faster-intertubes "Artigo da FastCompany sobre performance e Amazon")).
 
-{% tweetable O tráfego do Yahoo! aumenta 9% a cada 400ms de melhora na velocidade %}
+<%- @tweetable('O tráfego do Yahoo! aumenta 9% a cada 400ms de melhora na velocidade') %>
 Segundo estudos do próprio Yahoo em 2008. ([fonte](http://www.slideshare.net/stoyan/yslow-20-presentation))
 
-{% tweetable Usuários expressam mais agitação e stress em sites lentos, e precisam de 50% mais concentração %}
+<%- @tweetable('Usuários expressam mais agitação e stress em sites lentos, e precisam de 50% mais concentração') %>
 Além disso, já foi constatado até aumento de pressão arterial quando o usuário tem uma navegação lenta! ([fonte](http://www.webperformancetoday.com/2011/02/24/website-performance-web-stress/)).
 
-{% tweetable NYTimes: você perderá clientes para seu concorrente se sua página for mais de 250ms mais lenta %}
+<%- @tweetable('NYTimes: você perderá clientes para seu concorrente se sua página for mais de 250ms mais lenta') %>
 Essa matéria do New York Times de Março/2012 fala que 250ms é o número mágico da vantagem competitiva na Web. ([fonte](https://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html "For Impatient Web Users, an Eye Blink Is Just Too Long to Wait"))
 
-{% tweetable 71% dos usuários esperam que um site abra em seu celular tão rápido quanto no desktop. %}
+<%- @tweetable('71% dos usuários esperam que um site abra em seu celular tão rápido quanto no desktop.') %>
 Segundo a pesquisa *[What Mobile Users Want](http://www.gomez.com/wp-content/downloads/19986_WhatMobileUsersWant_Wp.pdf)* da Gomez/Compuware em julho de 2011.
 
-{% tweetable Ao cortar 2,2s da landing page do Firefox, a Mozilla aumentou o número de downloads em 15% %}
+<%- @tweetable('Ao cortar 2,2s da landing page do Firefox, a Mozilla aumentou o número de downloads em 15%') %>
 No total, foram mais **60 milhões** de cópias do navegador baixadas por ano. ([fonte](http://blog.mozilla.com/metrics/category/website-optimization/ "Estudo de otimização da Mozilla"))
 
-{% tweetable Um experimento do Google aumentou o carregamento de 0.4s para 0.9s. O tráfego de buscas caiu 20% %}
+<%- @tweetable('Um experimento do Google aumentou o carregamento de 0.4s para 0.9s. O tráfego de buscas caiu 20%') %>
 Nesse experimento, o Google aumentou o número de resultados de busca de 10 para 30, impactando em apenas meio segundo a performance. ([fonte](http://glinden.blogspot.com/2006/11/marissa-mayer-at-web-20.html))
 
-{% tweetable A Microsoft mostrou que 2s a mais de latência no Bing diminuíam o faturamento em 4,3% %}
+<%- @tweetable('A Microsoft mostrou que 2s a mais de latência no Bing diminuíam o faturamento em 4,3%') %>
 O experimento ainda mostrou queda no número de buscas, nos cliques e na satisfação final dos usuários ([fonte](http://velocityconference.blip.tv/file/2279751/))
 
-{% tweetable A expectativa de um comprador online em 2006 era de 4s para carregamento da página. Em 2010, 2s. %}
+<%- @tweetable('A expectativa de um comprador online em 2006 era de 4s para carregamento da página. Em 2010, 2s.') %>
 Segundo estudos da Forrester Consulting, com muitos outros dados. ([fonte](http://www.webperformancetoday.com/2010/06/15/everything-you-wanted-to-know-about-web-performance/))
 
-{% tweetable Um experimento da Caelum piorou o carregamento da página de 2s para 4s. Os pageviews caíram 28%. %}
+<%- @tweetable('Um experimento da Caelum piorou o carregamento da página de 2s para 4s. Os pageviews caíram 28%.') %>
 Esse experimento fez o tamanho da página subir de 100kb para 300kb, aumentando o número de requests de 12 para 42, o que resultou em um crescimento no tempo de carregamento de 2s para 6s. Os impactos foram queda de 21% no tempo que os usuários ficam no Site, menos 28% pageviews e uma queda de 18% no conversion rate. ([fonte](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/ "Artigo sobre otimizações no Blog da Caelum"))
 
-{% tweetable Uma diminuição de 6s para 1.2s na página do Shopzilla aumentou as vendas em 12%. %}
+<%- @tweetable('Uma diminuição de 6s para 1.2s na página do Shopzilla aumentou as vendas em 12%.') %>
 Além disso, o número de pageviews cresceu **25%** e a quantidade de servidores necessários pra rodar o site **caiu pela metade**. ([fonte](http://www.scribd.com/doc/16877317/Shopzillas-Site-Redo-You-Get-What-You-Measure "Slides sobre otimizações no Shozilla"))
 
-{% tweetable 50% dos usuários mobile abandonam um site se ele não abre em até 10s. E 3 em cada 5 não voltam mais. %}
+<%- @tweetable('50% dos usuários mobile abandonam um site se ele não abre em até 10s. E 3 em cada 5 não voltam mais.') %>
 O crescimento do mercado mobile traz novos desafios. E os usuários são exigentes! ([fonte](https://mashable.com/2012/03/14/slow-website-stats-infographic/))
 
-{% tweetable Desde 2010, o Google considera a velocidade de carregamento dos sites no ranking de buscas. %}
+<%- @tweetable('Desde 2010, o Google considera a velocidade de carregamento dos sites no ranking de buscas.') %>
 Entre as diversas variáveis usadas no page rank, o Google incluiu também a velocidade das páginas. SEO é um outro excelente motivo para se otimizar! ([fonte](http://googlewebmastercentral.blogspot.com.br/2010/04/using-site-speed-in-web-search-ranking.html))
 
-{% tweetable O Walmart descobriu que compradores viam seu site carregar 2x mais rápido que não compradores. %}
+<%- @tweetable('O Walmart descobriu que compradores viam seu site carregar 2x mais rápido que não compradores.') %>
 Ao analisar os visitantes que compraram algo e os que não compraram, eles descobriram que quem compra em geral viu um site mais rápido. A performance no Walmart.com está diretamente ligada ao *bounce rate* do site. ([fonte](https://minus.com/msM8y8nyh/2e "Slides sobre otimizações e estudos do Walmart.com"))
 
 Falo de performance e otimizações de Sites há algum tempo já. Tenho alguns [artigos no blog da Caelum](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/ "26 técnicas de otimizações de Sites, no Blog da Caelum") e palestras em diversos eventos, como esse meu [keynote no QCon SP 2011](http://www.slideshare.net/caelumdev/qcon-2011-por-uma-web-mais-rpida-tcnicas-de-otimizao-de-sites "Slides do keynote sobre otimizações no QCon SP 2011"). Divulgue esses fatos e, principalmente, faça algo por seu site e otimize-o já.

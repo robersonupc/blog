@@ -7,9 +7,10 @@ description: Minhas anotações da palestra do Gabriel Oliveira no evento QCon S
 
 Gabriel Oliveira ([twitter](https://twitter.com/gabaiel)), da [Caelum](http://www.caelum.com.br/), palestrou na track de **Front End** do evento [QCon SP 2012](http://www.qconsp.com/) sobre técnicas de offline storage com o título *HTML5 Offline & Storage: soluções para um mundo sem conexão permanente* ([slides](http://www.slideshare.net/gabrielso/html5-offline-storage)).
 
-{% figure "Palestra do Gabriel Oliveira no QCon SP 2012" %}
-	qconsp2012/gabriel.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/qconsp2012/gabriel.jpg">
+	<figcaption>"Palestra do Gabriel Oliveira no QCon SP 2012"</figcaption>
+</figure>
 
 ## Minhas anotações
 

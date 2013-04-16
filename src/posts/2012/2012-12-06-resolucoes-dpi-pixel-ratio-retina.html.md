@@ -14,9 +14,10 @@ O Nexus 7 tem resolução **tvdpi** com **devicePixelRatio** de ~1.3, o que dá 
 
 Pixel ratio, viewport, CSS pixels, dpi - *parece grego?* Leia mais.
 
-{% figure iPad Mini vs. Nexus 7 vs. Kindle Fire HD %}
-	resolucoes/ipadmini-nexus-kindle.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/resolucoes/ipadmini-nexus-kindle.jpg">
+	<figcaption>iPad Mini vs. Nexus 7 vs. Kindle Fire HD</figcaption>
+</figure>
 
 ## Resoluções e DPIs
 
@@ -55,9 +56,10 @@ Por isso o [artigo do Gizmodo](http://gizmodo.com/5954863/the-ipad-mini-screen-s
 
 Não quer dizer claro, que ter uma tela com alta resolução e com alto *pixel ratio* seja ruim. Embora o conteúdo fique igual de tamanho nos dois tipos de iPhone, ele fica **mais bem definido** no retina, claro. Textos e gráficos ficam ótimos. Conteúdos grandes e com *zoom out* ficam mais definidos -- como uma foto grande ou um vídeo HD ou mesmo um site Desktop visto no celular.
 
-{% figure Diferença de viewport em tablets do mesmo tamanho físico (<a href="http://www.alistapart.com/articles/a-pixel-identity-crisis/">A List Apart</a>) %}
-	resolucoes/tab-vs-fire.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/resolucoes/tab-vs-fire.jpg">
+	<figcaption>Diferença de viewport em tablets do mesmo tamanho físico (<a href="http://www.alistapart.com/articles/a-pixel-identity-crisis/">A List Apart</a>)</figcaption>
+</figure>
 
 ## Devíamos falar de 'DPI de conteúdo'
 
@@ -101,9 +103,10 @@ Olhando essa lista, percebemos que o estranho é o iPad normal, com um dpi bem m
 Na prática, o que a Apple está dizendo é que o **iPad mini foi feito para ser usado na mesma distância que você usa o iPhone**, e não como você usa o iPad normal.
 
 <div style="max-width: 70%">
-	{% figure iPad Mini vs. iPad %}
-		resolucoes/ipad-ipadmini.jpg
-	{% endfigure %}
+  <figure>
+    <img src="img/posts/resolucoes/ipad-ipadmini.jpg" alt="">
+    <figcaption>iPad Mini vs. iPad</figcaption>
+  </figure>
 </div>
 
 ## Quantos pixels minha tela deveria ter?
@@ -112,9 +115,10 @@ A questão aqui é de **usabilidade**. Pixels pequenos demais tornam a leitura d
 
 O W3C tem uma medida oficial pra determinar o tamanho de um pixel de conteúdo na tela, o que eles chama de [pixel de referência](http://www.w3.org/TR/css3-values/#reference-pixel). Ele é medido em ângulos, claro. Um pixel num celular que usamos perto do olho tem comprimento menor que um pixel numa televisão que vemos a metros de distância. Para analisar se um pixel está do "tamanho certo", é preciso saber a **distância do usuário em relação à tela**.
 
-{% figure Tamanho de um pixel de referência (<a href="http://www.w3.org/TR/css3-values/#reference-pixel">W3C</a>) %}
-	resolucoes/pixel-w3c.png
-{% endfigure %}
+<figure>
+	<img src="img/posts/resolucoes/pixel-w3c.png">
+	<figcaption>Tamanho de um pixel de referência (<a href="http://www.w3.org/TR/css3-values/#reference-pixel">W3C</a>)</figcaption>
+</figure>
 
 O tamanho oficial do pixel de referência é de *0.0213 graus*. Deixando a matemática um pouco de lado, isso quer dizer que:
 

@@ -7,9 +7,10 @@ description: Minhas anotações da palestra do Alexandre Gaigalas no evento Fron
 
 Alexandre Gaigalas ([twitter](https://twitter.com/alganet/)), do Yahoo, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre REST e HTTP com o título **REST Client Side - Uma visão geral sobre projeto e consumo de APIs em REST no navegador e vantagens de utilizar recursos do protocolo HTTP** ([slideshare](http://www.slideshare.net/Alganet/presentations)).
 
-{% figure "Palestra do Alexandre Gaigalas no Front In BH 2012" %}
-	frontinbh2012/alexandre.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/frontinbh2012/alexandre.jpg">
+	<figcaption>"Palestra do Alexandre Gaigalas no Front In BH 2012"</figcaption>
+</figure>
 
 ## Minhas anotações
 

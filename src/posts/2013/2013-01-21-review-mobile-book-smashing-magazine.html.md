@@ -14,9 +14,10 @@ O livro tem um viés um pouco mais de design que de código -- normal, pra quem 
 
 Tirando alguns poucos pontos que não gostei, **recomendo o livro** pra todo desenvolvedor Web, front-end, designer e quem mais estiver envolvido com mobile.
 
-{% figure "The Mobile Book, pela Smashing Magazine" %}
-	reviews/the-mobile-book.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/reviews/the-mobile-book.jpg">
+	<figcaption>"The Mobile Book, pela Smashing Magazine"</figcaption>
+</figure>
 
 O livro está dispoível no [site oficial](http://www.the-mobile-book.com/) por **$18 na versão ebook** -- que inclui PDF, epub e mobi -- e $50 impresso+ebook. Tem 330 páginas no total. Ele tem um **design muito bonito**. Mas a versão Kindle deixa muito a desejar, e acabei lendo no PDF mesmo, o que me irritou um pouco. Não tenho, por exemplo, minhas anotações sincronizadas. Mesmo assim, separei algumas.
 

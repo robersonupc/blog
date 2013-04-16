@@ -46,9 +46,10 @@ open -a /Applications/Safari.app http://localhost:9999
 
 ```
 
-{% figure Debugando o sergiolopes.org no Mobile Safari do emulador %}
-	debug-mobile-safari-ios/mobile-safari-iphone.png 	iPhone no emulador
-	debug-mobile-safari-ios/debug-safari.png 	Safari com inspector aberto
-{% endfigure %}
+<figure>
+	<img src="img/posts/debug-mobile-safari-ios/mobile-safari-iphone.png" alt="iPhone no emulador">
+	<img src="img/posts/debug-mobile-safari-ios/debug-safari.png" alt="Safari com inspector aberto">
+	<figcaption>Debugando o sergiolopes.org no Mobile Safari do emulador</figcaption>
+</figure>
 
 Há também um [gist](https://gist.github.com/1961630) disponível com esse código. O código do **gdb** eu peguei nesse [post aqui](http://atnan.com/blog/2011/11/17/enabling-remote-debugging-via-private-apis-in-mobile-safari/) -- lá você também vê como conectar o debug a um aparelho real com iOS, além do emulador.

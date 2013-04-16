@@ -7,9 +7,10 @@ description: Minhas anotações da palestra do Alexandre Tabor no evento Front i
 
 Alexandre Tabor, CTO do Peixe Urbano, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre o uso da Amazon EC2, cloud e truques de CDN no Peixe Urbano.
 
-{% figure "Palestra do Alexandre Tabor no Front In BH 2012" %}
-	frontinbh2012/tabor.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/frontinbh2012/tabor.jpg">
+	<figcaption>"Palestra do Alexandre Tabor no Front In BH 2012"</figcaption>
+</figure>
 
 ## Minhas anotações
 

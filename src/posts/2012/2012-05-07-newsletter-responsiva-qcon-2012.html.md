@@ -14,9 +14,10 @@ Na newsletter do evento, deveríamos seguir as mesmas boas práticas já seguind
 
 **[Veja o resultado final](http://sergiolopes.github.com/newsletter-qcon-2012/newsletter.html "Newsletter Responsiva do QCon 2012")**. Redimensione o navegador e veja a responsividade.
 
-{% figure Foto da newsletter responsiva do QCon 2012 (<a href="http://sergiolopes.github.com/newsletter-qcon-2012/newsletter.html">veja a real</a>) %}
-	newsletter-qcon-2012/newsletter-pequena.jpg
-{% endfigure %}
+<figure>
+	<img src="img/posts/newsletter-qcon-2012/newsletter-pequena.jpg">
+	<figcaption>Foto da newsletter responsiva do QCon 2012 (<a href="http://sergiolopes.github.com/newsletter-qcon-2012/newsletter.html">veja a real</a>)</figcaption>
+</figure>
 
 ## Suporte a Desktop e Mobile
 
