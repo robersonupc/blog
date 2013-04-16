@@ -2,11 +2,11 @@
 layout: blog
 ogtype: article
 ---
-<article class="text-page post container {% if page.fullPagePost != 'true' %}limit-line-length{%endif%}">
+<article class="text-page post container <%= if @document.fullPagePost != 'true' then 'limit-line-length' %>">
 	
-	{% if page.showTitleH1 != 'false' %}
+	<% if @document.showTitleH1 != 'false': %>
 		<h1><%= @document.title %></h1>
-	{% endif %}
+	<% end %>
 
 	<div class="post-content">
 		<%- @content %>
@@ -16,11 +16,11 @@ ogtype: article
 		<p class="post-author like-h">
 			Escrito por <a href="https://plus.google.com/116277751891701467725?rel=author">Sérgio Lopes</a> 
 			
-			{% if page.originalDate %}
+			<% if @document.originalDate: %>
 				originalmente em {{ page.originalDate | date_to_string }} e atualizado em <span class="post-data">{{ page.date | date_to_string }}</span>.
-			{% else %}
+			<% else: %>
 				em <span class="post-data">{{ page.date | date_to_string }}</span>.
-			{% endif %}
+			<% end %>
 		</p>
 	
 		<div class="post-social">

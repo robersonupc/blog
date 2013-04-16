@@ -1,39 +1,27 @@
 <!doctype html>
-<html class="no-js" {% if page.offlineManifest %}manifest="<%= @document.offlineManifest %>"{% endif %}>
+<html class="no-js" <%- if @document.offlineManifest then "manifest=\"#{@document.offlineManifest}\"" %>>
 <head>
 
-	{% if page.googlefonts %}
-		<!-- Fontes -->
-		<link href='//fonts.googleapis.com/css?family=<%= @document.googlefonts %>' rel='stylesheet'>
-	{% endif %}
+ 	<%- @getBlock("meta").toHTML() %>
+    <%- if !@document.noglobalcss then @getBlock("styles").add(["/style/all.css"]).toHTML() %>
 
-	<!-- Estilos -->	
-	{% unless page.noglobalcss %}
-		<link rel="stylesheet" href="/style.css?13">
-	{% endunless %}
-	{% if page.layoutcss %}
-		<link rel="stylesheet" href="<%= @document.layoutcss %>">
-	{% endif %}
-	{% if page.css %}
-		<link rel="stylesheet" href="<%= @document.css %>">
-	{% endif %}
+	<!-- Estilos de página -->
+	<%- if @document.googlefonts then @getBlock("styles").add(["//fonts.googleapis.com/css?family=" + @document.googlefonts]).toHTML() %>
+	<%- if @document.layoutcss then @getBlock("styles").add([@document.layoutcss]).toHTML() %>
+	<%- if @document.css then @getBlock("styles").add([@document.css]).toHTML() %>
 
 	<!-- inclui head comum, sem assets -->
-	{% include snippets/head.html %}
+	<%- @partial('snippets/head.html',@) %>
 
 </head>
-<body class="{% if page.theme %}<%= @document.theme %>{% else %}classic{% endif %}-theme themed-body">
+<body class="<%= if @document.theme then @document.theme else 'classic' %>-theme themed-body">
 
 	<%- @content %>
 
 	<div id="fb-root"></div>
-	<script src="/js/scripts.js?4" async></script>
 
-	{% if page.layoutscript %}
-		<script src="<%= @document.layoutscript %>" async></script>
-	{% endif %}
-	{% if page.script %}
-		<script src="<%= @document.script %>" async></script>
-	{% endif %}
+	<%- @getBlock("scripts").add(['/script/scripts.js']).toHTML() %>
+	<%- if @document.layoutscript then @getBlock("scripts").add([@document.layoutscript]).toHTML() %>
+	<%- if @document.script then @getBlock("scripts").add([@document.script]).toHTML() %>
 </body>
 </html>

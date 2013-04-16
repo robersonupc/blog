@@ -4,11 +4,11 @@ title: sergiolopes.org
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>{{ site.title }}</title>
- <link href="{{ site.production_url }}/atom.xml" rel="self"/>
- <link href="{{ site.production_url }}"/>
+ <title><%= @site.title %></title>
+ <link href="<%= @site.production_url %>/atom.xml" rel="self"/>
+ <link href="<%= @site.production_url %>"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
+ <id><%= @site.production_url %></id>
  <author>
    <name>{{ site.author.name }}</name>
  </author>
@@ -16,9 +16,9 @@ title: sergiolopes.org
  {% for post in site.posts limit: 10 %}
  <entry>
    <title>{{ post.title | xml_escape }}</title>
-   <link href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}{{ site.production_url }}{{ post.url }}{% endif %}"/>
+   <link href="{% if post.layout == 'redirect' %}{{ post.originalURI }}{% else %}<%= @site.production_url %>{{ post.url }}{% endif %}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>{{ site.production_url }}{{ post.id }}/</id>
+   <id><%= @site.production_url %>{{ post.id }}/</id>
    <content type="html">
       {% if post.feedReplace %}
          &lt;p style=&quot;padding:10px; background-color:#FFF0A5&quot;&gt;&lt;i&gt;{{ post.feedReplace }}&lt;/i&gt;&lt;/p&gt;

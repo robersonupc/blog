@@ -1,10 +1,16 @@
+---
+standalone: true
+---
+
 // arquivo do layout principal que inclui os demais
 
 @import "nib"
 @import "base/base"
 @import "base/icones"
-@import "base/code"
+@import "base/code.css"
 @import "base/header"
 @import "base/elements"
 @import "base/post"
 @import "base/paginas"
+
+

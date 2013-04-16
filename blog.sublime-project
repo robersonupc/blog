@@ -3,8 +3,7 @@
   [
       {
       "path": ".",
-      "folder_exclude_patterns": ["_deploy", "_site", ".pygments-cache", "out"],
-      "file_exclude_patterns": ["*.css"]
+      "folder_exclude_patterns": [".pygments-cache", "out"]
       }
   ]
 }

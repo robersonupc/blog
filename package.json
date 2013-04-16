@@ -8,10 +8,12 @@
     "url": "http://github.com/sergiolopes/blog"
   },
   "dependencies": {
-    "docpad-plugin-marked": "~2.1.1",
-    "docpad-plugin-eco": "~2.0.2",
-    "docpad-plugin-pygments": "~2.0.7",
-    "docpad-plugin-stylus": "~2.3.0",
-    "docpad-plugin-cleanurls": "~2.4.3"
+    "docpad-plugin-marked": "latest",
+    "docpad-plugin-eco": "latest",
+    "docpad-plugin-stylus": "latest",
+    "docpad-plugin-cleanurls": "latest",
+    "docpad-plugin-highlightjs": "latest",
+    "docpad-plugin-livereload": "latest",
+    "docpad-plugin-partials": "latest"
   }
 }

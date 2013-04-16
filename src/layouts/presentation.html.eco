@@ -6,65 +6,27 @@ pagetype: blog
 <html class="no-js">
 <head>
 	<!-- inclui head comum, sem assets -->
-	{% include snippets/head.html %}
+	<%- @partial('snippets/head.html',@) %>
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="apple-touch-icon" href="/img/palestra/<%= @document.slug %>/appicon.png">
 
 	<style>
-	{% include css/code.css %}
-	{% include css/palestra/presentation.css %}
-	{% include css/palestra/presentation-slides-comuns.css %}
+	<%- @include("style/base/code.css") %>
+	<%- @include("style/palestra/presentation.css") %>
+	<%- @include("style/palestra/presentation-slides-comuns.css") %>
+	<%- if @document.slug then @include("style/palestra/#{@document.slug}.css") %>
 	</style>
-
-	{% if page.slug %}
-		<!-- 
-			TODO
-				fazer isso dinamico no jekyll
-		-->
-		<style>
-		{% if page.slug == 'mobile-web' %}
-			{% include css/palestra/mobile-web.css %}
-		{% endif %}
-		{% if page.slug == 'appcache' %}
-			{% include css/palestra/appcache.css %}
-		{% endif %}
-		</style>
-	{% endif %}
-
 </head>
 <body>
-	<!--
-	<div class="controls">
-		<button class="enter-mode" data-mode="presentation">Presentation Mode</button>
-		<button class="enter-mode" data-mode="site">Site Mode</button>
-		<button class="enter-mode" data-mode="audience">Audience Mode</button>
-	</div>
-	-->
-
 	<%- @content %>
 
 	<span class="loading">&#8635;</span>
 
-
 	<script>
-	{% include js/presentation.js %}
+	<%- @include('script/presentation.js') %>
+	<%- if @document.slug then @include("script/palestra/#{@document.slug}.js") %>
 	</script>
-
-	{% if page.slug %}
-		<!-- 
-			TODO
-				fazer isso dinamico no jekyll
-		-->
-		<script>
-		{% if page.slug == 'mobile-web' %}
-			{% include js/palestra/mobile-web.js %}
-		{% endif %}
-		{% if page.slug == 'appcache' %}
-			{% include js/palestra/appcache.js %}
-		{% endif %}
-		</script>
-	{% endif %}
 </body>
 </html>
