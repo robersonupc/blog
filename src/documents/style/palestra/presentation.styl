@@ -1,0 +1,471 @@
+@import "nib"
+
+/* BASE */
+
+* {
+	box-sizing : border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	font-size: 100%;
+	font-weight: 400;
+	line-height: 1.5em;
+}
+
+code {
+	font-family:'Droid Sans Mono', 'Bitstream Vera Sans Mono','Courier', monospace;
+}
+
+pre code {
+	font-size: 87.5%; /* 14px */
+}
+
+@media only screen and (max-width: 599px) {
+	body {
+		font-size: 87.5%;
+	}
+}
+
+
+/* PRESENTATION STRUCTURE */
+
+.presentation
+	position: relative
+	max-width: none
+	margin: 0
+	width: 100%
+
+/* 1 slide */
+.slide  
+	/* 4:3 flexible box */
+	padding-top: 75%;
+	height: 0;
+	width: 100%;
+
+	position: relative;
+
+	/* hide all slides */
+	display: none
+
+	/* shows only active */
+	&.active
+		display: block
+
+	.content
+		// slide anchored to top but we need to adjust this value
+		// according to the scaleFactor. (this is a JS job)
+		absolute: top right
+
+		/* slide size. 4:3 fixed */
+		height: 768px;
+		width: 1024px;
+
+		overflow: hidden
+
+		/* prepare to scale */
+		transform-origin: bottom right
+ 
+/* hides notes and audience */
+.slide .notes,
+.slide .audience {
+	display: none;
+}
+
+
+/* loading spinner */
+@keyframes loading {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.loading
+	absolute: top 200px left
+	display: block;
+
+	color: white
+	font-size: 1000%
+	line-height: 0
+	text-align: center
+	width: 100%
+
+	animation: loading 1.5s linear infinite
+	transform-origin: top center
+
+.bars
+	display: none
+	width: 100%
+
+	> div
+		display: none
+
+
+/**
+    PRESENTATION MODE
+**/
+
+.presentation-mode 
+
+	html&, body, .presentation
+		height: 100%;
+		width: 100%;
+
+	.audience, .notes
+		display: none
+
+	// hide loading spinner
+	.loading
+		display: none
+
+	/* show bottom fixed bar */
+	.bars 
+		display: block
+		
+		.content
+			display: block
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -32em
+			overflow: hidden;
+
+			height: 2em;
+			width: 64em;
+			padding: 0 4em;
+
+			color: white;
+
+/* prevent scroll */
+.presentation-mode body,
+.presentation-mode html,
+.presentation-mode .presentation {
+	overflow: hidden;
+}
+
+.presentation-mode .presentation {
+	margin: 0 auto;
+	width: 100%;
+}
+
+/* hide audience and presentation notes */
+.presentation-mode .slide .notes,
+.presentation-mode .slide .audience {
+	display: none;
+}
+
+
+/***
+    SITE MODE
+ ***/
+
+.site-mode
+
+	.presentation
+		display: block
+		margin: 3em auto
+		max-width: 700px
+
+	.slide
+		height: auto
+		overflow: visible;
+		margin-bottom: 1em
+
+	/* show presentation notes */
+	.notes
+		display: block;
+		padding: 0.5em 1em
+		width: 100%;
+
+	.bars
+		absolute: top left
+		height: 3em
+		display: block
+
+		.site
+			display: block
+
+	// hide loading spinner
+	.loading
+		display: none
+
+
+// big screen landscape oriented
+@media (min-width: 800px) and (orientation: landscape), (min-width: 1200px)
+
+	// big desktop screen:
+	// put notes next to the slide
+	.site-mode
+		.presentation
+			margin-right: 0
+			max-width: none
+			width: 50%
+		.slide
+			padding-top: 0
+
+			.content
+				left: -1024px
+
+
+/***
+    AUDIENCE MODE
+ ***/
+ 
+.audience-mode
+
+	/* hide slide contents and presenter notes */
+	.content, .notes
+		display: none
+
+	// hide loading spinner
+	.loading
+		display: none
+
+	.slide
+		height: auto
+		.content
+			display: block
+
+	/* show audience bar */
+	.bars
+		absolute: top left
+		height: 3em
+		width: 100%
+		display: block
+
+		.audience
+			display: block
+
+	/* show last .audience */
+	.slide.audience-active
+		display: block
+
+		/* show audience notes */
+		.audience
+			display: block;
+
+		/* hide slide from background rendering */
+		.content
+			visibility: hidden
+		&.active .content
+			visibility: visible
+
+	/* position subsequent slides absolutely */
+	.slide.active
+		position: absolute
+		top: 0
+		left: 0
+	.slide.audience-active
+		position: relative;
+
+	.presentation
+		max-width: 500px
+		margin: 3em auto
+		width: 100%
+
+// hide slide if asked
+.hide-slide 
+	.slide
+		padding-top: 0
+		.content
+			display: none
+
+// show/hide slide view
+.bars .slide-toggle
+	.b:first-child
+		display: inline-block
+	.b:last-child
+		display: none
+
+	.hide-slide & 
+		.b:first-child
+			display: none
+		.b:last-child
+			display: inline-block
+
+
+.slide .audience
+	p
+		margin: 0
+		padding: 1em
+		font-size: 100%
+
+
+
+/*************
+ BASE LAYOUT
+ *************/
+
+body, .bars
+	background: black
+
+.slide 
+	.content
+		background-color: #f90;
+		padding: 5%;
+
+		li, p, blockquote
+			font-size: 3em
+			line-height: 1.2
+
+	.notes, .audience, .audience p
+		color: white
+
+.site-mode .bars
+	text-align: center
+
+.share
+	color: white
+	display: inline-block
+	line-height: 3em
+	vertical-align: middle
+
+	a
+		color: white
+		display: inline-block;
+		line-height: 2em
+		padding: 0 0.5em
+		line-height: 2.1em
+		vertical-align: middle
+		text-align: center
+		text-decoration: none
+		margin: 0 0.2em
+
+	.twitter
+		background: #00aced
+		&:hover
+			background: #0099d4
+
+	.facebook
+		background: #3b5998
+		&:hover
+			background: #344e86
+
+@media (max-width: 880px)
+	.bars .share
+		display: none
+
+.navigation
+	display: inline-block
+	line-height: 3em
+	vertical-align: middle
+	float: right
+	margin-right: 0.5em
+	
+.highlighted
+	font-size: 1.9em;
+
+.presentation-mode-only, 
+.site-mode-only, 
+.audience-mode-only,
+.show-on-main-room,
+.main-room .hide-on-main-room
+	display: none
+
+.presentation-mode .presentation-mode-only,
+.audience-mode .audience-mode-only,
+.site-mode .site-mode-only,
+.main-room .show-on-main-room
+	display: block
+
+
+
+/* BARS layout */
+.bars
+	.content
+		background: black
+
+		// main heading
+		.poster
+			absolute: top 0.1em left 0.1em
+			font-family: Arial, sans-serif
+			line-height: 1em
+			font-size: 170%
+			color: #999
+
+		// small oval client counter
+		.sync-clients
+			absolute: top 0.4em right 0.1em
+
+			border-radius: 1000px;
+			display: inline-block;
+			padding: 0
+
+			font-family: Arial;
+			font-size: 82%
+			line-height: 1.8em
+			width: 1.8em
+
+			text-align: center
+			vertical-align: middle
+
+			.sync-online &
+				background-color: #758918
+			
+			.sync-offline &
+				background-color: #DE3C2F
+
+	.audience, .site
+		background: #222 url(/img/base/noise.png);
+		box-shadow: 0 0 6px rgba(255,255,255,0.25)
+		height: 100%
+		width: 100%
+
+		// navigation button
+		.b
+			background #3299BB
+			border-radius: 0.3em
+			color: white
+			cursor: pointer
+			text-align: center
+
+			display: inline-block	
+
+			padding: 0 0.6em
+			line-height: 2.5em
+			vertical-align: top
+			margin-top: 0.23em
+
+		// window title
+		.title
+			absolute: top 0 left 0.25em
+			color: #ccc
+			font-size: 150%
+			line-height: 1.8em
+
+			span
+				display: none
+				margin-left: 0.3em
+				border: 6px solid white;
+				border-radius: 1000px
+
+			.sync-online & .aovivo
+				border-color: #0FC00F
+				display: inline-block
+			.sync-offline & .desconectado
+				border-color: #C00F0F
+				display: inline-block
+
+		// manual sync for incompatible clients
+		.manual-sync
+			background: #292929 url(/img/base/noise.png);
+			box-shadow: 0 0 6px rgba(255,255,255,0.25)
+			color: white
+			line-height: 3em
+			font-size: 90%
+
+			.do-sync
+				cursor: pointer
+				background: #C00F0F
+				line-height: 2
+				display: inline-block
+				border-radius: 0.3em
+				color: white
+				padding: 0.1em 0.4em
+				text-align: center
+
+				.doing-manual-sync &
+					background: #333
+					color: #777 

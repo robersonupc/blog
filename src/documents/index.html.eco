@@ -1,0 +1,29 @@
+---
+layout: page
+title: Home
+ogtype: website
+name: home
+---
+
+<h1>Blog do Sérgio Lopes</h1>
+<p>Artigos sobre <strong>Web</strong>, <strong>front-end</strong> e <strong>mobile web</strong>. Minhas palestras, reviews de livros, relatos de eventos e experimentos. <strong>Bem vindo!</strong></p>
+
+<% subtitulos = ['Últimos posts', 'Cobertura de eventos'] %>
+<% for tipo, tipo_i in ['artigos', 'eventos']: %>
+  <h2><%= subtitulos[tipo_i] %></h2>
+  <ul class="posts">
+    <% for post in @getCollection(tipo).toJSON(): %>
+    
+      <li class="one-post <%= post.class %> category-<%= @slug(post.category) %> type-<%= @getLayoutName(post) %>">
+        <div class="post-info">
+          <span class="post-date"><%= @dateAsText(post.date) %></span> 
+          <span class="post-category"><%= post.category %></span> 
+        </div>
+                        
+        <a class="post-link" href="<%= if @getLayoutName(post) == 'redirect' then post.originalURI else post.url %>">
+          <%= post.title %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

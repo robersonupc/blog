@@ -12,12 +12,8 @@ pagetype: blog
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<link rel="apple-touch-icon" href="/img/palestra/<%= @document.slug %>/appicon.png">
 
-	<style>
-	<%- @include("style/base/code.css") %>
-	<%- @include("style/palestra/presentation.css") %>
-	<%- @include("style/palestra/presentation-slides-comuns.css") %>
-	<%- if @document.slug then @include("style/palestra/#{@document.slug}.css") %>
-	</style>
+	<%- @getBlock("styles").add(["/style/palestra/presentation-all.css"]).toHTML() %>
+	<%- @getBlock("styles").add(["/style/palestra/#{@document.slug}.css"]).toHTML() %>
 </head>
 <body>
 	<%- @content %>

@@ -1,0 +1,83 @@
+---
+title: sergiolopes.org
+standalone: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title><%= @site.title %></title>
+ <link href="<%= @site.production_url %>/atom.xml" rel="self"/>
+ <link href="<%= @site.production_url %>"/>
+ <updated><%= @site.date.toISOString() %></updated>
+ <id><%= @site.production_url %></id>
+ <author>
+   <name><%= @site.author.name %></name>
+ </author>
+
+   <% for post in @getCollection('posts').toJSON(): %>
+      <entry>
+         <title><%= post.title %></title>
+         <link href="<%= @absoluteURI(post) %>"/>
+         <updated><%= post.date.toISOString() %></updated>
+         <id><%= @absoluteURI(post) %></id>
+
+         <content type="html">
+            <%# Post com cabeçalho de feedReplace %>
+            <% if post.feedReplace: %>
+               <%= @raw -> %>
+                  <p style="padding:10px; background-color:#FFF0A5">
+                     <i><%= post.feedReplace %></i>
+                  </p>
+
+                  <p><%- post.description %></p>
+                  <%# TODO prepare feed %>
+               <% end %>
+
+            <%# Posts externos de redirect %>
+            <% else if @getLayoutName(post) == 'redirect': %>
+               <% redirectURI = @absoluteURI(post) %>
+               <%= @raw -> %>
+                  <p style="padding:10px; background-color:#FFF0A5">
+                     <i>
+                        Escrevi esse post em um outro blog. 
+                        <a href="<%= redirectURI %>">Acesse aqui para ler</a>.
+                     </i>
+                  </p>
+               <% end %>
+
+            <%# Posts comuns com conteudo completo %>
+            <% else: %>
+
+               <%# warning no topo do feed %>
+               <% if post.feedWarning: %>
+                  <%= @raw -> %>
+                     <p style="padding:10px; background-color:#FFF0A5">
+                        <i><%= post.feedWarning %></i>
+                     </p>
+                  <% end %>
+               <% end %>
+
+               <%# aviso de atualizacao %>
+               <% if post.originalDate: %>
+                  <% originalDateAsText = @dateAsText(post.originalDate) %>
+                  <%= @raw -> %>
+                     <p style="padding:10px; background-color:#FFF0A5"><i>
+                        Esse post foi atualizado recentemente com mais informações (data de publicação original: <%=  originalDateAsText %>).
+                     </i></p>
+                  <% end %>
+               <% end %>
+
+               <%# conteudo TODO prepare feed%>
+               <%= @prepareFeed(post.contentRenderedWithoutLayouts) %>
+
+               <%# link back %>
+               <%= @raw -> %>
+                  <hr>
+                  <p>Conteúdo original do blog <a href="http://sergiolopes.org">sergiolopes.org</a>.</p>
+               <% end %>
+
+            <% end %>
+         </content>
+      </entry>
+   <% end %> 
+</feed>

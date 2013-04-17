@@ -2,16 +2,14 @@
 layout: base
 title: Livro “A Web Mobile” - Sérgio Lopes
 description: Programe a Web moderna, transformada pela mobilidade e os muitos dispositivos. Livro referência no mercado Web.
+css: /style/pagina/livro-web-mobile.css
 shareImage: /livro-web-mobile/share-web-mobile.jpg
 ogtype: book
 
 noglobalcss: true
 standalone: true
+referenceOthers: false
 ---
-
-<style>
- <%- @include('style/pagina/livro-web-mobile.css') %>
-</style>
 
 <div class="container">
 	<h2 class="autor">Livro por Sérgio Lopes</h2>
@@ -196,3 +194,5 @@ standalone: true
 	</div>
 	</div>
 </div>
+
+<% # eco # %>
