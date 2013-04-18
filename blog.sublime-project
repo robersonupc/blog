@@ -3,7 +3,7 @@
   [
       {
       "path": ".",
-      "folder_exclude_patterns": [".pygments-cache", "out"]
+      "folder_exclude_patterns": ["out"]
       }
   ]
 }

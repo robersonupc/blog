@@ -10,6 +10,8 @@ shareImage: /img/posts/diretorio-responsivo/share.jpg
 css: /style/posts/diretorio-responsivo.css
 theme: brasil
 showTitleH1: 'false'
+
+referenceOthers: false
 ---
 
 <h1>

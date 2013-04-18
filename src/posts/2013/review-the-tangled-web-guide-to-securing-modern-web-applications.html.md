@@ -5,6 +5,8 @@ date: 2013-02-07
 category: review
 description: Um dos livros mais divertidos que já li. Foi escrito por Michal Zalewski, especialista em segurança na Web e que trabalha no Google. Trata dos desafios de segurança que os navegadores a desenvolvedores Web enfretam hoje em dia.
 shareImage: /img/posts/reviews/the-tangled-web-share.jpg
+
+referenceOthers: false
 ---
 
 Um dos livros mais **divertidos** que já li. Foi escrito por [Michal Zalewski](http://lcamtuf.coredump.cx/), especialista em segurança na Web e que trabalha no Google. Trata dos desafios de **segurança** que os navegadores a desenvolvedores Web enfretam hoje em dia.

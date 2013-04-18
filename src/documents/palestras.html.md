@@ -2,6 +2,9 @@
 layout: page
 title: Palestras
 name: palestras
+
+referenceOthers: false
+standalone: true
 ---
 
 <h1>Minhas palestras</h1>

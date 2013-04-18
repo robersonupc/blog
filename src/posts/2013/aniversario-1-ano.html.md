@@ -4,6 +4,8 @@ title: "Aniversário de 1 ano do blog"
 date: 2013-03-26
 category: blog
 description: Comemoração de 1 ano de blog e estatísticas bacanas do que aconteceu nesse meio tempo.
+
+referenceOthers: false
 ---
 
 Parece que foi ontem. Mas hoje, *26 de março de 2013*, faz **1 ano que lancei esse blog**. Já tive outros blogs pessoais antes mas nunca tinha me dedicado tanto quanto agora. Esse novo blog, focado em desenvolvimento front-end, foi um grande feito pessoal pra mim.
@@ -87,4 +89,5 @@ Mas, no fundo, minha estratégia maior é escrever artigos--acredito eu--de qual
 
 O futuro é continuar esse blog e colocar cada vez mais artigos aqui. Espero que você goste de acompanhar. Aliás, pra não perder um post, assine o [RSS](/feed.xml) ou me siga no [Facebook](https://www.facebook.com/sergio.caelum) e no [Twitter](https://twitter.com/sergio_caelum).
 
-E, se você aguentou ler tudo isso até aqui, uma novidade em primeira mão: vou lançar muitíssimo em breve um livro sobre *Web Mobile*. É fruto direto do trabalho nesse blog e do resultado positivo desse ano todo. Vão ter artigos que publiquei aqui mas estendidos com mais conteúdo; e vários artigos novos e inéditos, claro. O lançamento vai ser semana que vem na [MobileConf](http://www.mobileconf.com.br), então não espalha ainda. Nos encontramos por lá!
+E, se você aguentou ler tudo isso até aqui, uma novidade em primeira mão: **acabo de lançar um [livro sobre Web Mobile](/livro-web-mobile/)**. É fruto direto do trabalho nesse blog e do resultado positivo desse ano todo. Ele tem artigos que publiquei aqui mas estendidos com mais conteúdo; e vários artigos novos e inéditos, claro. [Confere lá](/livro-web-mobile/)!
+

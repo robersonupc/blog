@@ -10,6 +10,8 @@ slug: appcache
 class: destaque
 
 feedReplace: Essa palestra é completamente interativa, o que não é suportado nos feeds RSS. Recomendo que visite o site e leia por lá. (é otimizado também para mobile)
+
+referenceOthers: false
 ---
 
 <article class="presentation">

@@ -158,12 +158,21 @@ docpadConfig = {
 		'posts/eventos'
 	]
 
-	# em desenvolvimento, ignora arquivos velhos
-	ignorePaths: [
-		# '/Users/sergio/workspace/blog/src/posts/2012',
-		# '/Users/sergio/workspace/blog/src/posts/caelum',
-		# '/Users/sergio/workspace/blog/src/posts/eventos'
-	]
+	environments:
+		development:
+
+			# em desenvolvimento, ignora arquivos velhos
+			ignorePaths: [
+				'/Users/sergio/workspace/blog/src/documents/feed',
+				'/Users/sergio/workspace/blog/src/documents/sitemap',
+				'/Users/sergio/workspace/blog/src/posts/2012',
+				'/Users/sergio/workspace/blog/src/posts/caelum',
+				'/Users/sergio/workspace/blog/src/posts/eventos'
+			]
+
+		production:
+			renderPasses: 2
+
 }
 
 # Export the DocPad Configuration

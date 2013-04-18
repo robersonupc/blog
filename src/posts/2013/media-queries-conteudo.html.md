@@ -5,6 +5,8 @@ date: 2013-02-15
 category: web
 description: Como escolher os valores pra colocar nas suas media queries em um design responsivo.
 shareImage: /img/posts/responsive-design/share.jpg
+
+referenceOthers: false
 ---
 
 Ao escrever [medias queries](http://blog.caelum.com.br/flexibilidade-em-paginas-para-dispositivos-moveis-com-media-queries/), você precisa escolher algum *valor* pra colocar lá. É o que chamamos dos **breakpoints**, os pontos onde seu layout vai ser ajustado por causa de uma resolução diferente. E **escrever bons breakpoints** é essencial para um *design responsivo* de qualidade.

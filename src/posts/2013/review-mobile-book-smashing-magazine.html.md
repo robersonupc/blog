@@ -5,6 +5,8 @@ date: 2013-01-21
 category: review
 description: Um livro épico, reunindo diversos **autores famosos** para falar sobre mobile. Muitos tópicos e diversos insights. Leitura obrigatória pra qualquer desenvolvedor mobile (web e nativo).
 shareImage: /img/posts/reviews/the-mobile-book-share.jpg
+
+referenceOthers: false
 ---
 
 Um livro épico, reunindo diversos **autores famosos** para falar sobre mobile. Muitos tópicos e diversos insights. **Leitura obrigatória** pra qualquer desenvolvedor mobile (web e nativo).
