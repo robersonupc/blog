@@ -17,10 +17,10 @@ ogtype: article
 			Escrito por <a href="https://plus.google.com/116277751891701467725?rel=author">Sérgio Lopes</a> 
 			
 			<% if @document.originalDate: %>
-				originalmente em <%= @dateAsText(@document.originalDate) %> e atualizado em 
-				<span class="post-data"><%= @dateAsText(@document.date) %></span>.
+				originalmente <%= @dateAsText(@document.originalDate, 'em ') %> e atualizado  
+				<span class="post-data"><%= @dateAsText(@document.date, 'em ') %></span>.
 			<% else: %>
-				em <span class="post-data"><%= @dateAsText(@document.date) %></span>.
+				<span class="post-data"><%= @dateAsText(@document.date, 'em ') %></span>.
 			<% end %>
 		</p>
 	
