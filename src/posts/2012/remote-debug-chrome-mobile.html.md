@@ -26,13 +26,13 @@ Embora ainda não haja suporte nativo para debug do browser padrão do Android, 
 * Vá nas **Configurações de sistema** do Android e entre em **Opções do Desenvolvedor**.
 * Lá, habilite a opção **Depuração USB**:
   <figure>
-    <img src="img/posts/debug-chrome-mobile/debug-usb.png" alt="Habilite depuração de USB.">
+    <img src="/img/posts/debug-chrome-mobile/debug-usb.png" alt="Habilite depuração de USB.">
   </figure>
 * Abra o **Chrome Mobile** no celular e vá em suas **Configurações**.
 * Entre no menu **Ferramentas para desenvolvedores** lá no final.
 * Lá, habilite a opção **Ativar a depuração da web via USB**
   <figure>
-    <img src="img/posts/debug-chrome-mobile/debug-web.png" alt="Habilite depuração da web via USB.">
+    <img src="/img/posts/debug-chrome-mobile/debug-web.png" alt="Habilite depuração da web via USB.">
   </figure>
 
 ## Debug do celular via Desktop
@@ -55,12 +55,12 @@ Embora ainda não haja suporte nativo para debug do browser padrão do Android, 
 * Por fim, basta ir no seu Chrome Desktop e abrir o endereço **http://localhost:9222**.
 * Todas as abas abertas no celular serão listadas. Selecione uma para debugar:
   <figure>
-    <img src="img/posts/debug-chrome-mobile/pages.png" alt="Escolha uma das abas abertas para debugar.">
+    <img src="/img/posts/debug-chrome-mobile/pages.png" alt="Escolha uma das abas abertas para debugar.">
   </figure>
 * O **Web Inspector** será aberto no seu Chrome no Desktop mas linkado com o Chrome no celular. Você pode debugar normalmente e fazer alterações e vê-las em tempo real no aparelho:
 
 <figure>
-	<img src="img/posts/debug-chrome-mobile/web-inspector.png" alt="O Web Inspector aberto no Chrome Desktop.">
-	<img src="img/posts/debug-chrome-mobile/remote-debug.jpg" alt="A página no Chrome Mobile sendo alterada em real-time.">
+	<img src="/img/posts/debug-chrome-mobile/web-inspector.png" alt="O Web Inspector aberto no Chrome Desktop.">
+	<img src="/img/posts/debug-chrome-mobile/remote-debug.jpg" alt="A página no Chrome Mobile sendo alterada em real-time.">
 	<figcaption>Debugando uma página do celular no Desktop</figcaption>
 </figure>

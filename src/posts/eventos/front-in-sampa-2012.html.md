@@ -17,7 +17,7 @@ A organização foi **impecável**. Impressionante o que os organizadores conseg
 Foram **7 palestras** e uma **mesa redonda** no final. Ficam aqui as minhas impressões de cada uma.
 
 <figure>
-	<img src="img/posts/frontinsampa2012/logo.png">
+	<img src="/img/posts/frontinsampa2012/logo.png">
 </figure>
 
 ## Responsive Design: Por quê e para quê utilizar um framework? Por Fernando Monteiro
@@ -27,7 +27,7 @@ O [Fernando](https://twitter.com/newaeonweb) fez uns [slides](https://speakerdec
 Se você quiser saber mais sobre o tema, recomendo meu [artigo sobre design responsivo](/responsive-web-design/) aqui no blog. Com relação a usar frameworks, sou da opinião contrária: acho que frameworks CSS com breakpoints fixos e grids responsivos só atrapalham.
 
 <figure>
-	<img src="img/posts/frontinsampa2012/sala.jpg">
+	<img src="/img/posts/frontinsampa2012/sala.jpg">
 	<figcaption>Auditório cheio no hotel Intercontinental</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ O pessoal foi bastante receptivo no twitter e em conversas depois do evento, ent
 Você pode seguir minha [palestra de web mobile](/palestra-mobile-web/) aqui no blog com slides, textos explicativos e demos dos slides pra acompanhar no celular/tablet.
 
 <figure>
-	<img src="img/posts/frontinsampa2012/palestrantes.jpg">
+	<img src="/img/posts/frontinsampa2012/palestrantes.jpg">
 	<figcaption>Palestrantes do Front in Sampa 2012</figcaption>
 </figure>
 
@@ -80,7 +80,7 @@ Sem dúvidas, a melhor palestra do evento. O [Horácio](https://twitter.com/hora
 Você pode ver também os [slides da palestra de front-end com acessibilidade](http://www.slideshare.net/horacio.soares/frontend-com-acessibilidade-frontinsampa-nov-2012).
 
 <figure>
-	<img src="img/posts/frontinsampa2012/horacio-clecio.jpg">
+	<img src="/img/posts/frontinsampa2012/horacio-clecio.jpg">
 	<figcaption>Palestra de Usabilidade com Horácio Soares e Clécio Bachini</figcaption>
 </figure>
 
@@ -93,7 +93,7 @@ Ele falou de 10 tópicos básicos de SEO que um programador front-end precisa se
 Achei interessante ele falar sobre [performance web](http://blog.caelum.com.br/por-uma-web-mais-rapida-26-tecnicas-de-otimizacao-de-sites/) como fator de SEO. O Googe fala disso há 3 anos, mas eu não imaginava que já fosse um fator tão significativo. Os slides da [palestra de SEO para front-end](http://www.slideshare.net/fabioricotta/seo-para-frontend) estão disponíveis.
 
 <figure>
-	<img src="img/posts/frontinsampa2012/ricotta.jpg">
+	<img src="/img/posts/frontinsampa2012/ricotta.jpg">
 	<figcaption>Palestra de SEO com Fábio Ricotta</figcaption>
 </figure>
 
@@ -104,7 +104,7 @@ O [Zeno](https://twitter.com/zenorocha) e o [Bernard](https://twitter.com/bernar
 Advogaram contra o pessoal que faz freelas, o que foi bastante polêmico e gerou muita controvérsia. Falaram bastante de você reservar um tempo para brincar com novas tecnologias, fazer projetos, se divertir. No fim, fizeram um demo com música usando a Audio API.
 
 <figure>
-	<img src="img/posts/frontinsampa2012/painel.jpg">
+	<img src="/img/posts/frontinsampa2012/painel.jpg">
 	<figcaption>7 Masters: debate sobre front-end, Mercado, Desenvolvimento e Tendências</figcaption>
 </figure>
 

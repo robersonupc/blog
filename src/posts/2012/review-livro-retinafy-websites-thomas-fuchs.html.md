@@ -14,7 +14,7 @@ O [Retinafy.me](http://retinafy.me/ Livro Retinafy web sites and apps) é um ebo
 O livro é bastante direto e prático, curto e grosso com as dicas de imagens, CSS, HTML e JS pra você suportar telas retina. É fruto do muito estudo feito pelo Thomas e apresenta as conclusões dele pra que você não precise pesquisar tudo de novo por conta própria. E o Thomas não é um cara qualquer; é o autor do Zepto.js, do script.aculo.us, commiter do Rails e de mais um monte de coisa importante.
 
 <figure>
-	<img src="img/posts/retinafy-websites/retinafy-websites-cover.png">
+	<img src="/img/posts/retinafy-websites/retinafy-websites-cover.png">
 	<figcaption>"Livro Retinafy Web Sites and Apps de Thomas Fuchs."</figcaption>
 </figure>
 

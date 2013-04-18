@@ -37,7 +37,7 @@ Browser edition
 Além disso, o **Responsive Play** tem uma versão web pra você rodar no navegador e visualizar seu site em diversas resoluções, sem gerar o vídeo. É só [acessar a página](http://sergiolopes.github.com/responsive-play/) e colocar o endereço de teste.
 
 <figure>
-	<img src="img/posts/responsive-play/browser-edition.png">
+	<img src="/img/posts/responsive-play/browser-edition.png">
 	<figcaption>ArquiteturaJava.com.br no Responsive Play, Browser Edition</figcaption>
 </figure>
 

@@ -160,9 +160,9 @@ docpadConfig = {
 
 	# em desenvolvimento, ignora arquivos velhos
 	ignorePaths: [
-		'/Users/sergio/workspace/blog/src/posts/2012',
-		'/Users/sergio/workspace/blog/src/posts/caelum',
-		'/Users/sergio/workspace/blog/src/posts/eventos'
+		# '/Users/sergio/workspace/blog/src/posts/2012',
+		# '/Users/sergio/workspace/blog/src/posts/caelum',
+		# '/Users/sergio/workspace/blog/src/posts/eventos'
 	]
 }
 

@@ -9,7 +9,7 @@ description: Minhas anotações da palestra do Eduardo Shiota no evento QCon SP 
 Eduardo Shiota ([blog](http://www.eshiota.com/), [twitter](https://twitter.com/shiota)) palestrou na track de **Front End** do evento [QCon SP 2012](http://www.qconsp.com/) sobre *Responsive Design* ([slides](http://www.slideshare.net/eshiota/responsive-web-design-e-a-ubiquidade-da-web)).
 
 <figure>
-	<img src="img/posts/qconsp2012/shiota.jpg">
+	<img src="/img/posts/qconsp2012/shiota.jpg">
 	<figcaption>"Palestra do Eduardo Shiota no QCon SP 2012"</figcaption>
 </figure>
 

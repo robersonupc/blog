@@ -3,6 +3,8 @@
 <head>
 
  	<%- @getBlock("meta").toHTML() %>
+ 	<%- @getBlock("styles").toHTML() %>
+
     <%- if !@document.noglobalcss then @getBlock("styles").add(["/style/all.css"]).toHTML() %>
 
 	<!-- Estilos de página -->
@@ -20,8 +22,11 @@
 
 	<div id="fb-root"></div>
 
-	<%- @getBlock("scripts").add(['/script/scripts.js']).toHTML() %>
+	<script src="/script/scripts.js"></script>
+
 	<%- if @document.layoutscript then @getBlock("scripts").add([@document.layoutscript]).toHTML() %>
 	<%- if @document.script then @getBlock("scripts").add([@document.script]).toHTML() %>
+
+	<%- @getBlock("scripts").toHTML() %>
 </body>
 </html>

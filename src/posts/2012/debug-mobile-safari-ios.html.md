@@ -46,8 +46,8 @@ open -a /Applications/Safari.app http://localhost:9999
 ```
 
 <figure>
-	<img src="img/posts/debug-mobile-safari-ios/mobile-safari-iphone.png" alt="iPhone no emulador">
-	<img src="img/posts/debug-mobile-safari-ios/debug-safari.png" alt="Safari com inspector aberto">
+	<img src="/img/posts/debug-mobile-safari-ios/mobile-safari-iphone.png" alt="iPhone no emulador">
+	<img src="/img/posts/debug-mobile-safari-ios/debug-safari.png" alt="Safari com inspector aberto">
 	<figcaption>Debugando o sergiolopes.org no Mobile Safari do emulador</figcaption>
 </figure>
 

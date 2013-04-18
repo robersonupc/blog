@@ -9,7 +9,7 @@ description: Minhas anotações da palestra do Zeno Rocha no evento Front in BH 
 Zeno Rocha ([blog](http://zenorocha.com/), [twitter](https://twitter.com/zenorocha)), da Liferay, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre pré-processadores CSS com o título **CSS Sucks** ([slides](http://talks.zenorocha.com/frontinbh-2012/)).
 
 <figure>
-	<img src="img/posts/frontinbh2012/zeno.jpg">
+	<img src="/img/posts/frontinbh2012/zeno.jpg">
 	<figcaption>"Palestra do Zeno Rocha no Front In BH 2012"</figcaption>
 </figure>
 

@@ -1,48 +1,24 @@
 Header unset ETag
 FileETag None
 
-<ifmodule mod_deflate.c>
-   AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/cache-manifest image/svg+xml
-</ifmodule>
+AddOutputFilterByType MOD_PAGESPEED_OUTPUT_FILTER text/html
+AddOutputFilterByType DEFLATE text/text text/plain text/xml text/css application/x-javascript application/javascript text/cache-manifest image/svg+xml application/x-font-ttf
 
 <IfModule mod_expires.c>
  ExpiresActive on
 
-# Perhaps better to whitelist expires rules? Perhaps.
- ExpiresDefault      "access plus 1 month"
+ ExpiresDefault      "access plus 2 minutes"
 
-# cache.appcache needs re-requests 
-# in FF 3.6 (thx Remy ~Introducing HTML5)
  ExpiresByType text/cache-manifest "access plus 0 seconds"
-
-# Your document html
- ExpiresByType text/html "access plus 5 minutes"
-
-# Data
  ExpiresByType text/xml "access plus 0 seconds"
  ExpiresByType application/xml "access plus 0 seconds"
  ExpiresByType application/json "access plus 0 seconds"
 
-# RSS feed
- ExpiresByType application/rss+xml "access plus 24 hours"
+ # RSS feed
+ ExpiresByType application/rss+xml "access plus 1 hour"
 
-# Favicon (cannot be renamed)
+ # Favicon (cannot be renamed)
  ExpiresByType image/x-icon "access plus 1 week"
-
-# Media: images, video, audio
- ExpiresByType image/gif "access plus 1 month"
- ExpiresByType image/png "access plus 1 month"
- ExpiresByType image/jpg "access plus 1 month"
- ExpiresByType image/jpeg "access plus 1 month"
- ExpiresByType video/ogg "access plus 1 month"
- ExpiresByType audio/ogg "access plus 1 month"
- ExpiresByType video/mp4 "access plus 1 month"
- ExpiresByType video/webm "access plus 1 month"
-
-# CSS and JavaScript
- ExpiresByType text/css "access plus 1 year"
- ExpiresByType application/javascript "access plus 1 year"
- ExpiresByType text/javascript "access plus 1 year"
    
  <IfModule mod_headers.c>
   Header append Cache-Control "public"
@@ -55,10 +31,22 @@ AddType video/webm .webm
 AddType text/cache-manifest .manifest
 AddType text/cache-manifest .appcache
 
-AddType image/svg+xml svg svgz
+AddType image/svg+xml .svg .svgz
 AddEncoding gzip svgz
-AddEncoding gzip ttf
 
+
+# PageSpeed
+<IfModule pagespeed_module>
+   ModPagespeed on   
+   ModPagespeedEnableFilters move_css_above_scripts
+   ModPagespeedEnableFilters local_storage_cache
+   ModPagespeedEnableFilters convert_jpeg_to_webp
+   ModPagespeedEnableFilters remove_comments
+   ModPagespeedEnableFilters collapse_whitespace
+   ModPagespeedEnableFilters remove_quotes
+   ModPagespeedEnableFilters trim_urls
+   ModPagespeedEnableFilters lazyload_images
+</IfModule>
 
 
 # Links simples

@@ -25,7 +25,7 @@ No imenso leque da Web, resolvi que 2012 seria [o ano de focar em mobile](http:/
 Codei vários sites responsivos -- como [esse blog](https://github.com/sergiolopes/blog), o site do [livro de arquitetura Java](https://github.com/caelum/arquiteturajava.com.br) e o novo [site da Caelum](http://www.caelum.com.br/apostilas/). Montei meu device lab: comprei 2 iPod Touch, 3 celulares Android; ganhei um Kindle Fire.
 
 <figure>
-	<img src="img/posts/retrospectiva/mobile-2012.jpg" alt="Testando em vários devices">
+	<img src="/img/posts/retrospectiva/mobile-2012.jpg" alt="Testando em vários devices">
 </figure>
 
 ## TOP posts de 2012
@@ -51,7 +51,7 @@ Escrevi também no **blog da Caelum** em 2012, com destaque para:
 ## Estatísticas do blog em 2012
 
 <figure>
-	<img src="img/posts/retrospectiva/estatisticas-2012.png" alt="Google Analytics dos 9 meses de blog">
+	<img src="/img/posts/retrospectiva/estatisticas-2012.png" alt="Google Analytics dos 9 meses de blog">
 </figure>
 
 * 9 meses de vida

@@ -9,7 +9,7 @@ description: Minhas anotações da palestra do Leo Balter no evento Front in BH 
 Leo Balter ([blog](http://leobalter.net/), [twitter](https://twitter.com/leobalter)), da Estante Virtual, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre as novidades da Mozilla e do Firefox OS ([slides](http://www.slideshare.net/leobalter/novo-cinto-de-utilidades-do-desenvolvedor-javascript-webapis-e-open-web)).
 
 <figure>
-	<img src="img/posts/frontinbh2012/leo.jpg">
+	<img src="/img/posts/frontinbh2012/leo.jpg">
 	<figcaption>"Palestra do Leo Balter no Front In BH 2012"</figcaption>
 </figure>
 

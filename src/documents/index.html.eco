@@ -6,7 +6,7 @@ name: home
 ---
 
 <h1>Blog do Sérgio Lopes</h1>
-<p>Artigos sobre <strong>Web</strong>, <strong>front-end</strong> e <strong>mobile web</strong>. Minhas palestras, reviews de livros, relatos de eventos e experimentos. <strong>Bem vindo!</strong></p>
+<p>Artigos sobre <strong>Web</strong>, <strong>front-end</strong> e <strong>mobile web</strong>. Minhas palestras, reviews de livros, relatos de eventos e experimentos. Conheça também meu <a href="/livro-web-mobile/">livro "A Web Mobile"</a>. <strong>Bem vindo!</strong></p>
 
 <% subtitulos = ['Últimos posts', 'Cobertura de eventos'] %>
 <% for tipo, tipo_i in ['artigos', 'eventos']: %>
@@ -20,7 +20,7 @@ name: home
           <span class="post-category"><%= post.category %></span> 
         </div>
                         
-        <a class="post-link" href="<%= if @getLayoutName(post) == 'redirect' then post.originalURI else post.url %>">
+        <a class="post-link" href="<%= if @getLayoutName(post) == 'redirect' then post.originalURI else post.url + '/' %>">
           <%= post.title %>
         </a>
       </li>

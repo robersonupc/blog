@@ -16,7 +16,7 @@ O livro tem um viés um pouco mais de design que de código -- normal, pra quem 
 Tirando alguns poucos pontos que não gostei, **recomendo o livro** pra todo desenvolvedor Web, front-end, designer e quem mais estiver envolvido com mobile.
 
 <figure>
-	<img src="img/posts/reviews/the-mobile-book.jpg">
+	<img src="/img/posts/reviews/the-mobile-book.jpg">
 	<figcaption>"The Mobile Book, pela Smashing Magazine"</figcaption>
 </figure>
 

@@ -1,7 +1,7 @@
 figure img {
 	display: inline-block;
 	vertical-align: middle;
-	width: 100%;
+	max-width: 100%;
 }
 figcaption {
 	display: block;

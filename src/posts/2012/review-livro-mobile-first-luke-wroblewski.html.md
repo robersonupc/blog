@@ -16,7 +16,7 @@ Comprei o livro no [combo junto com o *"Responsive Web Design"*](http://www.aboo
 Eu gostei bastante desse livro, mais até que do [*"Responsive Web Design" do Ethan Marcotte*](/review-responsive-design-ethan-marcotte/). É um livro básico mas não óbvio, com **várias sacadas que te fazem pensar melhor seus designs mobile**. Um desenvolvedor iniciante consegue acompanhá-lo, e um mais experiente certamente irá aproveitar vários pontos.
 
 <figure>
-	<img src="img/posts/livro-mobile-first-luke/livro-mobile-first.jpg">
+	<img src="/img/posts/livro-mobile-first-luke/livro-mobile-first.jpg">
 	<figcaption>"Livro Mobile First de Luke Wroblewski. Editora A Book Apart."</figcaption>
 </figure>
 

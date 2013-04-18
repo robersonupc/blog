@@ -9,7 +9,7 @@ description: Minhas anotações da palestra do Leandro Vieira no evento Front in
 Leandro Vieira ([blog](http://leandrovieira.com/), [twitter](https://twitter.com/leandrovieira/)), da Apiki WP, palestrou no evento [Front In BH 2012](http://www.frontinbh.com.br/) sobre Wordpress com o título **O WordPress como aliado do Desenvolvedor FrontEnd**.
 
 <figure>
-	<img src="img/posts/frontinbh2012/leandro.jpg">
+	<img src="/img/posts/frontinbh2012/leandro.jpg">
 	<figcaption>"Palestra do Leandro Vieira no Front In BH 2012"</figcaption>
 </figure>
 

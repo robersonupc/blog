@@ -12,7 +12,7 @@ Sempre que alguém fala em [medias queries](http://blog.caelum.com.br/flexibilid
 Aliás, é sempre bom lembrar que [acessibilidade não é só sobre usuários cegos](http://a11yproject.com/posts/myth-accessibility-is-blind-people/). Há várias categorias, incluindo os que enxergam mas com **dificuldade de ler texto pequeno**. Pode ser uma doença, pode ser uma pessoa mais idosa, ou até um usuário "comum" desconfortável com um texto pequeno.
 
 <figure>
-	<img src="img/posts/media-queries/media-queries-zoom.jpg">
+	<img src="/img/posts/media-queries/media-queries-zoom.jpg">
 </figure>
 
 Pra isso, os navegadores têm a capacidade de **zoom nas páginas**. Eu mesmo, apesar de não ter nenhum problema na vista, uso direto: gosto de ler textos com pelo menos 18px de tamanho, então dou zoom em todas as páginas menores que isso. 
@@ -22,7 +22,7 @@ Pra isso, os navegadores têm a capacidade de **zoom nas páginas**. Eu mesmo, a
 Mas dar zoom na página tem um problema: se você aumentar muito, o **design do site pode quebrar**, principalmente medidas flexíveis como porcentagens e `em`, tão comuns em design responsivo.
 
 <figure>
-	<img src="img/posts/media-queries/zoom-quebrando.jpg" alt="Screenshot do blog com zoom de 200% quebrando o layout">
+	<img src="/img/posts/media-queries/zoom-quebrando.jpg" alt="Screenshot do blog com zoom de 200% quebrando o layout">
 	<figcaption>Um zoom de 200% deixa o artigo do blog bem estranho. O texto fica grande mas apertado, e a foto fica grande demais sem necessidade.</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ Um zoom de 200%, na prática, faz 1px no CSS ser renderizado como 2px na tela. N
 E a vantagem do viewport mudar de tamanho de acordo com o zoom é que as **media queries** são aplicadas de acordo com o viewport. Com isso, as suas media queries criadas originalmente para celulares e tablets começam a ser aplicadas para o usuário com zoom. Seu layout passa a se **adaptar corretamente** sem problema algum.
 
 <figure>
-	<img src="img/posts/media-queries/zoom-ok.jpg" alt="Screenshot do blog com zoom de 200% aplicando as media queries">
+	<img src="/img/posts/media-queries/zoom-ok.jpg" alt="Screenshot do blog com zoom de 200% aplicando as media queries">
 	<figcaption>Media queries ajustam o layout no Desktop com zoom de 200% como se estivesse num tablet pequeno. O design fica grande mas bem mais harmônico e proporcional.</figcaption>
 </figure>
 

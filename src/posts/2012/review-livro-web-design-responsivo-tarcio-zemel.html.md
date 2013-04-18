@@ -14,7 +14,7 @@ Acompanho o mercado de [design responsivo](/responsive-web-design/) há algum te
 O [livro](http://www.casadocodigo.com.br/products/livro-web-design-responsivo) **acabou de sair**, editado pela [Casa do Código](http://www.casadocodigo.com.br/), nova editora nacional com foco em livros de TI, ebooks, preços competitivos e grandes nomes do mercado brasileiro. Tive o prazer de participar do projeto com o Tárcio, ajudando na revisão do livro ainda em beta, e com o prefácio.
 
 <figure>
-	<img src="img/posts/livro-web-design-responsivo/capa-livro-responsivo.jpg">
+	<img src="/img/posts/livro-web-design-responsivo/capa-livro-responsivo.jpg">
 	<figcaption>"Livro 'Web Design Responsivo: Páginas adaptáveis para todos os dispositivos' de Tárcio Zemel."</figcaption>
 </figure>
 

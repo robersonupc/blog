@@ -14,7 +14,7 @@ O assunto é até um pouco pesado, mas o livro é muito bem escrito, didático e
 É um **excelente livro**. Mostra com riqueza de detalhes o que acontece por trás dos navegadores -- veja [no site dele](http://lcamtuf.coredump.cx/tangled/) um overview dos capítulos pra ter uma ideia da quantidade de informação que ele tem. O livro expõe uma quantidade inimaginável de brechas de segurança na Web. E a conclusão dele -- e minha, após lê-lo -- é que **a Web funciona meio que por sorte**. É **impressionante** o que é possível fazer de ruim!
 
 <figure>
-	<img src="img/posts/reviews/the-tangled-web.jpg" alt="Capa do livro">
+	<img src="/img/posts/reviews/the-tangled-web.jpg" alt="Capa do livro">
 </figure>
 
 Eu gosto de estudar a segurança na Web meio que por hobby. Já estava familiarizado com ataques como [XSS](http://blog.caelum.com.br/seguranca-em-aplicacoes-web-xss/), [CSRF](http://pt.wikipedia.org/wiki/Cross-site_request_forgery), [injeção de parâmetros](http://blog.caelum.com.br/seguranca-em-aplicacoes-web-injecao-de-novos-parametros/), [clickjacking](http://en.wikipedia.org/wiki/Clickjacking); já conhecia algumas das novidades como [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) e [CSP](https://developer.mozilla.org/en-US/docs/Security/CSP/Introducing_Content_Security_Policy). Mesmo assim, **aprendi muito**.

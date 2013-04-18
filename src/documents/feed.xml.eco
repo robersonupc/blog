@@ -30,7 +30,6 @@ standalone: true
                   </p>
 
                   <p><%- post.description %></p>
-                  <%# TODO prepare feed %>
                <% end %>
 
             <%# Posts externos de redirect %>
@@ -67,7 +66,7 @@ standalone: true
                   <% end %>
                <% end %>
 
-               <%# conteudo TODO prepare feed%>
+               <%# conteudo %>
                <%= @prepareFeed(post.contentRenderedWithoutLayouts) %>
 
                <%# link back %>

@@ -34,35 +34,35 @@ Na implementação do blog, uso [Jekyll](https://github.com/mojombo/jekyll) pra 
 Uma parte divertida de ter um blog pessoal sem muito compromisso é poder abrir os números sem problemas. Pode ser interessante pra você comparar com suas próprias experiências.
 
 <figure>
-	<img src="img/posts/aniversario/2013-visitas.png" alt="O gráfico mostra um crescimento mês a mês meio constante. No último mês de fevereiro, batemos o recorde com quase 7 mil visitantes.">
+	<img src="/img/posts/aniversario/2013-visitas.png" alt="O gráfico mostra um crescimento mês a mês meio constante. No último mês de fevereiro, batemos o recorde com quase 7 mil visitantes.">
 	<figcaption>Visitas de Março de 2012 a Março de 2013.</figcaption>
 </figure>
 
 As visitas têm crescido bastante conforme mais conteúdo é postado. Isso é bem legal. Mas o blog ainda é pequeno em tamanho. O melhor pra mim não e o número de visitas mas a qualidade delas. E devo dizer que meu público--você!--é excelente!
 
 <figure>
-	<img src="img/posts/aniversario/2013-behavior.png" alt="50 mil visitas. 30 mil visitantes únicos. 95 mil pageviews. 8min36 de tempo médio. 1.91 páginas por visita. bounce rate de 57% e 61% de new visits.">
+	<img src="/img/posts/aniversario/2013-behavior.png" alt="50 mil visitas. 30 mil visitantes únicos. 95 mil pageviews. 8min36 de tempo médio. 1.91 páginas por visita. bounce rate de 57% e 61% de new visits.">
 	<figcaption>Comportamento dos visitantes.</figcaption>
 </figure>
 
 Eu acho impressionante o tempo médio da visita ser de **8 minutos e meio**. O recorde, pra mim quase inacreditável, é na minha [palestra sobre mobile web](/palestra-mobile-web/) com tempo médio de **meia hora**. Isso quer dizer que as pessoas realmente vêm aqui e lêem o que eu escrevo. Fantástico isso.
 
 <figure>
-	<img src="img/posts/aniversario/2013-browsers.png" alt="65% de Chrome, 19% de Firefox e 7% de Safari. IE não dá nem 3%.">
+	<img src="/img/posts/aniversario/2013-browsers.png" alt="65% de Chrome, 19% de Firefox e 7% de Safari. IE não dá nem 3%.">
 	<figcaption>Navegadores usados.</figcaption>
 </figure>
 
 Não ter nem 3% de usuários de IE é fantástico. Aliás, nem testo nesses browsers velhos. Posso usar códigos mais modernos já que vocês são uma audiência de navegadores modernos.
 
 <figure>
-	<img src="img/posts/aniversario/2013-mobile.png" alt="8% mobile, incluindo tablets.">
+	<img src="/img/posts/aniversario/2013-mobile.png" alt="8% mobile, incluindo tablets.">
 	<figcaption>8% dos visitantes em mobile.</figcaption>
 </figure>
 
 O número de usuários mobile porém não é tão alto quanto eu gostaria. Mas já um número bem mais alto que a média por aí (média brasileira é menor que 3% e outros sites que cuido não chegam nem a 5%). O site é todo responsivo e tem atraído uma certa audiência. Acho que essa proporção deve crescer mais ainda em 2013.
 
 <figure>
-	<img src="img/posts/aniversario/2013-traffic-source.png" alt="28% de twitter, 24% de facebook, 10% da caelum, 10% de portais como tableless, infoq e imasters.">
+	<img src="/img/posts/aniversario/2013-traffic-source.png" alt="28% de twitter, 24% de facebook, 10% da caelum, 10% de portais como tableless, infoq e imasters.">
 	<figcaption>Porcentagem de cada site que linka aqui (referral sources).</figcaption>
 </figure>
 
