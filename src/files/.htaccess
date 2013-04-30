@@ -45,7 +45,7 @@ AddEncoding gzip svgz
    ModPagespeedEnableFilters collapse_whitespace
    ModPagespeedEnableFilters remove_quotes
    ModPagespeedEnableFilters trim_urls
-   ModPagespeedEnableFilters lazyload_images
+   # ModPagespeedEnableFilters lazyload_images
 </IfModule>
 
 

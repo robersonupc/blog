@@ -34,7 +34,9 @@ A seguir o prefácio que escrevi para o livro:
 
 *O Web Design Responsivo é a chave para essa nova Web. É pensar em páginas que se adaptem a todo tipo de dispositivo e contexto de uso. É sair das limitações de um browser Desktop e seu tamanho previsível, e pensar em páginas com flexibilidade que suportem todo tamanho de tela, qualquer tipo de resolução, interfaces com touch ou mouse. Pensar responsivamente é repensar a Web para o futuro.*
 
-*E este livro é a ferramenta que você precisa pra entender os desafios do Web Design Responsivo. O Tárcio mostra os pilares de uma interface responsiva, explora os aspectos técnicos do HTML e CSS, e mostra ideias para uma interface móvel usável. É um livro que recomendo para todo desenvolvedor Web que queira participar ativamente da nova Web. Espero que você aproveite a leitura como eu aproveitei.*
+*Este livro é a ferramenta que você precisa pra entender os desafios do Web Design Responsivo. O Tárcio mostra os pilares de uma interface responsiva, explora os aspectos técnicos do HTML e CSS, e mostra ideias para uma interface móvel usável. É um livro que recomendo para todo desenvolvedor Web que queira participar ativamente da nova Web. Espero que você aproveite a leitura como eu aproveitei.*
+
+*E, quando terminar a leitura, não deixe de conferir também meu livro [A Web Mobile](http://sergiolopes.org/livro-web-mobile/), onde aprofundo em vários outros temas relacionados a dispositivos móveis e sites responsivos.*
 
 -- Sérgio Lopes - Instrutor e desenvolvedor na Caelum
 
