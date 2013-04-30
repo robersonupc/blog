@@ -54,6 +54,7 @@ RewriteEngine on
 
 # redirect dos exemplos do livro
 RewriteRule ^m0$ /livro-web-mobile/exemplos/grid-flexivel-simples.html [R=302,L]
+RewriteRule ^mo$ /livro-web-mobile/exemplos/grid-flexivel-simples.html [R=302,L]
 RewriteRule ^m1$ /livro-web-mobile/exemplos/media-queries1.html [R=302,L]
 RewriteRule ^m2$ /livro-web-mobile/exemplos/media-queries2.html [R=302,L]
 RewriteRule ^m3$ /livro-web-mobile/exemplos/viewport.html [R=302,L]
