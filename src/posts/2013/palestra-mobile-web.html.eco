@@ -1,7 +1,7 @@
 ---
 layout: presentation
 title: 'Palestra: Truques de Web mobile'
-date: 2012-11-03
+date: 2013-04-30
 category: mobile
 description: Muitas dicas de performance, otimizações, UX, HTML5 e CSS3 pra deixar seu site mobile tinindo. Slides comentados, cheios de referências e exemplos práticos. Veja demos no smartphone/tablet.
 ogtype: article
@@ -50,7 +50,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 			<li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
 		</ul>
 
-		<p><i><b>Último update:</b> Novembro/2012.</i></p>
+		<p><i><b>Último update:</b> Abril/2013.</i></p>
 	</aside>
 	<aside class="audience">
 		<p>Aqui você acompanha <b>exemplos e demos em tempo real</b> dos assuntos tratados na palestra. Você pode ver o slide atual aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
@@ -93,6 +93,21 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 			<b>estamos contratando instrutores de front-end</b>; fale comigo depois se te interessar.</p>
 
 		<p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front. Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
+	</aside>
+</section>
+
+<section class="slide" id="livro">
+	<div class="content">
+		<a href="http://www.casadocodigo.com.br/products/livro-web-mobile">
+			<img src="/livro-web-mobile/capa-a-web-mobile.png" alt="Capa do livro Web Mobile">
+		</a>
+	</div>
+	<aside class="notes audience">
+		<p>Tenho também um <strong>livro pela editora Casa do Código</strong> sobre Web Mobile que aprofunda em vários dos tópicos que vamos ver aqui na palestra, além de trazer <strong>muitos outros</strong>.</p>
+
+		<p>O ebook custa só R$29 e o impresso, R$59. Pra comprar, é só ir no <a href="http://www.casadocodigo.com.br/products/livro-web-mobile">site da editora</a>.</p>
+
+		<p><strong>Acho que você vai gostar!</strong></p>
 	</aside>
 </section>
 
@@ -385,7 +400,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	<aside class="notes">
 		<p>Além da tela pequena, uma coisa que atrapalha ainda mais é o tamanho das barras de navegação e opções dos navegadores. Elas ocupam espaço precioso e diminuem o espaço útil para o seu site. Mas muitos navegadores, como no iPhone e Android, têm um atenuante: eles escondem a imensa barra de endereços assim que o usuário começar a scrollar a página.</p>
 
-		<p>O truque aqui é forçar o browser a fazer esse scroll e esconder a barra de endereços logo de cara. Essencialmente, é mandar scrollar pro início com `window.scrollTo` mas há uns truques como esperar a página carregar antes de fazer isso, e o fato de o iOS precisar de 0 e o Android de 1. Há uns scripts prontos que já cuidam desses detalhes. Recomendo <a href="https://gist.github.com/1183357">esse script</a> do @scottjehl.</p>
+		<p>O truque aqui é forçar o browser a fazer esse scroll e esconder a barra de endereços logo de cara. Essencialmente, é mandar scrollar pro início com <code>window.scrollTo</code> mas há uns truques como esperar a página carregar antes de fazer isso, e o fato de o iOS precisar de 0 e o Android de 1. Há uns scripts prontos que já cuidam desses detalhes. Recomendo <a href="https://gist.github.com/1183357">esse script</a> do @scottjehl.</p>
 	</aside>
 	<aside class="audience">
 		<p>Fizemos o <code><b>window.scrollTo(0,1)</b></code> nesse slide.</p>
@@ -427,7 +442,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 	<aside class="notes">
 		<p>Outra coisa são as chamadas hot zones dos dedos quando usamos o celular. É a área privilegiada na tela do celular onde o toque é mais fácil, com alcance mais fácil dos dedos. Há alguns artigos de UX tratando do assunto: <a href="http://www.netmagazine.com/features/designing-touch">Design for Touch</a> (.Net Magazine) e <a href="http://designscreenshots.blogspot.com.br/2012/06/designing-for-one-hand-operation.html">Design for one hand operation</a> são meus favoritos.</p>
 
-		<p>Repare no desenho que as hot zones mudam de acordo com a orientação do dispositivo - e até se estamos falando de celulares pequenos ou tablets com telas maiores. Mas essa palestra é técnica e não tão focada em UX. O que eu gostaria de comentar sobre as hot zones é que, frequentemente, você vai precisar de ajustes de design para diferentes resoluções e, principalmente, para a orientação específica do aparelho.</p>		
+		<p>Repare no desenho que as hot zones mudam de acordo com a orientação do dispositivo — e até se estamos falando de celulares pequenos ou tablets com telas maiores. Mas essa palestra é técnica e não tão focada em UX. O que eu gostaria de comentar sobre as hot zones é que, frequentemente, você vai precisar de ajustes de design para diferentes resoluções e, principalmente, para a orientação específica do aparelho.</p>		
 	</aside>
 	<aside class="audience">
 		<p>Tente alcançar o <b>botão</b> lá embaixo usando um smartphone em portrait. <b>É desconfortável.</b></p>
@@ -544,9 +559,9 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<p>Pode usar hover puramente como decoração, adicional no Desktop, totalmente progressive enhancement.
 		Mas não dependa dele pra mostrar conteúdo ou fazer alguma interação.</p>
 
-		<p><em>A única implementação de hover decente que vi em mobile foi no Samsung Galaxy Note II com
-			sua caneta S Pen inteligente. A tela wacom do aparelho reconhece a proximidade da caneta mesmo
-			sem tocá-la, e dispara um evento de hover na página corretamente.</em></p>
+		<p><em>Há alguns poucos aparelhos com implementações de hover decentes. O Samsung Galaxy Note II, com
+			sua caneta S Pen inteligente e a tela wacom, reconhece a proximidade da caneta mesmo
+			sem tocá-la, e dispara um evento de hover na página corretamente. O Galaxy S4 consegue fazer isso mesmo com o uso do dedo, através da câmera frontal. Mas são raros os aparelhos e situações bem específicas.</em></p>
 	</aside>
 </section>
 
@@ -1021,7 +1036,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>A API <a href="http://www.html5rocks.com/en/tutorials/getusermedia/intro/">getUserMedia</a> já traz uma solução multimedia completa e permite a manipulação do vídeo/foto/som direto no browser com Canvas por exemplo. É mais complexa de usar porém traz mais opções.</p>
 		
-		<p>O suporte a essas APIs ainda é bem baixo. Em Agosto de 2012, temos a <i>Media Capture API</i> apenas no Chrome, Firefox e Android 3+. A <i>getUserMedia</i>, apenas no Opera do Android, e no Chrome e Opera do Desktop.</p>
+		<p>O suporte a essas APIs ainda não é universal. Em Abril de 2013, temos a <i>Media Capture API</i> apenas no Chrome, Firefox, Android 3+, Blackberry 10 e iOS 6. A <i>getUserMedia</i>, apenas no Opera do Android, Blackberry 10 e Chrome Mobile beta; e no Chrome, Firefox e Opera do Desktop.</p>
 	</aside>
 </section>
 
@@ -1204,7 +1219,7 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>O que acaba acontecendo então é que quando você põe o dedo na tela, o navegador precisa adivinhar que gesto você está fazendo. Será um clique? Será que você vai arrastar o dedo? Será um scroll? Assim, quando damos um toque indicando clique, o navegador ainda espera uns 300ms antes de disparar o clique pra tentar adivinhar se na verdade você não queria fazer outro toque.</p>
 
-		<p>O problema? Cliques com onclick são lentos no touch. O usuário aperta um botão ou link e há uma demora na execução do callback. Por isso, o pessoal do Google inventou uma técnica chamada de <a href="https://developers.google.com/mobile/articles/fast_buttons">Fast Button</a> que usa gestures e taps pra acionar o evento bem antes do `onclick` normal.</p>
+		<p>O problema? Cliques com onclick são lentos no touch. O usuário aperta um botão ou link e há uma demora na execução do callback. Por isso, o pessoal do Google inventou uma técnica chamada de <a href="https://developers.google.com/mobile/articles/fast_buttons">Fast Button</a> que usa gestures e taps pra acionar o evento bem antes do <code>onclick</code> normal.</p>
 	</aside>
 	<aside class="audience">
 		<h1>
@@ -1306,10 +1321,8 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<%- @code 'css', -> %> 
 		#banner { background: url(foto_normal.png); }
 
-		@media (-webkit-min-device-pixel-ratio: 2), 
-		       (min--moz-device-pixel-ratio: 2), 
-		       (-o-min-device-pixel-ratio: 2/1), 
-		       (min-device-pixel-ratio: 2) {
+		@media (-webkit-min-device-pixel-ratio: 2),
+		       (min-resolution: 192dpi) {
 		  
 			#banner {
 			   background-image: url(foto_retina.png);
@@ -1326,7 +1339,9 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 
 		<p>Mas vários celulares Android famosos (como o Galaxy S II) usam razão 1.5 (ou 3:2), a chamada hdpi. É comum também celulares medianos usarem a razão normal 1:1 (mdpi) e celulares mais simples (como o Galaxy 5) usarem resolução mais baixa de 0.75 (3:4, ldpi). Há ainda razões mais estranhas, como a tvdpi do tablet Nexus 7 e sua razão de 1.33.</p>
 
-		<p>Você pode lidar com diferentes densidades de pixel usando media queries (que, infelizmente, ainda exigem muitos prefixos proprietários). Cuidado apenas com a questão de performance. Mesmo tendo uma tela retina, às vezes pode não ser interessante dar um arquivo em alta resolução para o dispositivo, já que ele demorará para carregar.</p>
+		<p>Você pode lidar com diferentes densidades de pixel usando media queries. Cuidado apenas com a questão de performance. Mesmo tendo uma tela retina, às vezes pode não ser interessante dar um arquivo em alta resolução para o dispositivo, já que ele demorará para carregar.</p>
+
+		<p>Tenho dois artigos no blog sobre o assunto: <a href="/media-queries-retina/">Media queries para telas retina</a> e <a href="http://sergiolopes.org/resolucoes-dpi-pixel-ratio-retina/">Tudo que você precisa saber sobre resoluções, telas retina, devicePixelRatio, DPI, CSS pixels e etc</a>. O meu <a href="/livro-web-mobile/">livro de Web mobile</a> trata ainda mais a fundo de questões relacionadas a telas de alta resolução.</p>
 	</aside>
 </section>
 
@@ -1360,8 +1375,6 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<p>Similar ao srcset, foi criado no rascunho do CSS4 uma proposta pra função <a href="http://dev.w3.org/csswg/css4-images/#image-set-notation">image-set()</a> no background. Ela recebe uma lista
 			de imagens e configurações de densidade de pixels ou tamanho do viewport. <em>O image-set
 			já funciona a partir do Chrome 21 e do Safari 6 com o prefixo -webkit-.</em></p>
-
-		<p>Tem um <a href="http://codepen.io/keithchu/pen/nFmlb">demo</a> no CodePen dessas duas funcionalidades pra testar o suporte dos futuros navegadores.</p>
 
 		<p>Além dessas duas especificações, há uma <a href="http://www.w3.org/community/respimg/wiki/Picture_Element_Proposal">proposta</a> para se criar um novo elemento <code>&lt;picture&gt;</code> que suportaria várias imagens usando media queries completas, além do srcset.</p>
 	</aside>
@@ -1506,6 +1519,9 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<p>O Windows 8 também traz recursos pra permitir que uma webapp seja adicionada à startup
 			screen do usuário. Há alguns metadados que devem ser colocados, de maneira parecida
 			ao iOS.</p>
+
+		<p>O <strong>Firefox OS</strong> também tem recursos parecidos.</p>
+
 		<p>Recomendo esse artigo para saber mais sobre <a href="http://www.mobilexweb.com/blog/windows-8-surface-ie10-html5">as novidades de HTML5 e CSS3 no IE10 e Windows 8</a>.</p>
 	</aside>
 </section>
@@ -1559,20 +1575,18 @@ feedReplace: Essa palestra é completamente interativa, o que não é suportado 
 		<div class="font-caelum ex1 logo"></div>
 	</div>
 
-	<aside class="notes">
+	<aside class="notes audience">
 		<p>Gostou? <b>Compartilhe</b> no Facebook e no Twitter usando os botões aí do topo!</p>
-		<p>Não de me seguir também no <a href="http://twitter.com/sergio_caelum">Twitter</a> e de acompanhar <a href="http://sergiolopes.org/">meu blog</a> para mais artigos.</p>
-		<p>E o código dessa palestra está todo disponível no <a href="https://github.com/sergiolopes/blog">Github do blog</a>. É bastante CSS, JavaScript e HTML!</p>
-	</aside>
-	<aside class="audience">
-		<p>Fim! Valeu por ter acompanhado.</p>
+		<p>Não deixe de me seguir também no <a href="http://twitter.com/sergio_caelum">Twitter</a> e de acompanhar <a href="http://sergiolopes.org/">meu blog</a> para mais artigos.</p>
+		
+		<p>Acho que você vai gostar também do meu <strong>novo livro "A Web Mobile"</strong> que aprofunda em vários temas que vimos aqui na palestra, além de trazer muitos outros sobre mobile. O ebook custa só R$29 e o impresso, R$59. Pra comprar, é só ir no <a href="http://www.casadocodigo.com.br/products/livro-web-mobile">site da editora</a>.</p>
+
+		<a href="http://www.casadocodigo.com.br/products/livro-web-mobile">
+			<img src="/livro-web-mobile/capa-a-web-mobile.png" alt="Capa do livro Web Mobile">
+		</a>
 	</aside>
 </section>
 </article>
-
-
-
-
 
 
 
