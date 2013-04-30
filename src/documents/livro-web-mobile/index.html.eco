@@ -50,44 +50,23 @@ referenceOthers: false
 		</svg>	
 	</div>
 	
-	<a href="http://www.casadocodigo.com.br" class="cdc"><img src="casa-do-codigo.png" alt="Editora Casa do Código"></a>
+	<a href="http://www.casadocodigo.com.br" class="cdc"><img src="/livro-web-mobile/casa-do-codigo.png" alt="Editora Casa do Código"></a>
 </div>
 
 <div class="descricao">
 	<div class="container">
+		<div class="compre">
+			<a href="http://www.casadocodigo.com.br/products/livro-web-mobile" class="compre-botao">Compre Já</a>
+			<p class="compre-info">(só R$ 29 o ebook e R$ 59 o impresso)</p>
+		</div>
+
 		<p>Com o crescimento absurdo do uso de smartphones e tablets, a Web quebrou novas fronteiras. Sites enjaulados no Desktop são coisa do passado. A Web é multidispositivo e você precisa suportar mobile, TV, relógio... e até Desktop!</p>
 
 		<p>Programe a <b>Web moderna</b>, transformada pela mobilidade, touch screens e plataformas diversas. Desvende os mistérios de um bom design responsivo, de uma estratégia mobile-first, das telas de alta resolução, dos componentes HTML5 e das otimizações de performance. Enfrente os desafios e mudanças da <b>Web Mobile</b> e explore seus limites!</p>
-		
-		<div class="compreja">
-			<h2 class="compreja-chamada">Compre já o livro:</h2>
-		
-			<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-				<input type="hidden" name="id" value="293068765">
-				<input type="submit" value="ebook R$ 29">
-			</form>
-			
-			<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-				<input type="hidden" name="id" value="293070707">
-				<input type="submit" value="impresso R$ 59">
-			</form>
-			
-			<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-				<input type="hidden" name="id" value="293070813">
-				<input type="submit" value="combo R$ 69">
-			</form>
-			
-			<div class="promocao">
-				<h3>Compre até dia 17 de abril e concorra a uma camiseta</h3>
-				<img src="camiseta-web-mobile.png" alt="Camiseta com estampa da ilustração do livro A Web Mobile">
-			</div>
-			
-			<p>Ebooks disponíveis em <b>PDF</b>, <b>ePub</b> e <b>mobi</b>. Combo é impresso + ebook, sendo o ebook disponibilizado imediatamente. Impresso com previsão de entrega para 26 de abril. Mais informações no site da <a href="http://www.casadocodigo.com.br/products/livro-web-mobile">editora Casa do Código</a>.</p>
-		</div>
 	</div>
 </div>
 
-<div class="container sumario">
+<div class="container sumario" id="sumario">
 	<h2 class="sumario-titulo">Tópicos do livro</h2>
 
 	<ol class="sumario-itens">
@@ -160,38 +139,17 @@ referenceOthers: false
 			
 			<p>Saiba mais <a href="/sobre/">sobre mim</a>, ou visite meu <a href="/">blog</a> e meu <a href="https://twitter.com/sergio_caelum">twitter</a>. Participe também do <a href="https://groups.google.com/d/forum/livro-web-mobile">grupo de discussões do livro</a>.</p>
 			
-			<img src="capa-a-web-mobile.png" alt="Capa do Livro A Web Mobile" class="capa-livro">
+			<img src="/livro-web-mobile/capa-a-web-mobile.png" alt="Capa do Livro A Web Mobile" class="capa-livro">
 		</div>
 	</div>
 </div>
 
 <div class="compreja-container">
 	<div class="container">
-	<div class="compreja">
-		<h2 class="compreja-chamada">Compre já o livro:</h2>
-	
-		<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-			<input type="hidden" name="id" value="293068765">
-			<input type="submit" value="ebook R$ 29">
-		</form>
-		
-		<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-			<input type="hidden" name="id" value="293070707">
-			<input type="submit" value="impresso R$ 59">
-		</form>
-		
-		<form action="http://www.casadocodigo.com.br/cart/add" method="post">
-			<input type="hidden" name="id" value="293070813">
-			<input type="submit" value="combo R$ 69">
-		</form>
-	
-		<div class="promocao">
-			<h3>Compre até dia 17 de abril e concorra a uma camiseta</h3>
-			<img src="camiseta-web-mobile.png" alt="Camiseta com estampa da ilustração do livro A Web Mobile">
+		<div class="compre">
+			<a href="http://www.casadocodigo.com.br/products/livro-web-mobile" class="compre-botao">Compre Já</a>
+			<p class="compre-info">(só R$ 29 o ebook e R$ 59 o impresso)</p>
 		</div>
-				
-		<p>Ebooks disponíveis em <b>PDF</b>, <b>ePub</b> e <b>mobi</b>. Combo é impresso + ebook, sendo o ebook disponibilizado imediatamente. Impresso com previsão de entrega para 26 de abril. Mais informações no site da <a href="http://www.casadocodigo.com.br/products/livro-web-mobile">editora Casa do Código</a>.</p>
-	</div>
 	</div>
 </div>
 
