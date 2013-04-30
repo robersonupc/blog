@@ -19,6 +19,6 @@ Mais estão por vir!
 O blog
 ------
 
-Roda Wordpress? **Não**, graças a Deus. O blog é baseado no [Jekyll](https://github.com/mojombo/jekyll "Projeto Jekyll no Github"), do pessoal do [Github](http://github.com) -- mais especificamente, o *Github Pages*.
+Roda Wordpress? **Não**, graças a Deus. O blog é baseado no [DocPad](http://docpad.org). Por isso, ele é mais **simples**, mais **rápido e otimizado**, **responsivo**, funciona bem em **mobile**. E é um [blog opensource](https://github.com/sergiolopes/blog "Repositório do blog no Github") -- você pode ver o código, customizações e até posts e drafts no repositório. *Pull requests* com correções são muito bem vindos!
 
-Por isso, ele é mais **simples**, mais **rápido e otimizado**, **responsivo**, funciona bem em **mobile**. E é um [blog opensource](https://github.com/sergiolopes/blog "Repositório do blog no Github") -- você pode ver o código, customizações e até posts e drafts no repositório. *Pull requests* com correções são muito bem vindos!
+**Atualização Abril/2013:** Migrei o blog recentemente do Jekyll pro DocPad, então atualizei as informações aqui no post.

@@ -49,7 +49,7 @@ Este blog
 ---------
 
 * Responsive, mobile friendly
-* Baseado no [Jekyll](https://github.com/mojombo/jekyll/)
+* Baseado no fantástico [DocPad](http://docpad.org/)
 * Estático, rápido e otimizado -- não lerdo igual Wordpress
 * [Código fonte disponível](https://github.com/sergiolopes/blog) -- layout, estrutura, códigos e conteúdo
 * Todo conteúdo e códigos liberados para consumo pessoal e aprendizado -- **não copie e poste em outros lugares**

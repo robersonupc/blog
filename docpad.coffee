@@ -94,10 +94,10 @@ docpadConfig = {
 
 		dateAsText: (date, prefix) ->
 			# se for mais de 75 dias, mostra data; senão mostra x dias atrás
-			if (new Date().getTime() - date.getTime() > 75 * 24 * 60 * 60 * 1000)
-				(if prefix? then prefix else '') + moment(date).format('DD MMM YYYY')
-			else
-				moment(date).lang('pt').fromNow()
+			# if (new Date().getTime() - date.getTime() > 75 * 24 * 60 * 60 * 1000)
+				(if prefix? then prefix else '') + moment(date).lang('pt').format('DD MMM YYYY')
+			# else
+			#	moment(date).lang('pt').fromNow()
 
 		encodedAbsoluteURI: (post) ->
 			encodeURIComponent(@absoluteURI(post))
@@ -163,11 +163,11 @@ docpadConfig = {
 
 			# em desenvolvimento, ignora arquivos velhos
 			ignorePaths: [
-				'/Users/sergio/workspace/blog/src/documents/feed',
-				'/Users/sergio/workspace/blog/src/documents/sitemap',
-				'/Users/sergio/workspace/blog/src/posts/2012',
-				'/Users/sergio/workspace/blog/src/posts/caelum',
-				'/Users/sergio/workspace/blog/src/posts/eventos'
+				__dirname + '/src/documents/feed',
+				__dirname + '/src/documents/sitemap',
+				__dirname + '/src/posts/2012',
+				__dirname + '/src/posts/caelum',
+				__dirname + '/src/posts/eventos'
 			]
 
 		production:

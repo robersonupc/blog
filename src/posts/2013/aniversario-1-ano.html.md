@@ -25,11 +25,11 @@ Desses posts:
 * 12 posts foram cobrindo **palestras** de amigos em eventos que assisti. Um formato que resolvi testar por aqui.
 * E 7 posts eu escrevi no **blog da Caelum** e só linkei aqui. Acabei linkando também pra mais 6 posts meus antigos no blog da Caelum mas que acho importantes.
 
-Eu uso os comentários do Facebook aqui já que uso o Jekyll--aliás, sabia que [o código](https://github.com/sergiolopes/blog) do blog todo tá aberto? Foram 160 comentários esse ano e mais alguns milhares de Likes e compartilhamentos. Aliás, optei pelos comentários via Facebook pois eles são postados automaticamente na timeline do usuário, me ajudando na divulgação.
+Eu uso os comentários do Facebook aqui já que uso o DocPad--aliás, sabia que [o código](https://github.com/sergiolopes/blog) do blog todo tá aberto? Foram 160 comentários esse ano e mais alguns milhares de Likes e compartilhamentos. Aliás, optei pelos comentários via Facebook pois eles são postados automaticamente na timeline do usuário, me ajudando na divulgação.
 
 Nesse 1 ano, já fiz o primeiro **redesign** do blog também, na virada do ano. Sou programador e não muito bom pra isso, mas estou bem satisfeito com o design que montei agora. O design antigo, se estiver curioso, você pode ver [aqui](http://sergiolopes.org/img/design/2012/home.png), [aqui](http://sergiolopes.org/img/design/2012/artigo.png) e [aqui](http://sergiolopes.org/img/design/2012/artigo-especial.png). Sou adepto de *Flat Design* e coisas mais minimalistas, mas vira e mexe experimento com outras ideias também.
 
-Na implementação do blog, uso [Jekyll](https://github.com/mojombo/jekyll) pra gerar meu HTML. Uso [Stylus](http://learnboost.github.com/stylus/) pro CSS. O JavaScript é normal, sem framework. E otimizo tudo com [yuicompressor](http://yui.github.com/yuicompressor/) e [htmlcompressor](https://code.google.com/p/htmlcompressor/) antes do deploy. Tudo aqui, claro, é absolutamente responsivo e compatível com mobile. Como falei, você pode acompanhar o código de tudo isso [no Github](https://github.com/sergiolopes/blog).
+Na implementação do blog, uso [DocPad](https://docpad.org) pra gerar meu HTML. Uso [Stylus](http://learnboost.github.com/stylus/) pro CSS. O JavaScript é normal, sem framework. E otimizo tudo com o [mod_pagespeed](https://developers.google.com/speed/pagespeed/mod) direto no servidor. Tudo aqui, claro, é absolutamente responsivo e compatível com mobile. Como falei, você pode acompanhar o código de tudo isso [no Github](https://github.com/sergiolopes/blog).
 
 ## Estatísticas
 
@@ -91,3 +91,4 @@ O futuro é continuar esse blog e colocar cada vez mais artigos aqui. Espero que
 
 E, se você aguentou ler tudo isso até aqui, uma novidade em primeira mão: **acabo de lançar um [livro sobre Web Mobile](/livro-web-mobile/)**. É fruto direto do trabalho nesse blog e do resultado positivo desse ano todo. Ele tem artigos que publiquei aqui mas estendidos com mais conteúdo; e vários artigos novos e inéditos, claro. [Confere lá](/livro-web-mobile/)!
 
+**Atualização Abril/2013:** Migrei o blog recentemente do Jekyll pro DocPad, então atualizei as informações aqui no post.
