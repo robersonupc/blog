@@ -15,10 +15,13 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2013
 
+* *31/Ago* - **QCon SP** - *Otimização de performance Web: desafios do mundo mobile*
+* *03/Ago* - **Front In BH** - *(a definir)*
 * *20/Jul* - **Web Day** - *Dominando HTML5 offline com AppCache*
+* *22/Jun* - **JSConf** - *(lightning talk)*
 * *08/Jun* - **SampaJS 3.1** - *(a definir)*
-* *03/Mai* - **OlhóSEO - Florianópolis** - *Design Responsivo por uma Web única*
-* *30/Abr* - **DevCast online ao vivo** - *Uma tonelada de truques de web mobile*
+* *03/Mai* - **OlhóSEO - Florianópolis** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
+* *30/Abr* - **DevCast online ao vivo** - [Uma tonelada de truques de web mobile](/palestra-web-mobile/) ([gravação do vídeo](https://www.youtube.com/watch?v=_wMx_Yb2lBk))
 * *23/Abr* - **43º Fórum de TIC Dataprev - Brasília** - *Os caminhos de uma estratégia mobile*
 * *05/Abr* - **Mobile Conf** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
 * *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/) - [vídeo](https://www.youtube.com/watch?v=mrS4ivgj1Es)
