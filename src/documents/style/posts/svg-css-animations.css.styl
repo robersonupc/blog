@@ -1,0 +1,92 @@
+@import "nib"
+
+.ilustracao
+	display block 
+	width 100%
+	margin 1em 0
+	padding-top (403 / 549 * 100%)
+	position: relative
+	overflow hidden
+
+	svg
+		absolute top 0 left 0
+
+.no-svg 
+	.ilustracao, .exemplo
+		background: #FC1
+		padding 1em
+		font-style italic
+		margin 1em 0
+
+		&:after
+			content 'Seu navegador não suporta SVG pra mostrar os demos.'
+
+		svg
+			display none
+
+.ilustracao
+	.engrenagem-pequena
+		transform-origin 297px 309px
+		animation gira-horario 9s linear infinite
+
+	.engrenagem-grande
+		transform-origin 266px 226px
+		animation gira-anti 9s linear infinite
+
+	.nuvem-branca
+		animation move-nuvem 6s ease-out infinite alternate
+
+	.nuvem-fundo
+		animation move-nuvem 7s ease-in infinite alternate
+
+	.seta
+		animation muda-cor 2s linear infinite
+
+		& + .seta
+			animation-delay -0.5s
+			& + .seta 
+				animation-delay -1s
+				& + .seta 
+					animation-delay -1.5s
+
+.exemplo2 
+	.seta
+		fill #fcb870
+
+@keyframes gira-horario
+	to
+		transform: rotate(360deg)
+
+@keyframes gira-anti
+	to
+		transform: rotate(-360deg)
+
+@keyframes move-nuvem
+	to
+		transform: translateX(25px)
+
+@keyframes muda-cor
+	0%,74%
+		fill: #fcb870
+	75%,100%
+		fill: #f89c33
+
+
+@keyframes exemplo3-muda-cor {
+	0%,49% {
+		fill: #fcb870
+	}
+	50%,100% {
+		fill: #f89c33
+	}
+}
+
+.exemplo3 .seta
+	animation exemplo3-muda-cor 3s linear infinite
+
+.exemplo4 .engrenagem
+	animation: gira-horario 2s linear infinite;
+
+.exemplo5 .engrenagem
+	animation: gira-horario 4s linear infinite;
+	transform-origin 43px 40px
