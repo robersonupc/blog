@@ -27,7 +27,7 @@ name: comentarios
 
 	// preenche artgios
 	document.getElementById('artigo').innerHTML += '<a href="'+post_url+'">'+post_title+'</a>';
-	document.querySelector('#comentarios .fb-comments').setAttribute('data-href', 'http://sergiolopes.org' + post_url);
+	document.querySelector('#comentarios .fb-comments').setAttribute('data-href', post_url);
 
 	// carrega facebook
 	(function(d, s, id) {

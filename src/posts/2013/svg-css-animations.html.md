@@ -4,6 +4,8 @@ title: "Imagens SVG com CSS animations"
 date: 2013-05-15
 category: web
 description: Como animar um SVG usando CSS3 Animations
+shareImage: /livro-web-mobile/share-web-mobile.jpg
+feedWarning: Esse post possui exemplos não suportados nos feeds RSS. Recomendo que visite a página e leia por lá. (é otimizado também para mobile)
 
 css: /style/posts/svg-css-animations.css
 referenceOthers: false

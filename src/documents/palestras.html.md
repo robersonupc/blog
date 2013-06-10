@@ -18,8 +18,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *31/Ago* - **QCon SP** - *Otimização de performance Web: desafios do mundo mobile*
 * *03/Ago* - **Front In BH** - *(a definir)*
 * *20/Jul* - **Web Day** - *Dominando HTML5 offline com AppCache*
-* *22/Jun* - **JSConf** - *(lightning talk)*
-* *08/Jun* - **SampaJS 3.1** - *(a definir)*
+* *22/Jun* - **JSConf** - *(a definir)*
 * *23/Mai* - **Noite técnica na Caelum Rio de Janeiro** - *Design Responsivo por uma Web única*
 * *13/Mai* - **Google IO Extended Open Sampa** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
 * *03/Mai* - **OlhóSEO - Florianópolis** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
