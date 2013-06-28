@@ -20,7 +20,7 @@ Eu gosto muito de backend e Java -- até lancei um [livro](http://www.arquitetur
 
 ## 2012 foi o ano do mobile
 
-No imenso leque da Web, resolvi que 2012 seria [o ano de focar em mobile](http://blog.caelum.com.br/2012-e-o-ano-do-mercado-mobile-no-brasil/). Falei de [design responsivo](/responsive-web-design/), outras coisas de [mobile web](/palestra-web-mobile/) e até [emails responsivos](/email-newsletter-mobile-responsivo/).
+No imenso leque da Web, resolvi que 2012 seria [o ano de focar em mobile](http://blog.caelum.com.br/2012-e-o-ano-do-mercado-mobile-no-brasil/). Falei de [design responsivo](/responsive-web-design/), outras coisas de [mobile web](/palestra-mobile-web/) e até [emails responsivos](/email-newsletter-mobile-responsivo/).
 
 Codei vários sites responsivos -- como [esse blog](https://github.com/sergiolopes/blog), o site do [livro de arquitetura Java](https://github.com/caelum/arquiteturajava.com.br) e o novo [site da Caelum](http://www.caelum.com.br/apostilas/). Montei meu device lab: comprei 2 iPod Touch, 3 celulares Android; ganhei um Kindle Fire.
 
@@ -31,7 +31,7 @@ Codei vários sites responsivos -- como [esse blog](https://github.com/sergiolop
 ## TOP posts de 2012
 
 * [Design responsivo por uma Web única](/responsive-web-design/)
-* [Palestra: Truques de Web Mobile](/palestra-web-mobile/)
+* [Palestra: Truques de Web Mobile](/palestra-mobile-web/)
 * [10 dicas para fazer um email responsivo](/email-newsletter-mobile-responsivo/)
 * [CSS: Você deveria usar box-sizing: border-box em todas as suas páginas](/css-box-sizing-border-box/).
 * [Front In BH 2012: palestra sobre performance e otimizações web](/frontinbh-otimizacoes-web/)

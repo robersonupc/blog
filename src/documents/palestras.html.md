@@ -22,7 +22,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *23/Mai* - **Noite técnica na Caelum Rio de Janeiro** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
 * *13/Mai* - **Google IO Extended Open Sampa** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
 * *03/Mai* - **OlhóSEO - Florianópolis** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
-* *30/Abr* - **DevCast online ao vivo** - [Uma tonelada de truques de web mobile](/palestra-web-mobile/) ([gravação do vídeo](https://www.youtube.com/watch?v=_wMx_Yb2lBk))
+* *30/Abr* - **DevCast online ao vivo** - [Uma tonelada de truques de web mobile](/palestra-mobile-web/) ([gravação do vídeo](https://www.youtube.com/watch?v=_wMx_Yb2lBk))
 * *23/Abr* - **43º Fórum de TIC Dataprev - Brasília** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
 * *05/Abr* - **Mobile Conf** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
 * *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/) - [vídeo](https://www.youtube.com/watch?v=mrS4ivgj1Es)
@@ -30,12 +30,12 @@ Lista das palestras mais recentes que dei e links pros slides:
 # 2012
 
 * *05/Dez* - **JavaOne Latin America** - [Porque você deveria usar CDI em todos os seus projetos Java](http://www.slideshare.net/caelumdev/porque-voc-deveria-usar-cdi-nos-seus-projetos-java-javaone-la-2012-srgio-lopes)
-* *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
-* *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *30/Nov* - **DevFest Brasil** - [Uma tonelada de truques de Web Mobile](/palestra-mobile-web/)
+* *03/Nov* - **Front in Sampa** - [Uma tonelada de truques de Web Mobile](/palestra-mobile-web/)
 	* Vídeo da [mesa redonda do 7 masters](http://www.youtube.com/watch?v=bRrZYlbre7M) com minha participação
 	* [Vídeo oficial](https://www.youtube.com/watch?v=aH9eVa2cTcM) da palestra feito pela organização do evento
 * *08/Set* - **Joomla Day Brasil** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
-* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-web-mobile/)
+* *04/Ago* - **QCon SP** - [Uma tonelada de truques de Web Mobile](/palestra-mobile-web/)
 	* [Vídeo oficial](http://www.infoq.com/br/presentations/tonelada-truques-web) gravado no evento (by InfoQ Brasil)
 	* [Entrevista sobre mobile web](http://www.infoq.com/br/interviews/novidades-no-web-mobile) gravada no evento pelo InfoQ Brasil por Rafael Sakurai
 * *14/Jul* - **Front in BH** - [Por uma Web mais rápida: Técnicas de otimização de Sites](http://www.slideshare.net/caelumdev/frontinbh-2012-por-uma-web-mais-rpida-tcnicas-de-otimizaes-de-sites-por-srgio-lopes)
