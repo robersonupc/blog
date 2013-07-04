@@ -8,8 +8,8 @@ name: home
 <h1>Blog do Sérgio Lopes</h1>
 <p>Artigos sobre <strong>Web</strong>, <strong>front-end</strong> e <strong>mobile web</strong>. Minhas palestras, reviews de livros, relatos de eventos e experimentos. Conheça também meu <a href="/livro-web-mobile/">livro "A Web Mobile"</a>. <strong>Bem vindo!</strong></p>
 
-<% subtitulos = ['Últimos posts', 'Cobertura de eventos'] %>
-<% for tipo, tipo_i in ['artigos', 'eventos']: %>
+<% subtitulos = ['Últimos posts'] %>
+<% for tipo, tipo_i in ['artigos']: %>
   <h2><%= subtitulos[tipo_i] %></h2>
   <ul class="posts">
     <% for post in @getCollection(tipo).toJSON(): %>
