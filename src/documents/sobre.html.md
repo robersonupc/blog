@@ -13,7 +13,7 @@ name: sobre
 Atividades
 ----------
 
-* Instrutor e desenvolvedor na [Caelum](http://www.caelum.com.br/)
+* Instrutor e desenvolvedor na [Caelum](http://www.caelum.com.br/), onde dou aula nos [cursos de web design](http://www.caelum.com.br/cursos-web-front-end/) e [cursos java](http://www.caelum.com.br/cursos-java/).
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
 * [Palestrante em diversos eventos](/palestras/)
 * **Autor do livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**
