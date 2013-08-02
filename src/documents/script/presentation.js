@@ -1578,7 +1578,7 @@ var P = (function(doc, userAgent, location, win){
 
 
 // offline: supports update
-(function(){
+(function(window){
 
     function updateAvailable() {
         // TODO extrair mensagem
@@ -1587,12 +1587,14 @@ var P = (function(doc, userAgent, location, win){
         }
     }
 
-    window.applicationCache.addEventListener('updateready', updateAvailable);
-    if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
-      updateAvailable();
+    if ('applicationCache' in window) {
+        window.applicationCache.addEventListener('updateready', updateAvailable);
+        if(window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+          updateAvailable();
+        }
     }
 
-})();
+})(window);
 
 
 
