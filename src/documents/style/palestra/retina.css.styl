@@ -1,0 +1,101 @@
+@import "nib"
+
+
+cor_base = #FF0
+cor_sombra = #333
+cor_ruim = #F02
+
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/pt_sans-web-regular-webfont.ttf);
+}
+
+
+/*--- Layout base ---*/
+.slide .content
+	background transparent
+	font-size: 2em
+
+	h1, h2
+		font-size: 3.3em
+		font-weight normal
+		margin: 0.4em
+		line-height 1
+
+		color: cor_base
+		text-shadow 0.05em 0.06em cor_sombra
+
+	h2
+		font-size 3em
+
+	.balao
+		color: white
+		background cor_sombra
+		border-radius: 0.25em
+		text-shadow none
+		display: inline-block
+		padding: 0.25em 0.5em
+
+.highlighted
+	margin 0.4em
+	font-size: 1em
+
+.presentation-mode .bars .content
+	display none
+
+.code-center
+	.content
+		line-height 768px
+		text-align center
+
+	.highlighted
+		display inline-block
+		text-align: left
+		vertical-align: middle
+
+/*--- Barras ---*/
+.bars
+	.site, .audience
+		.title
+			font-size: 110%
+			line-height 2.75
+
+
+
+
+/*--- slides específicos ---*/
+.css-el
+	background #F90
+	margin 12% auto
+	height 40%
+	width 65%
+
+.css-gradiente
+	background-image linear-gradient(#F90, black)
+
+.css-rotate
+	transform rotate(-16deg)
+
+.css-blur
+	-webkit-filter: blur(10px);
+	-moz-filter: blur(10px);
+	filter: blur(10px);
+
+.babuino
+	position relative
+	margin 3% auto
+	width 52%
+
+	img
+		max-width 100%
+
+	p
+		absolute bottom 0 left 0
+		color white
+		background rgba(0,0,0,0.6)
+		padding 0.25em
+		margin 0
+		width 100%
+		text-align center

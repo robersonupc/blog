@@ -1,0 +1,832 @@
+---
+layout: presentation
+title: 'Palestra: Repensando o front-end para telas de alta resolução'
+date: 2013-08-03
+category: html5
+description: Como criar sites e webapps offline com Application Cache. Palestra completa com dicas avançadas, exemplos e explicações. 
+ogtype: article
+shareImage: /img/palestra/
+slug: retina
+class: destaque
+
+feedReplace: Essa palestra é completamente interativa, o que não é suportado nos feeds RSS. Recomendo que visite o site e leia por lá. (é otimizado também para mobile)
+
+referenceOthers: false
+---
+
+<article class="presentation">
+
+    <div class="svg-data"><%- @include("img/palestra/retina/presentation.svg") %></div>
+
+<!--
+####   ABERTURA
+ -->
+
+<section class="slide" id="capa">
+    <aside class="notes">
+        <p>Telas de alta resolução? Imagens responsivas? Retina? Gráficos vetoriais? SVG, icon fonts? DPIs, viewports, device pixel ratio? Muitos termos confusos? Essa palestra vai mostrar tudo que você precisa saber pra entender e trabalhar com telas de resoluções diferentes. Vamos ver como adaptar seu design e suas imagens pra esses contextos e dicas de como suportar os vários tipos de tela de hoje e do futuro!</p>
+
+        <h3>Como navegar no Desktop:</h3>
+        <ul>
+            <li>Use as <b>setas do teclado</b> pra passar os slides;</li>
+            <li>O slide é mostrado com anotações complementares cheias de links adicionais;</li>
+            <li>Pra esconder as notas e entrar em 'modo apresentação', aperte <b>P</b>;</li>
+            <li>Aperte <b>ESC</b> pra sair do 'modo apresentação'.</li>
+        </ul>
+
+        <h3>Como navegar no Tablet/Smartphone touchscreen:</h3>
+        <ul>
+            <li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
+        </ul>
+
+        <p><i><b>Data:</b> Agosto/2013.</i></p>
+    </aside>
+    <aside class="audience">
+        <p>Aqui você acompanha <b>exemplos e demos em tempo real</b> dos assuntos tratados na palestra. Você pode ver o slide atual aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
+
+        <p>Único requisito é usar um navegador moderno com suporte a <b>WebSockets</b>. No <b>iOS</b>, tudo
+         funciona bem da versão 4.2 pra cima.</p>
+
+        <p>No <b>Android</b>, recomendo fortemente o <a href="https://play.google.com/store/apps/details?id=com.android.chrome">Chrome Mobile</a> ou o <a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox">Firefox</a>. O Chrome só tá disponível pra Android 4+, mas o Firefox dá pra instalar em versões anteriores. O browser padrão do <em>Android 4+</em> também funciona bem.</p>
+
+        <p>Dá pra acompanhar no computador também. Nesse caso, use um Chrome ou Firefox recente, ou IE 10.</p>
+
+        <p>A sincronização estará ativa entre esse navegador e seu dispositivo se a <b>bolinha</b> no título da palestra estiver <b>verde</b>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes">
+        <p>Sou instrutor e desenvolvedor na <a href="http://www.caelum.com.br/">Caelum</a>.</p>
+
+        <p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front end e Web, em especial Web Mobile. Posto bastante coisa no <a href="http://blog.caelum.com.br/">blog da Caelum</a> também.</p>
+
+        <p>Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
+    </aside>
+    <aside class="audience">
+        <p>Sou instrutor e desenvolvedor na <a href="http://www.caelum.com.br/">Caelum</a>. Aliás,
+            <b>estamos contratando instrutores de front-end</b>; fale comigo depois se te interessar.</p>
+
+        <p>Não deixe de assinar <a href="http://sergiolopes.org">meu blog</a> onde posto muita coisa de front. Você também pode <a href="https://twitter.com/sergio_caelum">seguir meu Twitter</a> ou <a href="https://www.facebook.com/sergio.caelum">me adicionar no Facebook</a>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Tenho também um <strong>livro pela editora Casa do Código</strong> sobre Web Mobile que discute vários dos tópicos que vamos ver aqui na palestra, além de trazer <strong>muitos outros</strong>.</p>
+
+        <p>O ebook custa só R$29 e o impresso, R$59. Pra comprar, é só ir no <a href="http://www.casadocodigo.com.br/products/livro-web-mobile">site da editora</a>.</p>
+
+        <p><strong>Acho que você vai gostar!</strong></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Primeira coisa importante é definir o que são telas de alta resolução e porque elas afetam o desenvolvimento front-end moderno.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Isso é uma tela.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>A resolução é o número de pixels na tela. Aquele menor ponto do display que pode assumir uma cor diferente. Nesse desenho simples é como se a tela tivesse resolução de 14px por 8px.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Uma tela de <b>alta resolução</b> é simplesmente um termo bonito pra quando a tela tem <b>muitos pixels</b>, uma resolução alta.</p>
+
+        <p>O curioso é que essa definição não é exata e muda com o tempo. Na época que os monitores tinham 600px, alta resolução era ter um monitor de 1280px. Na época das TVs de tubo, TV de alta resolução era um HD simples de 720p. Hoje já falamos de TV 4k e telas de computador com mais de 3000px de largura.</p>
+
+        <p>Aqui no exemplo, minha tela tem o dobro da resolução da anterior. Então, pra mim, é de alta resolução.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas como tudo isso me afeta. Bom, imagina desenhar uma nuvem de 5px nessa minha tela de 14px. Ela ocupa esse tamanho aí.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>No meu CSS, apenas indiquei o tamanho da imagem e pronto, ela ocupará aquele tamanho pra mim.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas na minha tela com o dobro de resolução isso significaria que, agora, aquela imagem vai ocupar metade do espaço físico de antes. Os meus pixels têm metade do tamanho e a imagem ocupa os mesmos pixels de sempre.</p>
+
+        <p>Foi assim que as telas foram aumentando sua resolução durante décadas. Mas avanços recentes trouxeram um problema: a tela de alta resolução tem <i>tantos pixels</i> que eles ficam <b>muito pequenos</b> fisicamente. Isso quer dizer que meu desenho vai ficar tão pequeno que é quase inutilizável pro usuário.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>A solução foi manter o tamanho físico do desenho como antes, mesmo com a tela tendo o dobro de pixels. O que ele faz é desenhar minha nuvem ocupando o dobro de pixels na tela.</p>
+
+        <p>Isso deixa as coisas usáveis pro usuário, com mesmo tamanho real de antes. E de brinde deixa minha nuvem mais bem definida visualmente, já que agora ela tem direito a 4x o número de pixels de antes para ser desenhada.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>O melhor: eu, desenvolvedor, não preciso mudar meu código. Eu continuo declarando o mesmo CSS de antes e o próprio computador do usuário vai fazer esse aumento nos pixels caso seja necessário.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas isso nos leva a uma conclusão interessante. Eu escrevo <b>100px</b> no meu CSS e, numa tela de alta resolução, ele vai ser desenhado com <b>200px</b>. Ou seja, o <i>pixel</i> do meu CSS não é o número de pixels real que meu desenho vai ocupar.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Pra ficar claro: em ambos os cenários, uso o mesmo CSS e o resultado final ocupa o mesmo tamanho físico. Mas na tela da esquerda, ele ocupa 100px e na da direita ele ocupa 200px.</p>
+    </aside>
+</section>
+
+<section class="slide"></section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Isso porque estamos falando de pixels diferentes. Com toda essa zona das novas telas de alta resolução e esse dimensionamento automático, novos termos surgiram.</p>
+
+        <p>Falamos que aquele menor ponto físico na tela que pode receber uma cor é chamado de <b>device independent pixel</b> ou DIP. Essa nomenclatura é muito usada, em especial em mobile. Mas há quem fale de <i>pixel físico</i> ou <i>device pixel</i>. Mesma coisa.</p>
+
+        <p>O importante é que isso não é o <i>px</i> que escrevemos em CSS. A medida <i>px</i> que usamos tanto no HTML quanto no CSS e no JavaScript é uma medida de um <i>pixel virtual</i>. A gente chama ele de <b>CSS pixel</b>, mas há quem fale de <i>pixel lógico</i> e até <i>ponto</i>.</p>
+
+        <p>O importante é notar que um <i>CSS pixel</i> pode ocupar mais de um <i>DIP</i>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>No nosso exemplo, a imagem tem 100 CSS pixels mas ocupa 100 DIPs na tela da esquerda e 200 DIPs na tela da direita, de alta resolução.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>A razão de multiplicação entre um <i>CSS pixel</i> e um <i>DIP</i> é o que chamamos de <b>device pixel ratio</b>. Na minha tela de alta resolução do exemplo, o ratio é 2.</p>
+
+        <p>Isso quer dizer que 1 pixel no CSS significa 2 pixels físicos, DIPs.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Essa é a conta do device pixel ratio.</p>
+
+        <p>Caso você queira acessar o valor dessa razão no browser atual é só observar a variável <code>window.devicePixelRatio</code> no JavaScript. Vamos ver depois como acessar o mesmo com CSS.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Nos exemplos até agora, mostrei esses dois cenários. As telas normais têm dPR 1. São bem comuns ainda em notebooks, monitores, televisões e celulares e tablets medianos e simples.</p>
+
+        <p>As telas de alta resolução ficaram famosas com a marca <b>Retina</b> que a Apple inventou. Nos aparelhos retina da Apple (iPhone, iPad, iPod Touch e MacBook), o dPR é 2.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas não são só os dPRs 1 e 2 que existem no mercado. Existem diversos, em especial ao levar em consideração outras plataforma móveis como Android e Windows Phone.</p>
+
+        <p>Nesse slide está a lista das mais comuns e aproveitei e adicionei o termo usado pelo Android. "Retina" é um termo na Apple mas telas de dPR 2 no mundo Google também existem e são chamadas de XHDPI.</p>
+
+        <p>Hoje (2013) as telas com dPR mais alto têm valor 3 e costumam aparecer somente em celulares com resolução Full HD de 1080p. A mais baixa é bem estranha pois é menor que 1. É a 0.75, muito comum em Androids low-end. Nesse caso, a resolução é mais baixa que o comum. Um elemento de 4px, por exemplo, vai ser desenhado com 3px na tela apenas.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Alguns aparelhos famosos em cada um dessas categorias de dPR, apenas para referência.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Ok, então entendemos o que são telas de alta resolução e como funciona o device pixel ratio. Mas qual é o problema disso tudo e porque precisamos <i>repensar o front-end</i>, como essa palestra propõe?</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Esse é o problema. Você tem uma imagem bonitona mas que numa tela de alta resolução parece borrada, como no exemplo de baixo.</p>
+
+        <p>Eu exagerei um pouco o exemplo de baixo, mas é essa a experiência de um usuário de telas de alta resolução ao abrir um site pensado apenas para telas comuns.</p>
+
+        <p>Se o logo da Caelum tem 300px numa tela normal, ele vai ser desenhado com 600px numa tela de 2dppx. Mas se a imagem fonte não possui esses 600px, mas só 300px, não há mágica: o browser vai esticar os 300px pra virarem 600px e você perde qualidade visual (como ao dar zoom numa foto digital).</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Os próximos tópicos então são sobre como evitar esse aspecto feio dos sites em telas de alta resolução. E, importantíssimo, como fazer isso sem ficar louco, sem prejudicar a performance e pensando no futuro.</p>
+    </aside>
+</section>
+
+<!-- CSS -->
+<section class="slide" id="css">
+    <aside class="notes audience">
+        <p>Use o máximo possível de recursos visuais e de desenho do próprio CSS. Isso porque as propriedades do CSS são lidas pelo browser e interpretadas em tempo de execução de acordo com a densidade de pixels da tela em uso.</p>
+
+        <p>Isso quer dizer que efeitos criados com CSS puro sempre ficarão o mais nítido possível em todas as telas do mundo, mesmo se no futuro existirem telas com dPR altíssimo.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div style="border-radius: 40px" class="css-el"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de border-radius do CSS3.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div style="box-shadow: 0 0 30px black;" class="css-el"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de box-shadow do CSS3.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div class="css-el css-gradiente"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de gradientes do CSS3.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div class="babuino">
+            <img src="/img/palestra/retina/babuino.jpg" alt="babuino">
+            <p>Babuíno</p>
+        </div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de opacidade.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div class="css-el css-rotate"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de transform rotate no CSS3.</p>
+    </aside>
+</section>
+
+<section class="slide css">
+    <div class="content">
+        <div class="babuino css-blur">
+            <img src="/img/palestra/retina/babuino.jpg" alt="babuino">
+        </div>
+    </div>
+    <aside class="notes audience">
+        <p>Exemplo: uso de filter blur, um recurso experimental do CSS3. Poucos browsers já suportam. Melhor visualizado em WebKit/Chrome.</p>
+    </aside>
+</section>
+
+
+<!-- TEXTO -->
+<section class="slide">
+    <aside class="notes audience">
+        <p>O que fazer com os textos da página? Nada!</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Fontes de texto são independentes de resolução e ficam excelentes em qualquer tela.</p>
+
+        <p>O importanto é usar <b>texto onde tiver texto</b>. Isso é, não escrever texto no Photoshop e exportar junto com a imagem. Antigamente isso era comum por causa do baixo suporte a fontes bacanas na Web. Hoje em dia use @font-face pra carregar outras fontes e <b>sempre use texto puro</b>.</p>
+    </aside>
+</section>
+
+
+<!-- ICON FONTS -->
+<section class="slide" id="icon-fonts">
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+        @font-face {
+            font-family: 'PT Sans';
+            src: url('pt-sans.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .titulo {
+            font-family: 'PT Sans';
+        }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+        @font-face {
+            font-family: 'Icones';
+            src: url('icones.eot');
+            src: url('icones.eot?#iefix') 
+                    format('embedded-opentype'),
+                 url('icones.woff') format('woff'),
+                 url('icones.ttf') format('truetype'),
+                 url('icones.svg#pt_sansregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .icone-legal {
+            font-family: 'Icones';
+        }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Na prática carregar um font-face é um pouco mais complicado que o slide anterior, já que envolve carregar milhões de fallbacks diferentes para browsers diferentes.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Ferramenta  <a href="http://icomoon.io/app/">icomoon.io</a> pra gerar icon fonts tanto com ícones prontos e famosos quanto com ícones próprios que você envia.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <div class="content" style="padding: 20%; text-align: center">
+        <div class="font-caelum logo" style="color: black"></div>
+        <div class="font-caelum logo" style="color: red"></div>
+        <div class="font-caelum logo" style="color: green"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Uma grande vantagem é poder usar cores diferentes no ícone, como se fosse texto mesmo.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <div class="content" style="padding: 20%; text-align: center">
+        <div class="font-caelum logo" style="color: black; font-size: 10em"></div>
+        <div class="font-caelum logo" style="color: black; font-size: 15em"></div>
+        <div class="font-caelum logo" style="text-shadow: 10px 10px 10px gray;"></div>
+        <div class="font-caelum logo" style="color: transparent; text-shadow: 0 0 10px red;"></div>
+    </div>
+    <aside class="notes audience">
+        <p>Outra vantagem é poder aplicar todo tipo de propriedade de texto, como tamanho e sombras.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Uma desvantagem é que os ícones de fontes precisam ter um único path e só podem assumir uma única cor. Isso torna impossível o uso de ícones mais complexos, multi cores, ou com gradientes e outros efeitos. Os icon fonts são um recurso <i>bastante simples</i>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Outra desvantagem é a <b>portabilidade entre navegadores</b>. Todos os browsers modernos suportam fontes customizadas mas o <i>motor de renderização de fontes</i> de cada um é radicalmente diferente.</p>
+
+        <p>É impossível fazer um ícone de fonte ser rederizado da mesma forma em 2 browsers diferentes. Há diferenças de qualidade, de alinhamento, de suavidade dos traços e muitos outros. No geral, funciona sim. Mas se você quiser um design mais refinado com certo controle sobre a renderização, passe longe de icon fonts.</p>
+    </aside>
+</section>
+
+
+<!-- SVG -->
+<section class="slide" id="svg">
+    <aside class="notes audience">
+        <p>O SVG é a grande estrela de gráficos independentes de resolução. Na verdade, quando falamos de CSS, texto e icon fonts, a grande vantagem era que se tratam de <b>formatos vetoriais</b>. O mesmo para po SVG.</p>
+
+        <p>Um formato vetorial de imagens não guarda os pixels individuais do desenho. Ele guarda coordenadas de formas geométricas e outras informações que ajudarão o browser a renderizar o desenho por si só. Essas coordenadas são absolutas e permitem que o desenho seja renderizado em várias escalas diferentes.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Vantagens de SVG: multi cor e complexo; text based, facil de entender; ferramentas criacao; excelente portabilidade.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'html', -> %> 
+            <img src="logo.svg">
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>O jeito mais fácil de usar SVG é como um arquivo de imagem mesmo, usando img.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'html', -> %> 
+            <!doctype html>
+            <html>
+            <body>
+                <h1>Meu teste de SVG</h1>
+
+                <svg>
+                    <circle cx="50" cy="50" r="40" fill="#F90">
+                </svg>
+            </body>
+            </html>
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>No HTML5, ele pode ser inline.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+            .logo {
+                background: url(logo.svg) no-repeat;
+            }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Ou então você pode usar como background no CSS.</p>
+
+        <p>Há até formas mais bizarras, como usando as tags embed e object, algo que era mais comum antigamente.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Um problema do SVG é o suporte nos navegadores. Ele tem excelente suporte já (<a href="http://caniuse.com/svg">veja o caniuse</a>). Mas há duas grandes exceções: IE 8 e anteriores; e Android 2.x. Todos os outros browsers, desktop e mobile, suportam SVG 1.1 sem muitos problemas.</p>
+
+        <p>Você vai precisar decidir no seu projeto qual o tamanho do problema do IE8 e Android2 pra você. Hoje, por exemplo, no Brasil, o uso médio de IE8 é 4% e vem caindo rapidamente (0.5% ao mês!). Existem perspectivas concretas de o IE8 já ser insignificante até o começo de 2014. Em um projeto que cuido, o IE8 já é menos de 1% há algum tempo.</p>
+
+        <p>Já o Android 2.x tem uso bem baixo no Brasil. Representa menos de 0.5% de todos os seus visitantes e é um número que não vai crescer mais, visto que celulares mais novos já usam versões mais recentes.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'html', -> %> 
+            <img src="logo.svg" onerror="this.src='logo.png'">
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Se você precisar suportar esses browsers velhos e quiser um fallback pras imagens em SVG, há forma de se fazer. Você vai gerar um PNG equivalente daquela imagem e usá-lo quando o browser não tiver suporte.</p>
+
+        <p>Na tag img, uma forma bem simples de se fazer isso é com o atributo onerror, como mostrado aqui.</p>
+
+        <p>O problema, claro, é que o browser velho vai baixar a imagem SVG, dar pau, e depois baixar a imagem PNG. Funciona, mas o usuário faz 2 requests e gasta banda.</p>
+
+        <p>Você precisa decidir se isso é um problema. Lembre que esse cenário vai acontecer com menos de 4% dos usuários e que esse grupo está sumindo <i>rapidamente</i>. Vale a pena quebrar a cabeça com hacks e truques mais pesados por causa disso? Ou deixa os browsers velhos baixarem duplicado mesmo e paciência.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+            .svg .logo {
+                background: url(logo.svg) no-repeat;
+            }
+            .no-svg .logo {
+                background: url(logo.png) no-repeat;
+            }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Usando Modernizr ou outra forma de feature detect, é trivial fazer esse controle no CSS também. Você pode usar as classes <code>.svg</code> e <code>.no-svg</code> pra indicar o suporte ou não a SVG no browser. E carregar o arquivo SVG ou PNG dependendo do caso.</p>
+
+        <p>Se você não gostar de colocar a dependência do Modernizr só por causa disso, dá pra fazer a mesma coisa em <a href="https://gist.github.com/sergiolopes/6142473">1 linha de JavaScript</a> bem facilmente.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+
+<!-- FOTOS -->
+<section class="slide" id="fotos">
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'html', -> %> 
+            <img src="foto.jpg">
+
+            <img src="grafico.png">            
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'html', -> %> 
+            <img src="foto.jpg" 
+                 srcset="foto-normal.jpg 1x, foto-retina.jpg 2x">
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>O atributo <code>srcset</code> foi acrescentado à especificação do HTML5 pra suportar nativamente no browser o mecanismo de trocar o src da imagem dependendo de alguma condição.</p>
+
+        <p>No exemplo, as instruções <b>2x</b> e <b>1x</b> dizem respeito ao valor do device pixel ratio. A segunda imagem só vai ser carregada em dPR 2.</p>
+
+        <p>Há também uma outra spec em discussão que cria um elemento picture. Ele vai permitir o uso de media queries e conseguiria resolver o mesmo problema. Mas ele é bem mais verboso e complicado, apesar de mais poderoso.</p>
+
+        <p>Nenhum desses recursos tem suporte amplo nos browsers de hoje.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+            .foto {
+                background: url(foto-normal.jpg) no-repeat;
+            }
+
+            @media (resolution: 2dppx) {
+                .foto {
+                    background: url(foto-retina.jpg) no-repeat;
+                    background-size: 100%;
+                }
+            }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Com media queries no CSS3 é bem fácil trocar a foto baseado no device pixel ratio da tela. A especificação suporta essa media query <code>resolution</code> que recebe um valor do dPR usando a medida <b>dppx</b>, que quer dizer <i>dots per CSS pixel</i>.</p>
+    </aside>
+</section>
+
+<section class="slide code-center">
+    <div class="content">
+        <%- @code 'css', -> %> 
+            .foto {
+                background: url(foto-normal.jpg) no-repeat;
+            }
+
+            @media (-webkit-min-device-pixel-ratio: 1.5),
+                   (min-resolution: 1.5dppx) {
+
+                .foto {
+                    background: url(foto-retina.jpg) no-repeat;
+                    background-size: 100%;
+                }
+            }
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>O problema é o suporte em certos navegadores. Antes de existir a media query oficial <code>resolution</code>, o WebKit (Safari/Chrome) criaram a <code>device-pixel-ratio</code> que <b>não é oficial</b>. Por razões de compatibilidade, você precisa colocar as duas ainda até hoje.</p>
+
+        <p>Para saber mais, veja meu artigo sobre <a href="/media-queries-retina/">media queries de alta resolução</a>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p>Parece complicado tudo isso. Lidar com media queries e várias linhas de CSS, ou esperar o futurístico srcset. Porque estamos fazendo tudo isso? A discussão toda é em torno de <b>performance</b>.</p>
+
+        <p>A gente quer carregar a imagem certa pra cada resolução pra evitar carregar bytes desnecessários nas telas simples. Se tenho uma tela simples, parece desperdício carregar uma foto retina com 4x o número de pixels que eu posso exibir.</p>
+    </aside>
+</section>
+
+
+<!-- Compressive images -->
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas e se conseguirmos resolver o problema da performance sem ficar loucos cheio de hacks na página? Vamos conhecer a técnica que o pessoal chama de <b>compressive images</b>.</p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p><a href="/livro-web-mobile/exemplos/retina.html">Rode esse teste na sua máquina pra ver o resultado.</a></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p><a href="/livro-web-mobile/exemplos/retina.html">Rode esse teste na sua máquina pra ver o resultado.</a></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p><a href="/resources/palestra-retina/caelum1x.png">Veja essa imagem com seus próprios olhos.</a></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p><a href="/resources/palestra-retina/caelum2x.png">Veja essa imagem com seus próprios olhos.</a></p>
+    </aside>
+</section>
+
+<section class="slide">
+    <aside class="notes audience">
+        <p><a href="/resources/palestra-retina/caelum2x-opt.png">Veja essa imagem com seus próprios olhos.</a></p>
+    </aside>
+</section>
+
+<!-- WORKFLOW -->
+<section class="slide" id="workflow"></section>
+<section class="slide"></section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Prefira vetor sempre.</p>
+        <p>texto sempre texto</p>
+        <p>maximo possivel de CSS</p>
+        <p>SVG pros desenhos</p>
+        <p>icon fonts pros preguiçosos em fazer fallback pra browser antigo</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Sempre crie e desenvolva em Retina. Se quiser, gere a 1x depois. Original sempre 2x - ou até 3x se quiser ser precavido.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Trabalho de fazer duas imagens? Automatize. Não fique exportando na mão.</p>
+
+        <p>Questões: numero de resolucoes diferentes: 0.75, 1, 1.3, 1.5, 2, 3; gero uma imagem pra cada sempre?</p>
+        <p>E hoje trabalho em 2x, mas ja tem telas 3x. se amanha tiver 4x? (boatos iPhone)</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Nao bitole em usar todos os pixels da tela. Minhas imagens nao precisam ficar ultra hiper mega nitidas. preciso achar o bom o suficiente. E pra fotos, muitas vezes uma imagem 1.5x compressive fica bem bom em 2x e ate 3x.</p>
+        <p>Não bitole em economizar bytes sempre. Se a imagem for pequena e otimizada ela pode ser a mesma pra tela 1x e 2x. Mas claro se voce tiver uma foto de 500 kb você ta ferrado sempre.</p>
+    </aside>
+</section>
+<section class="slide"></section>
+<section class="slide"></section>
+<section class="slide"></section>
+<section class="slide"></section>
+<section class="slide"></section>
+<section class="slide"></section>
+
+<!-- SEO -->
+<section class="slide" id="seo"></section>
+<section class="slide code-center">
+    <div class="content" style="padding-top: 100px">
+        <%- @code 'xml', -> %> 
+            <?xml version="1.0" encoding="UTF-8"?>
+             <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+              xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+             
+             <url>
+               <loc>http://example.com/exemplo.html</loc>
+               
+               <image:image>
+                 <image:loc>http://example.com/image.jpg</image:loc> 
+                 <image:title>Minha foto bacana</image:title>
+               </image:image>
+             </url> 
+            </urlset> 
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p>Saiba mais no <a href="https://support.google.com/webmasters/answer/178636?hl=pt-BR">FAQ do Google</a>.</p>
+    </aside>
+</section>
+
+<!-- ACESSIBILIDADE -->
+<section class="slide" id="acessibilidade"></section>
+<section class="slide code-center">
+    <div class="content" style="padding-top: 100px">
+        <%- @code 'html', -> %> 
+            <div class="foto" role="img" aria-label="Que foto"></div>
+        <% end %>
+    </div>
+    <aside class="notes audience">
+        <p></p>
+    </aside>
+</section>
+
+<!-- favicon-->
+<section class="slide" id="favicon">
+    <aside class="notes audience">
+        <p>Use essa ferramenta online: <a href="http://xiconeditor.com">xiconeditor.com</a></p>
+    </aside>
+</section>
+
+
+
+<!-- FIM -->
+<section class="slide"></section>
+<section class="slide" id="fim">
+    <aside class="notes">
+        <p>Gostou? <b>Compartilhe</b> no Facebook e no Twitter usando os botões aí do topo!</p>
+
+        <p>Meu <a href="/livro-web-mobile/">Livro A Web Mobile</a> trata de muitos outros tópicos importantes no desenvolvimento Web moderno pensando em múltiplos dispositivos.</p>
+
+        <p>Não deixe de me seguir também no <a href="http://twitter.com/sergio_caelum">Twitter</a> e de acompanhar <a href="http://sergiolopes.org/">meu blog</a> para mais artigos.</p>
+        <p>E o código dessa palestra está todo disponível no <a href="https://github.com/sergiolopes/blog">Github do blog</a>.</p>
+    </aside>
+</section>
+</article>
+
+
+
+
+
+
+
+<!--
+####   BARRAS DE APRESENTACAO
+ -->
+<aside class="bars">
+    <div class="content"></div>
+
+    <div class="audience">
+        <div class="title">
+            Front-end alta resolução <span class="aovivo"></span><span class="desconectado"></span>
+        </div>
+
+        <div class="slide-toggle navigation">
+            <span class="b">ver só demos</span>
+            <span class="b">ver demos + slide</span>
+        </div>
+    </div>
+
+    <div class="site">
+        <div class="title goto-presentation-mode">
+            Front-end alta resolução
+        </div>
+
+        <div class="share">
+            compartilhe:
+            
+            <a class="facebook" title="Compartilhar no Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fsergiolopes.org%2Fpalestra-retina-web%2F">Facebook</a>
+
+            <a class="twitter" title="Compartilhar no Twitter" href="https://twitter.com/intent/tweet?text=Palestra%20Repensando%20o%20front-end%20para%20telas%20de%20alta%20resolução%20via%20@sergio_caelum&amp;url=http%3A%2F%2Fsergiolopes.org%2Fpalestra-retina-web%2F">Twitter</a>
+
+        </div>
+
+        <div class="navigation">
+            <span class="goto-previous b">Anterior</span>
+            <span class="goto-next b">Próximo</span>
+        </div>
+    </div>
+</aside>
+
+<!--
+    Mais ideias de topicos que ficaram de fora:
+
+    * SVG com CSS, animação
+
+    * SVG com width flexivel e truque do intrinsic ratio
+        - background-size
+        - no fallback do IE8 usar -ms-filter
+
+    * Como testar um layout em retina sem ter um computador retina?
+        - Firefox only, respeita media queries, dPR
+
+    * Como descobrir gargalos de perfomance no css
+    * Para saber mais: canvas retina, webgl retina
+
+ -->
