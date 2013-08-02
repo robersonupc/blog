@@ -151,35 +151,39 @@ referenceOthers: false
 
 <section class="slide">
     <aside class="notes audience">
-        <p>Pra ficar claro: em ambos os cenários, uso o mesmo CSS e o resultado final ocupa o mesmo tamanho físico. Mas na tela da esquerda, ele ocupa 100px e na da direita ele ocupa 200px.</p>
+        <p>Pra ficar claro: em ambos os cenários, uso o mesmo CSS e o resultado final ocupa o mesmo tamanho físico.</p>
     </aside>
 </section>
 
-<section class="slide"></section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Mas na tela da esquerda, ele ocupa 100px e na da direita ele ocupa 200px.</p>
+    </aside>
+</section>
 
 <section class="slide">
     <aside class="notes audience">
         <p>Isso porque estamos falando de pixels diferentes. Com toda essa zona das novas telas de alta resolução e esse dimensionamento automático, novos termos surgiram.</p>
 
-        <p>Falamos que aquele menor ponto físico na tela que pode receber uma cor é chamado de <b>device independent pixel</b> ou DIP. Essa nomenclatura é muito usada, em especial em mobile. Mas há quem fale de <i>pixel físico</i> ou <i>device pixel</i>. Mesma coisa.</p>
+        <p>Falamos que aquele menor ponto na tela que pode receber uma cor é um <b>pixel físico</b>. Há quem fale de <i>pontos</i> ou <i>device pixel</i>. Mesma coisa.</p>
 
-        <p>O importante é que isso não é o <i>px</i> que escrevemos em CSS. A medida <i>px</i> que usamos tanto no HTML quanto no CSS e no JavaScript é uma medida de um <i>pixel virtual</i>. A gente chama ele de <b>CSS pixel</b>, mas há quem fale de <i>pixel lógico</i> e até <i>ponto</i>.</p>
+        <p>O importante é que isso não é o <i>px</i> que escrevemos em CSS. A medida <i>px</i> que usamos tanto no HTML quanto no CSS e no JavaScript é uma medida de um <i>pixel virtual</i>. A gente chama ele de <b>device independent pixel</b> (DIP), mas há quem fale de <i>pixel lógico</i>. Nos cenários onde o viewport é device-width e o usuário não está dando zoom, 1px no CSS é igual a 1 DIP.</p>
 
-        <p>O importante é notar que um <i>CSS pixel</i> pode ocupar mais de um <i>DIP</i>.</p>
+        <p>O importante é notar que um <i>DIP</i> pode ocupar mais de um <i>pixel físico</i>.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p>No nosso exemplo, a imagem tem 100 CSS pixels mas ocupa 100 DIPs na tela da esquerda e 200 DIPs na tela da direita, de alta resolução.</p>
+        <p>No nosso exemplo, a imagem tem 100 CSS pixels mas ocupa 100 pixels físicos na tela da esquerda e 200 pixels físicos na tela da direita, de alta resolução.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p>A razão de multiplicação entre um <i>CSS pixel</i> e um <i>DIP</i> é o que chamamos de <b>device pixel ratio</b>. Na minha tela de alta resolução do exemplo, o ratio é 2.</p>
+        <p>A razão de multiplicação entre um <i>DIP</i> e um <i>pixel físico</i> é o que chamamos de <b>device pixel ratio</b>. Na minha tela de alta resolução do exemplo, o ratio é 2.</p>
 
-        <p>Isso quer dizer que 1 pixel no CSS significa 2 pixels físicos, DIPs.</p>
+        <p>Isso quer dizer que 1 pixel no CSS significa 2 pixels físicos.</p>
     </aside>
 </section>
 
@@ -237,7 +241,7 @@ referenceOthers: false
     </aside>
 </section>
 
-<!-- CSS -->
+<!-- CSS: 12min -->
 <section class="slide" id="css">
     <aside class="notes audience">
         <p>Use o máximo possível de recursos visuais e de desenho do próprio CSS. Isso porque as propriedades do CSS são lidas pelo browser e interpretadas em tempo de execução de acordo com a densidade de pixels da tela em uso.</p>
@@ -430,7 +434,7 @@ referenceOthers: false
 </section>
 
 
-<!-- SVG -->
+<!-- SVG: 20 min -->
 <section class="slide" id="svg">
     <aside class="notes audience">
         <p>O SVG é a grande estrela de gráficos independentes de resolução. Na verdade, quando falamos de CSS, texto e icon fonts, a grande vantagem era que se tratam de <b>formatos vetoriais</b>. O mesmo para po SVG.</p>
