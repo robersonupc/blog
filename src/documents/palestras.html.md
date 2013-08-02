@@ -15,16 +15,17 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2013
 
+* *19/Out* - **MobileConf Rio** - *Como suportar telas de alta resolução eficientemente na Web mobile*
 * *31/Ago* - **QCon SP** - *Otimização de performance Web: desafios do mundo mobile*
-* *03/Ago* - **Front In BH** - *Repensando o front-end para telas de alta resolução*
-* *20/Jul* - **Web Day** - *Dominando HTML5 offline com AppCache*
+* *03/Ago* - **Front In BH** - [Repensando o front-end para telas de alta resolução](/palestra-retina-web/)
+* *20/Jul* - **Web Day** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
 * *22/Jun* - **JSConf** - [Tudo que você precisa saber sobre carregamento e execução de JS no browser](http://www.slideshare.net/caelumdev/javascript-loadingsergiojsconfbr2013) (slides)
 * *23/Mai* - **Noite técnica na Caelum Rio de Janeiro** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
 * *13/Mai* - **Google IO Extended Open Sampa** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
 * *03/Mai* - **OlhóSEO - Florianópolis** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
 * *30/Abr* - **DevCast online ao vivo** - [Uma tonelada de truques de web mobile](/palestra-mobile-web/) ([gravação do vídeo](https://www.youtube.com/watch?v=_wMx_Yb2lBk))
 * *23/Abr* - **43º Fórum de TIC Dataprev - Brasília** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
-* *05/Abr* - **Mobile Conf** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
+* *05/Abr* - **Mobile Conf SP** - [Os caminhos de uma estratégia mobile](http://www.slideshare.net/caelumdev/mobile-conf) (slides)
 * *09/Mar* - **SampaJS** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/) - [vídeo](https://www.youtube.com/watch?v=mrS4ivgj1Es)
 
 # 2012
