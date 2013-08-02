@@ -1125,7 +1125,7 @@ var P = (function(doc, userAgent, location, win){
     var presentationContainer = Q('.presentation');
     var slides = presentationContainer.find('.slide');
 
-    
+
 
     // possible display modes.
     // initial mode is the page query string or 'site'.
@@ -1298,8 +1298,15 @@ var P = (function(doc, userAgent, location, win){
 
 
     // slide activation.
-    // initially, first slide or URL #hash
-    var activeSlide = doc.getElementById(location.hash.replace('#slide-','')) || slides.get(0);
+    var activeSlide;
+
+
+    // svg presentation
+    var svgPresentation = Q('.svg-data svg').get(0);
+    if (svgPresentation) {
+        svgPresentation.removeAttribute('width');
+        svgPresentation.removeAttribute('height');
+    }
 
 
     // exported public API
@@ -1307,20 +1314,23 @@ var P = (function(doc, userAgent, location, win){
 
         // make  enter the specified display mode
         enter: function(newMode) {
-            if (possibleModes.indexOf(newMode) == -1)
+            if (possibleModes.indexOf(newMode) == -1) {
                 throw "There is no " + newMode + " mode available.";
+            }
 
             // add a specific class to HTML root like 'presentation-mode' or 'site-mode'
             Q(doc.documentElement).removeClass(mode + '-mode').addClass(newMode + '-mode');
             
             // call mode entering logic
-            if (modes[mode] !== undefined)
+            if (modes[mode] !== undefined) {
                 modes[mode]['exit'].call(P);
+            }
 
             mode = newMode;
 
-            if (modes[newMode] !== undefined)
+            if (modes[newMode] !== undefined) {
                 modes[newMode]['enter'].call(P);
+            }
 
             // notify mode change event
             var evt = document.createEvent('Event');
@@ -1360,6 +1370,13 @@ var P = (function(doc, userAgent, location, win){
             Q(activeSlide).removeClass('active');
             Q(slide).addClass('active');
             activeSlide = slide;
+
+            // show SVG image
+            if (svgPresentation) {
+                var slideNumber = slides.nodes().indexOf(slide);
+                var currentSvgPosition = slideNumber * 1000;
+                svgPresentation.setAttribute('viewBox', currentSvgPosition + ' 0 800 600');
+            }
 
             // audience mode:
             // show last .audience if needed
@@ -1403,7 +1420,7 @@ var P = (function(doc, userAgent, location, win){
                 do {
                     previous = actual.getAttribute('data-previous');
                     actual = document.getElementById(previous);
-                } while(previous && Q('#'+previous).hasClass('skip-on-' + mode));
+                } while (previous && Q('#'+previous).hasClass('skip-on-' + mode));
                 
                 if (previous) {
                     // show slide and broadcast change
@@ -1441,6 +1458,7 @@ var P = (function(doc, userAgent, location, win){
         },
 
         init: function(options) {
+            var i = 0;
 
             // deal with config options
             possibleModes = options.possibleModes || possibleModes;
@@ -1450,7 +1468,13 @@ var P = (function(doc, userAgent, location, win){
             if (slides.nodes().length > 1) {
                 var previous = undefined;
                 var lastAudience = undefined;
+
                 slides.each(function(el) {
+                    // if doesn't have an id, generate one
+                    if (!el.id) {
+                        el.id = 'n' + (i++);
+                    }
+
                     // set audience id
                     if (Q(el).has('.audience')) {
                         lastAudience = el.id;
@@ -1472,6 +1496,8 @@ var P = (function(doc, userAgent, location, win){
             this.enter(initialMode);
 
             // show first slide
+            // initially, first slide or URL #hash
+            activeSlide = doc.getElementById(location.hash.replace('#slide-','')) || slides.get(0);
             this.showSlide(activeSlide.id);
 
 
@@ -1519,7 +1545,7 @@ var P = (function(doc, userAgent, location, win){
 
                     // apply dynamic CSS properties
                     var css = 
-                    ".slide .content { " +
+                    ".slide .content, .svg-data { " +
                         "top: " + topOffset + ";" +
                         "-webkit-transform: scale(" + scaleFactor + ");" +
                            "-moz-transform: scale(" + scaleFactor + ");" +

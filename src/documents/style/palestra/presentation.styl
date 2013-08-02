@@ -55,20 +55,38 @@ pre code {
 	&.active
 		display: block
 
-	.content
-		// slide anchored to top but we need to adjust this value
-		// according to the scaleFactor. (this is a JS job)
-		absolute: top right
+.slide .content, .svg-data
+	// slide anchored to top but we need to adjust this value
+	// according to the scaleFactor. (this is a JS job)
+	absolute: top right
 
-		/* slide size. 4:3 fixed */
-		height: 768px;
-		width: 1024px;
+	/* slide size. 4:3 fixed */
+	height: 768px;
+	width: 1024px;
 
-		overflow: hidden
+	overflow: hidden
 
-		/* prepare to scale */
-		transform-origin: bottom right
+	/* prepare to scale */
+	transform-origin: bottom right
  
+/* svg content and positioning */
+.svg-data
+	display none
+
+	.presentation-mode &,
+	.site-mode &,
+	.audience-mode &
+		display block
+
+	svg
+		height 100%
+		width 100%
+
+		-webkit-font-smoothing: antialiased;
+		-webkit-font-feature-settings: 'liga' 0;
+		-moz-font-feature-settings: 'liga' 0;
+		font-feature-settings: 'liga' 0;
+
 /* hides notes and audience */
 .slide .notes,
 .slide .audience {
@@ -207,6 +225,9 @@ pre code {
 
 			.content
 				left: -1024px
+
+		.svg-data
+			right 100%
 
 
 /***
