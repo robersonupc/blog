@@ -1303,11 +1303,22 @@ var P = (function(doc, userAgent, location, win){
 
     // svg presentation
     var svgPresentation = Q('.svg-data svg').get(0);
+
     if (svgPresentation) {
         svgPresentation.removeAttribute('width');
         svgPresentation.removeAttribute('height');
-    }
+        svgPresentation.setAttribute('viewBox', '0 0 800 600');
 
+        // create svg:group
+        // var svgContainer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        // Q('.svg-data svg > *').each(function(el){
+        //     if (el.tagName.indexOf('inkscape') >= 0 || el.tagName.indexOf('sodipodi') >= 0 || el.tagName == 'defs' || el.tagName == 'metadata') 
+        //         return;
+
+        //     svgContainer.appendChild(el);
+        // });
+        // svgPresentation.appendChild(svgContainer);
+    }
 
     // exported public API
     return {
@@ -1375,6 +1386,8 @@ var P = (function(doc, userAgent, location, win){
             if (svgPresentation) {
                 var slideNumber = slides.nodes().indexOf(slide);
                 var currentSvgPosition = slideNumber * 1000;
+                
+                //svgContainer.setAttributeNS(null, 'transform', 'translate(-' + currentSvgPosition + ')');
                 svgPresentation.setAttribute('viewBox', currentSvgPosition + ' 0 800 600');
             }
 

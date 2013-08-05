@@ -3,9 +3,9 @@ layout: presentation
 title: 'Palestra: Repensando o front-end para telas de alta resolução'
 date: 2013-08-03
 category: html5
-description: Como criar sites e webapps offline com Application Cache. Palestra completa com dicas avançadas, exemplos e explicações. 
+description: Telas de alta resolução? Imagens responsivas? Retina? Gráficos vetoriais? SVG, icon fonts? Veja nessa palestra como suportar telas de resoluções diferentes.
 ogtype: article
-shareImage: /img/palestra/
+shareImage: /img/palestra/retina/share.png
 slug: retina
 class: destaque
 
@@ -25,6 +25,8 @@ referenceOthers: false
 <section class="slide" id="capa">
     <aside class="notes">
         <p>Telas de alta resolução? Imagens responsivas? Retina? Gráficos vetoriais? SVG, icon fonts? DPIs, viewports, device pixel ratio? Muitos termos confusos? Essa palestra vai mostrar tudo que você precisa saber pra entender e trabalhar com telas de resoluções diferentes. Vamos ver como adaptar seu design e suas imagens pra esses contextos e dicas de como suportar os vários tipos de tela de hoje e do futuro!</p>
+
+        <p><i>Importante: por motivos que desconheço, os slides ficam beeem lentos no iOS. No Firefox e no IE ficam bem rápidos, no Chrome fica decente mas o Safari se perde em algo. Os slides usam bastante SVG.</i></p>
 
         <h3>Como navegar no Desktop:</h3>
         <ul>
@@ -306,6 +308,8 @@ referenceOthers: false
     </div>
     <aside class="notes audience">
         <p>Exemplo: uso de filter blur, um recurso experimental do CSS3. Poucos browsers já suportam. Melhor visualizado em WebKit/Chrome.</p>
+
+        <p>Se o seu browser não suporta, veja <a href="/img/palestra/retina/babuino-blur.png">esse screenshot</a> que tirei no Chrome.</p>
     </aside>
 </section>
 
@@ -329,13 +333,13 @@ referenceOthers: false
 <!-- ICON FONTS -->
 <section class="slide" id="icon-fonts">
     <aside class="notes audience">
-        <p></p>
+        <p>O texto fica tão bom e nítido nas telas de alta resolução que o pessoal começou a levar a ideia mais além. E se colocarmos os ícones dentro de fontes e usá-los como caracteres de texto? São as icon fonts.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p></p>
+        <p>Uma fonte normal aqui, como a que uso na palestra, a PT-Sans.</p>
     </aside>
 </section>
 
@@ -355,13 +359,13 @@ referenceOthers: false
         <% end %>
     </div>
     <aside class="notes audience">
-        <p></p>
+        <p>Pra usar uma fonte customizada, você vai se @font-face no CSS. Sem problema algum aqui.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p></p>
+        <p>A ideia então é gerar uma fonte customizada que ao invés de letras tem desenhos, ícones. Aí você carrega com o font-face também e pronto.</p>
     </aside>
 </section>
 
@@ -392,7 +396,7 @@ referenceOthers: false
 
 <section class="slide">
     <aside class="notes audience">
-        <p>Ferramenta  <a href="http://icomoon.io/app/">icomoon.io</a> pra gerar icon fonts tanto com ícones prontos e famosos quanto com ícones próprios que você envia.</p>
+        <p>Ferramenta  <a href="http://icomoon.io/app/">icomoon.io</a> pra gerar icon fonts tanto com ícones prontos e famosos de diversas coleções quanto com ícones próprios que você envia.</p>
     </aside>
 </section>
 
@@ -542,7 +546,7 @@ referenceOthers: false
 
 <section class="slide">
     <aside class="notes audience">
-        <p></p>
+        <p>Uma dica importante para SVGs responsivos que você quer renderizar de tamanhos diferentes é remover os atributos width e height da imagem e trocar pelo viewBox. Vários browsers tem problemas em renderizar SVG com width fixo se você quiser aumentar o tamanho depois. E, se pensar bem, fixar width/height numa imagem vetorial é algo meio besta, já que ela escala infinitamente com boa qualidade.</p>
     </aside>
 </section>
 
@@ -550,7 +554,7 @@ referenceOthers: false
 <!-- FOTOS -->
 <section class="slide" id="fotos">
     <aside class="notes audience">
-        <p></p>
+        <p>Mas nem tudo no site pode ser vetorial. Às vezes precisamos trabalhar com fotos e outros gráficos baseados em pixels.</p>
     </aside>
 </section>
 
@@ -563,7 +567,7 @@ referenceOthers: false
         <% end %>
     </div>
     <aside class="notes audience">
-        <p></p>
+        <p>Por exemplo uma imagem comum em JPG ou PNG, ambos formatos 'bitmap' baseado em pixels e não vetoriais.</p>
     </aside>
 </section>
 
@@ -613,7 +617,7 @@ referenceOthers: false
             }
 
             @media (-webkit-min-device-pixel-ratio: 1.5),
-                   (min-resolution: 1.5dppx) {
+                   (min-resolution: 144dpi) {
 
                 .foto {
                     background: url(foto-retina.jpg) no-repeat;
@@ -625,7 +629,7 @@ referenceOthers: false
     <aside class="notes audience">
         <p>O problema é o suporte em certos navegadores. Antes de existir a media query oficial <code>resolution</code>, o WebKit (Safari/Chrome) criaram a <code>device-pixel-ratio</code> que <b>não é oficial</b>. Por razões de compatibilidade, você precisa colocar as duas ainda até hoje.</p>
 
-        <p>Para saber mais, veja meu artigo sobre <a href="/media-queries-retina/">media queries de alta resolução</a>.</p>
+        <p>Para saber mais, veja meu artigo sobre <a href="/media-queries-retina/">media queries de alta resolução</a> e <a href="/livro-web-mobile/">meu livro</a>.</p>
     </aside>
 </section>
 
@@ -672,19 +676,31 @@ referenceOthers: false
 <section class="slide">
     <aside class="notes audience">
         <p><a href="/resources/palestra-retina/caelum2x-opt.png">Veja essa imagem com seus próprios olhos.</a></p>
+
+        <p>Aqui, claro que se eu otimizasse a imagem original ia ganhar também. Mas a questão é que otimizando agressivamente posso chegar numa imagem de tamanho bastante aceitável mesmo sendo 2x e não me preocupar com manter mais de uma versão da imagem.</p>
     </aside>
 </section>
 
 <!-- WORKFLOW -->
-<section class="slide" id="workflow"></section>
-<section class="slide"></section>
+<section class="slide" id="workflow">
+    <aside class="notes audience">
+        <p>Algumas dicas do que fazer no dia a dia e como incorporar tudo isso ao seu workflow de trabalho.</p>
+    </aside>
+</section>
 <section class="slide">
     <aside class="notes audience">
-        <p>Prefira vetor sempre.</p>
-        <p>texto sempre texto</p>
-        <p>maximo possivel de CSS</p>
-        <p>SVG pros desenhos</p>
-        <p>icon fonts pros preguiçosos em fazer fallback pra browser antigo</p>
+        <p>A maioria dos ditos <i>frameworks de retina</i> funciona de alguma de duas maneiras. Ou a solução é inteira em JavaScript e usa sintaxes bizarras no HTML, ou ela é server-side e trabalha com cookies pra sinalizar pro server qual versão servir.</p>
+
+        <p>Todas as soluções server-side baseadas em cookie não funcionam por causa do pre-parser dos browsers modernos. Ignore essas.</p>
+
+        <p>As soluções em JS até funcionam mas prejudicam demais a performance. Há a dependência no framework em si e o custo de ter que esperar a execução da lógica JS pra decidir a imagem correta. Isso atrasa o início dos downloads das imagens.</p>
+
+        <p>Não recomendo nenhuma.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Prefira vetor sempre. Faça textos sempre com textos, abuse de recursos do CSS e prefira SVG nos desenhos. Se estiver com preguiça de arrumar os fallbacks do SVG, um icon font pode resolver, mas lembre que o resultado visual final é meio imprevisível.</p>
     </aside>
 </section>
 <section class="slide">
@@ -694,27 +710,55 @@ referenceOthers: false
 </section>
 <section class="slide">
     <aside class="notes audience">
-        <p>Trabalho de fazer duas imagens? Automatize. Não fique exportando na mão.</p>
+        <p>Trabalho de fazer duas imagens? Automatize. Não fique exportando na mão no Photoshop.</p>
 
         <p>Questões: numero de resolucoes diferentes: 0.75, 1, 1.3, 1.5, 2, 3; gero uma imagem pra cada sempre?</p>
-        <p>E hoje trabalho em 2x, mas ja tem telas 3x. se amanha tiver 4x? (boatos iPhone)</p>
+        <p>E hoje trabalho em 2x, mas ja tem telas 3x. se amanha tiver 4x?</p>
     </aside>
 </section>
 <section class="slide">
     <aside class="notes audience">
-        <p>Nao bitole em usar todos os pixels da tela. Minhas imagens nao precisam ficar ultra hiper mega nitidas. preciso achar o bom o suficiente. E pra fotos, muitas vezes uma imagem 1.5x compressive fica bem bom em 2x e ate 3x.</p>
-        <p>Não bitole em economizar bytes sempre. Se a imagem for pequena e otimizada ela pode ser a mesma pra tela 1x e 2x. Mas claro se voce tiver uma foto de 500 kb você ta ferrado sempre.</p>
+        <p>Não bitole em usar todos os pixels da tela. Minhas imagens não precisam ficar ultra hiper mega nítidas. preciso achar o bom o suficiente. E pra fotos, muitas vezes uma imagem 1.5x compressive fica bem bom em 2x e ate 3x. Geralmente gráficos e texto que ficam mais ruins visualmente; e, pra isso, SVG e texto resolvem.</p>
+
+        <p>Não bitole em economizar bytes sempre. Se a imagem for pequena e otimizada ela pode ser a mesma pra tela 1x e 2x. Mas claro se você tiver uma foto de 500 kb você ta ferrado sempre.</p>
     </aside>
 </section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Teste muito essas coisas pra ver o resultado. Veja onde a performance está sendo um gargalo, onde a página ficou feia.</p>
+    </aside>
+</section>
+
+<!-- Bônus -->
 <section class="slide"></section>
 <section class="slide"></section>
-<section class="slide"></section>
-<section class="slide"></section>
-<section class="slide"></section>
-<section class="slide"></section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Use essas ferramentas de compressão de SVG. Elas conseguem remover muito código desnecessário que os editores visuais colocam em desenvolvimento.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>E o SVG é um conteúdo textual, baseado em XML. Use GZIP neles sempre! O GZIP faz verdadeiros milagres ao compactar conteúdos de texto e diminui muito o tamanho do download.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Por fim, se tiver muitos desenhos, o melhor pode ser trabalhar com sprites em SVG pra economizar requests. Essas duas ferramentas mostram abordagens diferentes que você pode pesquisar.</p>
+
+        <p>Eu hoje uso uma variação da técnica do grunticon.</p>
+    </aside>
+</section>
 
 <!-- SEO -->
-<section class="slide" id="seo"></section>
+<section class="slide" id="seo">
+    <aside class="notes audience">
+        <p>Se você usar CSS para carregar imagens diferentes com o eu mostrei aqui, você vai precisar usar um DIV ou algo do tipo na página. Enquanto o futuro srcset não vira realidade, não dá pra fazer esse tipo de carregamento condicional com a tag IMG.</p>
+
+        <p>Um problema que surge do uso de DIV ao invés de IMG é que eles têm semântica bem diferente. E isso vai deixar o pessoal mais purista meio louco.</p>
+
+        <p>Se quiser aliviar a barra, podemos resolver alguns problemas. Uma consequecia prática grave da falta da tag IMG é que o Google não vai mais indexar minhas imagens (ele não consegue indexar imagens de CSS). Pra resolver isso, podemos usar <b>Image Sitemaps</b>.</p>
+    </aside></section>
 <section class="slide code-center">
     <div class="content" style="padding-top: 100px">
         <%- @code 'xml', -> %> 
@@ -739,7 +783,10 @@ referenceOthers: false
 </section>
 
 <!-- ACESSIBILIDADE -->
-<section class="slide" id="acessibilidade"></section>
+<section class="slide" id="acessibilidade">
+    <aside class="notes audience">
+        <p>Outro problema da falta de semântica do DIV é acessibilidade. Leitores de tela para deficientes visuais, por exemplo, ignoram um DIV com background por não encontrar uma IMG lá.</p>
+    </aside></section>
 <section class="slide code-center">
     <div class="content" style="padding-top: 100px">
         <%- @code 'html', -> %> 
@@ -747,21 +794,25 @@ referenceOthers: false
         <% end %>
     </div>
     <aside class="notes audience">
-        <p></p>
+        <p>Pra resolver isso, podemos usar WAI-ARIA, que me permite mudar o role semântico de uma tag qualquer para ser equivalente a um img com label.</p>
     </aside>
 </section>
 
 <!-- favicon-->
 <section class="slide" id="favicon">
     <aside class="notes audience">
-        <p>Use essa ferramenta online: <a href="http://xiconeditor.com">xiconeditor.com</a></p>
+        <p>Por fim, não esqueça do favicon; ele também deve ser retina. Use essa ferramenta online: <a href="http://xiconeditor.com">xiconeditor.com</a></p>
     </aside>
 </section>
 
 
 
 <!-- FIM -->
-<section class="slide"></section>
+<section class="slide skip-on-site">
+    <aside class="notes audience">
+        <p>É isso que você precisa pra repensar seu front-end pra retina.</p>
+    </aside>
+</section>
 <section class="slide" id="fim">
     <aside class="notes">
         <p>Gostou? <b>Compartilhe</b> no Facebook e no Twitter usando os botões aí do topo!</p>
