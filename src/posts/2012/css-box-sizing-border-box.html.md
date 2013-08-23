@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "CSS: Você deveria usar box-sizing: border-box em todas as suas páginas"
-date: 2012-06-25
+date: 2013-08-23
+originalDate: 2012-06-25
+version: 2
 category: web
 description: O box model padrão do CSS é uma pedra no sapato. Com o box-sizing, você troca para um esquema mais fácil. Confira!
 shareImage: /img/posts/box-sizing.png
@@ -87,6 +89,18 @@ Eu uso essa regra em todos os elementos de todas as minhas páginas -- inclusive
 }
 ```
 
-*P.S.* Existe uma preocupação quanto à performance do seletor universal (*) mas ela certamente não será um problema para algo tão simples e pontual como essa regra. O ruim é abusar e ter diversas regras com seletor universal e descendentes. E você nem devia estar se preocupando com performance de CSS se ainda não tem uma nota maior que 95 no PageSpeed; gzip, minificação, sprites, etc são bem mais importantes pra performance.
+Existe uma preocupação quanto à performance do seletor universal `*` mas ela certamente não será um problema para algo tão simples e pontual como essa regra. O ruim é abusar e ter diversas regras com seletor universal e descendentes. E você nem devia estar se preocupando com performance de CSS se ainda não tem uma nota maior que 95 no PageSpeed; gzip, minificação, sprites, etc são bem mais importantes pra performance.
 
-*P.P.S.* Há uns [bugs chatos](https://developer.mozilla.org/En/CSS/Box-sizing#Notes) no Firefox, especialmente ao usarmos *min/max-width/height*. Mas é só. Dá pra evitar cair nesses cenários e aproveitar o novo box-sizing pra todo o resto.
+Outro ponto importante é que o seletor `*` não pega pseudo-elementos. Na prática, acabo usando:
+
+```css 
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+```
+
+---
+
+**Atualização Ago/2013**: acrescentei os pseudo-elementos na regra e removi informações sobre bug antigo do Firefox.
