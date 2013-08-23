@@ -16,6 +16,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 # 2013
 
 * *19/Out* - **MobileConf Rio** - *Como suportar telas de alta resolução eficientemente na Web mobile*
+* *14/Set* - **Front in Sampa** - *Além do responsive design: a mudança de paradigma do design adaptativo e os múltiplos dispositivos.*
 * *31/Ago* - **QCon SP** - *Otimização de performance Web: desafios do mundo mobile*
 * *03/Ago* - **Front In BH** - [Repensando o front-end para telas de alta resolução](/palestra-retina-web/)
 * *20/Jul* - **Web Day** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
