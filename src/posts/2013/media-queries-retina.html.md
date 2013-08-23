@@ -5,7 +5,7 @@ date: 2013-01-28
 category: web
 description: Media queries de resolução permitem carregar imagens e estilos diferentes em telas de resolução diferente ou retina. Conheça mais!
 shareImage: /img/posts/media-queries/media-queries-resolucao-share.jpg
-
+book: web-mobile
 referenceOthers: false
 ---
 

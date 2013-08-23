@@ -6,6 +6,7 @@ category: mobile
 description: Nunca proíba o usuário de dar zoom nas páginas. É péssima usabilidade.
 originalDate: 2012-07-20
 version: 2
+book: web-mobile
 ---
 
 As telas pequenas dos smartphones ensinaram algo simples para os usuários: se algo estiver pequeno, apenas arraste os dedos (pinch) e **dê zoom**! É um gesto básico de dispositivos touch e conhecido por todo mundo. Mas, mesmo assim, muitos sites bloqueiam o zoom nas páginas. **Não faça isso**.

@@ -5,7 +5,7 @@ date: 2013-01-30
 category: web
 description: "Sempre que alguém fala em medias queries, a primeira coisa que vem à cabeça é design responsivo e mobile. Mas elas ajudam também em acessibilidade."
 shareImage: /img/posts/media-queries/media-queries-zoom-share.jpg
-
+book: web-mobile
 referenceOthers: false
 ---
 

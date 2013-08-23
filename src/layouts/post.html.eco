@@ -8,6 +8,10 @@ ogtype: article
 		<h1><%= @document.title %></h1>
 	<% end %>
 
+	<% if @document.book == 'web-mobile': %>
+		<p class="post-book">Uma versão mais atual, revisada e expandida desse assunto está disponível no meu <a href="/livro-web-mobile/">livro "A Web Mobile"</a>.</p>
+	<% end %>
+
 	<div class="post-content">
 		<%- @content %>
 	</div>

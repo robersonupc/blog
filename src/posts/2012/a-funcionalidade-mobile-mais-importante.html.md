@@ -5,6 +5,7 @@ date: 2012-06-11
 category: mobile
 description: Se você só tem tempo para uma coisa agora, foque quem deixar seu site mais rápido. A mais importante funcionalidade do seu site para um usuário mobile é performance.
 shareImage: /img/posts/otimizacoes-web.png
+book: web-mobile
 ---
 
 Talvez você ainda esteja decidindo se vai de site mobile específico ou de [página única responsiva](/responsive-web-design/). Ou até já começou a implementar sua estratégia mobile, mas as coisas levam tempo e você está incomodado com usuários mobile abrindo seu site Desktop atual.

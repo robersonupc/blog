@@ -18,6 +18,7 @@ theme: dark
 
 category: mobile
 description: Responsive Web Design para um único site funcionar em todos os dispositivos. [artigo completo e interativo]
+book: web-mobile
 
 feedWarning: Esse post possui design e interatividade não suportados nos feeds RSS. Recomendo que visite a página e leia por lá. (é otimizado também para mobile)
 

@@ -5,6 +5,7 @@ date: 2012-12-06
 category: web
 description: "Entenda como funcionam telas de alta resolução, o pixel scaling nos dispositivos, porque viewport é mais importante que o número de pixels, e como calcular o número ideal de pixels para uma tela."
 shareImage: /img/posts/resolucoes/pixel-w3c.png
+book: web-mobile
 ---
 
 Há **muita confusão** rondando as discussões sobre resoluções de tela, densidade de pixels, usabilidade das telas, áreas útil e coisas relacionadas. *Confusão inclusive na mídia especializada*.

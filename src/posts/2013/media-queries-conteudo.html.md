@@ -5,7 +5,7 @@ date: 2013-02-15
 category: web
 description: Como escolher os valores pra colocar nas suas media queries em um design responsivo.
 shareImage: /img/posts/responsive-design/share.jpg
-
+book: web-mobile
 referenceOthers: false
 ---
 

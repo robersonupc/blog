@@ -19,6 +19,15 @@
 	font-weight: bold;
 }
 
+/* link pro livro */
+p.post-book {
+	border: 0.35em dotted #f90;
+	padding: 1em;
+	margin: 0.5em;
+	font-style: italic;
+	display: inline-block;
+}
+
 /* barra social no fim do post */
 .post-social {
 	font-size: 0.9em; /* muda base pra 18px */
@@ -90,7 +99,7 @@
 /* RESPONSIVE (mobile first) */
 @media (min-width: 37em) {
 	/* primeiro paragrafo dos posts com letra maior */
-	.post > p:first-of-type { 
+	.post-content > p:first-of-type { 
 		font-size: 1.2em;
 	}
 }
