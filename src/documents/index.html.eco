@@ -14,7 +14,7 @@ name: home
   <ul class="posts">
     <% for post in @getCollection(tipo).toJSON(): %>
     
-      <li class="one-post <%= post.class %> category-<%= @slug(post.category) %> type-<%= @getLayoutName(post) %>">
+      <li class="one-post <%= post.class %> category-<%= @slug(post.category) %> type-<%= @getLayoutName(post) %> <%= if post.version then 'post-updated' %>">
         <div class="post-info">
           <span class="post-date"><%= @dateAsText(post.date) %></span> 
           <span class="post-category"><%= post.category %></span> 
