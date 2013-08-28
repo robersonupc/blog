@@ -1347,13 +1347,6 @@ var P = (function(doc, userAgent, location, win){
             var evt = document.createEvent('Event');
             evt.initEvent('slidescale', true, true);
             document.dispatchEvent(evt);
-
-            // select first slide to show (except in site mode)
-            if (mode != 'site') {
-                var slide = location.hash.replace('#slide-', '');
-                if (slide === '') slide = slides.get(0).id;
-                this.showSlide(slide);
-            }
         },
 
         showSlide: function(name) {
@@ -1503,15 +1496,15 @@ var P = (function(doc, userAgent, location, win){
                 });
             }
 
-            // enter the first, initial mode
-            var initialMode = getURLParameter('mode') || document.documentElement.getAttribute('data-initial-mode') || 'site';
-            if (possibleModes.indexOf(initialMode) == -1) initialMode = possibleModes[0];
-            this.enter(initialMode);
-
             // show first slide
             // initially, first slide or URL #hash
             activeSlide = doc.getElementById(location.hash.replace('#slide-','')) || slides.get(0);
             this.showSlide(activeSlide.id);
+
+            // enter the first, initial mode
+            var initialMode = getURLParameter('mode') || document.documentElement.getAttribute('data-initial-mode') || 'site';
+            if (possibleModes.indexOf(initialMode) == -1) initialMode = possibleModes[0];
+            this.enter(initialMode);
 
 
             // config params
