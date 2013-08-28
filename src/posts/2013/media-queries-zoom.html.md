@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Media queries também ajudam na acessibilidade
-date: 2013-01-30
+date: 2013-08-28
+originalDate: 2013-01-30
+version: 2
 category: web
 description: "Sempre que alguém fala em medias queries, a primeira coisa que vem à cabeça é design responsivo e mobile. Mas elas ajudam também em acessibilidade."
 shareImage: /img/posts/media-queries/media-queries-zoom-share.jpg
@@ -43,24 +45,24 @@ E a vantagem do viewport mudar de tamanho de acordo com o zoom é que as **media
 	<figcaption>Media queries ajustam o layout no Desktop com zoom de 200% como se estivesse num tablet pequeno. O design fica grande mas bem mais harmônico e proporcional.</figcaption>
 </figure>
 
-Todos os navegadores suportam esse tipo de recurso: Firefox, Chrome, Android, Opera, Internet Explorer e Safari. Só há um [bug no Webkit](https://bugs.webkit.org/show_bug.cgi?id=41063) -- Chrome, Safari, Android -- que faz a media query ser aplicada apenas se o usuário der zoom e depois um *refresh* na página; em todos os outros, a media query é aplicada imediatamente de acordo com o zoom.
+Todos os navegadores suportam esse tipo de recurso: Firefox, Chrome, Android, Opera, Internet Explorer e Safari. Só há um [bug no WebKit](https://bugs.webkit.org/show_bug.cgi?id=41063) -- Safari, Android -- que faz a media query ser aplicada apenas se o usuário der zoom e depois um *refresh* na página; em todos os outros (incluindo Chrome com Blink), a media query é aplicada imediatamente de acordo com o zoom.
 
 Então, se você por acaso não gosta de [design responsivo](/responsive-web-design/) e ainda faz site Desktop e mobile separado, tá aí um motivo pra usar media queries mesmo assim: garantir acesso de pessoas com visão reduzida.
 
-## Use media queries com 'em' por causa do Webkit
+## Use media queries com 'em' por causa do WebKit
 
-Aliás, falando em Webkit, há outra questão importante. Quando o zoom aumenta, o cálculo dos pixels não afeta as media queries. Isso quer dizer que, se você usou `(max-width: 960px)` no CSS, o Webkit não irá considerar metade desse valor quando o zoom estiver em 200%. Ele deveria fazer isso -- como todo os outros browsers fazem --, já que a media query é sobre o **tamanho do viewport e não o tamanho da janela**.
+Aliás, falando em WebKit, há outra questão importante. Quando o zoom aumenta, o cálculo dos pixels não afeta as media queries. Isso quer dizer que, se você usou `(max-width: 960px)` no CSS, o WebKit não irá considerar metade desse valor quando o zoom estiver em 200%. Ele deveria fazer isso -- como todo os outros browsers fazem --, já que a media query é sobre o **tamanho do viewport e não o tamanho da janela**.
 
-Mas o Webkit consegue reaplicar as media queries no zoom corretamente sim, apenas **precisamos declará-las com `em`**:
+Mas o WebKit consegue reaplicar as media queries no zoom corretamente sim, apenas **precisamos declará-las com `em`**:
 
 ```css 
 @media (max-width: 44em) { ... } /* equivalente a 704px */
 @media (max-width: 37em) { ... } /* equivalente a 592px */
 ```
 
-A conta é simples: é só usar como base o `font-size` em 16px e você chega no valor em `em`. Os browsers Webkit consideram que o `font-size` base muda conforme o zoom o que faz sua media query ser aplicada (depois de um refresh, por causa do bug que falei antes).
+A conta é simples: é só usar como base o `font-size` em 16px e você chega no valor em `em`. Os browsers WebKit consideram que o `font-size` base muda conforme o zoom o que faz sua media query ser aplicada (depois de um refresh, por causa do bug que falei antes). **Importante**: o Chrome não sofre mais desse problema desde que mudou para o Blink.
 
-E não se engane: isso é um **bug do Safari/Chrome/Android e cia**. Usar media queries em `em` não deveria ser necessário para ganharmos acessibilidade no zoom. **Até o IE funciona direito!** Mas, com o Chrome se tornando o navegador mais usado no mundo e o Webkit dominando completamente o mundo mobile, é bom **fazer sempre suas media queries em `em`** pra evitar problemas. Pelo menos até corrigirem esse bug.
+E não se engane: isso é um **bug do Safari/Android e cia**. Usar media queries em `em` não deveria ser necessário para ganharmos acessibilidade no zoom. **Até o IE funciona direito!** Mas, com o WebKit dominando completamente o mundo mobile, é bom **fazer sempre suas media queries em `em`** pra evitar problemas. Pelo menos até corrigirem esse bug.
 
 ## Media queries de resolução aplicadas no zoom
 
@@ -72,7 +74,7 @@ Após um [longo debate no W3C](http://w3-org.9356.n7.nabble.com/Behavior-of-devi
 
 Em outras palavras: se você serve uma imagem de alta resolução (2x) para telas retina, por exemplo, ela será usada quando o usuário der 200% de zoom na página. Excelente.
 
-Por enquanto, agora em Janeiro/2013, apenas o Firefox implementou isso corretamente. Mas é questão de tempo até os outros navegadores implementarem.
+Por enquanto, em Agosto/2013, apenas o Firefox e o Chrome implementaram isso corretamente. Mas é questão de tempo até os outros navegadores implementarem.
 
 ## Uma nota sobre a falta de acessibilidade do iOS
 
@@ -87,3 +89,9 @@ Nesse post, falo do **zoom dos navegadores modernos**, que aumenta a página tod
 Aliás, esse era um argumento forte a favor de `em` na época, mas hoje em dia os browsers dão zoom inclusive em medidas com `px` fixos.
 
 <small><i>* Imagem que ilustra o post por <a href="http://www.flickr.com/photos/m4tik/47714548/" rel="nofollow">@m4tik no Flickr</a>.</i></small>
+
+
+----
+
+**Atualização Ago/2013:** informações sobre correções dos bugs no Chrome e WebKit.
+
