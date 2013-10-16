@@ -15,12 +15,13 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2013
 
-* *18/Nov* - **Webbr 2013** - *Tutorial: Técnicas para suportar telas de alta resolução na Web*
+* *23/Nov* - **DevInSantos** - *Otimização de performance Web: desafios do mundo mobile*
+* *18/Nov* - **Webbr W3C** - *Tutorial: Técnicas para suportar telas de alta resolução na Web*
 * *19/Out* - **MobileConf Rio** - *Como suportar telas de alta resolução eficientemente na Web mobile*
 * *14/Set* - **Front in Sampa** - [Além do responsive design: a mudança de paradigma do design adaptativo e os múltiplos dispositivos](http://www.slideshare.net/caelumdev/alm-do-responsive-design-a-mudana-de-paradigma-do-design-adaptativo-e-os-mltiplos-dispositivos)
 * *31/Ago* - **QCon SP** - [Otimização de performance Web: desafios do mundo mobile](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
 * *03/Ago* - **Front In BH** - [Repensando o front-end para telas de alta resolução](/palestra-retina-web/)
-* *20/Jul* - **Web Day** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
+* *20/Jul* - **Web Day** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/) [[vídeo](https://www.youtube.com/watch?v=sVBSNJznDF0)]
 * *22/Jun* - **JSConf** - [Tudo que você precisa saber sobre carregamento e execução de JS no browser](http://www.slideshare.net/caelumdev/javascript-loadingsergiojsconfbr2013) (slides)
 * *23/Mai* - **Noite técnica na Caelum Rio de Janeiro** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-por-uma-web-nica) (slides)
 * *13/Mai* - **Google IO Extended Open Sampa** - [Dominando HTML5 offline com AppCache](/palestra-appcache-html5-offline/)
