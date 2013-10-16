@@ -22,10 +22,11 @@ Atividades
 Social
 ------
 
-* Twitter: [@sergio_caelum](http://twitter.com/sergio_caelum)
-* Facebook: [sergio.caelum](http://facebook.com/sergio.caelum)
-* Github: [@sergiolopes](http://github.com/sergiolopes)
-* Delicious: [sergiolopes](http://delicious.com/sergiolopes)
+* [Twitter @sergio_caelum](http://twitter.com/sergio_caelum)
+* [Facebook](http://facebook.com/sergio.luis.lopes.jr)
+* [Github @sergiolopes](http://github.com/sergiolopes)
+* [Delicious](http://delicious.com/sergiolopes)
+* [LinkedIn](http://www.linkedin.com/in/sergiolopesjr)
 
 Interesses atuais
 -----------------
@@ -34,7 +35,7 @@ Interesses atuais
 * Mobile Web e responsive design
 * Cloud computing -- em especial, AppEngine
 * *Server:* gosto de Java na Web, mas também Python e PHP
-* Desenvolvimento frontend
+* Desenvolvimento front-end
 * Marketing digital, web analytics etc
 * Escrever -- posts, livros, artigos, cursos
 
@@ -42,8 +43,7 @@ Desinteresses atuais
 --------------------
 
 * Apps nativas -- celular, tablet ou desktop
-* Buzzwords e modinhas -- Lean Startup, Node.JS etc
-* Ruby on Rails, .Net, Scala (entre outros)
+* Ruby on Rails, .NET, Scala (entre outros)
 
 Este blog
 ---------
