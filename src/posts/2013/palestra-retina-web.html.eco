@@ -1,7 +1,8 @@
 ---
 layout: presentation
 title: 'Palestra: Repensando o front-end para telas de alta resolução'
-date: 2013-08-03
+date: 2013-10-19
+originalDate: 2013-08-03
 category: html5
 description: Telas de alta resolução? Imagens responsivas? Retina? Gráficos vetoriais? SVG, icon fonts? Veja nessa palestra como suportar telas de resoluções diferentes.
 ogtype: article
@@ -41,7 +42,7 @@ referenceOthers: false
             <li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
         </ul>
 
-        <p><i><b>Data:</b> Agosto/2013.</i></p>
+        <p><i><b>Última revisão:</b> Outubro/2013.</i></p>
     </aside>
     <aside class="audience">
         <p>Aqui você acompanha <b>exemplos e demos em tempo real</b> dos assuntos tratados na palestra. Você pode ver o slide atual aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
@@ -544,9 +545,10 @@ referenceOthers: false
     </aside>
 </section>
 
-<section class="slide">
+<section class="slide skip-on-presentation">
     <aside class="notes audience">
         <p>Uma dica importante para SVGs responsivos que você quer renderizar de tamanhos diferentes é remover os atributos width e height da imagem e trocar pelo viewBox. Vários browsers tem problemas em renderizar SVG com width fixo se você quiser aumentar o tamanho depois. E, se pensar bem, fixar width/height numa imagem vetorial é algo meio besta, já que ela escala infinitamente com boa qualidade.</p>
+        <p>O Firefox é um caso clássico desse bug, que foi arrumado apenas na versão 24.</p>
     </aside>
 </section>
 
@@ -652,32 +654,40 @@ referenceOthers: false
 <section class="slide">
     <aside class="notes audience">
         <p><a href="/livro-web-mobile/exemplos/retina.html">Rode esse teste na sua máquina pra ver o resultado.</a></p>
+        <p>Essa imagem de um babuíno tem 500px x 500px e pesa 80KB se salva com qualidade 80 no meu editor de imagens.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p><a href="/livro-web-mobile/exemplos/retina.html">Rode esse teste na sua máquina pra ver o resultado.</a></p>
+        <p>Quero suportar o dobro da resolução (@2x) pra telas retina. Exporto ele com 1000px x 1000px, mas mantenho os 80KB diminuindo a qualidade pra 20 na hora de exportar. Essa técnica é o que chamam de <b>compressive images</b>.</p>
+        <p>Uma imagem com dobro da resolução mas com qualidade bem mais baixa acaba ficando equivalente em tamanho. E, principalmente, tem resultado visual muito bom. São dois casos importantes:</p>
+        <p>1) Na tela retina fica melhor que antes pois temos o dobro de pixels em cada dimensão. A qualidade baixa não atrapalha pois, em telas retina, o pixel é tão pequeno que é quase imperceptível individualmente.</p>
+        <p>2) Na tela normal, vamos ter o dobro de pixels que o necessário e o browser faz o downscaling da imagem. O resultado visual fica bom porque, mesmo com qualidade mais baixa que antes, agora temos o dobro de pixels necessários e o downscaling deixa a imagem visualmente boa.</p>
+        <p><a href="/livro-web-mobile/exemplos/retina.html">Rode esse teste na sua máquina pra ver o resultado visual.</a></p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
         <p><a href="/resources/palestra-retina/caelum1x.png">Veja essa imagem com seus próprios olhos.</a></p>
+        <p>Nesse exemplo, temos um PNG com tamanho de apenas 9KB com o logo da Caelum medindo 320px x 100px. Exportei a imagem direto do editor Inkscape.</p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p><a href="/resources/palestra-retina/caelum2x.png">Veja essa imagem com seus próprios olhos.</a></p>
+        <p>O problema é que se exporto com o dobro da resolução pensando em retina, o tamanho da imagem fica gigante. 19KB nesse caso. PNG é um formato bem ruim para compressão, por ser lossless.</p>
+        <p><a href="/resources/palestra-retina/caelum2x.png">Veja també essa outra imagem com seus próprios olhos.</a></p>
     </aside>
 </section>
 
 <section class="slide">
     <aside class="notes audience">
-        <p><a href="/resources/palestra-retina/caelum2x-opt.png">Veja essa imagem com seus próprios olhos.</a></p>
+        <p>A questão aqui é que posso otimizar a imagem a ponto dela ser pequena o suficiente. Aqui, eu fazendo otimizações lossless do arquivo e transformando ele em PNG-8 (lossy, palheta limitada), chego em 7KB, menos que o arquivo original em @1x.</p>
+        <p><a href="/resources/palestra-retina/caelum2x-opt.png">Veja essa imagem aqui com seus próprios olhos.</a></p>
 
-        <p>Aqui, claro que se eu otimizasse a imagem original ia ganhar também. Mas a questão é que otimizando agressivamente posso chegar numa imagem de tamanho bastante aceitável mesmo sendo 2x e não me preocupar com manter mais de uma versão da imagem.</p>
+        <p>Claro que se eu otimizasse a imagem original ia ganhar também. Mas a questão é que otimizando agressivamente posso chegar numa imagem de tamanho bastante aceitável mesmo sendo 2x e não me preocupar com manter mais de uma versão da imagem.</p>
     </aside>
 </section>
 
@@ -713,7 +723,7 @@ referenceOthers: false
         <p>Trabalho de fazer duas imagens? Automatize. Não fique exportando na mão no Photoshop.</p>
 
         <p>Questões: numero de resolucoes diferentes: 0.75, 1, 1.3, 1.5, 2, 3; gero uma imagem pra cada sempre?</p>
-        <p>E hoje trabalho em 2x, mas ja tem telas 3x. se amanha tiver 4x?</p>
+        <p>E hoje trabalho em 2x, mas já temos telas 3x. Se amanhã existir 4x? Há rumores de aparelhos iOS 4x pra um futuro próximo.</p>
     </aside>
 </section>
 <section class="slide">
