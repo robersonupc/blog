@@ -1,7 +1,7 @@
 ---
 layout: presentation
 title: 'Palestra: Repensando o front-end para telas de alta resolução'
-date: 2013-10-19
+date: 2013-11-19
 originalDate: 2013-08-03
 category: html5
 description: Telas de alta resolução? Imagens responsivas? Retina? Gráficos vetoriais? SVG, icon fonts? Veja nessa palestra como suportar telas de resoluções diferentes.
@@ -42,7 +42,7 @@ referenceOthers: false
             <li>Use as <b>barra de navegação no topo</b> pra passar os slides;</li>
         </ul>
 
-        <p><i><b>Última revisão:</b> Outubro/2013.</i></p>
+        <p><i><b>Última revisão:</b> Novembro/2013.</i></p>
     </aside>
     <aside class="audience">
         <p>Aqui você acompanha <b>exemplos e demos em tempo real</b> dos assuntos tratados na palestra. Você pode ver o slide atual aqui também ou escondê-lo e ver apenas os demos e exemplos.</p>
@@ -438,6 +438,16 @@ referenceOthers: false
     </aside>
 </section>
 
+<section class="slide">
+    <div class="content" style="text-align:center;margin-top:2em">
+        <img src="/img/palestra/retina/icon-fonts-diferenca.gif" alt="screencast diferença ícones">
+    </div>
+    <aside class="notes audience">
+        <p>No exemplo, peguei um ícone na home do Github que fica alinhado num círculo CSS. Abri no Chrome, Firefox e IE11 e gravei esse screencast pra ver as diferenças.</p>
+        <p>É possível ver que o alinhamento varia, deixando o ícone fora de centro em alguns browsers. A renderização muda também, como a grossura das linhas.</p>
+    </aside>
+</section>
+
 
 <!-- SVG: 20 min -->
 <section class="slide" id="svg">
@@ -471,17 +481,19 @@ referenceOthers: false
             <!doctype html>
             <html>
             <body>
-                <h1>Meu teste de SVG</h1>
+            <h1>Meu teste de SVG</h1>
 
-                <svg>
-                    <circle cx="50" cy="50" r="40" fill="#F90">
-                </svg>
+            <svg>
+              <circle cx="50" cy="50" r="40" fill="#F90">
+            </svg>
+
             </body>
             </html>
         <% end %>
     </div>
     <aside class="notes audience">
         <p>No HTML5, ele pode ser inline.</p>
+        <p>Se você olhar o código fonte dessa palestra, vai ver que uso um SVG gigante declarado inline.</p>
     </aside>
 </section>
 
@@ -504,7 +516,7 @@ referenceOthers: false
     <aside class="notes audience">
         <p>Um problema do SVG é o suporte nos navegadores. Ele tem excelente suporte já (<a href="http://caniuse.com/svg">veja o caniuse</a>). Mas há duas grandes exceções: IE 8 e anteriores; e Android 2.x. Todos os outros browsers, desktop e mobile, suportam SVG 1.1 sem muitos problemas.</p>
 
-        <p>Você vai precisar decidir no seu projeto qual o tamanho do problema do IE8 e Android2 pra você. Hoje, por exemplo, no Brasil, o uso médio de IE8 é 4% e vem caindo rapidamente (0.5% ao mês!). Existem perspectivas concretas de o IE8 já ser insignificante até o começo de 2014. Em um projeto que cuido, o IE8 já é menos de 1% há algum tempo.</p>
+        <p>Você vai precisar decidir no seu projeto qual o tamanho do problema do IE8 e Android2 pra você. Hoje, por exemplo, no Brasil, o <a href="http://gs.statcounter.com/#browser_version_partially_combined-BR-monthly-201210-201310">uso médio de IE8 é 3,6%</a> e vem caindo rapidamente. Existem perspectivas concretas de o IE8 ser insignificante já em 2014. Em um projeto que cuido, o IE8 já é menos de 1% há algum tempo.</p>
 
         <p>Já o Android 2.x tem uso bem baixo no Brasil. Representa menos de 0.5% de todos os seus visitantes e é um número que não vai crescer mais, visto que celulares mais novos já usam versões mais recentes.</p>
     </aside>
@@ -513,7 +525,8 @@ referenceOthers: false
 <section class="slide code-center">
     <div class="content">
         <%- @code 'html', -> %> 
-            <img src="logo.svg" onerror="this.src='logo.png'">
+            <img src="logo.svg" 
+                 onerror="this.src='logo.png'">
         <% end %>
     </div>
     <aside class="notes audience">
@@ -533,6 +546,7 @@ referenceOthers: false
             .svg .logo {
                 background: url(logo.svg) no-repeat;
             }
+
             .no-svg .logo {
                 background: url(logo.png) no-repeat;
             }
@@ -576,8 +590,13 @@ referenceOthers: false
 <section class="slide code-center">
     <div class="content">
         <%- @code 'html', -> %> 
-            <img src="foto.jpg" 
-                 srcset="foto-normal.jpg 1x, foto-retina.jpg 2x">
+            <img src="fallback.jpg" 
+                 srcset="foto.jpg 1x, retina.jpg 2x">
+
+
+            <img src="fallback.jpg"
+                 src2="(min-width: 400px) medium.jpg"
+                 src3="(min-width: 1000px) large.jpg">
         <% end %>
     </div>
     <aside class="notes audience">
@@ -585,9 +604,9 @@ referenceOthers: false
 
         <p>No exemplo, as instruções <b>2x</b> e <b>1x</b> dizem respeito ao valor do device pixel ratio. A segunda imagem só vai ser carregada em dPR 2.</p>
 
-        <p>Há também uma outra spec em discussão que cria um elemento picture. Ele vai permitir o uso de media queries e conseguiria resolver o mesmo problema. Mas ele é bem mais verboso e complicado, apesar de mais poderoso.</p>
+        <p>Há também uma outra spec em discussão que cria um elemento picture. Ele vai permitir o uso de media queries e conseguiria resolver o mesmo problema. Mas ele é bem mais verboso e complicado, apesar de mais poderoso. Uma terceira possiblidade é a especificação src-N que é bem poderosa mas mais simples que a srcset.</p>
 
-        <p>Nenhum desses recursos tem suporte amplo nos browsers de hoje.</p>
+        <p>Nenhum desses recursos tem suporte amplo nos browsers de hoje. E ainda há muita discussão (e briga) pra ver qual spec será realmente o futuro.</p>
     </aside>
 </section>
 
@@ -600,7 +619,7 @@ referenceOthers: false
 
             @media (resolution: 2dppx) {
                 .foto {
-                    background: url(foto-retina.jpg) no-repeat;
+                    background-image: url(foto-retina.jpg);
                     background-size: 100%;
                 }
             }
@@ -622,7 +641,7 @@ referenceOthers: false
                    (min-resolution: 144dpi) {
 
                 .foto {
-                    background: url(foto-retina.jpg) no-repeat;
+                    background-image: url(foto-retina.jpg);
                     background-size: 100%;
                 }
             }
@@ -678,7 +697,7 @@ referenceOthers: false
 <section class="slide">
     <aside class="notes audience">
         <p>O problema é que se exporto com o dobro da resolução pensando em retina, o tamanho da imagem fica gigante. 19KB nesse caso. PNG é um formato bem ruim para compressão, por ser lossless.</p>
-        <p><a href="/resources/palestra-retina/caelum2x.png">Veja també essa outra imagem com seus próprios olhos.</a></p>
+        <p><a href="/resources/palestra-retina/caelum2x.png">Veja também essa outra imagem com seus próprios olhos.</a></p>
     </aside>
 </section>
 
@@ -770,7 +789,7 @@ referenceOthers: false
         <p>Se quiser aliviar a barra, podemos resolver alguns problemas. Uma consequecia prática grave da falta da tag IMG é que o Google não vai mais indexar minhas imagens (ele não consegue indexar imagens de CSS). Pra resolver isso, podemos usar <b>Image Sitemaps</b>.</p>
     </aside></section>
 <section class="slide code-center">
-    <div class="content" style="padding-top: 100px">
+    <div class="content" style="padding-top: 100px; font-size: 1.5em">
         <%- @code 'xml', -> %> 
             <?xml version="1.0" encoding="UTF-8"?>
              <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -800,7 +819,9 @@ referenceOthers: false
 <section class="slide code-center">
     <div class="content" style="padding-top: 100px">
         <%- @code 'html', -> %> 
-            <div class="foto" role="img" aria-label="Que foto"></div>
+            <div class="foto" role="img" 
+                 aria-label="Semanticamente, sou uma foto!">
+            </div>
         <% end %>
     </div>
     <aside class="notes audience">
@@ -812,6 +833,42 @@ referenceOthers: false
 <section class="slide" id="favicon">
     <aside class="notes audience">
         <p>Por fim, não esqueça do favicon; ele também deve ser retina. Use essa ferramenta online: <a href="http://xiconeditor.com">xiconeditor.com</a></p>
+    </aside>
+</section>
+
+<!-- como testar retina?-->
+<section class="slide"></section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Do ponto de vista técnico, estar em uma tela retina significa responder corretamente a dois aspectos técnicos: media queries de resolução e o devicePixelRatio.</p>
+
+        <p>Isso quer dizer que, se quero simular uma tela 2x, espero um devicePixelRatio 2 e que a media query (resolution:2dppx) vai ser true.</p>
+
+        <p>A boa notícia é que as últimas versões dos browsers mais modernos conseguem simular isso facilmente (Chrome, Firefox, Opera e IE11 - Safari não).</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Isso aqui é meu blog aberto normal no Desktop.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Basta dar 200% de zoom no Desktop que o browser multiplica o devicePixelRatio e o CSS por 2. E suas media queries e códigos que esperam retina vão disparar.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Além dos aspectos técnicos, pra testar retina, preciso conseguir olhar pra tela como um usuário olharia pra retina dele. Isso significa deixar a tela do tamanho e da distância semelhante a que um usuário veria na prática.</p>
+    </aside>
+</section>
+<section class="slide">
+    <aside class="notes audience">
+        <p>Exemplo: quero simular a tela de um iPhone retina no meu Macbook velhão não-retina.</p>
+        <p>Começo pegando o tamanho da tela física do iPhone, que é 640px. Redimensiono então meu browser pra 640px de janela.</p>
+        <p>Agora pego o valor do devicePixelRatio do iPhone, 2, e faço zoom equivalente no meu browser Desktop - 200% no caso.</p>
+        <p>Por fim, preciso simular a distância. Sei que um iPhone foi feito pra ser usado a 42cm de distância da vista. Faço uma continha e concluo que, pra ter a mesma experiência no meu Macbook 13,3'', preciso estar a 121cm da tela.</p>
+        <p>A conta pra chegar nesse número é um pouco chata. Envolve saber o DPI de pixels físicos dos seus dispositivos e calcular o ângulo de visão do aparelho a ser emulado e projetar o mesmo ângulo na tela do seu Desktop.</p>
     </aside>
 </section>
 
