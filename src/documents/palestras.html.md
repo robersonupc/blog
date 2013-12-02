@@ -15,9 +15,8 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2013
 
-* *23/Nov* - **DevInSantos** - *Otimização de performance Web: desafios do mundo mobile*
-* *18/Nov* - **Webbr W3C** - *Tutorial: Técnicas para suportar telas de alta resolução na Web*
-* *19/Out* - **MobileConf Rio** - *Como suportar telas de alta resolução eficientemente na Web mobile*
+* *18/Nov* - **Webbr W3C** - [Tutorial: Técnicas para suportar telas de alta resolução na Web](/palestra-retina-web/)
+* *19/Out* - **MobileConf Rio** - [Como suportar telas de alta resolução eficientemente na Web mobile](/palestra-retina-web/)
 * *14/Set* - **Front in Sampa** - [Além do responsive design: a mudança de paradigma do design adaptativo e os múltiplos dispositivos](http://www.slideshare.net/caelumdev/alm-do-responsive-design-a-mudana-de-paradigma-do-design-adaptativo-e-os-mltiplos-dispositivos)
 * *31/Ago* - **QCon SP** - [Otimização de performance Web: desafios do mundo mobile](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
 * *03/Ago* - **Front In BH** - [Repensando o front-end para telas de alta resolução](/palestra-retina-web/)
