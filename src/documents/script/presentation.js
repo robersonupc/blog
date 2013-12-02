@@ -1094,7 +1094,7 @@ var WS = (function(doc, win){
     document.documentElement.className += (room === 'main-room')? ' main-room' : ' normal-room';
 
     // connect sync
-    WS.connect("ws://ec2-23-22-59-142.compute-1.amazonaws.com:8080/websockets-server/sync", room, localStorage.getItem('sync-secret') );
+    WS.connect("ws://sergiolopes.no-ip.biz:11080/websockets-server/sync", room, localStorage.getItem('sync-secret') );
 
 })();
 
