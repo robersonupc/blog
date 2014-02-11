@@ -1,13 +1,12 @@
-// loads analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-61051-6']);
-_gaq.push(['_trackPageview']);
+// analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = 'http://www.google-analytics.com/' + (location.hostname == 'localhost' || location.hostname.indexOf('192.168') >= 0? 'u/ga_debug.js' : 'ga.js');
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+ga('create', 'UA-61051-6', 'sergiolopes.org');
+ga('send', 'pageview');
+
 
 // supports code copy
 (function(){
@@ -45,7 +44,7 @@ _gaq.push(['_trackPageview']);
 
 			// track
 			el.addEventListener('click', function(){
-				_gaq.push(['_trackPageview', '/EXTERNAL/' + this.href]);
+				ga('send', 'pageview', '/EXTERNAL/' + this.href);
 			}, false);
 		}
 	}
