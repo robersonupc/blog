@@ -8,7 +8,7 @@ description: Design responsivo, media queries, telas retina, touch screen, mobil
 referenceOthers: false
 ---
 
-Acabo de lançar pela editora [Casa do Código](http://www.casadocodigo.com.br) meu livro **“A Web Mobile”**. Falo sobre design responsivo, media queries, telas retina, touch screens, mobile-first, RESS e muito mais.
+Acabo de lançar pela editora [Casa do Código](https://casadocodigo.refersion.com/l/fdf.1465) meu livro **“A Web Mobile”**. Falo sobre design responsivo, media queries, telas retina, touch screens, mobile-first, RESS e muito mais.
 
 Se você me acompanha aqui no blog, certamente vai gostar do livro. Alguns tópicos inclusive saíram aqui do blog e aproveitei pra incrementá-los bastante. Mas, claro, a maioria dos tópicos são inéditos e recheados de conteúdo de mobile e Web — veja a [lista completa de tópicos](/livro-web-mobile/#sumario).
 
