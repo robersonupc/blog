@@ -25,11 +25,11 @@ pagetype: blog
 	<nav class="header-menu header-item">
 		<a href="/" class="icone">
 			<span aria-hidden="true" class="icone-home"></span>
-			<span class="icone-alt">Home</a>
+			<span class="icone-alt">Home</span>
 		</a>
 		<a href="/feed.xml" class="icone">
 			<span aria-hidden="true" class="icone-feed"></span>
-			<span class="icone-alt">Feed RSS</a>
+			<span class="icone-alt">Feed RSS</span>
 		</a>
 	</nav>
 
