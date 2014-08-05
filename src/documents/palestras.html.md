@@ -15,8 +15,9 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2014
 
-* *24/Set* - **QCon Rio** - *(a definir)*
-* *06/Ago* - **MobCamp Campinas** - *Design Responsivo por uma Web única*
+* *14/Nov* - **FrontInMaceio** - *(a definir)*
+* *23/Out* - **TablelessConf** - *(a definir)*
+* *06/Ago* - **MobCamp Campinas** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-mobcamp-2014)
 * *31/Mai* - **MobileConf RJ** - [A web mobile: Otimizações e desafios de performance](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
 * *09/Abr* - **QCon SP** - [Rumo ao HTTP2.0: o que vem por aí e o que você pode utilizar já com SPDY](https://docs.google.com/presentation/d/1BVyBcR5AE2kwY7akcmM0O3dDJ5TccY3ew0U9Ux7wsQs/pub?start=false&loop=false&delayms=3000&utm_content=buffer7886e&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer#slide=id.p)
 
