@@ -91,3 +91,5 @@ RewriteRule ^e14$ /mobile-web-book/examples/select.html [R=302,L]
 RewriteRule ^e15$ /mobile-web-book/examples/input-file.html [R=302,L]
 RewriteRule ^e16$ /mobile-web-book/examples/labels.html [R=302,L]
 
+RewriteRule ^/mobile-web-book/$ http://www.codecrushing.com/products/book-mobile-web-responsive [R=302,L]
+
