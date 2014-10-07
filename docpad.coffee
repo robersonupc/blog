@@ -167,6 +167,7 @@ docpadConfig = {
 				__dirname + '/src/documents/feed',
 				__dirname + '/src/documents/sitemap',
 				__dirname + '/src/posts/2012',
+				__dirname + '/src/posts/2013',
 				__dirname + '/src/posts/caelum',
 				__dirname + '/src/posts/eventos'
 			]
