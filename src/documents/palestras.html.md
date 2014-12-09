@@ -17,7 +17,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 * *22/Nov* - **DevFest SP** - *Offline Web do jeito certo com ServiceWorkers*
 * *15/Nov* - **FrontInMaceio** - [HTTP/2, SPDY e Otimizações Web](http://www.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes)
-* *08/Nov* - **FrontIn Porto Alegre** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
+* *08/Nov* - **FrontIn Porto Alegre** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio) ([vídeo](https://www.youtube.com/watch?v=mchPQdKbbus))
 * *23/Out* - **TablelessConf** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
 * *15/Out* - **Semana Computação FEI** - [Otimização de performance Web: desafios do mundo mobile](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
 * *06/Ago* - **MobCamp Campinas** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-mobcamp-2014)
