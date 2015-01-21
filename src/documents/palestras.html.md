@@ -13,9 +13,19 @@ Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vári
 
 Lista das palestras mais recentes que dei e links pros slides:
 
+# 2015
+
+* *18/Jun* - **Encontro Locaweb São Paulo** - *Como o HTTP/2 vai mudar sua vida*
+* *30/Mai* - **MobileConf Rio de Janeiro** - *(a definir)*
+* *19/Mai* - **Encontro Locaweb Rio de Janeiro** - *Como o HTTP/2 vai mudar sua vida*
+* *07/Mai* - **Encontro Locaweb Porto Alegre** - *Como o HTTP/2 vai mudar sua vida*
+* *11/Abr* - **Encontro Locaweb Curitiba** - *Como o HTTP/2 vai mudar sua vida*
+* *18/Mar* - **Encontro Locaweb Recife** - *Como o HTTP/2 vai mudar sua vida*
+* *06/Mar* - **Encontro Locaweb Belo Horizonte** - *Como o HTTP/2 vai mudar sua vida*
+
 # 2014
 
-* *22/Nov* - **DevFest SP** - *Offline Web do jeito certo com ServiceWorkers*
+* *22/Nov* - **DevFest SP** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
 * *15/Nov* - **FrontInMaceio** - [HTTP/2, SPDY e Otimizações Web](http://www.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes)
 * *08/Nov* - **FrontIn Porto Alegre** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio) ([vídeo](https://www.youtube.com/watch?v=mchPQdKbbus))
 * *23/Out* - **TablelessConf** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
