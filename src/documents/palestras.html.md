@@ -15,13 +15,13 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2015
 
-* *18/Jun* - **Encontro Locaweb São Paulo** - *Como o HTTP/2 vai mudar sua vida*
-* *30/Mai* - **MobileConf Rio de Janeiro** - *(a definir)*
-* *19/Mai* - **Encontro Locaweb Rio de Janeiro** - *Como o HTTP/2 vai mudar sua vida*
-* *07/Mai* - **Encontro Locaweb Porto Alegre** - *Como o HTTP/2 vai mudar sua vida*
-* *11/Abr* - **Encontro Locaweb Curitiba** - *Como o HTTP/2 vai mudar sua vida*
-* *18/Mar* - **Encontro Locaweb Recife** - *Como o HTTP/2 vai mudar sua vida*
-* *06/Mar* - **Encontro Locaweb Belo Horizonte** - *Como o HTTP/2 vai mudar sua vida*
+* *18/Jun* - **Encontro Locaweb São Paulo** - *Tudo que você precisa saber sobre picture e srcset*
+* *30/Mai* - **MobileConf Rio de Janeiro** - *Como o HTTP/2 vai mudar sua vida*
+* *19/Mai* - **Encontro Locaweb Rio de Janeiro** - *Tudo que você precisa saber sobre picture e srcset*
+* *07/Mai* - **Encontro Locaweb Porto Alegre** - *Tudo que você precisa saber sobre picture e srcset*
+* *11/Abr* - **Encontro Locaweb Curitiba** - *Tudo que você precisa saber sobre picture e srcset*
+* *18/Mar* - **Encontro Locaweb Recife** - *Tudo que você precisa saber sobre picture e srcset*
+* *06/Mar* - **Encontro Locaweb Belo Horizonte** - *Tudo que você precisa saber sobre picture e srcset*
 
 # 2014
 
