@@ -12,10 +12,10 @@
     "docpad-plugin-eco": "latest",
     "docpad-plugin-highlightjs": "latest",
     "docpad-plugin-livereload": "latest",
-    "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-marked": "latest",
     "docpad-plugin-partials": "latest",
     "docpad-plugin-stylus": "latest",
-    "juice": "latest",
+    "juice": "0.5.0",
     "moment": "latest",
     "slug": "latest"
   }
