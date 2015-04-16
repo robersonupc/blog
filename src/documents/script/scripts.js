@@ -7,24 +7,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-61051-6', 'sergiolopes.org');
 ga('send', 'pageview');
 
-
-// supports code copy
-(function(){
-	if (!document.querySelectorAll) return;
-
-	var codes = document.querySelectorAll('div.highlight');
-	for (var i = 0; i < codes.length; i++) {
-		var div = codes[i];
-		var pre = div.querySelector('pre');
-		var linenos = pre.cloneNode(true);
-
-		linenos.className = 'linenoscol';
-		pre.className = 'maincode';
-
-		div.appendChild(linenos);
-	}
-})();
-
 // analytics: track external links
 (function(doc) {
 	if (!document.querySelectorAll) return;
