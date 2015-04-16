@@ -8,15 +8,15 @@
     "url": "http://github.com/sergiolopes/blog"
   },
   "dependencies": {
-    "docpad-plugin-robotskirt": "latest",
-    "docpad-plugin-eco": "latest",
-    "docpad-plugin-stylus": "latest",
     "docpad-plugin-cleanurls": "latest",
+    "docpad-plugin-eco": "latest",
     "docpad-plugin-highlightjs": "latest",
     "docpad-plugin-livereload": "latest",
+    "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-partials": "latest",
-    "slug": "latest",
+    "docpad-plugin-stylus": "latest",
+    "juice": "latest",
     "moment": "latest",
-    "juice": "latest"
+    "slug": "latest"
   }
 }
