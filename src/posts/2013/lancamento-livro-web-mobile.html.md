@@ -12,7 +12,7 @@ Acabo de lançar pela editora [Casa do Código](https://casadocodigo.refersion.c
 
 Se você me acompanha aqui no blog, certamente vai gostar do livro. Alguns tópicos inclusive saíram aqui do blog e aproveitei pra incrementá-los bastante. Mas, claro, a maioria dos tópicos são inéditos e recheados de conteúdo de mobile e Web — veja a [lista completa de tópicos](/livro-web-mobile/#sumario).
 
-O livro custa **R$ 29 em ebook**, **R$ 59 na versão impressa** e **R$ 69 ebook + impresso**. Você pode comprar direto [no site da editora Casa do Código](http://www.casadocodigo.com.br/products/livro-web-mobile).
+O livro custa **R$ 29 em ebook**, **R$ 59 na versão impressa** e **R$ 69 ebook + impresso**. Você pode comprar direto [no site da editora Casa do Código](https://casadocodigo.refersion.com/l/fdf.1465).
 
 <img src="/img/posts/livro-web-mobile/capa-web-mobile-1200px.png" style="max-width:600px" alt="Capa do livro A Web Mobile">
 

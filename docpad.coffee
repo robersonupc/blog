@@ -155,6 +155,7 @@ docpadConfig = {
 		'posts/2012',
 		'posts/2013',
 		'posts/2014',
+		'posts/2015',
 		'posts/caelum',
 		'posts/eventos'
 	]

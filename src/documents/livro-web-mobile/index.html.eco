@@ -72,7 +72,7 @@ referenceOthers: false
 	<ol class="sumario-itens">
 		<li>
 			<ol class="topicos">
-				<li>A Web Mobile</li>
+				<li>A Web Mobile
 			</ol>
 		</li>
 		<li>
@@ -106,7 +106,10 @@ referenceOthers: false
 				<li>Progressive enhancement e feature detection
 				<li>RESS — Design responsivos com componentes no lado do servidor
 				<li>O complicado cenário das imagens responsivas
+				<li>Tudo sobre picture e srcset
+				<li>Cola com todas as soluções de imagens responsivas
 				<li>Design adaptativo e carregamento condicional
+				<li>Coreografia de conteúdo
 			</ol>
 		</li>
 		<li>
@@ -125,7 +128,7 @@ referenceOthers: false
 		</li>
 	</ol>
 	
-	<p>Total de páginas: 220 na versão impressa.</p>
+	<p>Total de páginas: 243 na versão impressa.</p>
 </div>
 
 <div class="sobre-container">
