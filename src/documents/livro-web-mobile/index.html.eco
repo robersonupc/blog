@@ -15,7 +15,7 @@ referenceOthers: false
 	<h2 class="autor">Livro por Sérgio Lopes</h2>
 	<h1 class="nome">
 		<div class="titulo">A Web Mobile</div>
-		<div class="subtitulo">Programe para um mundo de muitos dispositivos.</div>
+		<div class="subtitulo">Design Responsivo e além para uma Web adaptada ao mundo mobile.</div>
 	</h1>
 	
 	<div class="ilustracao">
@@ -114,7 +114,7 @@ referenceOthers: false
 		</li>
 		<li>
 			<span class="part">Gestos e entrada de dados</span>
-			<ol class="topicos" start="21">
+			<ol class="topicos" start="24">
 				<li>Gestos na Web
 				<li>Implementando gestos com JavaScript
 				<li>Desafios de UX em interfaces touch

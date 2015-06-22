@@ -3,6 +3,7 @@ layout: post
 title: "Segunda edição do meu livro “A Web Mobile”, revista e ampliada"
 date: 2015-05-27
 category: blog
+class: destaque
 description: Design responsivo, media queries, telas retina, touch screen, mobile-first, RESS e muito mais. Meu novo livro pela editora Casa do Código.
 
 referenceOthers: false
