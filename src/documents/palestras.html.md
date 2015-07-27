@@ -15,15 +15,15 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2015
 
-* *22/Set* - **Webbr** - *(a definir)*
-* *28/Ago* - **QCon Rio** - *(a definir)*
+* *22/Set* - **Webbr** - HTTP/2.0
+* *28/Ago* - **QCon Rio** - Progressive WebApps: o melhor da Web, Appficada
 * *26/Ago* - **7 Masters** - *(a definir)*
+* *22/Ago* - **[AluraConf Online](http://www.aluraconf.com.br/)** - Imagens responsivas com picture E crcset
 * *18/Jun* - **Encontro Locaweb São Paulo** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *30/Mai* - **MobileConf Rio de Janeiro** - [Como o HTTP/2 vai mudar sua vida](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
 * *19/Mai* - **Encontro Locaweb Rio de Janeiro** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *07/Mai* - **Encontro Locaweb Porto Alegre** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *11/Abr* - **Encontro Locaweb Curitiba** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
-* *18/Mar* - **Encontro Locaweb Recife** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *06/Mar* - **Encontro Locaweb Belo Horizonte** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 
 # 2014
@@ -31,7 +31,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *22/Nov* - **DevFest SP** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
 * *15/Nov* - **FrontInMaceio** - [HTTP/2, SPDY e Otimizações Web](http://www.slideshare.net/caelumdev/http2-spdy-e-otimizaes-web-front-in-macei-2014-srgio-lopes)
 * *08/Nov* - **FrontIn Porto Alegre** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio) ([vídeo](https://www.youtube.com/watch?v=mchPQdKbbus))
-* *23/Out* - **TablelessConf** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio)
+* *23/Out* - **TablelessConf** - [Offline Web do jeito certo com ServiceWorkers](http://www.slideshare.net/caelumdev/serviceworkers-sergio) ([vídeo](https://www.eventials.com/tableless/service-workers-o-jeito-certo-de-fazer-offline/?playlist=palestras-do-tableless-conference-2014))
 * *15/Out* - **Semana Computação FEI** - [Otimização de performance Web: desafios do mundo mobile](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
 * *06/Ago* - **MobCamp Campinas** - [Design Responsivo por uma Web única](http://www.slideshare.net/caelumdev/design-responsivo-mobcamp-2014)
 * *31/Mai* - **MobileConf RJ** - [A web mobile: Otimizações e desafios de performance](http://www.slideshare.net/caelumdev/otimizaes-de-performance-web-desafios-do-mundo-mobile)
