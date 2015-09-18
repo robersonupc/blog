@@ -15,16 +15,16 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2015
 
+* *21/Nov* - **Front In Sampa** - Progressive WebApps: o melhor da Web, Appficada
 * *22/Set* - **Webbr** - HTTP/2.0
 * *28/Ago* - **QCon Rio** - Progressive WebApps: o melhor da Web, Appficada
-* *26/Ago* - **7 Masters** - *(a definir)*
-* *22/Ago* - **[AluraConf Online](http://www.aluraconf.com.br/)** - Imagens responsivas com picture E crcset
+* *26/Ago* - **7 Masters** - Progressive WebApps: o melhor da Web, Appficada
 * *18/Jun* - **Encontro Locaweb São Paulo** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *30/Mai* - **MobileConf Rio de Janeiro** - [Como o HTTP/2 vai mudar sua vida](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
 * *19/Mai* - **Encontro Locaweb Rio de Janeiro** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
-* *07/Mai* - **Encontro Locaweb Porto Alegre** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
-* *11/Abr* - **Encontro Locaweb Curitiba** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
-* *06/Mar* - **Encontro Locaweb Belo Horizonte** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
+* *07/Mai* - **Encontro Locaweb Porto Alegre** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
+* *11/Abr* - **Encontro Locaweb Curitiba** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
+* *06/Mar* - **Encontro Locaweb Belo Horizonte** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 
 # 2014
 
