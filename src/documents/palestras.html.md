@@ -15,8 +15,8 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2015
 
-* *21/Nov* - **Front In Sampa** - Progressive WebApps: o melhor da Web, Appficada
-* *22/Set* - **Webbr** - HTTP/2.0
+* *21/Nov* - **Front In Sampa** - Progressive WebApps: o melhor da Web, Appficada (v2)
+* *22/Set* - **Webbr** - [HTTP/2.0](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
 * *28/Ago* - **QCon Rio** - Progressive WebApps: o melhor da Web, Appficada
 * *26/Ago* - **7 Masters** - Progressive WebApps: o melhor da Web, Appficada
 * *18/Jun* - **Encontro Locaweb São Paulo** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
