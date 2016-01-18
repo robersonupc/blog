@@ -15,10 +15,10 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2015
 
-* *21/Nov* - **Front In Sampa** - Progressive WebApps: o melhor da Web, Appficada (v2)
+* *21/Nov* - **Front In Sampa** - [Progressive WebApps: o melhor da Web, Appficada 2.0](http://www.slideshare.net/caelumdev/progressive-web-apps-o-melhor-da-web-appficada) ([vídeo](https://www.youtube.com/watch?v=sH7dlRnuh-k&feature=youtu.be&a=))
 * *22/Set* - **Webbr** - [HTTP/2.0](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
 * *28/Ago* - **QCon Rio** - Progressive WebApps: o melhor da Web, Appficada
-* *26/Ago* - **7 Masters** - Progressive WebApps: o melhor da Web, Appficada
+* *26/Ago* - **7 Masters** - Progressive WebApps: o melhor da Web, Appficada ([vídeo](http://imasters.com.br/design-ux/design-responsivo/video-progressive-web-apps-7masters/))
 * *18/Jun* - **Encontro Locaweb São Paulo** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *30/Mai* - **MobileConf Rio de Janeiro** - [Como o HTTP/2 vai mudar sua vida](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
 * *19/Mai* - **Encontro Locaweb Rio de Janeiro** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
