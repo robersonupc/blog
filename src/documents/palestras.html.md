@@ -13,6 +13,11 @@ Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vári
 
 Lista das palestras mais recentes que dei e links pros slides:
 
+# 2016
+
+* *30/Mar* - **QConSP** - Performance na web: o modelo RAIL e outras novidades
+* *07/Mar* - **Front7** - Progressive Web Apps: o melhor da Web, appficada
+
 # 2015
 
 * *21/Nov* - **Front In Sampa** - [Progressive WebApps: o melhor da Web, Appficada 2.0](http://www.slideshare.net/caelumdev/progressive-web-apps-o-melhor-da-web-appficada) ([vídeo](https://www.youtube.com/watch?v=sH7dlRnuh-k&feature=youtu.be&a=))
