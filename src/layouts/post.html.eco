@@ -40,11 +40,6 @@ ogtype: article
 				Compartilhar no Twitter
 			</a>
 			
-			<a href="/comentarios/?url=<%= @encodedAbsoluteURI(@document) %>&amp;title=<%= @encodedTitle(@document) %>" rel="nofollow" class="share-comment">
-				<span aria-hidden="true" class="icone-bubbles"></span>
-				Comentários
-			</a>
-			
 		</div>
 	</aside>
 </article>
