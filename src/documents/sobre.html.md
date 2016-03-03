@@ -17,6 +17,7 @@ Atividades
 * Coordenador da unidade SP da [Caelum](http://www.caelum.com.br/)
 * [Palestrante em diversos eventos](/palestras/)
 * **Autor do livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**
+* **Autor do livro [Aplicações mobile híbridas com Cordova e PhoneGap.](https://www.casadocodigo.com.br/products/livro-cordova-phonegap)**
 * **Editor do livro [Coletânea Front-end: uma antologia da comunidade front-end brasileira](https://casadocodigo.refersion.com/l/f49.5558)**
 * Co-autor do livro [Introdução a arquitetura e design Java](http://www.arquiteturajava.com.br/)
 * Co-fundador do [MusicDot, cursos online de teclado e piano](http://www.musicdot.com.br)
