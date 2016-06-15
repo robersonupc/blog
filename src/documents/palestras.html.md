@@ -15,8 +15,14 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2016
 
-* *30/Mar* - **QConSP** - Performance na web: o modelo RAIL e outras novidades
-* *07/Mar* - **Front7** - Progressive Web Apps: o melhor da Web, appficada
+* *23/Set* - **RubyConf Brasil** - Progressive Web Apps: o melhor da Web, appficada 3.0
+* *26/Ago* - **BrazilJS** - *(a definir)*
+* *07/Jul* - **TDC - The Developers Conference** - Progressive Web Apps: o melhor da Web, appficada *(lightning talk)*
+* *09/Jun* - **Encontro Locaweb Porto Alegre** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
+* *19/Mai* - **FEMUG-SP** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
+* *05/Mai* - **Encontro Locaweb Recife** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
+* *30/Mar* - **QConSP** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
+* *07/Mar* - **Front7** - [Progressive Web Apps: o melhor da Web, appficada 2.0](http://www.slideshare.net/caelumdev/progressive-web-apps-o-melhor-da-web-appficada)
 
 # 2015
 
@@ -26,7 +32,7 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *26/Ago* - **7 Masters** - Progressive WebApps: o melhor da Web, Appficada ([vídeo](http://imasters.com.br/design-ux/design-responsivo/video-progressive-web-apps-7masters/))
 * *18/Jun* - **Encontro Locaweb São Paulo** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *30/Mai* - **MobileConf Rio de Janeiro** - [Como o HTTP/2 vai mudar sua vida](http://www.slideshare.net/caelumdev/como-o-http2-vai-mudar-sua-vida)
-* *19/Mai* - **Encontro Locaweb Rio de Janeiro** - - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
+* *19/Mai* - **Encontro Locaweb Rio de Janeiro** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *07/Mai* - **Encontro Locaweb Porto Alegre** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *11/Abr* - **Encontro Locaweb Curitiba** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
 * *06/Mar* - **Encontro Locaweb Belo Horizonte** - [Tudo que você precisa saber sobre picture e srcset](http://www.slideshare.net/caelumdev/tudo-que-voc-precisa-saber-sobre-ltpicture-e-srcset)
