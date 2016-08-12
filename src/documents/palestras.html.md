@@ -15,13 +15,14 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2016
 
-* *23/Set* - **RubyConf Brasil** - Progressive Web Apps: o melhor da Web, appficada 3.0
-* *26/Ago* - **BrazilJS** - *(a definir)*
+* *23/Set* - **RubyConf Brasil** - *Progressive Web Apps: o melhor da Web, appficada 3.0*
+* *26/Ago* - **BrazilJS** - *Desafios práticos de performance web*
+* *18/Ago* - **6ª Semana de Sistemas de Informação da USP** - *Progressive Web Apps: o melhor da Web, appficada 2.0*
 * *07/Jul* - **TDC - The Developers Conference** - Progressive Web Apps: o melhor da Web, appficada *(lightning talk)*
 * *09/Jun* - **Encontro Locaweb Porto Alegre** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
 * *19/Mai* - **FEMUG-SP** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
 * *05/Mai* - **Encontro Locaweb Recife** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
-* *30/Mar* - **QConSP** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
+* *30/Mar* - **QConSP** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/) ([vídeo oficial](https://www.infoq.com/br/presentations/performance-na-web-o-modelo-rail-e-outras-novidades))
 * *07/Mar* - **Front7** - [Progressive Web Apps: o melhor da Web, appficada 2.0](http://www.slideshare.net/caelumdev/progressive-web-apps-o-melhor-da-web-appficada)
 
 # 2015
