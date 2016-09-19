@@ -15,6 +15,10 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2016
 
+* *12/Nov* - **GDG DevFest SP** - *(a definir)*
+* *22/Out* - **InterCon** - *HTTP/2*
+* *22/Out* - **Front-end Carioca** - *Desafios práticos de performance web*
+* *13/Out* - **Webbr** - *Workshop Performance Web*
 * *23/Set* - **RubyConf Brasil** - *Progressive Web Apps: o melhor da Web, appficada 3.0*
 * *26/Ago* - **BrazilJS** - *Desafios práticos de performance web*
 * *18/Ago* - **6ª Semana de Sistemas de Informação da USP** - *Progressive Web Apps: o melhor da Web, appficada 2.0*
