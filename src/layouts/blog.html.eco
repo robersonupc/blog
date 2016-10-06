@@ -4,7 +4,7 @@ pagetype: blog
 ---
 <header>
 	<a href="/" class="header-foto header-item">
-		<img src="/img/base/sergiolopes.jpg" alt="Foto de Sérgio Lopes">
+		<img src="/img/base/sergiolopes.svg" alt="Caricatura de Sérgio Lopes">
 	</a>
 	
 	<span class="header-nome header-item like-h">Sérgio Lopes</span>

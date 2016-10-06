@@ -54,6 +54,7 @@ Este blog
 * Responsive, mobile friendly
 * Baseado no fantástico [DocPad](http://docpad.org/)
 * Estático, rápido e otimizado -- não lerdo igual Wordpress
+* Ilustração por [Rafael Balbi](https://cursos.alura.com.br/user/rbalbi)
 * [Código fonte disponível](https://github.com/sergiolopes/blog) -- layout, estrutura, códigos e conteúdo
 * Todo conteúdo e códigos liberados para consumo pessoal e aprendizado -- **não copie e poste em outros lugares**
 * No ar desde **Março de 2012**
