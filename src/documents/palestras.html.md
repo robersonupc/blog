@@ -19,8 +19,8 @@ Lista das palestras mais recentes que dei e links pros slides:
 * *22/Out* - **InterCon** - *HTTP/2*
 * *22/Out* - **Front-end Carioca** - *Desafios práticos de performance web*
 * *13/Out* - **Webbr** - *Workshop Performance Web*
-* *23/Set* - **RubyConf Brasil** - *Progressive Web Apps: o melhor da Web, appficada 3.0*
-* *26/Ago* - **BrazilJS** - *Desafios práticos de performance web*
+* *23/Set* - **RubyConf Brasil** - *Progressive Web Apps: o melhor da Web, appficada 2.0*
+* *26/Ago* - **BrazilJS** - Desafios práticos de performance web - [vídeo](https://www.youtube.com/watch?v=EMCBd3kw4zs)
 * *18/Ago* - **6ª Semana de Sistemas de Informação da USP** - *Progressive Web Apps: o melhor da Web, appficada 2.0*
 * *07/Jul* - **TDC - The Developers Conference** - Progressive Web Apps: o melhor da Web, appficada *(lightning talk)*
 * *09/Jun* - **Encontro Locaweb Porto Alegre** - [Performance na web: o modelo RAIL e outras novidades](http://www.slideshare.net/caelumdev/)
