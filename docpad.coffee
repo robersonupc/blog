@@ -4,6 +4,8 @@ moment = require('moment')
 juice = require('juice')
 fs = require('fs')
 
+moment.locale('pt')
+
 docpadConfig = {
 
 	collections:
@@ -95,7 +97,7 @@ docpadConfig = {
 		dateAsText: (date, prefix) ->
 			# se for mais de 75 dias, mostra data; senão mostra x dias atrás
 			# if (new Date().getTime() - date.getTime() > 75 * 24 * 60 * 60 * 1000)
-				(if prefix? then prefix else '') + moment(date).lang('pt').format('DD MMM YYYY')
+				(if prefix? then prefix else '') + moment(date).format('DD MMM YYYY')
 			# else
 			#	moment(date).lang('pt').fromNow()
 
