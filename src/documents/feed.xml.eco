@@ -45,7 +45,7 @@ standalone: true
                <% end %>
 
             <%# Posts comuns com conteudo completo %>
-            <% else: %>
+            <% else if (post.contentRenderedWithoutLayouts != null): %>
 
                <%# warning no topo do feed %>
                <% if post.feedWarning: %>
