@@ -13,9 +13,15 @@ Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vári
 
 Lista das palestras mais recentes que dei e links pros slides:
 
+#2017
+
+* *13/Mai* - **CEJS** - *(a definir)*
+* *24/Abr* - **QConSP** - *Performance Web muito além do carregamento*
+* *13/Mar* - **Cubo** - *Performance na web: o modelo RAIL e outras novidades*
+
 # 2016
 
-* *12/Nov* - **GDG DevFest SP** - *(a definir)*
+* *12/Nov* - **GDG DevFest SP** - *Progressive Web Apps são o futuro da web*
 * *22/Out* - **InterCon** - *HTTP/2*
 * *22/Out* - **Front-end Carioca** - *Desafios práticos de performance web*
 * *13/Out* - **Webbr** - *Workshop Performance Web*
