@@ -13,7 +13,7 @@ Minha primeira palestra técnica foi em 2005 e, desde então, já falei em vári
 
 Lista das palestras mais recentes que dei e links pros slides:
 
-#2017
+# 2017
 
 * *13/Mai* - **CEJS** - *(a definir)*
 * *24/Abr* - **QConSP** - *Performance Web muito além do carregamento*
