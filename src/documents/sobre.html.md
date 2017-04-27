@@ -8,14 +8,15 @@ name: sobre
 
 * **Nome:** Sérgio Lopes
 * **Cidade:** São Paulo
-* **Trabalho:** [Caelum](https://www.caelum.com.br/) & [Alura](https://www.alura.com.br/), desde 2004
+* **Trabalho:** [Grupo Caelum](https://www.caelum.com.br/grupo) desde 2004
 
 Atividades
 ----------
 
-* Instrutor e desenvolvedor na [Alura](https://www.alura.com.br/) e na [Caelum](http://www.caelum.com.br/), onde dou aula nos [cursos de front-end](https://www.caelum.com.br/cursos-web-front-end/) e [cursos java](https://www.caelum.com.br/cursos-java/).
+* Instrutor e desenvolvedor na [Alura](https://www.alura.com.br/) e na [Caelum](http://www.caelum.com.br/)
 * Diretor no [Grupo Caelum](https://www.caelum.com.br/grupo)
 * [Palestrante em diversos eventos](/palestras/)
+* [Colunista no iMasters](https://imasters.com.br/perfil/sergiolopes/)
 * **Autor do livro [A Web Mobile: programe para um mundo de muitos dispositivos.](/livro-web-mobile/)**
 * **Autor do livro [Aplicações mobile híbridas com Cordova e PhoneGap.](https://www.casadocodigo.com.br/products/livro-cordova-phonegap)**
 * **Editor do livro [Coletânea Front-end: uma antologia da comunidade front-end brasileira](https://casadocodigo.refersion.com/l/f49.5558)**
