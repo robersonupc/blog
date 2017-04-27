@@ -15,10 +15,12 @@ Lista das palestras mais recentes que dei e links pros slides:
 
 # 2017
 
+* *23/Jun* - **JS Experience iMasters** - *(a definir)*
+* *24/Mai* - **Fluig Meetup** - *Progressive Web Apps são o futuro da Web*
 * *13/Mai* - **CEJS** - *(a definir)*
-* *24/Abr* - **QConSP** - *Performance Web muito além do carregamento*
-* *13/Mar* - **Cubo Summit** - *Progressive Web Apps são o futuro da Web*
-* *13/Mar* - **Cubo Summit** - *Performance na web: o modelo RAIL e outras novidades*
+* *24/Abr* - **QConSP** - Performance Web muito além do carregamento
+* *13/Mar* - **Cubo Summit** - Progressive Web Apps são o futuro da Web
+* *13/Mar* - **Cubo Summit** - Performance na web: o modelo RAIL e outras novidades
 
 # 2016
 
