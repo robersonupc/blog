@@ -159,7 +159,8 @@ docpadConfig = {
 		'posts/2014',
 		'posts/2015',
 		'posts/caelum',
-		'posts/eventos'
+		'posts/eventos',
+		'posts/externo'
 	]
 
 	environments:
@@ -172,7 +173,8 @@ docpadConfig = {
 				__dirname + '/src/posts/2012',
 				__dirname + '/src/posts/2013',
 				__dirname + '/src/posts/caelum',
-				__dirname + '/src/posts/eventos'
+				__dirname + '/src/posts/eventos',
+				__dirname + '/src/posts/externo'
 			]
 
 		production:
